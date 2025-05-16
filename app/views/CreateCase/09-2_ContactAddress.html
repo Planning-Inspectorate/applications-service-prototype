@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Enter the Applicant’s address (optional)
+      </h1>
+
+      <form class="form" action="./09-3_ContactWebsite" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="applicant.firstName">
+            Postcode
+          </label>
+        <input class="govuk-input govuk-!-width-one-third" id="applicant.firstName" name="applicant.firstName" type="text">
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

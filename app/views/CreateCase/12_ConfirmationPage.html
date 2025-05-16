@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "New case has been created",
+        html: "The case reference number<br><strong>EN0110011</strong>"
+      }) }}
+      <p>
+        <a href="../index">
+          Go back to main Applications homepage
+        </a>
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

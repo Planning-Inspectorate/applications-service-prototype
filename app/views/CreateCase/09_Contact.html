@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Choose the Applicant information you have available
+    </h1>
+
+    <form class="form" action="./09-1_ContactName" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames"
+                name="geographicalInformation.regionNames[]" type="checkbox" value="east_midlands">
+              <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames">
+                Applicant’s contact name
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-2"
+                name="geographicalInformation.regionNames[]" type="checkbox" value="eastern">
+              <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-2">
+                Address
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-3"
+                name="geographicalInformation.regionNames[]" type="checkbox" value="london">
+              <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-3">
+                Website
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-4"
+                name="geographicalInformation.regionNames[]" type="checkbox" value="north_east">
+              <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-4">
+                Email address
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-5"
+                name="geographicalInformation.regionNames[]" type="checkbox" value="north_west">
+              <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-5">
+                Telephone number
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="./06_MapZoom" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Choose one or multiple regions
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames" name="geographicalInformation.regionNames[]" type="checkbox" value="east_midlands">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames">
+                  East Midlands
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-2" name="geographicalInformation.regionNames[]" type="checkbox" value="eastern">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-2">
+                  Eastern
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-3" name="geographicalInformation.regionNames[]" type="checkbox" value="london">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-3">
+                  London
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-4" name="geographicalInformation.regionNames[]" type="checkbox" value="north_east">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-4">
+                  North East
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-5" name="geographicalInformation.regionNames[]" type="checkbox" value="north_west">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-5">
+                  North West
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-6" name="geographicalInformation.regionNames[]" type="checkbox" value="south_east">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-6">
+                  South East
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-7" name="geographicalInformation.regionNames[]" type="checkbox" value="south_west">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-7">
+                  South West
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-8" name="geographicalInformation.regionNames[]" type="checkbox" value="wales">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-8">
+                  Wales
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-9" name="geographicalInformation.regionNames[]" type="checkbox" value="west_midlands">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-9">
+                  West Midlands
+                </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="geographicalInformation.regionNames-10" name="geographicalInformation.regionNames[]" type="checkbox" value="yorkshire_and_the_humber">
+                      <label class="govuk-label govuk-checkboxes__label" for="geographicalInformation.regionNames-10">
+                  Yorkshire and the Humber
+                </label>
+                    </div>
+            </div>
+          
+          </fieldset>
+          </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="./07_ProjectEmail" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Choose map zoom level
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="geographicalInformation.mapZoomLevelName" name="geographicalInformation.mapZoomLevelName" type="radio" value="country">
+                    <label class="govuk-label govuk-radios__label" for="geographicalInformation.mapZoomLevelName">
+                  Country
+                </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="geographicalInformation.mapZoomLevelName-2" name="geographicalInformation.mapZoomLevelName" type="radio" value="region">
+                    <label class="govuk-label govuk-radios__label" for="geographicalInformation.mapZoomLevelName-2">
+                  Region
+                </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="geographicalInformation.mapZoomLevelName-3" name="geographicalInformation.mapZoomLevelName" type="radio" value="county">
+                    <label class="govuk-label govuk-radios__label" for="geographicalInformation.mapZoomLevelName-3">
+                  County
+                </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="geographicalInformation.mapZoomLevelName-4" name="geographicalInformation.mapZoomLevelName" type="radio" value="borough">
+                    <label class="govuk-label govuk-radios__label" for="geographicalInformation.mapZoomLevelName-4">
+                  Borough
+                </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="geographicalInformation.mapZoomLevelName-5" name="geographicalInformation.mapZoomLevelName" type="radio" value="district">
+                    <label class="govuk-label govuk-radios__label" for="geographicalInformation.mapZoomLevelName-5">
+                  District
+                </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="geographicalInformation.mapZoomLevelName-6" name="geographicalInformation.mapZoomLevelName" type="radio" value="none" checked="">
+                    <label class="govuk-label govuk-radios__label" for="geographicalInformation.mapZoomLevelName-6">
+                  None
+                </label>
+                  </div>
+            </div>
+          
+          </fieldset>
+          </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
