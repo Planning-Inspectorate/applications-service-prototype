@@ -18,22 +18,11 @@ html: 'This is not a full service. It is not production code and you might exper
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-{{ govukBreadcrumbs({
-items: [
-{
-text: "Project overview",
-href: "#"
-},
-{
-text: "Project documentation",
-href: "#"
-},
-{
-text: "Project management",
-href: "prject-management"
-}
-]
-}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "project-management"
+  }) }}
 
 {% endblock %}
 
