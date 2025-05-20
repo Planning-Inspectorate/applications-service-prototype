@@ -1,0 +1,204 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  Applications
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="pins-dashboard-box" style="box-shadow: 0 2px 0 #b1b4b6, inset 2px 0 0 #b1b4b6, inset -2px 0 0 #b1b4b6, inset 0 4px 0 #1d70b8;">
+      <h2 class="govuk-heading-l pins-dashboard-box--title">Search cases</h2>
+      <form class="pins-dashboard-box--form pins-dashboard-form" role="search" aria-label="Applications">
+      <div class="govuk-form-group">
+        <label class="govuk-label pins-dashboard-form--label" for="searchApplications">
+          Enter keyword, case reference or case title
+        </label>
+        <input class="govuk-input pins-dashboard-form--input" id="searchApplications" name="query" type="text" inputmode="search">
+      </div>
+      <button class="govuk-button pins-dashboard-form--btn">
+        Search
+      </button>
+    </form>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <div class="pins-dashboard-box" style="box-shadow: 0 2px 0 #b1b4b6, inset 2px 0 0 #b1b4b6, inset -2px 0 0 #b1b4b6, inset 0 4px 0 #1d70b8;">
+      <h2 class="govuk-heading-l pins-dashboard-box--title">Actions</h2>
+      <p>
+        <a class="govuk-button govuk-button--secondary pins-dashboard-box--btn" href="/CreateCase/01_NameDescription">Create case</a>
+      </p>
+      <p>
+        <a href="/applications-service/general-section-51" class="govuk-link">Manage general S51 advice</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<h1 class="govuk-heading-l">
+  All cases
+</h1>
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Business and Commercial
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            BC01 Office Use
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Name</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Stage</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="/../Project/Overview/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">                  
+                  <strong class="govuk-tag govuk-tag--green">Pre-application</strong>
+                </td>              
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--blue">Pre-examination</strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--purple">Examination</strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--grey">Post-decision</strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--orange">Withdrawn</strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--yellow">Recommendation</strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--pink">Decision</strong>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">
+                  <a class="govuk-body" href="Project/Overview.html">XX0000000 - Case name placeholder</a>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <strong class="govuk-tag govuk-tag--turquoise">Acceptance</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Energy
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for the web.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Transport
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for the web.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Water
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for the web.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Waste
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for the web.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Waste Water
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for the web.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
