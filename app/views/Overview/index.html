@@ -8,7 +8,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 {{ govukBackLink({
 text: "Back to applications",
-href: "/../../applications/applications"
+href: "/../../applications/"
 }) }}
 {% endblock %}
 
@@ -18,7 +18,7 @@ href: "/../../applications/applications"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    {% include "../../_includes/project-description.html" %}
+    {% include "../_includes/project-description.html" %}
 
 
   <style>
@@ -58,13 +58,13 @@ href: "/../../applications/applications"
   <div class="govuk-grid-column-one-quarter">
     <nav class="side-nav">
       <ul class="govuk-list">
-        <li><a href="project-overview" class="selected">Overview</a></li>
-        <li><a href="/../Project/KeyDates/KeyDates">Key dates</a></li>
-        <li><a href="/../Project/ProjectTeam/ProjectTeam">Project team</a></li>
-        <li><a href="/../Project/ProjectDocumentation/project-documentation">Project documentation</a></li>
-        <li><a href="/../Project/ProjectUpdates/ProjectUpdates">Project updates</a></li>
-        <li><a href="/../Project/ExaminationTimetable/examinationtimetable">Exam timetable</a></li>
-        <li><a href="/../Project/Fees/fees">Fees and forecasting</a></li>
+        <li><a href="/Overview/" class="selected">Overview</a></li>
+        <li><a href="/KeyDates/">Key dates</a></li>
+        <li><a href="/ProjectTeam/">Project team</a></li>
+        <li><a href="/ProjectDocumentation/">Project documentation</a></li>
+        <li><a href="/ProjectUpdates/">Project updates</a></li>
+        <li><a href="/ExaminationTimetable/">Exam timetable</a></li>
+        <li><a href="/Fees/">Fees and forecasting</a></li>
       </ul>
     </nav>
   </div>

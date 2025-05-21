@@ -7,7 +7,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% block beforeContent %}
 {{ govukBackLink({
 text: "Back to project overview",
-href: "/../Project/Overview/Overview"
+href: "/Overview/"
 }) }}
 {% endblock %}
 
@@ -16,7 +16,7 @@ href: "/../Project/Overview/Overview"
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    {% include "../../_includes/project-description.html" %}
+    {% include "../_includes/project-description.html" %}
 
 
 

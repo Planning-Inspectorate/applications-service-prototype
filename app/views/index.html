@@ -6,15 +6,83 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
       <h1 class="govuk-heading-l">{{ pageName }}</h1>
-
-      <p>Select a version or page of the prototype:</p>
-
-      <ul class="govuk-list govuk-list">
-        <li><a href="project/projectdocumentation/relevant-representations">Bulk unnpublish relevant representations journey</a></li>
-        <li><a href="applications/applications">Prototype homepage</a></li>
-      </ul>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#back-office">
+              Current Back Office
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#front-office">
+              Current Front Office
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#mock-ups">
+              Draft mock-ups
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#archive">
+              Archived mock-ups
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="back-office">
+          <ul>
+            <li><a href="/Applications/applications">Applications homepage</a></li>
+            <li><a href="/Overview/Overview">View case</a>
+              <ul>
+                <li><a href="/Overview/">Overview</a></li>
+                <li><a href="/Keydates/">Key dates</a></li>
+                <li><a href="/ProjectTeam/">Project Team</a></li>
+                <li><a href="/ProjectDocumentation/">Project documentation</a>
+                <ul>
+                  <li><a href="/ProjectDocumentation/">Generic folder page</a></li>
+                  <li><a href="/ProjectDocumentation/relevant-representations">Relevant representations</a></li>
+                </ul>
+                </li>
+                <li><a href="/ProjectUpdates/">Project updates</a></li>
+                <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
+              </ul>
+            </li>
+            <li><a href="/CreateCase/01_NameDescription">Create case</a>
+              <ol>
+                <li><a href="/CreateCase/01_NameDescription">Project info</a></li>
+                <li><a href="/CreateCase/02_Sector">Sector</a></li>
+                <li><a href="/CreateCase/04_GeographicalInfo">Geographical info</a></li>
+                <li><a href="/CreateCase/07_ProjectEmail">Project contact</a></li>
+                <li><a href="/CreateCase/09_Contact">Applicant contact</a></li>
+                <li><a href="/CreateCase/10_KeyDates">Key dates</a></li>
+                <li><a href="/CreateCase/11_CheckAnswers">Check answers</a></li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-tabs__panel" id="front-office">
+          <ul>
+            <li><a href="">Work in progress</a></li>
+          </ul>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="mock-ups">
+          <ul>
+            <li><a href="project/projectdocumentation/relevant-representations">Bulk unnpublish relevant representations journey</a></li>
+          </ul>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="archive">
+          <ul>
+            <li><a href="">[Insert archived mock-up here]</a></li>
+            <li><a href="">[Insert archived mock-up here]</a></li>
+            <li><a href="">[Insert archived mock-up here]</a></li>
+          </ul>
+        </div>
+      </div>
 
     </div>
   </div>
