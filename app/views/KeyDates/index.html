@@ -1,10 +1,709 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+Key dates – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+text: "Back to applications",
+href: "/../../applications/"
+}) }}
 {% endblock %}
 
 {% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% include "../_includes/project-description.html" %}
+
+
+    <style>
+      .side-nav {
+        padding-right: 20px;
+      }
+
+      .side-nav ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .side-nav li {
+        margin-bottom: 5px;
+      }
+
+      .side-nav a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #1d70b8;
+        border-left: 5px solid transparent;
+      }
+
+      .side-nav a:hover {
+        background-color: #f3f2f1;
+      }
+
+      .side-nav a.selected {
+        background-color: #f3f2f1;
+        font-weight: bold;
+        border-left: 5px solid #1d70b8;
+        color: #0b0c0c;
+      }
+    </style>
+    <div class="govuk-grid-column-one-quarter">
+      <nav class="side-nav">
+        <ul class="govuk-list">
+          <li><a href="/Overview/">Overview</a></li>
+          <li><a href="/KeyDates/" class="selected">Key dates</a></li>
+          <li><a href="/ProjectTeam/">Project team</a></li>
+          <li><a href="/ProjectDocumentation/">Project documentation</a></li>
+          <li><a href="/ProjectUpdates/">Project updates</a></li>
+          <li><a href="/ExaminationTimetable/">Exam timetable</a></li>
+          <li><a href="/Fees/">Fees and forecasting</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <h2 class="govuk-heading-m">Key dates</h2>
+      <p class="govuk-body">Provide details on dates and deadlines in this project.</p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Pre-application
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Pre-application dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Pre-application stage (Pre-application dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date first notified of project
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of inception meeting
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Programme document submission date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Statutory consultation period end date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date for submission of draft documents
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Programme document first iteration
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Programme document second iteration
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Project published on website
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Anticipated submission date published
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      Between February and March 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Anticipated submission date internal
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Section 46 notification
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Screening and scoping
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Screening opinion sought
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Screening opinion issued
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Scoping opinion sought
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Scoping opinion issued
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Acceptance
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Acceptance dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Acceptance stage (Acceptance dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Application submitted (Section 55)
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Deadline for Acceptance decision
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of Acceptance (Section 55)
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of Non-Acceptance
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Pre-examination
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Relevant representations
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> for relevant representations (relevant representation dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Open
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Close
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Extension
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Relevant representations appear on website
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Relevant representations re-open
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> for relevant representations re-open (relevant representation re-open dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Re-opens
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Re-opening closes
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Other dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> for pre-examination (other dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      IAPI due
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Rule 6 letter publication
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Preliminary meeting
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Preliminary meeting notification (including events following PM)
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Event notification
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Examination
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Examination dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Examination stage (Examination dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date Section 58 Notice received
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Examination start date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Rule 8 letter publication date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Deadline for close of Examination
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Examination closing date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Extension to close of Examination
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Recommendation
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Recommendation dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Recommendation stage (Recommendation dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Deadline for submission of Recommendation
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of Recommendation submitted to SoS
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Extension to Recommendation deadline
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Decision
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Decision dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Decision stage (Decision dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Deadline for Decision
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of Decision
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Extension to Decision deadline
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Post-decision
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Judicial review dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Judicial review (Judicial review dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Judicial review period end date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of judicial review
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Withdrawal
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">
+                  Withdrawal dates
+                </h2>
+                <ul class="govuk-summary-card__actions">
+                  <li class="govuk-summary-card__action">
+                    <a class="govuk-link" href="#">Manage dates<span class="govuk-visually-hidden"> of Withdrawal (Withdrawal dates)</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date project withdrawn
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      12 Feb 2025
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 {% endblock %}
