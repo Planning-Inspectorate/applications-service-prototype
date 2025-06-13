@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage pre-application fees – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="./index" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+              Add a link to the s61 summary
+            </label>
+          </h1>
+          <input class="govuk-input" id="event-name" name="eventName" type="text">
+        </div>
+
+        {{ govukButton({
+          text: "Save changes"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

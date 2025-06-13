@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Fees and forecasting – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -93,7 +93,7 @@ href: "/../../Applications/"
                   A
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="new-maturity">Change<span class="govuk-visually-hidden"> new
+                  <a class="govuk-link" href="./edit_maturity">Change<span class="govuk-visually-hidden"> new
                       maturity</span></a>
                 </dd>
               </div>
@@ -107,7 +107,7 @@ href: "/../../Applications/"
                   9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> pre-exam invoice</span></a>
+                  <a class="govuk-link" href="./edit_invoice">Change<span class="govuk-visually-hidden"> pre-exam invoice</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -120,7 +120,7 @@ href: "/../../Applications/"
                   12 Mar 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> intial exam invoice
+                  <a class="govuk-link" href="./edit_invoice">Change<span class="govuk-visually-hidden"> intial exam invoice
                       reference</span></a>
                 </dd>
               </div>
@@ -132,29 +132,20 @@ href: "/../../Applications/"
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> final exam invoice</span></a>
+                  <a class="govuk-link" href="./edit_invoice">Add<span class="govuk-visually-hidden"> final exam invoice</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Inspector band 2
+                  Examining inspectors
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  2
+                  4 band 2 inspectors,
+                  <br>
+                  1 band 3 inspectors
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> inspector band 2</span></a>
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Inspector band 3
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  3
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> inspector band 3</span></a>
+                  <a class="govuk-link" href="./edit_inspectors">Change<span class="govuk-visually-hidden"> examining inspectors</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -165,7 +156,7 @@ href: "/../../Applications/"
                   20 May 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> MEM last updated</span></a>
+                  <a class="govuk-link" href="./edit_MEM">Change<span class="govuk-visually-hidden"> MEM last updated</span></a>
                 </dd>
               </div>
             </dl>
@@ -189,7 +180,7 @@ href: "/../../Applications/"
                   Enhanced
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="new-maturity">Change<span class="govuk-visually-hidden"> tier</span></a>
+                  <a class="govuk-link" href="./edit_projTier">Change<span class="govuk-visually-hidden"> tier</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -200,7 +191,7 @@ href: "/../../Applications/"
                   <a class="govuk-link" href="#">s61-summary-project.com/link</a>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> s61</span></a>
+                  <a class="govuk-link" href="./edit_s61SummaryLink">Change<span class="govuk-visually-hidden"> s61</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -211,7 +202,7 @@ href: "/../../Applications/"
                   <a class="govuk-link" href="#">prog-doc-project.com/link</a>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> documentation</span></a>
+                  <a class="govuk-link" href="./edit_progDocLink">Change<span class="govuk-visually-hidden"> documentation</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -222,18 +213,18 @@ href: "/../../Applications/"
                   20 May 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> scoping date</span></a>
+                  <a class="govuk-link" href="./edit_scopingDate.html">Change<span class="govuk-visually-hidden"> scoping date</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  AoC milestone
+                  Adequacy of Consultation Milestone
                 </dt>
                 <dd class="govuk-summary-list__value">
                   01 Jun 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> AoC</span></a>
+                  <a class="govuk-link" href="./edit_AocDate.html">Change<span class="govuk-visually-hidden"> AoC</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -244,7 +235,7 @@ href: "/../../Applications/"
                   Apr 2025 - Mar 2026
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> year of service</span></a>
+                  <a class="govuk-link" href="./edit_yearOfService">Change<span class="govuk-visually-hidden"> year of service</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -253,7 +244,6 @@ href: "/../../Applications/"
                 </dt>
                 <dd class="govuk-summary-list__value">
                   20 May 2025
-                  <br>(edit in Key Dates section)
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
@@ -363,10 +353,10 @@ href: "/../../Applications/"
                 <dd class="govuk-summary-list__actions">
                   <ul class="govuk-summary-list__actions-list">
                     <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                      <a class="govuk-link" href="./edit_Meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
                     </li>
                     <li class="govuk-summary-list__actions-list-item">
-                      <a class="govuk-link" href="./edit_Meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
                     </li>
                   </ul>
                 </dd>
@@ -397,7 +387,7 @@ href: "/../../Applications/"
                   Required
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="new-maturity">Change<span class="govuk-visually-hidden"> c1</span></a>
+                  <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> c1</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -410,8 +400,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -424,8 +420,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -438,8 +440,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -452,8 +460,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -466,8 +480,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -480,8 +500,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -494,8 +520,14 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -508,13 +540,19 @@ href: "/../../Applications/"
                   Date: 9 Jan 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> meeeting
-                      details</span></a>
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="./edit_EvidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
                 </dd>
               </div>
               <div class="govuk-summary-list__row--no-border">
                 <dd class="govuk-summary-list__actions" style="text-align: left;">
-                  <a class="govuk-link" href="#">Add new meeting</a>
+                  <a class="govuk-link" href="./edit_EvidenceMeeting">Add new meeting</a>
                 </dd>
               </div>
             </dl>
@@ -545,7 +583,7 @@ href: "/../../Applications/"
                     <a href="#">issue-tracker123.com</a>
                   </dd>
                   <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> issues tracker</span></a>
+                    <a class="govuk-link" href="./edit_IssueTracker">Change<span class="govuk-visually-hidden"> issues tracker</span></a>
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row">

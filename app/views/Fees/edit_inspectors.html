@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage accepted fees – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="./index" method="post">
+
+        <h1 class="govuk-heading govuk-heading-l">Manage examining inspectors</h1>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="one-quarter">
+            Number of band 2 inspectors
+          </label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="oneQuarter" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="one-quarter">
+            Number of band 3 inspectors
+          </label>
+          <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="oneQuarter" type="text">
+        </div>
+
+        {{ govukButton({
+          text: "Save changes"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
