@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage project meetings – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column">
+
+      <form class="form" action="./index" method="post">
+
+        <h1 class="govuk-heading-l">
+          Delete meeting
+        </h1>
+
+        
+        
+        <p class="govuk-body">Meeting: Project Update Meeting (PUM)</p>
+        <p class="govuk-body">Date: 12 Jan 2025</p>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            Deleting this meeting will remove it from any fees and forecasting.
+          </strong>
+        </div>
+
+        {{ govukButton({
+          text: "Delete",
+          classes: "govuk-button--warning"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
