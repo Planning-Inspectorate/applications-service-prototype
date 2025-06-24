@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Manage evidence plan process – {{ serviceName }} – GOV.UK Prototype Kit
+  Manage pre-application fees – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,38 +18,13 @@
 
       <form class="form" action="./index" method="post">
 
-        <h1 class="govuk-heading-l">
-          Manage evidence plan meeting
-        </h1>
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label" for="event-name">
-              <strong>Purpose of meeting</strong>
-            </label>
-            <div id="authentication-code-hint" class="govuk-hint">
-              for example, Flood Risk Assessment (FRA)
-            </div>
-          </h1>
-          <input class="govuk-input" id="event-name" name="eventName" type="text">
-        </div>
-
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label" for="event-name">
-              <Strong>Planning inspectorate role in meeting (optional)</Strong>
-            </label>
-            <div id="authentication-code-hint" class="govuk-hint">
-              for example, advisory
-            </div>
-          </h1>
-          <input class="govuk-input" id="event-name" name="eventName" type="text">
-        </div>
+        <h1 class="govuk-heading govuk-heading-l">Date programme document reviewed by EST</h1>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
             <legend class="govuk-fieldset__legend">
-                <strong>Date of evidence planning meeting</strong>
+                <strong>First iteration</strong>
             </legend>
             <div class="govuk-date-input" id="passport-issued">
               <div class="govuk-date-input__item">
@@ -82,12 +57,6 @@
 
         {{ govukButton({
           text: "Save and return"
-        }) }}
-      
-        {{ govukButton({
-          text: "Remove meeting",
-          classes: "govuk-button--secondary",
-          href: "delete_meeting"
         }) }}
 
       </form>

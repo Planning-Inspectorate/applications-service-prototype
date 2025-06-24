@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Manage supplementary components – {{ serviceName }} – GOV.UK Prototype Kit
+  Manage accepted fees – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,10 +21,13 @@
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--l" for="event-name">
-              Link to the issues tracker
+              Additional comments
             </label>
           </h1>
-          <input class="govuk-input" id="event-name" name="eventName" type="text">
+          <div id="event-name-hint" class="govuk-hint">
+            Use an asterisk (*) to denote a new bullet point
+          </div>
+          <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
         </div>
 
         {{ govukButton({
