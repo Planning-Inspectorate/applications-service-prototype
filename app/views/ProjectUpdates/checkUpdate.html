@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h2 class="govuk-body"><strong>Project name: </strong>Longfield Solar Farm</h2>
+
+      <h1 class="govuk-heading-l">
+        Check your project update
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date published
+          </dt>
+          <dd class="govuk-summary-list__value">
+            13 Dec 2025
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Details about the update
+          </dt>
+          <dd class="govuk-summary-list__value">
+            This is a project update description.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_updateText">Change<span class="govuk-visually-hidden"> update details</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email to subscribers
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_updateText">Change<span class="govuk-visually-hidden"> email confirmation</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What information does the update contain?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">General</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_updateInfo">Change<span class="govuk-visually-hidden"> update information type</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <div class="govuk-tag">Published</div>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_updateStatus">Change<span class="govuk-visually-hidden"> update status</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">
+        Preview
+      </h2>
+      <div class="govuk-inset-text">
+        This is a project update description.
+      </div>
+
+      <form action="." method="post" novalidate>
+
+        {{ govukButton({
+          href: "12_ConfirmationPage.html",
+          text: "Save project update"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-body"><strong>Project name: </strong>Longfield Solar Farm</h2>
+
+    <h1 class="govuk-heading-l">
+      Change project update
+    </h1>
+
+    <form class="form" action="./03_Subsector" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          <strong>Details about the update</strong>
+        </label>
+        <div id="passport-issued-hint" class="govuk-hint">
+          The recommended length is 500 characters
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10"></textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend">
+            <strong>Email to subscribers?</strong>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            De-select if you do not want to send an email notification to subcribers
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Send to subscribers
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Save and continue",
+        href: "edit_updateInfo"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}
