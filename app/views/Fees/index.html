@@ -38,7 +38,8 @@ href: "/../../Applications/"
 
       .side-nav a {
         display: block;
-        padding: 10px 15px;
+        padding: 12px 8px;
+        font-size: 16px;
         text-decoration: none;
         color: #1d70b8;
         border-left: 5px solid transparent;
@@ -55,7 +56,7 @@ href: "/../../Applications/"
         color: #0b0c0c;
       }
     </style>
-    <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
       <nav class="side-nav">
         <ul class="govuk-list">
           <li><a href="/Overview/">Overview</a></li>
@@ -63,7 +64,7 @@ href: "/../../Applications/"
           <li><a href="/ProjectTeam/">Project team</a></li>
           <li><a href="/ProjectDocumentation/">Project documentation</a></li>
           <li><a href="/ProjectUpdates/">Project updates</a></li>
-          <li><a href="/ExaminationTimetable/">Exam timetable</a></li>
+          <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
           <li><a href="/Fees/" class="selected">Fees and forecasting</a></li>
         </ul>
       </nav>
@@ -193,13 +194,13 @@ href: "/../../Applications/"
               </div> -->
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Submission date internal
+                  Anticipated submission date internal
                 </dt>
                 <dd class="govuk-summary-list__value">
                   20 May 2025
                 </dd>
                 <dd class="govuk-summary-list__actions">
-
+                  <a class="govuk-link" href="edit_submissionDate">Change<span class="govuk-visually-hidden"> submission date</span></a>
                 </dd>
               </div>
             </dl>
@@ -214,6 +215,64 @@ href: "/../../Applications/"
             </h2>
           </div>
           <div id="accordion-default-content-3" class="govuk-accordion__section-content">
+
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Stage</th>
+                  <th scope="col" class="govuk-table__header">Amount</th>
+                  <th scope="col" class="govuk-table__header">ID</th>
+                  <th scope="col" class="govuk-table__header">Status</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+      
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Pre-application</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004419</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Paid</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Acceptance</td>
+                  <td class="govuk-table__cell">£9,410</td>
+                  <td class="govuk-table__cell">1800004420</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Paid</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Pre-examination</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004421</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Due</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Initial examination</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004422</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Issued</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Final examination</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004423</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Refunded</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+      
+              </tbody>
+            </table>
+
+            <!--
             <dl class="govuk-summary-list">
               <div class="govuk-summary-card">
                 <div class="govuk-summary-card__title-wrapper">
@@ -489,9 +548,10 @@ href: "/../../Applications/"
                   </div>
               </div>
             </dl>
+          -->
             <form autocomplete="off" class="form" action="edit_invoice">
               <button class="reset govuk-button govuk-button--secondary govuk-!-margin-bottom-0 govuk-!-margin-top-0" data-module="govuk-button">
-                Add new invoice
+                Add new fee
               </button>
             </form>
           </div>
@@ -505,6 +565,44 @@ href: "/../../Applications/"
             </h2>
           </div>
           <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Meeting agenda</th>
+                  <th scope="col" class="govuk-table__header">Date</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+      
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Inception meeting</td>
+                  <td class="govuk-table__cell">09 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_inceptionMeeting">Review</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Project Update Meeting (PUM)</td>
+                  <td class="govuk-table__cell">11 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_meeting">Review</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Multi-Party Meeting (MPM)</td>
+                  <td class="govuk-table__cell">12 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_meeting">Review</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Draft document review</td>
+                  <td class="govuk-table__cell">13 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_meeting">Review</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <form autocomplete="off" class="form" action="edit_meeting">
+              <button class="reset govuk-button govuk-button--secondary govuk-!-margin-bottom-0 govuk-!-margin-top-0" data-module="govuk-button">
+                Add project meeting
+              </button>
+            </form>
+            <!--
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -651,6 +749,7 @@ href: "/../../Applications/"
                 necessary, as they may exceed the agreed scope for the selected tier.
               </strong>
             </div>
+            -->
           </div>
         </div>
         <div class="govuk-accordion__section">
@@ -662,6 +761,50 @@ href: "/../../Applications/"
             </h2>
           </div>
           <div id="accordion-default-content-5" class="govuk-accordion__section-content">
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Evidence plan process
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Required
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_evidenceProcess">Change<span class="govuk-visually-hidden"> c1</span></a>
+                </dd>
+              </div>
+            </dl>
+            
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Issues discussed</th>
+                  <th scope="col" class="govuk-table__header">Date</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+      
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Flood Risk Assessment</td>
+                  <td class="govuk-table__cell">19 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_evidenceMeeting">Review</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Habitat Regulation Assessment</td>
+                  <td class="govuk-table__cell">21 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_evidenceMeeting">Review</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <form autocomplete="off" class="form" action="edit_evidenceMeeting">
+              <button class="reset govuk-button govuk-button--secondary govuk-!-margin-bottom-0 govuk-!-margin-top-0" data-module="govuk-button">
+                Add evidence plan meeting
+              </button>
+            </form>
+
+            <!--
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -710,6 +853,7 @@ href: "/../../Applications/"
                 </dd>
               </div>
             </dl>
+            -->
           </div>
 
           <div class="govuk-accordion__section">

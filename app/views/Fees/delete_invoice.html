@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage project meetings – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column">
+
+      <form class="form" action="./index" method="post">
+
+        <h1 class="govuk-heading-l">
+          Delete fee
+        </h1>
+
+        
+        
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Stage</th>
+              <th scope="col" class="govuk-table__header">Amount</th>
+              <th scope="col" class="govuk-table__header">ID</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+  
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Pre-application</td>
+              <td class="govuk-table__cell">£63,410</td>
+              <td class="govuk-table__cell">1800004419</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Paid</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            Deleting this fee will remove it from future forecasting reporting.
+          </strong>
+        </div>
+
+        {{ govukButton({
+          text: "Delete",
+          classes: "govuk-button--warning"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -96,16 +96,17 @@
           </fieldset>
         </div>
 
-        {{ govukButton({
-          text: "Save and return"
-        }) }}
-      
-        {{ govukButton({
-          text: "Remove meeting",
-          classes: "govuk-button--secondary",
-          href: "delete_meeting"
-        }) }}
-
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and return"
+          }) }}
+        
+          {{ govukButton({
+            text: "Remove meeting",
+            classes: "govuk-button--secondary",
+            href: "delete_meeting"
+          }) }}
+        </div>
       </form>
 
     </div>
