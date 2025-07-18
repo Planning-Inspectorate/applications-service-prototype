@@ -1,3 +1,5 @@
+
+
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
@@ -61,18 +63,25 @@ text: "Relevant representations"
           <form autocomplete="off" class="status" action="status?project={{projectNo}}" method="post"
             onsubmit="return validateStatusLib(event)">
             <div class="govuk-form-group status">
-              <h4 id="select-status" class="govuk-heading-s">Filter</h4>
+              <h4 id="select-status" class="govuk-heading-m">Filter</h4>
             </div>
 
             <div class="govuk-grid-row">
+              <style>
+                .govuk-checkboxes__label {
+                  max-width: 110%;
+                  padding: 0px;
+                }
+              </style>
               <div class="govuk-grid-column-one-half">
+                
                 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
                 {{ govukCheckboxes({
                 name: "redaction",
+                classes: "govuk-checkboxes--small",
                 fieldset: {
                 legend: {
-                isPageHeading: false,
-                classes: "govuk-fieldset__legend--s"
+                isPageHeading: false
                 }
                 },
                 items: [
@@ -84,23 +93,15 @@ text: "Relevant representations"
                 ]
                 }) }}
 
-                <div class="govuk-button-group">
-                  <button class="govuk-button">Apply filters</button>
-                  <a class="govuk-link" href="#">Clear filters</a>
-                </div>
-
-
               </div>
 
               <div class="govuk-grid-column-one-half">
                 {{ govukCheckboxes({
                 name: "status",
-                classes: "status",
+                classes: "govuk-checkboxes--small",
                 fieldset: {
                 legend: {
-
-                isPageHeading: false,
-                classes: "govuk-fieldset__legend--s"
+                isPageHeading: false
                 }
                 },
                 items: [
@@ -110,6 +111,14 @@ text: "Relevant representations"
                 { value: "Unpublished", text: "Unpublished (0)" }
                 ]
                 }) }}
+              </div>
+              <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-button-group">
+                  <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Apply filters
+                  </button>
+                  <a class="govuk-link" href="#">Clear filters</a>
+                </div>
               </div>
             </div>
           </form>
