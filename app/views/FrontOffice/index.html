@@ -1,0 +1,350 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+text: "Back to applications",
+href: "/../../Applications/"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% include "../_includes/project-description.html" %}
+
+
+  <style>
+    .side-nav {
+      padding-right: 20px;
+    }
+
+    .side-nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .side-nav li {
+      margin-bottom: 5px;
+    }
+
+    .side-nav a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      padding: 12px 8px;
+      font-size: 16px;
+      color: #1d70b8;
+      border-left: 5px solid transparent;
+    }
+
+    .side-nav a:hover {
+      background-color: #f3f2f1;
+    }
+
+    .side-nav a.selected {
+      background-color: #f3f2f1;
+      font-weight: bold;
+      border-left: 5px solid #1d70b8;
+      color: #0b0c0c;
+    }
+  </style>
+  <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
+    <nav class="side-nav">
+      <ul class="govuk-list">
+        <li><a href="/Overview/" class="selected">Overview</a></li>
+        <li><a href="/KeyDates/">Key dates</a></li>
+        <li><a href="/ProjectTeam/">Project team</a></li>
+        <li><a href="/ProjectDocumentation/">Project documentation</a></li>
+        <li><a href="/ProjectUpdates/">Project updates</a></li>
+        <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
+        <li><a href="/Fees/">Fees and forecasting</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h2 class="govuk-heading-m">Overview</h2>
+
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Publish project
+      </button>
+      <a class="govuk-link" href="#">Unpublish project</a>
+    </div>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          DCO status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">
+            Granted
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="edit_DCO">Change<span class="govuk-visually-hidden"> Development Consent Order status</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Recommendation
+        </dt>
+        <dd class="govuk-summary-list__value" style="width: 100%;">
+            Recommend consent
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="edit_recommendedOutcome">Change<span class="govuk-visually-hidden"> Development Consent Order status</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reference number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          EN0110007
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Is this an application for a material change?	
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Case manager
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John Smith
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          NSIP officers
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Jane Doe
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sector
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Energy
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Subsector
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Generating Stations
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Solar
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="./edit_SectorType">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Regions
+        </dt>
+        <dd class="govuk-summary-list__value">
+          South West
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Case stage
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Acceptance
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project page
+        </dt>
+        <dd class="govuk-summary-list__value" style="padding-right: 0px;">
+          <strong class="govuk-tag govuk-tag--green">Published</strong> <span class="govuk-body-s colour--secondary" style="color: #505a5f;">&nbsp;Last updated 4:01PM 24 Apr 2025</span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Longfield Solar Farm
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project description
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Lage development of a new power station
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          London
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          john@powerstation.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Grid references
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123456 (Easting)<br>654321 (Northing)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Map zoom level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          None
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Applicant information</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Organisation name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          EnergyCo Limited
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact name (internal use only)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Bob Boyle
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence type</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address (internal use only)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          bobby@gmail.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> home address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          powerstation.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence period</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Telephone number (internal use only)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          0795839574
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence period</span></a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+
+
+{% endblock %}

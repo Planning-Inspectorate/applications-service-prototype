@@ -1,0 +1,135 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .layout-slots__divider{
+    color: #ffffff
+  }
+  a {
+    color: #1d70b8;
+  }
+  .grey-box {
+    display: none;
+  }
+
+  .govuk-main-wrapper {
+    padding-top: 0px;
+  }
+
+</style>
+
+
+<p><div class="govuk-tag">Beta</div> <span class="govuk-body-s">This is a beta service - your <a>feedback</a> will help us to improve it</span></p>
+
+
+
+
+
+<section aria-label="Service information" class="govuk-service-navigation"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container govuk-width-container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <strong>Home</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+            <a class="govuk-service-navigation__link" href="#" aria-current="true">
+              <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <Strong>Detailed information</Strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div class="govuk-grid-row" style="padding-top: 48px;">
+  <div class="govuk-grid-column-full">
+
+    {% include "../_includes/project-description.html" %}
+
+  <div class="govuk-grid-column-one-third" style="padding: 0px;">
+    <h2 class="govuk-heading-m">Filter</h2>
+    <p class="govuk-link govuk-body-s">Show all sections</p>
+
+
+    <p>> Location</p>
+    <hr class="layout-slots__divider">
+    <p>> Sector</p>
+    <hr class="layout-slots__divider">
+    <p>> Stage</p>
+
+    <button class="govuk-button">Apply filters</button>
+    <hr class="layout-slots__divider">
+    <span>&nbsp;</span>
+    <p><strong>Related content</strong></p>
+    <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Register of applications</a>
+
+    
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-xl" style="margin-bottom: 24px;">Projects</h2>
+    <p class="govuk-body-m">This is a list of all projects. To find a specific project, use the filters or search by project name or applicant.</p>
+    <p class="govuk-link" style="color: #1d70b8;">Download a table containing a complete list of all 241 projects (CSV)</p>
+    
+    <div class="govuk-form-group" style="margin-bottom: 0px;">
+      <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
+        <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+          Search
+        </button>
+    </div>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Project name</th>
+          <th scope="col" class="govuk-table__header">Applicant</th>
+          <th scope="col" class="govuk-table__header">Stage</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a>Longfield Solar Farm</a></th>
+          <td class="govuk-table__cell">Highways England</td>
+          <td class="govuk-table__cell">Decided</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a>Shortfield Solar Farm</a></th>
+          <td class="govuk-table__cell">Highways England</td>
+          <td class="govuk-table__cell">Withdrawn</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a>Widefield Solar Farm</a></th>
+          <td class="govuk-table__cell">Highways England</td>
+          <td class="govuk-table__cell">Examination</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a>Narrowfield Solar Farm</a></th>
+          <td class="govuk-table__cell">Highways England</td>
+          <td class="govuk-table__cell">Pre-application</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
