@@ -21,11 +21,25 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     padding-top: 0px;
   }
 
-  .govuk-header, .govuk-header__container {
-    background-color: rgb(7, 71, 69);
-    border-bottom: 10px solid #00847f;
+  .filter {
+    background-color: #f3f2f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid #505a5f;
+    text-decoration: none;
+    color: black;
   }
 
+  .filter:visited {
+    color: black;
+  }
+
+  .govuk-header, .govuk-header__container {
+      background-color: rgb(7, 71, 69);
+
+      border-bottom: 10px solid #00847f;
+    }
 
 </style>
 
@@ -42,6 +56,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 
 
+
+
 <section aria-label="Service information" class="govuk-service-navigation"
   data-module="govuk-service-navigation">
   <div class="govuk-width-container">
@@ -49,12 +65,12 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
         <ul class="govuk-service-navigation__list" id="navigation">
           <li class="govuk-service-navigation__item">
-            <a class="govuk-service-navigation__link" href="index" aria-current="true">
+            <a class="govuk-service-navigation__link" href="index">
               <strong>Home</strong>
             </a>
           </li>
           <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
-            <a class="govuk-service-navigation__link" href="#">
+            <a class="govuk-service-navigation__link" href="search" aria-current="true">
               <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
             </a>
           </li>
@@ -113,13 +129,15 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <dl class="govuk-summary-list govuk-summary-list--no-border">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key govuk-body-l">
-
+          Filtered results
         </dt>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="searchMapView">Map view<span class="govuk-visually-hidden"> for projects</span></a>
         </dd>
       </div>
     </dl>
+
+    <p class="govuk-body-s"><strong>Sector: </strong><a class="filter" href="search">&#10005; Energy</a></p>
 
     <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -139,16 +157,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           <td class="govuk-table__cell"><a>Shortfield Solar Farm</a></th>
           <td class="govuk-table__cell">Highways England</td>
           <td class="govuk-table__cell">Withdrawn</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a>Widefield Solar Farm</a></th>
-          <td class="govuk-table__cell">Highways England</td>
-          <td class="govuk-table__cell">Examination</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a>Narrowfield Solar Farm</a></th>
-          <td class="govuk-table__cell">Highways England</td>
-          <td class="govuk-table__cell">Pre-application</td>
         </tr>
       </tbody>
     </table>
