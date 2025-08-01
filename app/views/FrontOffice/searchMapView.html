@@ -41,6 +41,19 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     border-bottom: 10px solid #00847f;
   }
 
+  .greybg {
+    box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
+  }
+
+  .listbox {
+    border: 1px solid rgb(147, 147, 147);
+    padding: 16px;
+    margin: 12px;
+    transform: translateY(600px);
+    position: absolute;
+    background-color: white;
+    width: 554px;
+  }
 </style>
 
 
@@ -58,7 +71,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-<section aria-label="Service information" class="govuk-service-navigation"
+<section aria-label="Service information" class="govuk-service-navigation greybg"
   data-module="govuk-service-navigation">
   <div class="govuk-width-container">
     <div class="govuk-service-navigation__container govuk-width-container">
@@ -139,7 +152,32 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
     <p class="govuk-body-s"><strong>Sector: </strong><a class="filter" href="search">&#10005; Energy</a></p>
 
-    <iframe height="600px" width="100%" title="ONS Census Maps" frameborder="1" src="https://www.ons.gov.uk/census/maps/choropleth/work/industry-current/industry-current-88a/01-crop-and-animal-production-hunting-and-related-service-activities?embed=true&embedInteractive=true&embedAreaSearch=false&embedCategorySelection=false&embedView=geography">
+    <div class="listbox">
+      <h2 class="govuk-heading-m">2 projects in this location</h2>
+      <table class="govuk-table" style="margin-bottom: 0px;">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Project name</th>
+            <th scope="col" class="govuk-table__header">Applicant</th>
+            <th scope="col" class="govuk-table__header">Stage</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a>Longfield Solar Farm</a></th>
+            <td class="govuk-table__cell">Highways England</td>
+            <td class="govuk-table__cell">Decided</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a>Shortfield Solar Farm</a></th>
+            <td class="govuk-table__cell">Highways England</td>
+            <td class="govuk-table__cell">Withdrawn</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <iframe height="845px" width="100%" title="ONS Census Maps" frameborder="1" src="https://www.ons.gov.uk/census/maps/choropleth/work/industry-current/industry-current-88a/01-crop-and-animal-production-hunting-and-related-service-activities?embed=true&embedInteractive=true&embedAreaSearch=false&embedCategorySelection=false&embedView=geography">
     
   </div>
 </div>

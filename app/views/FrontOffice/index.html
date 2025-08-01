@@ -51,6 +51,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
     .masthead {
       background-color: #00847f;
       padding-top: 30px;
+      box-shadow: #00847f 600px 0px, #00847f -600px 0px;
     }
 
     .masthead p, .masthead h1, .masthead a:link, .masthead a:visited {
@@ -67,6 +68,10 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
       padding-top: 0px;
     }
 
+    .greybg {
+      box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
+    }
+
   </style>
 
 <div class="govuk-phase-banner">
@@ -80,7 +85,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
   </p>
 </div>
 
-  <section aria-label="Service information" class="govuk-service-navigation"
+  <section aria-label="Service information" class="govuk-service-navigation greybg"
   data-module="govuk-service-navigation">
   <div class="govuk-width-container">
     <div class="govuk-service-navigation__container govuk-width-container">
@@ -107,7 +112,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
   </div>
 </section>
 
-<div class="govuk-width-container masthead fullwidth">
+<div class="govuk-width-container masthead">
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -118,7 +123,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
         <p class="govuk-body">
           This site is managed by the Planning Inspectorate, the government agency responsible for examining applications of this size and scale in England and Wales.
         </p>
-        <p class="govuk-body govuk-body--font-white">This is a new service. If you are visiting for information on a Welsh project, visit our.
+        <p class="govuk-body govuk-body--font-white">This is a new service. If you are visiting for information on a Welsh project, visit our
           <a class="govuk-link" href="#">
             old website</a>.
         </p>
@@ -127,7 +132,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
   </main>
 </div>
 
-<section class="page-section full-width-section full-width-section--bg-lightgrey govuk-!-margin-bottom-6 govuk-!-padding-top-6">
+<section class="page-section full-width-section full-width-section--bg-lightgrey govuk-!-margin-bottom-6 govuk-!-padding-top-6 greybg" style="background-color: #f3f2f1;">
   <div class="page-section__content">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">
@@ -142,7 +147,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
         <div class="search-container">
           <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text"
               aria-describedby="event-name-hint">
-          <a class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button" href="search.html?">
+          <a class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button" href="search">
               Search
           </a>
       </div>
@@ -150,12 +155,92 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
       <div class="govuk-grid-column-one-half">
         <h2 class="govuk-heading-m ">I want to view all projects</h2>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p class="govuk-body">See a <a class="govuk-link" href="project-search">complete list of all projects</a></p>
+        <p class="govuk-body">See a <a class="govuk-link" href="search">complete list of all projects</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-!-padding-bottom-9"></div>
+</section>
+
+
+
+<section>
+  <div class="page-section__content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Information for members of the public</h2>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <a href="#" style="text-decoration: none;">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <h3 class="govuk-link">See the process</h3>
+          <p class="govuk-body-m">Here you can view the stages of an application goes through from start to finish.</p>
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <a href="#" style="text-decoration: none;">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <h3 class="govuk-link">How to have your say on a project</h3>
+          <p class="govuk-body-m">Find out everything you need to know about sharing your views on a project.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-!-padding-bottom-9"></div>
+</section>
+<section>
+  <div class="page-section__content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Information for professional users</h2>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <a href="#" style="text-decoration: none;">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <h3 class="govuk-link">View detailed information</h3>
+          <p class="govuk-body-m">Find advice pages, relevant legislation and national policy documents.</p>
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <a href="#" style="text-decoration: none;">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <h3 class="govuk-link">See the process of submitting a project</h3>
+          <p class="govuk-body-m">If you want to build a new development, this is what you need to know before you start.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-!-padding-bottom-9"></div>
+</section>
+<section>
+  <div class="page-section__content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Updates and contact information</h2>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <a href="#" style="text-decoration: none;">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <h3 class="govuk-link">I need help</h3>
+          <p class="govuk-body-m">How to get in contact with us.</p>
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <a href="#" style="text-decoration: none;">
+          <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+          <h3 class="govuk-link">See the latest news</h3>
+          <p class="govuk-body-m">See the latest NSIP news.</p>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
 </div>
 
 
