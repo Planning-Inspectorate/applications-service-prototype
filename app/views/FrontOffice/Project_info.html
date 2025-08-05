@@ -1,0 +1,304 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .layout-slots__divider{
+    color: #ffffff
+  }
+  a {
+    color: #1d70b8;
+  }
+  .grey-box {
+    display: none;
+  }
+
+  .govuk-main-wrapper {
+    padding-top: 0px;
+  }
+
+  .govuk-header, .govuk-header__container {
+    background-color: rgb(7, 71, 69);
+    border-bottom: 10px solid #00847f;
+  }
+
+  .greybg {
+    box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
+  }
+
+</style>
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a beta service - your  <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<section aria-label="Service information" class="govuk-service-navigation greybg"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container govuk-width-container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="index" aria-current="true">
+              <strong>Home</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="search">
+              <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <Strong>Detailed information</Strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div class="govuk-grid-row" style="padding-top: 48px;">
+  <div class="govuk-grid-column-full">
+
+    {% include "../_includes/project-description.html" %}
+
+  <div class="govuk-grid-column-one-third" style="padding: 0px;">
+    <h2 class="govuk-heading-m">Filter</h2>
+    <p class="govuk-link govuk-body-s">Show all sections</p>
+
+
+    <p>> Location</p>
+    <hr class="layout-slots__divider">
+    <p>> Sector</p>
+    <hr class="layout-slots__divider">
+    <p>> Stage</p>
+
+    {{ govukButton({
+      text: "Apply filters",
+      href: "searchFiltered"
+    }) }}
+    <hr class="layout-slots__divider">
+    <span>&nbsp;</span>
+    <p><strong>Related guides</strong></p>
+    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">The process for Nationally Significant Infrastructure Projects (NSIPs)</a></p>
+    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">Have your say about a national infrastructure project</a></p>
+    
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body-m">Longfield Solar Farm</p>
+    <h2 class="govuk-heading-xl" style="margin-bottom: 24px;">Project information</h2>
+    
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Latest update - 11 May 2025
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-body-m">
+          <a>The Secretary of State has made a Correction Order</a> (PDF, 50 KB) affecting the Longfield Solar Farm. <a>A Correction Notice</a> (PDF, 137 KB) was issued on 30 April 2021. The Correction was made following <a>a request from The Applicant’s solicitor DLA Piper Scotland Ltd on 19 February 2021</a> (PDF, 52 KB).
+        </p>
+        <p class="govuk-body-m"><a class="govuk-notification-banner__link" href="#">View all updates</a>.</p>
+      </div>
+    </div>
+    
+    <h2 class="govuk-heading-m">About the project</h2>
+    <p class="govuk-body">Type of application: Solar</p>
+    <p class="govuk-body">Name of applicant: Team Solarfarm</p>
+    <p class="govuk-body">The scheme is 6.5 km in length and will consist of lengthening the solar farm south of Gateshead to four solar panels to provide additional energy.</p>
+    <p class="govuk-body-s govuk-link"><a>Link to developer's website</a></p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
+    <section>
+      <h2 class="govuk-heading-m">Project stage</h2>
+      <p class="govuk-body">This project is at the <strong>post-decision</strong> stage.</p>
+      <p class="govuk-body">This application was granted on 19 January 2025.</p>
+
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary" style="margin-right: 0px;">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                Pre-application
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">This is where the applicant starts to create their application. The applicant is required to consult with people and organisations in the area. They must also create detailed documents about the impact the project could have on the environment.</p>
+          <p class="govuk-body-m">It is important to get involved at this stage to influence the application before the applicant sends it to the Planning Inspectorate.</p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/pre-application">Find out what you can do at this stage and check our detailed guides.</a>
+        </div>
+      </details>
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                Acceptance
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">This is when the applicant sends us their application documents. We check if we can accept the application for examination. We have 28 days to make this decision.</p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/review-of-the-application">How the acceptance stage works and what happens next.</a>
+        </div>
+      </details>
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                Pre-examination
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">The Examining Authority is appointed and is made up of one or more inspectors. Anyone who wants to have their say needs to register at this stage.          </p>
+          <p class="govuk-body-m">The applicant must publish that the application has been accepted by us. They include when and how parties can register to get involved. The time period for registering is set by the applicant but must be no less than 30 days.          </p>
+          <p class="govuk-body-m">The pre-examination stage usually takes about 3 months.          </p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/pre-examination">What happens during the pre-examination stage.</a>
+        </div>
+      </details>
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                Examination
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">The Examining Authority will ask questions about the proposed development. The applicant and anyone who has registered to have their say can get involved and submit comments at each deadline in the timetable. You can also attend hearings that may take place. This stage takes up to 6 months.</p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/examination-of-the-application">What happens at the examination stage?</a>
+        </div>
+      </details>
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                Recommendation
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">The Examining Authority writes its recommendation report. This must be completed and sent to the relevant Secretary of State within 3 months of the end of examination stage.</p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/recommendation">Making a recommendation.</a>
+        </div>
+      </details>
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                Decision
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">The decision stage is when the relevant Secretary of State then reviews the report and makes the final decision. They have 3 months to make a decision.</p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/decision">Who makes the final decision.</a>
+        </div>
+      </details>
+      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-details__summary-text">
+                What happens after a decision is made
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <div class="govuk-tag govuk-tag--green">Completed</div>
+              </dd>
+            </div>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body-m">Once the Secretary of State has made a decision, challenges can be made to the High Court. All procedures must be followed when making a challenge. The High Court will decide if there are grounds for a judicial review.</p>
+          <p class="govuk-body-m">This must happen within 6 weeks.</p>
+          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/decision">What you can do after the decision has been made.</a>
+        </div>
+      </details>
+    </section>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <section>
+      <h2 class="govuk-heading-m">Project location</h2>
+      <p class="govuk-body">The scheme is located on the A1 Newcastle Gateshead Western Bypass, between junctions 65 and 67.      </p>
+      <div style="background-color: rgb(195, 223, 203); width: 100%; height: 160px; margin-bottom: 16px; text-align: center; padding-top: 150px;">INSERT MAP HERE</div>
+    </section>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <section>
+      <h2 class="govuk-heading-m">Get updates</h2>
+      <p class="govuk-body">Enter your email address to receive:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>updates on project progress</li>
+        <li>information on how to have your say</li>
+        <li>notifications when key documents are published</li>
+      </ul>
+      <div class="govuk-inset-text">
+        Read the <a href="https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice">privacy notice</a> to see how we handle your information.
+      </div>
+      <div class="govuk-button">Get updates</div>
+    </section>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <section>
+      <h1 class="govuk-heading-m">Contact us</h1>
+      <h2 class="govuk-heading-s">Telephone</h2>
+      <p class="govuk-body">If you have an interested party number, have it with you when you call.</p>
+      <p class="govuk-body">Telephone: 0303 444 5000</p>
+      <p class="govuk-body">Open Monday to Friday: 9am to 4pm.<br>
+      Closed on weekends and bank holidays.</p>
+      <h2 class="govuk-heading-s">Email</h2>
+      <p><a href="a1birtleytocoalhouse@planninginspectorate.gov.uk">a1birtleytocoalhouse@planninginspectorate.gov.uk</a>.</p>
+      <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
+      <p class="govuk-body">We aim to respond within 10 working days.</p>
+      <h2 class="govuk-heading-s">Alternative formats</h2>
+      <p class="govuk-body">Call or email to ask for project documents in alternative formats such as PDF, large print, easy read, audio recording or braille.</p>
+    </section>
+  </div>
+</div>
+
+
+
+{% endblock %}
