@@ -1,0 +1,105 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<!--test-->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
+      John Doe
+    </h1>
+    <div class="govuk-tag govuk-tag--grey" style="margin-bottom: 24px;">Awaiting review</div>
+    <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
+
+    <h2 class="govuk-heading-s">Redaction suggestions</h2>
+    <p class="govuk-body">We have suggested some common redactions and hidden these for you. To make these visible again, 'Reject' each suggestion.</p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Redaction suggestion</th>
+          <th scope="col" class="govuk-table__header govuk-table__header">Type of information</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">John Doe</th>
+          <td class="govuk-table__cell govuk-table__cell">Name</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" style="color:#1d70b8;">Reject</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Unredacted representation
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          Hello, my name is <span style="background-color: yellow;">John doe</span> and I don't like this solar farm, it is too big and too close to my house.
+        </div>
+      </details>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="more-detail">
+            Redacted representation
+          </label>
+        </h2>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="2" aria-describedby="more-detail-hint">Hello, my name is &#9608;&#9608;&#9608;&#9608;&#9608;&#9608; and I don't like this solar farm, it is too big and too close to my house.</textarea>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Redact selected text
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Undo
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Undo selected
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Undo all changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="more-detail">
+          Notes
+        </label>
+      </h2>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="2" aria-describedby="more-detail-hint">John Doe</textarea>
+    </div>
+
+    <a href="RelRep_details_updatedRedacted" type="submit" class="govuk-button" data-module="govuk-button">
+      Save and return
+    </a>
+  </div>
+</div>
+
+
+
+
+
+    {% endblock %}

@@ -1,0 +1,71 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<!--test-->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
+      John Doe
+    </h1>
+    <div class="govuk-tag govuk-tag--grey" style="margin-bottom: 24px;">Awaiting review</div>
+    <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
+
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+      <div role="alert">
+        <h2 class="govuk-error-summary__title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#">Enter representation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-form-group">
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="7" aria-describedby="more-detail-hint">Hello, my name is John doe and I have some strong thoughts on this solar farm, please contact me on 0777771723</textarea>
+    </div>
+    <div class="govuk-form-group">
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="more-detail">
+          Notes
+        </label>
+      </h2>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="2" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        Editing a representation will remove any current redactions
+      </strong>
+    </div>
+
+    <a href="RelRep_details_updated" type="submit" class="govuk-button" data-module="govuk-button">
+      Save and return
+    </a>
+  </div>
+</div>
+
+
+
+
+
+    {% endblock %}
