@@ -139,46 +139,42 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </button>
     </div>
 
-    <dl class="govuk-summary-list govuk-summary-list--no-border">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key govuk-body-l">
-          Filtered results
-        </dt>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="searchFiltered">View as a list<span class="govuk-visually-hidden"></span></a>
-        </dd>
-      </div>
-    </dl>
+    <p><a class="govuk-link govuk-body-m" href="searchFiltered">Switch to list view</a></p>
+
+    <h3 class="govuk-heading-m">Filtered results</h3>
 
     <p class="govuk-body-s"><strong>Sector: </strong><a class="filter" href="search">&#10005; Energy</a></p>
 
-    <div class="listbox">
-      <h2 class="govuk-heading-m">2 projects in this location</h2>
-      <table class="govuk-table" style="margin-bottom: 0px;">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Project name</th>
-            <th scope="col" class="govuk-table__header">Applicant</th>
-            <th scope="col" class="govuk-table__header">Stage</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a>Longfield Solar Farm</a></th>
-            <td class="govuk-table__cell">Highways England</td>
-            <td class="govuk-table__cell">Decided</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a>Shortfield Solar Farm</a></th>
-            <td class="govuk-table__cell">Highways England</td>
-            <td class="govuk-table__cell">Withdrawn</td>
-          </tr>
-        </tbody>
-      </table>
+    <div style="height: 400px; width: 100%; background-color: rgb(188, 214, 188); text-align: center; padding-top: 400px;">INSERT MAP HERE</div>
+    <h3 class="govuk-heading-m">2 projects selected</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Project name</th>
+          <th scope="col" class="govuk-table__header">Applicant</th>
+          <th scope="col" class="govuk-table__header">Stage</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="Project_info">Longfield Solar Farm</a></th>
+          <td class="govuk-table__cell">Highways England</td>
+          <td class="govuk-table__cell">Decided</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="Project_info">Shortfield Solar Farm</a></th>
+          <td class="govuk-table__cell">Highways England</td>
+          <td class="govuk-table__cell">Withdrawn</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        This product is still in development, so the data may be inaccurate. (Copy needs checking with legal team?)
+      </strong>
     </div>
-
-    <iframe height="845px" width="100%" title="ONS Census Maps" frameborder="1" src="https://www.ons.gov.uk/census/maps/choropleth/work/industry-current/industry-current-88a/01-crop-and-animal-production-hunting-and-related-service-activities?embed=true&embedInteractive=true&embedAreaSearch=false&embedCategorySelection=false&embedView=geography">
-    
   </div>
 </div>
 

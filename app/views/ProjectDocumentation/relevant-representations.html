@@ -8,16 +8,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block beforeContent %}
 
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
-{{ govukPhaseBanner({
-tag: {
-text: "Prototype",
-classes: "govuk-tag--pink"
-},
-html: 'This is not a full service. It is not production code and you might experience problems.'
-}) }}
-
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {{ govukBreadcrumbs({
@@ -185,116 +175,312 @@ text: "Relevant representations"
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">John Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Valid
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000025</td>
+            <td class="govuk-table__cell">Jim Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000026</td>
+            <td class="govuk-table__cell">Jack Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                Withdrawn
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000027</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">
+                Invalid
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000028</td>
+            <td class="govuk-table__cell">James Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                Awaiting review
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">John Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Valid
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000025</td>
+            <td class="govuk-table__cell">Jim Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000026</td>
+            <td class="govuk-table__cell">Jack Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                Withdrawn
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000027</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">
+                Invalid
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000028</td>
+            <td class="govuk-table__cell">James Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                Awaiting review
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">John Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Valid
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000025</td>
+            <td class="govuk-table__cell">Jim Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000026</td>
+            <td class="govuk-table__cell">Jack Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                Withdrawn
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000027</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">
+                Invalid
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000028</td>
+            <td class="govuk-table__cell">James Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                Awaiting review
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">John Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Valid
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000025</td>
+            <td class="govuk-table__cell">Jim Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000026</td>
+            <td class="govuk-table__cell">Jack Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                Withdrawn
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000027</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">
+                Invalid
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">B100000028</td>
+            <td class="govuk-table__cell">James Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                Awaiting review
+              </strong></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">John Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Valid
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">B100000025</td>
+            <td class="govuk-table__cell">Jim Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag">
-                Valid
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                Published
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
+            <td class="govuk-table__cell">B100000026</td>
+            <td class="govuk-table__cell">Jack Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
             <td class="govuk-table__cell">Redacted</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag">
-                Valid
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                Withdrawn
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
-            <td class="govuk-table__cell">Redacted</td>
+            <td class="govuk-table__cell">B100000027</td>
+            <td class="govuk-table__cell">Jane Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
             <td class="govuk-table__cell"><strong class="govuk-tag">
-                Valid
+                Invalid
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
           </tr>
 
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
-            <td class="govuk-table__cell">Redacted</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag">
-                Valid
+            <td class="govuk-table__cell">B100000028</td>
+            <td class="govuk-table__cell">James Doe</td>
+            <td class="govuk-table__cell">12 Aug 2025</td>
+            <td class="govuk-table__cell">Unredacted</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                Awaiting review
               </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
-          </tr>
-
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">B100000024</td>
-            <td class="govuk-table__cell">John Smith</td>
-            <td class="govuk-table__cell">13 Jan 2025</td>
-            <td class="govuk-table__cell">Redacted</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag">
-                Valid
-              </strong></td>
-            <td class="govuk-table__cell"><a href="#">Review</a></td>
+            <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
           </tr>
 
         </tbody>
       </table>
+
+      <nav class="govuk-pagination" aria-label="Pagination">
+        
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
     </div>
 
 

@@ -1,0 +1,204 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<!--test-->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
+      John Doe
+    </h1>
+    <div class="govuk-tag govuk-tag--grey" style="margin-bottom: 24px;">Awaiting review</div>
+    <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
+    <h2 class="govuk-heading-m" style="padding-top: 24px;">Contact details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Organisation<br><br>Full name<br><br>Job title<br><br>Email address<br><br>Telephone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <br><br>John Doe<br><br>Doctor<br><br><br><br>0777771723
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          72 Guild Street<br>London<br>SE23 6FH
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Preferred contact method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Email
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">Local authorities</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Under 18
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">Unknown</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Representation on behalf of
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">An individual</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m" style="padding-top: 24px;">Representation</h2>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          B100000045
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#"></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date received
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12 August 2025
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#"></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Original representation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Hello, my name is John doe and I have some strong thoughts on this solar farm, please contact me on 0777771723
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#"></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Edited representation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Hello, my name is John doe and I don't like this solar farm, it is too big and too close to my house
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#"></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Edit notes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Added additional detail on rep's reason against solar farm after phone conversation
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#"></a>
+        </dd>
+      </div>
+    </dl>
+    <div class="govuk-button-group">
+      <a href="edit_relRep" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Edit
+      </a>
+      <a href="#" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Redact
+      </a>
+    </div>
+
+    <h2 class="govuk-heading-m" style="padding-top: 24px;">Workflow</h2>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Redaction
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Unredacted
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change</a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      View task log
+    </button>
+    <h2 class="govuk-heading-m">Attachments</h2>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Upload files
+    </button>
+  </div>
+</div>
+
+
+
+
+
+    {% endblock %}
