@@ -81,12 +81,44 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <h2 class="govuk-heading-m">Filter</h2>
     <p class="govuk-link govuk-body-s">Show all sections</p>
 
-
-    <p>> Location</p>
-    <hr class="layout-slots__divider">
-    <p>> Sector</p>
-    <hr class="layout-slots__divider">
-    <p>> Stage</p>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <details class="govuk-details" style="margin-bottom: 0px; padding: 8px;">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text" style="text-decoration: none;">
+              Location
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div>
+        </details>
+      </div>
+      <div class="govuk-summary-list__row">
+        <details class="govuk-details" style="margin-bottom: 0px; padding: 8px;">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text" style="text-decoration: none;">
+              Sector
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div>
+        </details>
+      </div>
+      <div class="govuk-summary-list__row">
+        <details class="govuk-details" style="margin-bottom: 0px; padding: 8px;">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text" style="text-decoration: none;">
+              Stage
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div>
+        </details>
+      </div>
+    </dl>
 
     {{ govukButton({
       text: "Apply filters",
