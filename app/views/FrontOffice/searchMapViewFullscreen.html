@@ -17,7 +17,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     margin: 10px;
     padding: 16px;
     border-radius: 4px;
-    left: 600px;
+    left: 48%;
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
@@ -82,7 +82,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
   }
 
   .greybg {
-    box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
+    box-shadow: #f3f2f1 800px 0px, #f3f2f1 -800px 0px;
   }
 
   .listbox {
@@ -144,6 +144,17 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-full">
 
     {% include "../_includes/project-description.html" %}
+
+    <h2 class="govuk-heading-xl" style="margin-bottom: 24px;">Projects map</h2>
+    <p class="govuk-body-m">This is a map of all project boundaries. To find a specific project select a project boundary.</p>
+    
+    <div class="govuk-form-group" style="margin-bottom: 0px;">
+      <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
+        <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+          Search
+        </button>
+    </div>
+
     <p><a class="govuk-link govuk-body-m" href="search">Switch to list view</a></p>
     <h2 class="govuk-heading-m">Filtered results</h2>
     <p class="govuk-body-s"><strong>Sector: </strong><a class="filter" href="search">&#10005; Energy</a></p>
@@ -169,7 +180,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-visually-hidden">Warning</span>
-        Project boundaries shown are for illustrative purposes only. To the view exact boundaries refer to latest relevant plans and drawings.
+        Project boundaries shown are for illustrative purposes only. To view the exact boundaries refer to latest relevant plans and drawings.
       </strong>
     </div>
   </div>
