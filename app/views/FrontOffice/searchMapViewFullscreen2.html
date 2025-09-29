@@ -182,18 +182,23 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <h2 class="govuk-heading-xl" style="margin-bottom: 24px;">Projects map</h2>
     <p class="govuk-body-m">This is a map of all project boundaries. To find a specific project select a project boundary.</p>
     
+    <div class="govuk-button-group">
+      <a class="govuk-link" href="search">Switch to list view</a>
+    </div>
+
     <div class="govuk-form-group" style="margin-bottom: 0px;">
       <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
         <button type="submit" class="govuk-button govuk-button" data-module="govuk-button" style="margin-bottom: 16px;">
           Search
         </button>
     </div>
-    <div class="govuk-grid-column-three-quarters" style="padding: 0px;">
+    <div class="govuk-grid-column-two-thirds" style="padding: 0px;">
       <details class="govuk-details">
-        <summary class="govuk-details__summary">
+        <summary class="govuk-details__summary" style="width: 91%;">
           <span class="govuk-details__summary-text" style="text-decoration: none; font-size: 1.1875rem;">
             Filter and sort
           </span>
+          <span style="position: absolute; right: 0px;" class="govuk-body-s">216 results</span>
         </summary>
         <div class="govuk-details__text" style="background-color: #f3f2f1; border: none; padding-right: 16px; margin-top: 16px;">
           <details class="govuk-details filters">
@@ -379,19 +384,13 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
           </details>
-          <button class="govuk-button" style="width: 100%;">Apply filters</button>   
+          <button class="govuk-button" style="width: 100%;">Apply</button>   
         </div>
       </details>
     </div>
-    
+  </div>
 
-    <div class="govuk-button-group">
-      <a type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" href="searchMapView">
-        Show filters
-      </a>
-      <a class="govuk-link" href="search">Switch to list view</a>
-    </div>
-    
+  <div class="govuk-grid-column-full">
     <div id="tooltip">
       <div id="tooltiptext">
         <h3 class="govuk-heading-m">2 projects selected</h3>
@@ -409,7 +408,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </table>
       </div>
     </div>
-
+  </div>
+  <div class="govuk-grid-column-two-thirds">
     <div class="govuk-warning-text" style="padding-top: 32px;">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
