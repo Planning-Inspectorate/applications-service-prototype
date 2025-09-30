@@ -30,6 +30,42 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
   }
 
+  .govuk-details__summary::before {
+    clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
+    background-color: black;
+    color: black;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    color: black;
+  }
+
+  .filters {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+  }
+
+  .filters .govuk-details__text {
+    border: none;
+    padding-left: 0px;
+    margin-left: 15px;
+  }
+
+  .filters .govuk-details__summary {
+    margin-left: 15px;
+  }
+
+  .filters .govuk-details__summary-text {
+    text-decoration: none;
+  }
+
+  .govuk-details[open] > .govuk-details__summary::before {
+    clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+    width: 3px;
+    height: 3px;
+  }
+
 </style>
 
 
@@ -77,47 +113,197 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
     {% include "../_includes/project-description.html" %}
 
-  <div class="govuk-grid-column-one-third" style="padding: 0px;">
+  <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
     <h2 class="govuk-heading-m">Filter</h2>
     <p class="govuk-link govuk-body-s">Show all sections</p>
 
     <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <details class="govuk-details" style="margin-bottom: 0px; padding: 8px;">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text" style="text-decoration: none;">
-              Location
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Location
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North West (22)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    North East (19)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Yorkshire and the Humber (50)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    West Midlands (10)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    East Midlands (40)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Eastern (51)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    South West (14)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    London (7)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Wales (22)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-        </details>
-      </div>
-      <div class="govuk-summary-list__row">
-        <details class="govuk-details" style="margin-bottom: 0px; padding: 8px;">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text" style="text-decoration: none;">
-              Sector
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Sector
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Transport (72)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Energy (186)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Business and Commercial (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Water (7)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Waste (3)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Waste Water (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-        </details>
-      </div>
-      <div class="govuk-summary-list__row">
-        <details class="govuk-details" style="margin-bottom: 0px; padding: 8px;">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text" style="text-decoration: none;">
-              Stage
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Stage
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Pre-application (65)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Acceptance (5)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Pre-examination (8)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Examination (6)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Recommendation (4)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Decision (167)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Post-decision (167)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Withdrawn (6)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-        </details>
-      </div>
+        </div>
+      </details>
     </dl>
 
     {{ govukButton({

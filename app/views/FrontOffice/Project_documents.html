@@ -64,6 +64,49 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         color: #0b0c0c;
       }
 
+      .govuk-details__summary::before {
+    clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
+    background-color: black;
+    color: black;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    color: black;
+  }
+
+  .filters {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+  }
+
+  .document-item {
+    padding-top: 12px;
+    padding-bottom: 0px;
+  }
+
+  .filters .govuk-details__summary {
+    margin-left: 15px;
+  }
+
+  .filters .govuk-details__summary-text {
+    text-decoration: none;
+  }
+
+  .filters .govuk-details__text {
+    border: none;
+    padding-left: 0px;
+    margin-left: 15px;
+
+  }
+
+
+  .govuk-details[open] > .govuk-details__summary::before {
+    clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+    width: 3px;
+    height: 3px;
+  }
+
 </style>
 
 
@@ -111,7 +154,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
     {% include "../_includes/project-description.html" %}
 
-  <div class="govuk-grid-column-one-third" style="padding: 0px;">
+  <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
 
     <nav class="side-nav">
       <ul class="govuk-list">
@@ -123,7 +166,284 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         <li><a href="Project_s51">Section 51 advice</a></li>
       </ul>
     </nav>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Filter</h2>
+    <p class="govuk-link govuk-body-s">Show all sections</p>
 
+    <dl class="govuk-summary-list">
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Pre-application (4)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Developer's application (161)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Acceptance (8)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Pre-examination (33)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Examination (406)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Decision (61)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Post-decision (3)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Doc filter type (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Date published
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <legend class="govuk-fieldset__legend">
+                From
+              </legend>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <legend class="govuk-fieldset__legend">
+                To
+              </legend>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+    </dl>
+    <button class="govuk-button">Apply filters</button>
     <hr class="layout-slots__divider">
     <span>&nbsp;</span>
     <p><strong>Related guides</strong></p>
@@ -135,200 +455,128 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-xl">
       <span class="govuk-caption-l">Longfield Solar Farm</span>
-      Documents</h2>
+      Documents
+    </h2>
     
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Latest update - 11 May 2025
-        </h2>
+    
+    
+    <h2 class="govuk-heading-m">Search documents</h2>
+    <p class="govuk-body">Search by author, description or document type.</p>
+    <div class="govuk-form-group" style="margin-bottom: 0px;">
+      <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
+        <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+          Search
+        </button>
+    </div>
+    <p class="govuk-body">Showing <strong>1</strong> to <strong>25</strong> of <strong>676</strong> documents, newest first.</p>    
+    <p class="govuk-body"><strong style="padding-right: 16px;">Results per page</strong> 25&#10240;&VerticalLine;&#10240;<a>50</a>&#10240;&VerticalLine;&#10240;<a>100</a></p>
+
+    
+
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="document-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <p class="govuk-body"><a class="govuk-link"><strong>Joint response to Secretary of State Consultation &#10240; (PDF, 149KB)</strong></a>
+            <br><span class="govuk-body-s">From Highways England</span></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
+        </div>
       </div>
-      <div class="govuk-notification-banner__content">
-        <p class="govuk-body-m">
-          <a>The Secretary of State has made a Correction Order</a> (PDF, 50 KB) affecting the Longfield Solar Farm. <a>A Correction Notice</a> (PDF, 137 KB) was issued on 30 April 2021. The Correction was made following <a>a request from The Applicant’s solicitor DLA Piper Scotland Ltd on 19 February 2021</a> (PDF, 52 KB).
-        </p>
-        <p class="govuk-body-m"><a class="govuk-notification-banner__link" href="#">View all updates</a>.</p>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+    <div class="document-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <p class="govuk-body"><a class="govuk-link"><strong>Joint response to Secretary of State Consultation &#10240; (PDF, 149KB)</strong></a>
+            <br><span class="govuk-body-s">From Highways England</span></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+    <div class="document-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <p class="govuk-body"><a class="govuk-link"><strong>Joint response to Secretary of State Consultation &#10240; (PDF, 149KB)</strong></a>
+            <br><span class="govuk-body-s">From Highways England</span></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+    <div class="document-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <p class="govuk-body"><a class="govuk-link"><strong>Joint response to Secretary of State Consultation &#10240; (PDF, 149KB)</strong></a>
+            <br><span class="govuk-body-s">From Highways England</span></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
+        </div>
       </div>
     </div>
-    
-    <h2 class="govuk-heading-m">About the project</h2>
-    <p class="govuk-body">Type of application: Solar</p>
-    <p class="govuk-body">Name of applicant: Team Solarfarm</p>
-    <p class="govuk-body">The scheme is 6.5 km in length and will consist of lengthening the solar farm south of Gateshead to four solar panels to provide additional energy.</p>
-    <p class="govuk-body-s govuk-link"><a>Link to developer's website</a></p>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-    
-    <section>
-      <h2 class="govuk-heading-m">Project stage</h2>
-      <p class="govuk-body">This project is at the <strong>post-decision</strong> stage.</p>
-      <p class="govuk-body">This application was granted on 19 January 2025.</p>
 
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary" style="margin-right: 0px;">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                Pre-application
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">This is where the applicant starts to create their application. The applicant is required to consult with people and organisations in the area. They must also create detailed documents about the impact the project could have on the environment.</p>
-          <p class="govuk-body-m">It is important to get involved at this stage to influence the application before the applicant sends it to the Planning Inspectorate.</p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/pre-application">Find out what you can do at this stage and check our detailed guides.</a>
-        </div>
-      </details>
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                Acceptance
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">This is when the applicant sends us their application documents. We check if we can accept the application for examination. We have 28 days to make this decision.</p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/review-of-the-application">How the acceptance stage works and what happens next.</a>
-        </div>
-      </details>
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                Pre-examination
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">The Examining Authority is appointed and is made up of one or more inspectors. Anyone who wants to have their say needs to register at this stage.          </p>
-          <p class="govuk-body-m">The applicant must publish that the application has been accepted by us. They include when and how parties can register to get involved. The time period for registering is set by the applicant but must be no less than 30 days.          </p>
-          <p class="govuk-body-m">The pre-examination stage usually takes about 3 months.          </p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/pre-examination">What happens during the pre-examination stage.</a>
-        </div>
-      </details>
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                Examination
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">The Examining Authority will ask questions about the proposed development. The applicant and anyone who has registered to have their say can get involved and submit comments at each deadline in the timetable. You can also attend hearings that may take place. This stage takes up to 6 months.</p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/examination-of-the-application">What happens at the examination stage?</a>
-        </div>
-      </details>
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                Recommendation
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">The Examining Authority writes its recommendation report. This must be completed and sent to the relevant Secretary of State within 3 months of the end of examination stage.</p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/recommendation">Making a recommendation.</a>
-        </div>
-      </details>
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                Decision
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">The decision stage is when the relevant Secretary of State then reviews the report and makes the final decision. They have 3 months to make a decision.</p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/decision">Who makes the final decision.</a>
-        </div>
-      </details>
-      <details class="govuk-details" style="border-bottom: 1px solid #b1b4b6; margin-bottom: 0px;">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-details__summary-text">
-                What happens after a decision is made
-              </dt>
-              <dd class="govuk-summary-list__actions">
-                <div class="govuk-tag govuk-tag--green">Completed</div>
-              </dd>
-            </div>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body-m">Once the Secretary of State has made a decision, challenges can be made to the High Court. All procedures must be followed when making a challenge. The High Court will decide if there are grounds for a judicial review.</p>
-          <p class="govuk-body-m">This must happen within 6 weeks.</p>
-          <a class="govuk-link" href="https://national-infrastructure-consenting.planninginspectorate.gov.uk/decision-making-process-guide/decision">What you can do after the decision has been made.</a>
-        </div>
-      </details>
-    </section>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-    <section>
-      <h2 class="govuk-heading-m">Project location</h2>
-      <p class="govuk-body">The scheme is located on the A1 Newcastle Gateshead Western Bypass, between junctions 65 and 67.      </p>
-      <div style="background-color: rgb(195, 223, 203); width: 100%; height: 160px; margin-bottom: 16px; text-align: center; padding-top: 150px;">INSERT MAP HERE</div>
-    </section>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-    <section>
-      <h2 class="govuk-heading-m">Get updates</h2>
-      <p class="govuk-body">Enter your email address to receive:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>updates on project progress</li>
-        <li>information on how to have your say</li>
-        <li>notifications when key documents are published</li>
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
       </ul>
-      <div class="govuk-inset-text">
-        Read the <a href="https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice">privacy notice</a> to see how we handle your information.
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
       </div>
-      <div class="govuk-button">Get updates</div>
-    </section>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-    <section>
-      <h1 class="govuk-heading-m">Contact us</h1>
-      <h2 class="govuk-heading-s">Telephone</h2>
-      <p class="govuk-body">If you have an interested party number, have it with you when you call.</p>
-      <p class="govuk-body">Telephone: 0303 444 5000</p>
-      <p class="govuk-body">Open Monday to Friday: 9am to 4pm.<br>
-      Closed on weekends and bank holidays.</p>
-      <h2 class="govuk-heading-s">Email</h2>
-      <p><a href="a1birtleytocoalhouse@planninginspectorate.gov.uk">a1birtleytocoalhouse@planninginspectorate.gov.uk</a>.</p>
-      <p class="govuk-body">When writing an email, quote the name of the project in the subject line.</p>
-      <p class="govuk-body">We aim to respond within 10 working days.</p>
-      <h2 class="govuk-heading-s">Alternative formats</h2>
-      <p class="govuk-body">Call or email to ask for project documents in alternative formats such as PDF, large print, easy read, audio recording or braille.</p>
-    </section>
+    </nav>
   </div>
 </div>
 
