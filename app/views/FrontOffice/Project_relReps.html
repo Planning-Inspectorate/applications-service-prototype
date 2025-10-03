@@ -1,0 +1,300 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .layout-slots__divider{
+    color: #ffffff
+  }
+  a {
+    color: #1d70b8;
+  }
+  .grey-box {
+    display: none;
+  }
+
+  .govuk-main-wrapper {
+    padding-top: 0px;
+  }
+
+  .govuk-header, .govuk-header__container {
+    background-color: rgb(7, 71, 69);
+    border-bottom: 10px solid #00847f;
+  }
+
+  .greybg {
+    box-shadow: #f3f2f1 800px 0px, #f3f2f1 -800px 0px;
+  }
+
+  .side-nav {
+        padding-right: 20px;
+      }
+
+      .side-nav ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .side-nav li {
+        margin-bottom: 5px;
+      }
+
+      .side-nav a {
+        display: block;
+        padding: 12px 8px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #1d70b8;
+        border-left: 5px solid transparent;
+      }
+
+      .side-nav a:hover {
+        background-color: #f3f2f1;
+      }
+
+      .side-nav a.selected {
+        background-color: #f3f2f1;
+        font-weight: bold;
+        border-left: 6px solid #00847f;
+        color: #0b0c0c;
+      }
+
+      .govuk-details__summary::before {
+    clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
+    background-color: black;
+    color: black;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    color: black;
+  }
+
+  .filters {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+  }
+
+  .document-item {
+    padding-top: 12px;
+    padding-bottom: 0px;
+  }
+
+  .filters .govuk-details__summary {
+    margin-left: 15px;
+  }
+
+  .filters .govuk-details__summary-text {
+    text-decoration: none;
+  }
+
+  .filters .govuk-details__text {
+    border: none;
+    padding-left: 0px;
+    margin-left: 15px;
+
+  }
+
+
+  .govuk-details[open] > .govuk-details__summary::before {
+    clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+    width: 3px;
+    height: 3px;
+  }
+
+</style>
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a beta service - your  <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<section aria-label="Service information" class="govuk-service-navigation greybg"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container govuk-width-container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="index" aria-current="true">
+              <strong>Home</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="search">
+              <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <Strong>Detailed information</Strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div class="govuk-grid-row" style="padding-top: 48px;">
+  <div class="govuk-grid-column-full">
+
+    {% include "../_includes/project-description.html" %}
+
+  <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
+
+    <nav class="side-nav">
+      <ul class="govuk-list">
+        <li><a href="Project_info">Project information</a></li>
+        <li><a href="Project_documents">Documents</a></li>
+        <li><a href="Project_relReps" class="selected">Relevant representations (registration comments)</a></li>
+        <li><a href="Project_examTimetable">Examination timetable</a></li>
+        <li><a href="Project_haveYourSay">Have your say</a></li>
+        <li><a href="Project_updates">Get updates</a></li>
+        <li><a href="Project_s51">Section 51 advice</a></li>
+      </ul>
+    </nav>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Filter</h2>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Local authorities (2)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Members of the public/businesses (12)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Non-statutory organisations (5)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Statutory consultees (8)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                Parish councils (1)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button">Apply filters</button>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <span>&nbsp;</span>
+    <p><strong>Related guides</strong></p>
+    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">The process for Nationally Significant Infrastructure Projects (NSIPs)</a></p>
+    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">Have your say about a national infrastructure project</a></p>
+    
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-xl">
+      <span class="govuk-caption-l">Longfield Solar Farm</span>
+      Relevant representations (registration comments)
+    </h2>
+    
+    <p class="govuk-body">Search by the person or group making the submission, the reference number or the content of the submission.</p>
+    <div class="govuk-form-group" style="margin-bottom: 0px;">
+      <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
+        <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+          Search
+        </button>
+    </div>
+    <p class="govuk-body">Showing <strong>1</strong> to <strong>25</strong> of <strong>676</strong> documents, newest first.</p>    
+    <p class="govuk-body"><strong style="padding-right: 16px;">Results per page</strong> 25&#10240;&VerticalLine;&#10240;<a>50</a>&#10240;&VerticalLine;&#10240;<a>100</a></p>
+
+    
+
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="document-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <p class="govuk-body"><a class="govuk-link"><strong>Representation name</strong></a>
+            <br><span class="govuk-body-s">Submitted by Members of the public/businesses on 20 September 2025</span></p>
+          <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development. I accept that there is a requirement and... <a>Read More</a></p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">RR-001</p>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+    <div class="document-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <p class="govuk-body"><a class="govuk-link"><strong>Current representation style</strong></a></p>
+          <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development. I accept that there is a requirement and... <a>Read More</a></p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p class="govuk-body govuk-body-s"><Strong>Submitted by:</Strong> Members of the public/businesses</p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p class="govuk-body govuk-body-s govuk-!-text-align-right"><strong>Date submitted:</strong> 24 January 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+{% endblock %}
