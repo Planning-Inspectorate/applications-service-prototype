@@ -33,27 +33,15 @@ html: 'This is not a full service. It is not production code and you might exper
     <h1 class="govuk-heading-xl"> Document_1.pdf</h1>
   </div>
   <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Case reference</th>
-          <td class="govuk-table__cell">EN0110007</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Document reference number</th>
-          <td class="govuk-table__cell">EN0110007-000011</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">File type and size</th>
-          <td class="govuk-table__cell">PDF, 17 KB</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Version</th>
-          <td class="govuk-table__cell">2</td>
-        </tr>
-      </tbody>
-    </table>
+    <p class="govuk-body"><strong>Description: </strong>The first document, ever</p>
+    <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
+    <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
+    <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
+    <p class="govuk-body"><strong>Version: </strong>2</p>
 
+    <div class="govuk-inset-text">
+      This document has been superseded by <a style="color: rgb(36, 77, 190);">EN0110007-00005</a>
+    </div>
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
