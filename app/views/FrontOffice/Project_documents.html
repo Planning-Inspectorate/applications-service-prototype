@@ -52,7 +52,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
       .side-nav a {
         display: block;
-        padding: 12px 8px;
+        padding: 10px 8px;
         font-size: 16px;
         text-decoration: none;
         color: #1d70b8;
@@ -174,67 +174,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       </ul>
     </nav>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <h2 class="govuk-heading-m">Filter</h2>
-    <p class="govuk-link govuk-body-s">Show all sections</p>
-
+    <h2 class="govuk-heading-m">Examination library</h2>
     <dl class="govuk-summary-list">
-      <details class="govuk-details filters">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text filtersText">
-            Sort by
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Name (ascending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Name (descending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Author (ascending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Author (descending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
-                  <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    Updated (newest)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
-                  <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    Updated (oldest)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Examination library category
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-        </div>
-      </details>
       <details class="govuk-details filters">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text filtersText">
@@ -273,42 +214,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 1 (EV1)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 2 (EV2)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 3 (EV3)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 4 (EV4)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 5 (EV5)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 6 (EV6)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
                     Other documents (OD)
                   </label>
                 </div>
@@ -320,7 +225,53 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       <details class="govuk-details filters">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text filtersText">
-            Deadline (31)
+            Events and hearings (8)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Preliminary Meeting (EV1)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Open Floor Hearing (EV2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Unaccompanied Site Visits (EV3)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Compulsory Acquisition Hearing (EV4)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Issue Specific Hearing (EV5)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Deadlines (31)
           </span>
         </summary>
         <div class="govuk-details__text">
@@ -399,6 +350,68 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
       </details>
+    </dl>
+    <h2 class="govuk-heading-m">Filter</h2>
+    <p class="govuk-link govuk-body-s">Show all sections</p>
+
+    <dl class="govuk-summary-list">
+      <!--<details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Sort by
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    Name (ascending)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    Name (descending)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    Author (ascending)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    Author (descending)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    Updated (newest)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">
+                    Updated (oldest)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changedName">
+                    Examination library category
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>-->
       <details class="govuk-details filters">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text filtersText">
@@ -686,10 +699,13 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       Documents
     </h2>
     
-    
+    <div class="govuk-inset-text" style="margin-top: 0px;">
+      View <a>examination library</a> containing document reference numbers.
+    </div>
     
     <h2 class="govuk-heading-m">Search documents</h2>
     <p class="govuk-body">Search by author, description, document type or examination library reference.</p>
+
     <div class="govuk-form-group" style="margin-bottom: 0px;">
       <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
         <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
@@ -707,11 +723,11 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="document-item">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>New proposed document format &#10240; (PDF, 149KB)</strong></a>
-            <br><span class="govuk-body-s">From Highways England on 13 December 2025</span></p>
+          <p class="govuk-body"><a class="govuk-link"><strong>Current document format &#10240; (PDF, 149KB)</strong></a>
+            <br><span class="govuk-body-s">From Highways England</span></p>
         </div>
         <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">REF-001</p>
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
         </div>
         <div class="govuk-grid-column-one-third">
           <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
@@ -725,11 +741,11 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="document-item">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>New proposed document format &#10240; (PDF, 149KB)</strong></a>
-            <br><span class="govuk-body-s">From Highways England on 13 September 2025</span></p>
+          <p class="govuk-body"><a class="govuk-link"><strong>Current document format &#10240; (PDF, 149KB)</strong></a>
+            <br><span class="govuk-body-s">From Highways England</span></p>
         </div>
         <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">REF-001</p>
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
         </div>
         <div class="govuk-grid-column-one-third">
           <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
@@ -740,42 +756,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-inset-text" style="margin-top: 0px;">
         This document has been superseded, <a href="Project_documentHistory">view all updates</a>
-      </div>
-      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-    </div>
-    <div class="document-item">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>Current document format &#10240; (PDF, 149KB)</strong></a>
-            <br><span class="govuk-body-s">From Highways England</span></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
-        </div>
-      </div>
-      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-    </div>
-    <div class="document-item">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>Current document format &#10240; (PDF, 149KB)</strong></a>
-            <br><span class="govuk-body-s">From Highways England</span></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
-        </div>
       </div>
       <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
     </div>
