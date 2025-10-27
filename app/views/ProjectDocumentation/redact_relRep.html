@@ -24,7 +24,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
 
     <h2 class="govuk-heading-s">Redaction suggestions</h2>
-    <p class="govuk-body">We have suggested some common redactions and hidden these for you. To make these visible again, 'Reject' each suggestion.</p>
+    <p class="govuk-body">An assistive tool suggested some common redactions to remove personally identifiable information (PII). These may not be accurate or appropriate. You should reject unnecessary suggestions and add in any redactions the tool may have missed.</p>
 
     <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -48,7 +48,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            Unredacted representation
+            Original representation
           </span>
         </summary>
         <div class="govuk-details__text">
@@ -63,6 +63,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
             Redacted representation
           </label>
         </h2>
+        
         <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="2" aria-describedby="more-detail-hint">Hello, my name is &#9608;&#9608;&#9608;&#9608;&#9608;&#9608; and I don't like this solar farm, it is too big and too close to my house.</textarea>
         <div class="govuk-button-group">
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -92,6 +93,15 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="2" aria-describedby="more-detail-hint">John Doe</textarea>
     </div>
 
+    <!--
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        You must check and confirm these suggested redactions. They were produced by an assistive tool and may not be accurate.
+      </strong>
+    </div>
+    -->
     <a href="RelRep_details_updatedRedacted" type="submit" class="govuk-button" data-module="govuk-button">
       Save and return
     </a>

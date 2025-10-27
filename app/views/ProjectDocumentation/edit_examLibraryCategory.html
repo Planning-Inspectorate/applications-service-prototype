@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="./index" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Examination Library category
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Select the Examination Library to assign an Examination Library reference number to this document
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Application documents
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Adequacy of consultation responses
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Procedural decisions and notifications from Examining Authority
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Additional submissions
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Events and hearings
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Procedural deadlines
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Deadlines
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Other documents
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+              When updating the category, any previously assigned Examination Library reference numbers will be permanently overwritten and lost for this document.
+          </strong>
+        </div>
+
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and return"
+          }) }}
+
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
