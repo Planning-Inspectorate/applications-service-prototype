@@ -174,7 +174,12 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       </ul>
     </nav>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <h2 class="govuk-heading-m">Examination library</h2>
+    
+    <h2 class="govuk-heading-m">Filter</h2>
+
+    <h2 class="govuk-heading-s">Examination library</h2>
+    <p class="govuk-link govuk-body-s">Show all sections</p>
+
     <dl class="govuk-summary-list">
       <details class="govuk-details filters">
         <summary class="govuk-details__summary">
@@ -351,7 +356,15 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </details>
     </dl>
-    <h2 class="govuk-heading-m">Filter</h2>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Author
+        </label>
+      </h1>
+      <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+    </div>
+    <h2 class="govuk-heading-s">Additional filters</h2>
     <p class="govuk-link govuk-body-s">Show all sections</p>
 
     <dl class="govuk-summary-list">
@@ -700,7 +713,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     </h2>
     
     <div class="govuk-inset-text" style="margin-top: 0px;">
-      View <a>examination library</a> containing document reference numbers.
+      View <a href="Project_documentsExamLibrary">examination library</a> containing document reference numbers.
     </div>
     
     <h2 class="govuk-heading-m">Search documents</h2>
