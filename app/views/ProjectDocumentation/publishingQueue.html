@@ -1,0 +1,143 @@
+<style>
+  .tableLink {
+    color: #1d70b8;
+  }
+</style>
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is not a full service. It is not production code and you might experience problems.'
+}) }}
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "project-management"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <span class="govuk-caption-m">Publishing queue</span>
+    <h1 class="govuk-heading-l">Select documents for publishing</h1>
+
+    <ul class="govuk-list">
+      <li><strong>Case name: </strong>Longfield Solar farm</li>
+      <li><strong>Case reference: </strong>EN0110007</li>
+    </ul>
+    
+    <p class="govuk-body">The queue contains 12 document(s). Showing 1 - 12 document(s).</p>
+    <p class="govuk-body"><strong>0 document(s) on this page are selected.</strong></p>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
+          <th scope="col" class="govuk-table__header govuk-body-s">Document information</th>
+          <th scope="col" class="govuk-table__header govuk-body-s">Properties</th>
+          <th scope="col" class="govuk-table__header govuk-body-s">Actions</th>
+          <th scope="col" class="govuk-table__header govuk-body-s">Remove</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label">
+                </label>
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell">
+            <p class="govuk-body-m"><strong>Document_1</strong></p>
+            <p class="govuk-body-s">File name: Document_1.pdf</p>
+            <p class="govuk-body-s">From: Highways England</p>
+          </td>
+          <td class="govuk-table__cell">
+            <p class="govuk-body-s">Examination Library: REP1-001</p>
+            <p class="govuk-body-s">Webfilter: Random docs</p>
+            <p class="govuk-body-s">PNG 1 MB</p>
+          </td>
+          <td class="govuk-table__cell"><a href="">View/edit properties</a></td>
+          <td class="govuk-table__cell"><a href="">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label">
+                </label>
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell">
+            <p class="govuk-body-m"><strong>Document_1</strong></p>
+            <p class="govuk-body-s">File name: Document_1.pdf</p>
+            <p class="govuk-body-s">From: Highways England</p>
+          </td>
+          <td class="govuk-table__cell">
+            <p class="govuk-body-s">Examination Library: REP1-002</p>
+            <p class="govuk-body-s">Webfilter: Random docs</p>
+            <p class="govuk-body-s">PNG 1 MB</p>
+          </td>
+          <td class="govuk-table__cell"><a href="">View/edit properties</a></td>
+          <td class="govuk-table__cell"><a href="">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label">
+                </label>
+              </div>
+            </div>
+          </th>
+          <td class="govuk-table__cell">
+            <p class="govuk-body-m"><strong>Document_1</strong></p>
+            <p class="govuk-body-s">File name: Document_1.pdf</p>
+            <p class="govuk-body-s">From: Highways England</p>
+          </td>
+          <td class="govuk-table__cell">
+            <p class="govuk-body-s">Examination Library: REP1-003</p>
+            <p class="govuk-body-s">Webfilter: Random docs</p>
+            <p class="govuk-body-s">PNG 1 MB</p>
+          </td>
+          <td class="govuk-table__cell"><a href="">View/edit properties</a></td>
+          <td class="govuk-table__cell"><a href="">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-inset-text">
+      Saving files will default them to ‘Unredacted’ and ‘Not checked’
+    </div>
+
+    <a href="project-management" class="govuk-button" role="button" data-module="govuk-button">
+      Save and return
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -64,9 +64,6 @@ html: 'This is not a full service. It is not production code and you might exper
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Unpublish
       </button>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Supersede
-      </button>
     </div>
 
   </div>
@@ -97,19 +94,24 @@ html: 'This is not a full service. It is not production code and you might exper
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
+              <td class="govuk-table__header">Description</td>
+              <td class="govuk-table__cell">Document_1</td>
+              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
               <td class="govuk-table__header">IP number (optional)</td>
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Who the document is from</td>
-              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell">Highways England</td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_author">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__header">Supersedes (optional)</td>
-              <td class="govuk-table__cell"><a style="color: #1d70b8;">EN0110007-000003</a></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_documentSupersedes">Change</a></td>
+              <td class="govuk-table__header">Type of IP</td>
+              <td class="govuk-table__cell">Applicant</td>
+              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_author">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Agent (optional)</td>
@@ -120,6 +122,11 @@ html: 'This is not a full service. It is not production code and you might exper
               <td class="govuk-table__header">Document case stage</td>
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header">Supersedes (optional)</td>
+              <td class="govuk-table__cell"><a style="color: #1d70b8;">EN0110007-000003</a></td>
+              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_documentSupersedes">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Webfilter</td>
@@ -144,7 +151,7 @@ html: 'This is not a full service. It is not production code and you might exper
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Published date</td>
-              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell">12 April 2025</td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
@@ -154,7 +161,7 @@ html: 'This is not a full service. It is not production code and you might exper
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Status</td>
-              <td class="govuk-table__cell">Not checked</td>
+              <td class="govuk-table__cell">Checked</td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
             </tr>
           </tbody>
@@ -176,7 +183,7 @@ html: 'This is not a full service. It is not production code and you might exper
           </thead>
           <tbody class="govuk-table__body">
 
-            {% for i in [5,4,3,2,1] %}
+            {% for i in [2,1] %}
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <p class="govuk-body">{{ i }}</p>
@@ -189,10 +196,10 @@ html: 'This is not a full service. It is not production code and you might exper
       <td class="govuk-table__cell">
         <ul class="govuk-list govuk-list--spaced">
           <li>
-            <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, McShane, Claire</p>
+            <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
           </li>
           <li>
-            <p class="govuk-body"><strong>Published: </strong>Not published</p>
+            <p class="govuk-body"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
           </li>
         </ul>
       </td>
