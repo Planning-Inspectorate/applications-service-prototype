@@ -1,10 +1,265 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+Examination timetable – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+text: "Back to applications",
+href: "/../../Applications/"
+}) }}
 {% endblock %}
 
 {% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% include "../_includes/project-description.html" %}
+
+
+  <style>
+    .side-nav {
+      padding-right: 20px;
+    }
+
+    .side-nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .side-nav li {
+      margin-bottom: 5px;
+    }
+
+    .side-nav a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      padding: 12px 8px;
+      font-size: 16px;
+      color: #1d70b8;
+      border-left: 5px solid transparent;
+    }
+
+    .side-nav a:hover {
+      background-color: #f3f2f1;
+    }
+
+    .side-nav a.selected {
+      background-color: #f3f2f1;
+      font-weight: bold;
+      border-left: 5px solid #1d70b8;
+      color: #0b0c0c;
+    }
+  </style>
+  <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
+    <nav class="side-nav">
+      <ul class="govuk-list">
+        <li><a href="/Overview/">Overview</a></li>
+        <li><a href="/KeyDates/">Key dates</a></li>
+        <li><a href="/ProjectTeam/">Project team</a></li>
+        <li><a href="/ProjectDocumentation/">Project documentation</a></li>
+        <li><a href="/ProjectUpdates/">Project updates</a></li>
+        <li><a href="/ExaminationTimetable/" class="selected">Examination timetable</a></li>
+        <li><a href="/Fees/">Fees and forecasting</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h2 class="govuk-heading-m">Examination timetable</h2>
+    <p class="govuk-body">Create or manage an examination timetable.</p>
+
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Create timetable item
+      </button>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Preview and republish
+      </button>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h3 class="govuk-heading-m">Pre-examination</h3>
+    <p class="govuk-body">No timetable items</p>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Examination</h3>
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              <p class="govuk-body-m"><strong>Deadline 1 (new)</strong></p>
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Item type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Deadline
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> type</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Item name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Deadline 1
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                End date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                21 Jan 2025
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                End time
+              </dt>
+              <dd class="govuk-summary-list__value">
+                01:01
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Item description
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Deadline for receipt by the ExA of:
+                <ul>
+                  <li>written submissions about how the application should be examined including the draft Examination Timetable</li>
+                  <li>requests to register for the preliminary meeting</li>
+                  <li>requests to register for open floor hearing 1</li>
+                  <li>requests to register for issue specific hearing 1 regarding the draft Development Consent Order</li>
+                  <li>suggested locations for site inspections, including the reason for nomination, issues to be observed there and whether the location(s) require access to private land</li>
+                </ul>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> description</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Examination library
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag">
+                  Published
+                </strong>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="review_examLibrary">Review<span class="govuk-visually-hidden"> submissions</span></a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              <p class="govuk-body-m"><strong>Deadline 1 (old)</strong></p>
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Item type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Deadline
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> type</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Item name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Deadline 1
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                End date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                21 Jan 2025
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                End time
+              </dt>
+              <dd class="govuk-summary-list__value">
+                01:01
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Item description
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Deadline for receipt by the ExA of:
+                <ul>
+                  <li>written submissions about how the application should be examined including the draft Examination Timetable</li>
+                  <li>requests to register for the preliminary meeting</li>
+                  <li>requests to register for open floor hearing 1</li>
+                  <li>requests to register for issue specific hearing 1 regarding the draft Development Consent Order</li>
+                  <li>suggested locations for site inspections, including the reason for nomination, issues to be observed there and whether the location(s) require access to private land</li>
+                </ul>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> description</span></a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 
 {% endblock %}

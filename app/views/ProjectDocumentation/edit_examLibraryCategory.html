@@ -28,53 +28,83 @@
             <div id="contact-hint" class="govuk-hint">
               Select the Examination Library to assign an Examination Library reference number to this document
             </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+              <label class="govuk-label govuk-radios__label" for="contact-3">
+                No Examination Library category
+              </label>
+            </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Application documents
+                  Application documents (APP)
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Adequacy of consultation responses
+                  Adequacy of consultation responses (AoC)
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Procedural decisions and notifications from Examining Authority
+                  Procedural decisions and notifications from Examining Authority (PD)
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Additional submissions
+                  Additional submissions (AS)
                 </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-ev">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Events and hearings (EVX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-ev">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    EV(1-9)
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-pd">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Procedural deadlines (PDX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-pd">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    PD(1-9)
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-rep">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Deadlines (REPX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-rep">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    REP(1-9)
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                </div>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Events and hearings
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
-                <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Procedural deadlines
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
-                <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Deadlines
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
-                <label class="govuk-label govuk-radios__label" for="contact-3">
-                  Other documents
+                  Other documents (OD)
                 </label>
               </div>
             </div>
