@@ -19,7 +19,7 @@ html: 'This is not a full service. It is not production code and you might exper
 
 {{ govukBackLink({
   text: "Back",
-  href: "project-management"
+  href: "javascript:window.history.back()"
   }) }}
 
 {% endblock %}
@@ -137,6 +137,11 @@ html: 'This is not a full service. It is not production code and you might exper
               <td class="govuk-table__header">Examination Library category</td>
               <td class="govuk-table__cell">Deadline 1 (REP1)</td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_examLibraryCategory">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header">Reference number override (optional)</td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_examLibraryNumber">Change</a></td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Document type (optional)</td>
