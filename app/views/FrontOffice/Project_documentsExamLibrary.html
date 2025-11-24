@@ -418,9 +418,12 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-caption-l">Longfield Solar Farm</span>
       Examination library
     </h2>
-    <p class="govuk-body">The examination library is a list of all the individual documents, including comments, plans, and statements. </p> 
-    <p class="govuk-body">Each item in the list is given an individual reference number. This is important because applications can include hundreds of individual comments, documents and evidence. People and organisations should quote any relevant examination library reference numbers in their comments so that
-      everyone understands what documents the comment is referring to.</p>
+    <p class="govuk-body">An examination library lists all the documents (including comments, plans, evidence and statements) submitted about a nationally significant infrastructure project application. It covers the period from the point of application to the close of the examination phase.
+    </p>
+    <p class="govuk-body">
+      Each document has an individual reference number. It's important to quote these reference numbers if you refer to any documents when making comments about a project.
+    </p>
+
     {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
 {{ govukAccordion({
@@ -454,7 +457,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </table>
         
         <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Plans / Drawings / Sections</caption>
+          <caption class="govuk-table__caption govuk-table__caption--m">Plans / drawings / sections</caption>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell"><a>APP-004</a></th>
@@ -475,7 +478,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </table>
     
         <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Draft Development Consent Order</caption>
+          <caption class="govuk-table__caption govuk-table__caption--m">Draft development consent order</caption>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell"><a>APP-007</a></th>
@@ -621,7 +624,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     },
     {
       heading: {
-        text: "Relevant representations"
+        text: "Relevant representations (registration comments)"
       },
       content: {
         html: '<p class="govuk-body">Lorem ipsum</p>'
