@@ -21,11 +21,11 @@
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--l" for="cost-per-item">
-              What is the reference number of the document that is being superseded?
+              Document reference number for superseded document (optional)
             </label>
           </h1>
           <div id="event-name-hint" class="govuk-hint">
-            You can find the document reference number on the document properties page of the previous document
+            Document reference numbers are listed on the document properties page
           </div>
           <div class="govuk-input__wrapper">
             <div class="govuk-input__prefix" aria-hidden="true">EN0110007</div>
@@ -33,12 +33,22 @@
           </div>
         </div>
 
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is a superseded document?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If a submitted document is later revised and resubmitted, then this newer revision will supersede the older submission. We refer to the older submission as the superseded document. Linking the new and old document reference numbers creates a document history page in the front office.
+          </div>
+        </details>
+
         {{ govukButton({
           text: "Save and return"
         }) }}
 
       </form>
-
     </div>
   </div>
 
