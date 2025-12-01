@@ -6,15 +6,68 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-  text: "Back",
+  text: "Back to applications",
   href: "javascript:window.history.back()"
 }) }}
 {% endblock %}
 
 {% block content %}
 
+  <style>
+    .side-nav {
+      padding-right: 20px;
+    }
+
+    .side-nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .side-nav li {
+      margin-bottom: 5px;
+    }
+
+    .side-nav a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      padding: 12px 8px;
+      font-size: 16px;
+      color: #1d70b8;
+      border-left: 5px solid transparent;
+    }
+
+    .side-nav a:hover {
+      background-color: #f3f2f1;
+    }
+
+    .side-nav a.selected {
+      background-color: #f3f2f1;
+      font-weight: bold;
+      border-left: 5px solid #1d70b8;
+      color: #0b0c0c;
+    }
+  </style>
+
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full-width">
+    {% include "../_includes/project-description.html" %}
+
+    <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
+      <nav class="side-nav">
+        <ul class="govuk-list">
+          <li><a href="/Overview/">Overview</a></li>
+          <li><a href="/KeyDates/">Key dates</a></li>
+          <li><a href="/ProjectTeam/">Project team</a></li>
+          <li><a href="/ProjectDocumentation/">Project documentation</a></li>
+          <li><a href="/ProjectUpdates/">Project updates</a></li>
+          <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
+          <li><a href="/ExaminationTimetable/overview_examLibrary" class="selected">Examination library</a></li>
+          <li><a href="/Fees/">Fees and forecasting</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
       <span class="govuk-caption-l">Longfield Solar Farm</span>
       <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
 				Examination library
@@ -144,8 +197,8 @@
             </a>
           </div>
           <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--blue">
-              Published
+            <strong class="govuk-tag govuk-tag--green">
+              Ready to publish
             </strong>
           </div>
         </li>
