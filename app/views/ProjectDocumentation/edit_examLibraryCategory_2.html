@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="./index" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Examination library category
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Select the category to assign an examination library reference number to this document
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+              <label class="govuk-label govuk-radios__label" for="contact-3">
+                No examination library category
+              </label>
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Application documents (APP)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Adequacy of consultation responses (AoC)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Procedural decisions and notifications from Examining Authority (PD)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Additional submissions (AS)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-ev">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Events and hearings (EVX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-ev">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Events and hearings
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="hearing1">Open floor hearing 1</option>
+                    <option value="issuespecific1">Issue specific hearing 1</option>
+                    <option value="issuespecific2" selected>Issue specific hearing 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-pd">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Procedural deadlines (PDX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-pd">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Procedural deadlines
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="proceduraldeadline1">Procedural deadline 1</option>
+                    <option value="proceduraldeadline2" selected>Procedural deadline 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-rep">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Deadlines (REPX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-rep">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Deadlines
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="deadline1">Deadline 1</option>
+                    <option value="deadline2">Deadline 2</option>
+                    <option value="deadline3">Deadline 3</option>
+                    <option value="deadline4" selected>Deadline 4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Other documents (OD)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            Updating the category will change the examination library reference. You will not be able to revert back to the original reference if the document has been published to the examination library.
+          </strong>
+        </div>
+
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and return"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
