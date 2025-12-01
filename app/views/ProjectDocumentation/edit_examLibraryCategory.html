@@ -68,9 +68,12 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-ev">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-phone">
-                    EV(1-9)
+                    Event and hearing number
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                  <div id="event-name-hint" class="govuk-hint">
+                    This should be between 1 and 9
+                  </div>
+                  <input class="govuk-input govuk-input--width-2" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -82,9 +85,12 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-pd">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-phone">
-                    PD(1-9)
+                    Procedural deadline number
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                  <div id="event-name-hint" class="govuk-hint">
+                    This should be between 1 and 9
+                  </div>
+                  <input class="govuk-input govuk-input--width-2" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -101,7 +107,7 @@
                   <div id="event-name-hint" class="govuk-hint">
                     This should be between 1 and 9
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                  <input class="govuk-input govuk-input--width-2" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -118,7 +124,7 @@
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-visually-hidden">Warning</span>
-              When updating the category, any previously assigned examination library references will be permanently overwritten and lost for this document.
+            Updating the category will change the examination library reference. You will not be able to revert back to the original reference if the document has been published to the examination library.
           </strong>
         </div>
 
@@ -127,8 +133,6 @@
           {{ govukButton({
             text: "Save and return"
           }) }}
-
-          <a class="govuk-link" href="#">Cancel</a>
         </div>
 
       </form>
