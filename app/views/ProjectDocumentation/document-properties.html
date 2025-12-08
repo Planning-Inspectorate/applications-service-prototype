@@ -39,10 +39,11 @@ html: 'This is not a full service. It is not production code and you might exper
     <p class="govuk-body"><strong>Examination library reference: </strong>REP1-007</p>
     <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
     <p class="govuk-body"><strong>Version: </strong>2</p>
-
+    <!--
     <div class="govuk-inset-text">
       This document has been superseded by <a style="color: rgb(36, 77, 190);">EN0110007-00013</a>
     </div>
+    -->
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
@@ -123,11 +124,13 @@ html: 'This is not a full service. It is not production code and you might exper
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
             </tr>
+            <!--
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Supersedes (optional)</td>
               <td class="govuk-table__cell"><a style="color: #1d70b8;">EN0110007-000003</a></td>
               <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_documentSupersedes">Change</a></td>
             </tr>
+             -->
             <tr class="govuk-table__row">
               <td class="govuk-table__header">Webfilter</td>
               <td class="govuk-table__cell"></td>
