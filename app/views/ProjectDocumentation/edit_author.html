@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Manage accepted fees – {{ serviceName }} – GOV.UK Prototype Kit
+  Example edit page – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,6 +24,9 @@
                 Type of interested party (IP)
               </h1>
             </legend>
+            <div id="changedName-hint" class="govuk-hint">
+              Add some text here explaining what is meant
+            </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
