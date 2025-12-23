@@ -51,209 +51,210 @@
   </style>
 
   <div class="govuk-grid-row">
-    {% include "../_includes/project-description.html" %}
+    <div class="govuk-grid-column-full">
+      {% include "../_includes/project-description.html" %}
 
-    <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
-      <nav class="side-nav">
-        <ul class="govuk-list">
-          <li><a href="/Overview/">Overview</a></li>
-          <li><a href="/KeyDates/">Key dates</a></li>
-          <li><a href="/ProjectTeam/">Project team</a></li>
-          <li><a href="/ProjectDocumentation/">Project documentation</a></li>
-          <li><a href="/ProjectUpdates/">Project updates</a></li>
-          <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
-          <li><a href="/ExaminationTimetable/overview_examLibrary" class="selected">Examination library</a></li>
-          <li><a href="/Fees/">Fees and forecasting</a></li>
+      <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
+        <nav class="side-nav">
+          <ul class="govuk-list">
+            <li><a href="/Overview/">Overview</a></li>
+            <li><a href="/KeyDates/">Key dates</a></li>
+            <li><a href="/ProjectTeam/">Project team</a></li>
+            <li><a href="/ProjectDocumentation/">Project documentation</a></li>
+            <li><a href="/ProjectUpdates/">Project updates</a></li>
+            <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
+            <li><a href="/ExaminationTimetable/overview_examLibrary" class="selected">Examination library</a></li>
+            <li><a href="/Fees/">Fees and forecasting</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">
+          Examination library
+        </h2>      
+        <p class="govuk-body">The examination library lists all the documents submitted about the project from the point of application to the close of the examination phase. Any deadlines or meetings added to the examination timetable will appear here as new sections.</p>
+
+        <h2 class="govuk-heading-m">
+          Pre-examination
+        </h2> 
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_unpublished" aria-describedby="company-details-1-status">
+                Application documents
+              </a>
+              <div id="company-details-3-hint" class="govuk-task-list__hint">
+                Any amended versions accepted before or at the Preliminary Meeting should be saved as Additional Submissions.
+              </div>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-1-status">
+              <strong class="govuk-tag govuk-tag--red">
+                Unpublished
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-2-status">
+                Adequacy of consultation responses
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-2-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-3-hint company-details-3-status">
+                Relevant representations (registration comments)
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-3-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-4-status">
+                Procedural decisions and notifications from Examining Authority
+              </a>
+              <div id="company-details-3-hint" class="govuk-task-list__hint">
+                Includes Examining Authority’s written questions, event notifications and procedural decisions on the examination.
+              </div>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-4-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
+                Additional submissions
+              </a>
+              <div id="company-details-3-hint" class="govuk-task-list__hint">
+                Includes anything accepted at the discretion of the Examining Authority outside of a formal deadline.
+              </div>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
+                Other documents
+              </a>
+              <div id="company-details-3-hint" class="govuk-task-list__hint">
+                Includes s127/131/138 information, s56, s58 and s59 certificates, and transboundary documents.
+              </div>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
         </ul>
-      </nav>
-    </div>
-    <div class="govuk-grid-column-three-quarters">
-      <span class="govuk-caption-l">Longfield Solar Farm</span>
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
-				Examination library
-			</h1>      
-      <p class="govuk-body">The examination library lists all the documents submitted about the project from the point of application to the close of the examination phase. Any deadlines or meetings added to the examination timetable will appear here as new sections.</p>
 
-      <h2 class="govuk-heading-m">
-				Pre-examination
-			</h2> 
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_unpublished" aria-describedby="company-details-1-status">
-              Application documents
-            </a>
-            <div id="company-details-3-hint" class="govuk-task-list__hint">
-              Any amended versions accepted before or at the Preliminary Meeting should be saved as Additional Submissions.
+
+        <h2 class="govuk-heading-m">
+          Events and hearings
+        </h2>      
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
+                Open floor hearing 1
+              </a>
             </div>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-            <strong class="govuk-tag govuk-tag--red">
-              Unpublished
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-2-status">
-              Adequacy of consultation responses
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-2-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-3-hint company-details-3-status">
-              Relevant representations (registration comments)
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-3-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-4-status">
-              Procedural decisions and notifications from Examining Authority
-            </a>
-            <div id="company-details-3-hint" class="govuk-task-list__hint">
-              Includes Examining Authority’s written questions, event notifications and procedural decisions on the examination.
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
             </div>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-4-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
-              Additional submissions
-            </a>
-            <div id="company-details-3-hint" class="govuk-task-list__hint">
-              Includes anything accepted at the discretion of the Examining Authority outside of a formal deadline.
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
+                Open floor hearing 2
+              </a>
             </div>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
-              Other documents
-            </a>
-            <div id="company-details-3-hint" class="govuk-task-list__hint">
-              Includes s127/131/138 information, s56, s58 and s59 certificates, and transboundary documents.
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
             </div>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-      </ul>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary" aria-describedby="company-details-5-status">
+                Issue specific hearing 1
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--blue">
+                In progress
+              </strong>
+            </div>
+          </li>
+        </ul>
 
+        <h2 class="govuk-heading-m">
+          Procedural deadlines
+        </h2>      
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary" aria-describedby="company-details-5-status">
+                Procedural deadline 1
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
+        </ul>
 
-      <h2 class="govuk-heading-m">
-				Events and hearings
-			</h2>      
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
-              Open floor hearing 1
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
-              Open floor hearing 2
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary" aria-describedby="company-details-5-status">
-              Issue specific hearing 1
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--blue">
-              In progress
-            </strong>
-          </div>
-        </li>
-      </ul>
-
-      <h2 class="govuk-heading-m">
-				Procedural deadlines
-			</h2>      
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary" aria-describedby="company-details-5-status">
-              Procedural deadline 1
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-      </ul>
-
-      <h2 class="govuk-heading-m">
-				Deadlines
-			</h2>      
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
-              Deadline 1
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Published
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary" aria-describedby="company-details-5-status">
-              Deadline 2
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-5-status">
-            <strong class="govuk-tag govuk-tag--blue">
-              In progress
-            </strong>
-          </div>
-        </li>
-      </ul>
+        <h2 class="govuk-heading-m">
+          Deadlines
+        </h2>      
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary_published" aria-describedby="company-details-5-status">
+                Deadline 1
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--green">
+                Published
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="/ExaminationTimetable/review_examLibrary" aria-describedby="company-details-5-status">
+                Deadline 2
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="company-details-5-status">
+              <strong class="govuk-tag govuk-tag--blue">
+                In progress
+              </strong>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

@@ -433,6 +433,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       heading: {
         text: "Application documents"
       },
+      summary: {
+        text: "Documents and plans submitted by the applicant for a development consent order."
+      },
       content: {
         html: '
         <table class="govuk-table">
@@ -613,8 +616,13 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       heading: {
         text: "Adequecy of consultation responses"
       },
+      summary: {
+        text: "Comments from local authorities, statutory consultees, the Planning Inspectorate."
+      },
       content: {
-        html: '<table class="govuk-table">
+        html: '
+        <p class="govuk-body">Comments from local authorities, statutory consultees and the Planning Inspectorate about the initial application, including whether they&apos;ve been sufficiently consulted by the applicant.</p>
+        <table class="govuk-table">
           <caption class="govuk-table__caption govuk-table__caption--m">Adequecy of consultation representations</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -646,6 +654,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     {
       heading: {
         text: "Relevant representations (registration comments)"
+      },
+      summary: {
+        text: "Comments from individuals and organisations."
       },
       content: {
         html: '
@@ -771,6 +782,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       heading: {
         text: "Procedural decisions and notifications from Examining Authority"
       },
+      summary: {
+        text: "Written questions, event notifications and decisions about how the application will be examined."
+      },
       content: {
         html: '<table class="govuk-table">
           <caption class="govuk-table__caption govuk-table__caption--m">Procedural decisions and notifications from Examining Authority</caption>
@@ -799,6 +813,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     {
       heading: {
         text: "Additional submissions"
+      },
+      summary: {
+        text: "Anything accepted by the Examining Authority outside of a formal deadline."
       },
       content: {
         html: '<table class="govuk-table">
@@ -829,6 +846,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       heading: {
         text: "Events and hearings"
       },
+      summary: {
+        text: "Agendas, recordings, notes, actions."
+      },
       content: {
         html: '<table class="govuk-table">
           <caption class="govuk-table__caption govuk-table__caption--m">Open floor hearing 1</caption>
@@ -836,19 +856,16 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
               <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">EV1-001</th>
               <td class="govuk-table__cell"><a>Draft Development Consent Order</a></td>
-              <td class="govuk-table__cell">Highways England</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">EV1-002</th>
               <td class="govuk-table__cell"><a>Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
             </tr>
           </tbody>
         </table>
@@ -858,19 +875,16 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
               <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">EV2-001</th>
               <td class="govuk-table__cell"><a>Draft Development Consent Order</a></td>
-              <td class="govuk-table__cell">Highways England</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">EV2-002</th>
               <td class="govuk-table__cell"><a>Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
             </tr>
           </tbody>
         </table>
@@ -880,19 +894,16 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
               <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">EV3-001</th>
               <td class="govuk-table__cell"><a>Draft Development Consent Order</a></td>
-              <td class="govuk-table__cell">Highways England</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">EV3-002</th>
               <td class="govuk-table__cell"><a>Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
             </tr>
           </tbody>
         </table>'
@@ -1010,6 +1021,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     {
       heading: {
         text: "Other documents"
+      },
+      summary: {
+        text: "Certificates, transboundary documents, further information."
       },
       content: {
         html: '
