@@ -30,12 +30,12 @@
               text: "Project name"
             },
             value: {
-              text: "The name of the project"
+              text: data['project-name']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "01_NameDescription",
                   text: "Change",
                   visuallyHiddenText: "Question 1"
                 }
@@ -48,12 +48,12 @@
               text: "Project description"
             },
             value: {
-              text: "A short description of the project"
+              text: data['project-description']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "01_NameDescription",
                   text: "Change",
                   visuallyHiddenText: "Question 2"
                 }
@@ -66,12 +66,12 @@
               text: "Sector"
             },
             value: {
-              text: "Energy"
+              text: data['project-sector']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "02_Sector",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -84,12 +84,12 @@
               text: "Subsector"
             },
             value: {
-              text: "Generating Stations"
+              text: data['project-subsector']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "03_Subsector",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -102,12 +102,12 @@
               text: "Project type"
             },
             value: {
-              text: "Solar"
+              text: data['project-sectortype']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "03-1_SectorType",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -120,12 +120,12 @@
               text: "Project location"
             },
             value: {
-              text: "A short description of the project location"
+              text: data['geographicalInformation.locationDescription']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "04_GeographicalInfo",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -138,12 +138,12 @@
               text: "Grid reference Easting"
             },
             value: {
-              text: "123456"
+              text: data['geographicalInformation.gridReference.easting']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "04_GeographicalInfo",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -156,12 +156,12 @@
               text: "Grid reference Northing"
             },
             value: {
-              text: "123456"
+              text: data['geographicalInformation.gridReference.northing']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "04_GeographicalInfo",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -174,12 +174,12 @@
               text: "Regions"
             },
             value: {
-              text: "West Midlands"
+              text: data['geographicalInformation.regionNames']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "05_Regions",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -192,12 +192,12 @@
               text: "Map zoom level"
             },
             value: {
-              text: "Region"
+              text: data['geographicalInformation.mapZoomLevelName']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "06_MapZoom",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -210,12 +210,12 @@
               text: "Project email"
             },
             value: {
-              text: "Optional email address"
+              text: data['caseEmail']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "07_ProjectEmail",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -236,12 +236,12 @@
               text: "Organisation name"
             },
             value: {
-              text: "The name of the organisation"
+              text: data['caseOrg']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "08_Organisation",
                   text: "Change",
                   visuallyHiddenText: "Question 1"
                 }
@@ -254,12 +254,12 @@
               text: "Contact name"
             },
             value: {
-              text: "The name of the contact"
+              text: data['applicant.firstName']+' '+data['applicant.lastName']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "09-1_ContactName",
                   text: "Change",
                   visuallyHiddenText: "Question 2"
                 }
@@ -272,12 +272,12 @@
               text: "Address"
             },
             value: {
-              text: "The address of the organisation"
+              text: data['applicant.address']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "09-2_ContactAddress",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -290,12 +290,12 @@
               text: "Website"
             },
             value: {
-              text: "The website of the organisation"
+              text: data['applicant.website']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "09-3_ContactWebsite",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -308,12 +308,12 @@
               text: "Email address"
             },
             value: {
-              text: "The email address of the organisation"
+              text: data['applicant.email']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "09-4_ContactEmail",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -326,12 +326,12 @@
               text: "Telephone number"
             },
             value: {
-              text: "01234567890"
+              text: data['applicant.number']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "09-5_ContactNumber",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -352,12 +352,12 @@
               text: "Anticipated submission date published"
             },
             value: {
-              text: "00/00/0000"
+              text: data['submission-external']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "10_KeyDates",
                   text: "Change",
                   visuallyHiddenText: "Question 1"
                 }
@@ -370,12 +370,12 @@
               text: "Anticipated submission date internal"
             },
             value: {
-              text: "00/00/0000"
+              text: data['submission-internal-day']+'/'+data['submission-internal-month']+'/'+data['submission-internal-year']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "10_KeyDates",
                   text: "Change",
                   visuallyHiddenText: "Question 2"
                 }
