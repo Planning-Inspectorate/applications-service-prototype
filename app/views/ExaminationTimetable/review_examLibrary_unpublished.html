@@ -18,10 +18,32 @@
     color: #1d70b8;
     cursor: pointer;
   }
+
+  .hide {
+    display: none;
+  }
+
+  #banner.hide:target {
+    display: block;
+  }
 </style>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+
+      <div class="hide" id="banner">
+        {% set html %}
+          <h3 class="govuk-notification-banner__heading">
+            Examination library category unpublished
+          </h3>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: "success"
+        }) }}
+      </div>
+
       <span class="govuk-caption-l">Examination library</span>
       <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
 				Application documents

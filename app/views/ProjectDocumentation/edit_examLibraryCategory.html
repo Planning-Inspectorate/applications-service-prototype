@@ -16,7 +16,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="./index" method="post">
+      <form class="form" action="./document-properties" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -29,14 +29,14 @@
               Select the category to assign an examination library reference number to this document
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+              <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="No examination library category">
               <label class="govuk-label govuk-radios__label" for="contact-3">
                 No examination library category
               </label>
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-ap" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-ap">
+                <input class="govuk-radios__input" id="contact-ap" name="library-category" type="radio" value="Application documents (APP)" data-aria-controls="conditional-contact-ap">
                 <label class="govuk-label govuk-radios__label" for="contact-ap">
                   Application documents (APP)
                 </label>
@@ -58,25 +58,25 @@
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <input class="govuk-radios__input" id="contact-2" name="library-category" type="radio" value="Adequacy of consultation responses (AoC)">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
                   Adequacy of consultation responses (AoC)
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                <input class="govuk-radios__input" id="contact-2" name="library-category" type="radio" value="Procedural decisions and notifications (PD)">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
                   Procedural decisions and notifications from Examining Authority (PD)
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="Additional submissions (AS)">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
                   Additional submissions (AS)
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-ev">
+                <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="Issue specific hearing 2 (EV3)" data-aria-controls="conditional-contact-ev">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
                   Events and hearings (EVX)
                 </label>
@@ -86,15 +86,15 @@
                   <label class="govuk-label" for="sort">
                     Events and hearings
                   </label>
-                  <select class="govuk-select" id="sort" name="sort">
-                    <option value="hearing1">23 Jul 2025 - Open floor hearing 1</option>
-                    <option value="issuespecific1">27 Jul 2025 - Issue specific hearing 1</option>
-                    <option value="issuespecific2" selected>13 Aug 2025 - Issue specific hearing 2</option>
+                  <select class="govuk-select" id="sort" name="library-category-2">
+                    <option value="Open floor hearing 1 (EV1)">23 Jul 2025 - Open floor hearing 1 (EV1)</option>
+                    <option value="Issue specific hearing 1 (EV2)">27 Jul 2025 - Issue specific hearing 1 (EV2)</option>
+                    <option value="Issue specific hearing 2 (EV3)" selected>13 Aug 2025 - Issue specific hearing 2 (EV3)</option>
                   </select>
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-pd">
+                <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="Procedural deadline 1 (PD1)" data-aria-controls="conditional-contact-pd">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
                   Procedural deadlines (PDX)
                 </label>
@@ -104,14 +104,13 @@
                   <label class="govuk-label" for="sort">
                     Procedural deadlines
                   </label>
-                  <select class="govuk-select" id="sort" name="sort">
-                    <option value="proceduraldeadline1">13 Mar 2025 - Procedural deadline 1</option>
-                    <option value="proceduraldeadline2" selected>28 Aug 2025 - Procedural deadline 2</option>
+                  <select class="govuk-select" id="sort" name="library-category-2">
+                    <option value="Procedural deadline 1 (PD1)" selected>13 Mar 2025 - Procedural deadline 1 (PD1)</option>
                   </select>
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-rep">
+                <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="Deadline 2 (REP2)" data-aria-controls="conditional-contact-rep">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
                   Deadlines (REPX)
                 </label>
@@ -121,16 +120,14 @@
                   <label class="govuk-label" for="sort">
                     Deadlines
                   </label>
-                  <select class="govuk-select" id="sort" name="sort">
-                    <option value="deadline1">29 Dec 2024 - Deadline 1</option>
-                    <option value="deadline2">12 Jan 2025 - Deadline 2</option>
-                    <option value="deadline3">15 Jul 2025 - Deadline 3</option>
-                    <option value="deadline4" selected>23 Aug 2025 - Deadline 4</option>
+                  <select class="govuk-select" id="sort" name="library-category-2">
+                    <option value="Deadline 1 (REP1)">29 Dec 2024 - Deadline 1 (REP1)</option>
+                    <option value="Deadline 2 (REP2)" selected>12 Jan 2025 - Deadline 2 (REP2)</option>
                   </select>
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text">
+                <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="Other documents (OD)">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
                   Other documents (OD)
                 </label>

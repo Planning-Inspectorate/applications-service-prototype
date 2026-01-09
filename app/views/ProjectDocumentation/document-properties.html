@@ -36,7 +36,7 @@ html: 'This is not a full service. It is not production code and you might exper
     <p class="govuk-body"><strong>Description: </strong>The first document, ever</p>
     <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
-    <p class="govuk-body"><strong>Examination library reference: </strong>REP1-007</p>
+    <p class="govuk-body"><strong>Final examination library reference: </strong>REP1-007</p>
     <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
     <p class="govuk-body"><strong>Version: </strong>2</p>
     <!--
@@ -63,7 +63,7 @@ html: 'This is not a full service. It is not production code and you might exper
         Open in Adobe
       </button>
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Unpublish
+        Delete
       </button>
     </div>
 
@@ -87,93 +87,256 @@ html: 'This is not a full service. It is not production code and you might exper
       </ul>
       <div class="govuk-tabs__panel" id="past-day">
         <h2 class="govuk-heading-m">Document properties</h2>
-        <table class="govuk-table">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">File name</td>
-              <td class="govuk-table__cell">document.pdf</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Description</td>
-              <td class="govuk-table__cell">Document_1</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">IP number (optional)</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Who the document is from</td>
-              <td class="govuk-table__cell">Highways England</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Type of party</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_author">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Agent (optional)</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Document case stage</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <!--
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Supersedes (optional)</td>
-              <td class="govuk-table__cell"><a style="color: #1d70b8;">EN0110007-000003</a></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_documentSupersedes">Change</a></td>
-            </tr>
-             -->
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Webfilter</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Examination library category</td>
-              <td class="govuk-table__cell">Deadline 1 (REP1)</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_examLibraryCategory">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Examination library reference override (optional)</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_examLibraryNumber">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Document type (optional)</td>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Date received</td>
-              <td class="govuk-table__cell">11 April 2025</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Published date</td>
-              <td class="govuk-table__cell">12 April 2025</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Redaction</td>
-              <td class="govuk-table__cell">Unredacted</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="edit_redactionStatus">Change</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__header">Status</td>
-              <td class="govuk-table__cell">Checked</td>
-              <td class="govuk-table__cell govuk-!-text-align-right"><a href="#">Change</a></td>
-            </tr>
-          </tbody>
-        </table>
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "File name"
+              },
+              value: {
+                text: "Coverletter_v1.pdf"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Description"
+              },
+              value: {
+                text: "1.1 Cover letter"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "Document description"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "IP number (optional)"
+              },
+              value: {
+                text: ""
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "Interested party number"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Who the document is from"
+              },
+              value: {
+                text: "Highways England"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "Who the document is from"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Type of party"
+              },
+              value: {
+                text: data['party-type']
+              },
+              actions: {
+                items: [
+                  {
+                    href: "edit_partyType",
+                    text: "Change",
+                    visuallyHiddenText: "Type of party"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Agent (optional)"
+              },
+              value: {
+                text: ""
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "Agent"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Document case stage"
+              },
+              value: {
+                text: "Examination"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "document case stage"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Webfilter"
+              },
+              value: {
+                text: "Deadline 1"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "webfilter"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Examination library category"
+              },
+              value: {
+                text: data['library-category']
+              },
+              actions: {
+                items: [
+                  {
+                    href: "edit_examLibraryCategory",
+                    text: "Change",
+                    visuallyHiddenText: "examination library category"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Examination library reference override (optional)"
+              },
+              value: {
+                text: ""
+              },
+              actions: {
+                items: [
+                  {
+                    href: "edit_examLibraryNumber",
+                    text: "Change",
+                    visuallyHiddenText: "examination library reference override"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Document type (optional)"
+              },
+              value: {
+                text: ""
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "document type"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Date received"
+              },
+              value: {
+                text: "11 May 2025"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "date received"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Published date"
+              },
+              value: {
+                text: "30 May 2025"
+              }
+            },
+            {
+              key: {
+                text: "Redaction"
+              },
+              value: {
+                text: "Redacted"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "edit_redactionStatus",
+                    text: "Change",
+                    visuallyHiddenText: "redaction status"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Status"
+              },
+              value: {
+                text: "Published"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "edit_status",
+                    text: "Change",
+                    visuallyHiddenText: "document status"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
       </div>
 
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
@@ -195,31 +358,31 @@ html: 'This is not a full service. It is not production code and you might exper
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <p class="govuk-body">{{ i }}</p>
-      </div>
-      </td>
-      <td class="govuk-table__cell">
-        <strong><a href="#" class="govuk-link">Document_v{{ i }}.pdf</a></strong><br>
-        PDF, 1.2MB
-      </td>
-      <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li>
-            <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
-          </li>
-          <li>
-            <p class="govuk-body"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
-          </li>
-        </ul>
-      </td>
-      <td class="govuk-table__cell">Unredacted</td>
-      <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="#" class="govuk-link">Download</a></li>
-          <li><a href="#" class="govuk-link">Open in Adobe</a></li>
-        </ul>
-      </td>
-      </tr>
-      {% endfor %}
+              </div>
+              </td>
+              <td class="govuk-table__cell">
+                <strong><a href="#" class="govuk-link">Document_v{{ i }}.pdf</a></strong><br>
+                PDF, 1.2MB
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                    <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
+                  </li>
+                  <li>
+                    <p class="govuk-body"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
+                  </li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">Redacted</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li><a href="#" class="govuk-link">Download</a></li>
+                  <li><a href="#" class="govuk-link">Open in Adobe</a></li>
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
 
       </tbody>
       </table>
