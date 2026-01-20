@@ -41,6 +41,19 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          AI redaction process complete. You must review these AI redaction suggestions.
+        </h3>
+      </div>
+    </div>
+
     <span class="govuk-caption-xl">Document properties</span>
     <h1 class="govuk-heading-xl"> Document_1.pdf</h1>
   </div>
@@ -59,27 +72,30 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-    text: "Upload new version"
+    text: "Upload new version",
+    href: "4"
     }) }}
 
     <h2 class="govuk-heading-m">Document actions</h2>
 
     <div class="govuk-button-group">
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Open
-      </button>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Download
-      </button>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Open in Adobe
-      </button>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        AI redaction
-      </button>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Delete
-      </button>
+      {{ govukButton({
+        text: "Open",
+        classes: "govuk-button--secondary"
+      }) }}
+      {{ govukButton({
+        text: "Download",
+        classes: "govuk-button--secondary"
+      }) }}
+      {{ govukButton({
+        text: "AI redaction",
+        disabled: true,
+        classes: "govuk-button--secondary"
+      }) }}
+      {{ govukButton({
+          text: "Delete",
+          classes: "govuk-button--secondary"
+      }) }}
     </div>
 
   </div>
@@ -313,7 +329,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 text: "Published date"
               },
               value: {
-                text: "30 May 2025"
+                text: ""
               }
             },
             {
@@ -321,13 +337,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 text: "Redaction"
               },
               value: {
-                text: "Redacted"
+                text: "AI redaction review needed"
               },
               actions: {
                 items: [
                   {
                     href: "edit_redactionStatus",
-                    text: "Change",
+                    text: "",
                     visuallyHiddenText: "redaction status"
                   }
                 ]
@@ -338,7 +354,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 text: "Status"
               },
               value: {
-                text: "Published"
+                text: "Not checked"
               },
               actions: {
                 items: [
@@ -368,38 +384,53 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-
-            {% for i in [2,1] %}
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <p class="govuk-body">{{ i }}</p>
+                <p class="govuk-body">2</p>
               </div>
               </td>
               <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Document_v{{ i }}.pdf</a></strong><br>
+                <strong><a href="#" class="govuk-link">Document_v1.pdf</a></strong><br>
                 PDF, 1.2MB
               </td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li>
-                    <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
-                  </li>
-                  <li>
-                    <p class="govuk-body"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
+                    <p class="govuk-body"><strong>Uploaded: </strong>13:43, 11 Apr 2025, AI redaction tool</p>
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">Redacted</td>
+              <td class="govuk-table__cell">AI redaction review needed</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
-                  <li><a href="#" class="govuk-link">Open in Adobe</a></li>
                 </ul>
               </td>
             </tr>
-            {% endfor %}
-
-      </tbody>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p class="govuk-body">1</p>
+              </div>
+              </td>
+              <td class="govuk-table__cell">
+                <strong><a href="#" class="govuk-link">Document_v1.pdf</a></strong><br>
+                PDF, 1.2MB
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                    <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Alex Hopkins</p>
+                  </li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">Unredacted</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li><a href="#" class="govuk-link">Download</a></li>
+                </ul>
+              </td>
+            </tr>
+        </tbody>
       </table>
     </div>
   </div>
