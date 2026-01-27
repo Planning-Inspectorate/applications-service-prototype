@@ -49,8 +49,9 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          AI redaction process complete. You must review these AI redaction suggestions.
+          AI redaction process complete
         </h3>
+        <p class="govuk-body">A new version of the document has been created. You must review the redaction suggestions from the AI redaction tool.</p>
       </div>
     </div>
 
@@ -85,11 +86,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       }) }}
       {{ govukButton({
         text: "Download",
-        classes: "govuk-button--secondary"
-      }) }}
-      {{ govukButton({
-        text: "AI redaction",
-        disabled: true,
         classes: "govuk-button--secondary"
       }) }}
       {{ govukButton({

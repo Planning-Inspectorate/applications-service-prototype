@@ -41,17 +41,18 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Important <a href="3">[advance prototype]</a>
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+      <div role="alert">
+        <h2 class="govuk-error-summary__title">
+          There is a problem
         </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <h3 class="govuk-notification-banner__heading">
-          AI redaction in progress
-        </h3>
-        <p class="govuk-body">This process can take some time. Check back later for a new version of the document with redactions suggested from the AI redaction tool.</p>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#">AI redaction failed – try again</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -64,7 +65,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
     <p class="govuk-body"><strong>Final examination library reference: </strong>REP1-007</p>
     <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
-    <p class="govuk-body"><strong>Version: </strong>1</p>
+    <p class="govuk-body"><strong>Version: </strong>2</p>
     <!--
     <div class="govuk-inset-text">
       This document has been superseded by <a style="color: rgb(36, 77, 190);">EN0110007-00013</a>
@@ -73,26 +74,36 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-    text: "Upload new version"
+    text: "Upload new version",
+    href: "4"
     }) }}
 
     <h2 class="govuk-heading-m">Document actions</h2>
 
-    <div class="govuk-button-group">
-      {{ govukButton({
-        text: "Open",
-        classes: "govuk-button--secondary"
-      }) }}
-      {{ govukButton({
-        text: "Download",
-        classes: "govuk-button--secondary"
-      }) }}
-      {{ govukButton({
-          text: "Delete",
+    <div class="govuk-form-group govuk-form-group--error">
+      <p id="national-insurance-number-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> AI redaction failed – try again
+      </p>
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Open",
           classes: "govuk-button--secondary"
-      }) }}
+        }) }}
+        {{ govukButton({
+          text: "Download",
+          classes: "govuk-button--secondary"
+        }) }}
+        {{ govukButton({
+          text: "AI redaction",
+          classes: "govuk-button--secondary",
+          href: "2"
+        }) }}
+        {{ govukButton({
+            text: "Delete",
+            classes: "govuk-button--secondary"
+        }) }}
+      </div>
     </div>
-
   </div>
 
   <div class="govuk-grid-column-full">
@@ -332,13 +343,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 text: "Redaction"
               },
               value: {
-                text: "Awaiting AI redaction"
+                text: "AI redaction failed"
               },
               actions: {
                 items: [
                   {
                     href: "edit_redactionStatus",
-                    text: "",
+                    text: "Change",
                     visuallyHiddenText: "redaction status"
                   }
                 ]
@@ -395,14 +406,14 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">Awaiting AI redaction</td>
+              <td class="govuk-table__cell">AI redaction failed</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
                 </ul>
               </td>
             </tr>
-      </tbody>
+        </tbody>
       </table>
     </div>
   </div>
