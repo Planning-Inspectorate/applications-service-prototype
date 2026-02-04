@@ -26,7 +26,7 @@
               </h1>
             </legend>
             <div id="contact-hint" class="govuk-hint">
-              Select the category to assign an examination library reference number to this document
+              Deadlines, events and hearings created in the examination timetable will appear as sub categories
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="No examination library category">
@@ -136,14 +136,9 @@
           </fieldset>
         </div>
 
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-visually-hidden">Warning</span>
-            Updating the category will change the examination library reference. You will not be able to revert back to the original reference if the document has been published to the examination library.
-          </strong>
+        <div class="govuk-inset-text">
+          Updating the category will change the draft examination library reference. 
         </div>
-
 
         <div class="govuk-button-group">
           {{ govukButton({

@@ -16,32 +16,57 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="./index" method="post">
+      <form class="form" action="./document-properties" method="post">
 
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="cost-per-item">
-              Examination library reference override (optional)
-            </label>
-          </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            To change the document order within the examination library, add the reference number and a single letter, for example, REP1-021a, REP1-021b
-          </div>
-          <div class="govuk-input__wrapper">
-            <div class="govuk-input__prefix" aria-hidden="true">REP1</div>
-            <input class="govuk-input govuk-input--width-4" id="cost-per-item" name="costPerItem" type="text" spellcheck="false">
-          </div>
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Examination library reference
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              A unique reference number is given to each published document assigned to an examination library category
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" checked name="library-ref" type="radio" value="REP1-001 (Auto)">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Automatic reference
+                </label>
+                <div id="automatic-reference-hint" class="govuk-hint govuk-radios__hint">
+                  Automatically assign reference according to order hierarchy
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="library-ref" type="radio" value="REP1-001" data-aria-controls="conditional-contact-ev">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Set reference
+                </label>
+                <div id="specific-reference-hint" class="govuk-hint govuk-radios__hint">
+                  For exceptional documents and late submissions only
+                </div>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-ev">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="event-name">
+                    Unique reference
+                  </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">REP1 -</div>
+                    <input class="govuk-input govuk-input--width-4" id="cost-per-item" name="costPerItem" type="text" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
         </div>
-
         <div class="govuk-button-group">
           {{ govukButton({
-            text: "Save and return",
-            href: "document-properties"
+            text: "Save and return"
           }) }}
         </div>
-
       </form>
-
     </div>
   </div>
 
