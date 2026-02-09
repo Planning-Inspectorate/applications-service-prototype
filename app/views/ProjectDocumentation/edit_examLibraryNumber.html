@@ -30,13 +30,16 @@
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" checked name="library-ref" type="radio" value="REP1-001 (Auto)">
+                <input class="govuk-radios__input" id="contact-2" checked name="library-ref" type="radio" value="REP1-001 (Auto)" data-aria-controls="conditional-contact-au">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
                   Automatic reference
                 </label>
                 <div id="automatic-reference-hint" class="govuk-hint govuk-radios__hint">
                   Automatically assign reference according to order hierarchy
                 </div>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-au">
+                <p class="govuk-body">Predicted reference</br><strong>REP1-001</strong></p>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-3" name="library-ref" type="radio" value="REP1-001" data-aria-controls="conditional-contact-ev">

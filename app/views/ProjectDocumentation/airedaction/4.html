@@ -41,16 +41,17 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Success
+          Important <a href="5">[advance prototype]</a>
         </h2>
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          New version uploaded
+          AI redaction being finalised
         </h3>
+        <p class="govuk-body">This process can take some time. Check back later for a new version of the document with finalised redactions.</p>
       </div>
     </div>
 
@@ -72,8 +73,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-    text: "Upload new version",
-    href: "4"
+    text: "Upload new version"
     }) }}
 
     <h2 class="govuk-heading-m">Document actions</h2>
@@ -86,11 +86,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       {{ govukButton({
         text: "Download",
         classes: "govuk-button--secondary"
-      }) }}
-      {{ govukButton({
-        text: "AI redaction",
-        classes: "govuk-button--secondary",
-        href: "2"
       }) }}
       {{ govukButton({
           text: "Delete",
@@ -106,17 +101,17 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#past-day">
+          <a class="govuk-tabs__tab" href="#properties">
             Document properties
           </a>
         </li>
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#past-week">
+          <a class="govuk-tabs__tab" href="#history">
             Document history
           </a>
         </li>
       </ul>
-      <div class="govuk-tabs__panel" id="past-day">
+      <div class="govuk-tabs__panel" id="properties">
         <h2 class="govuk-heading-m">Document properties</h2>
         {{ govukSummaryList({
           rows: [
@@ -337,13 +332,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 text: "Redaction"
               },
               value: {
-                text: "Unredacted"
+                text: "Awaiting AI redaction"
               },
               actions: {
                 items: [
                   {
                     href: "edit_redactionStatus",
-                    text: "Change",
+                    text: "",
                     visuallyHiddenText: "redaction status"
                   }
                 ]
@@ -370,7 +365,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         }) }}
       </div>
 
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
         <h2 class="govuk-heading-m">Document history</h2>
 
         <table class="govuk-table">
@@ -390,17 +385,17 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
               </td>
               <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Document_v1_Redacted.pdf</a></strong><br>
+                <strong><a href="#" class="govuk-link">Document_v1_Redaction_Suggestions.pdf</a></strong><br>
                 PDF, 1.2MB
               </td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li>
-                    <p class="govuk-body"><strong>Uploaded: </strong>13:43, 11 Apr 2025, Alex Hopkins</p>
+                    <p class="govuk-body"><strong>Uploaded: </strong>13:53, 11 Apr 2025, Alex Hopkins</p>
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">Unredacted</td>
+              <td class="govuk-table__cell">Amended redaction suggestions</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
@@ -453,7 +448,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 </ul>
               </td>
             </tr>
-      </tbody>
+        </tbody>
       </table>
     </div>
   </div>

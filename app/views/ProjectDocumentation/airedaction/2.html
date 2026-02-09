@@ -101,17 +101,17 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#past-day">
+          <a class="govuk-tabs__tab" href="#properties">
             Document properties
           </a>
         </li>
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#past-week">
+          <a class="govuk-tabs__tab" href="#history">
             Document history
           </a>
         </li>
       </ul>
-      <div class="govuk-tabs__panel" id="past-day">
+      <div class="govuk-tabs__panel" id="properties">
         <h2 class="govuk-heading-m">Document properties</h2>
         {{ govukSummaryList({
           rows: [
@@ -365,7 +365,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         }) }}
       </div>
 
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
         <h2 class="govuk-heading-m">Document history</h2>
 
         <table class="govuk-table">
