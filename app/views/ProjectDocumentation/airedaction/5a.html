@@ -40,6 +40,20 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Finalised redactions ready for review
+        </h3>
+      </div>
+    </div>
+
     <span class="govuk-caption-xl">Document properties</span>
     <h1 class="govuk-heading-xl"> Document_1.pdf</h1>
   </div>
@@ -72,11 +86,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       {{ govukButton({
         text: "Download",
         classes: "govuk-button--secondary"
-      }) }}
-      {{ govukButton({
-        text: "AI redaction",
-        classes: "govuk-button--secondary",
-        href: "2"
       }) }}
       {{ govukButton({
           text: "Delete",
@@ -358,7 +367,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
         <h2 class="govuk-heading-m">Document history</h2>
-
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -372,29 +380,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <p class="govuk-body">4</p>
-              </div>
-              </td>
-              <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Document_v1_Redacted.pdf</a></strong><br>
-                PDF, 1.2MB
-              </td>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list govuk-list--spaced">
-                  <li>
-                    <p class="govuk-body"><strong>Uploaded: </strong>14:03, 11 Apr 2025, AI redaction tool</p>
-                  </li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell">Redacted</td>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list govuk-list--spaced">
-                  <li><a href="#" class="govuk-link">Download</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
                 <p class="govuk-body">3</p>
               </div>
               </td>
@@ -405,11 +390,11 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li>
-                    <p class="govuk-body"><strong>Uploaded: </strong>13:53, 11 Apr 2025, Alex Hopkins</p>
+                    <p class="govuk-body"><strong>Uploaded: </strong>13:53, 11 Apr 2025, AI redaction tool</p>
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">Amended redaction suggestions</td>
+              <td class="govuk-table__cell">Redacted</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
@@ -432,7 +417,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">AI redaction review needed</td>
+              <td class="govuk-table__cell">Redactions suggested</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>

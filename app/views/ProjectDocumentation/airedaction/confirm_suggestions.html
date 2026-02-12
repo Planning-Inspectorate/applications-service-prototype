@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype",
+classes: "govuk-tag--pink"
+},
+html: 'This is not a full service. It is not production code and you might experience problems.'
+}) }}
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "3"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--l">Review the document containing suggestions</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">File name</th>
+          <th scope="col" class="govuk-table__header">Activity</th>
+          <th scope="col" class="govuk-table__header">Download</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">Document_v1_Redaction_Suggestions.pdf</a></th>
+          <td class="govuk-table__cell">14:22, 21 Nov 2025, AI redaction tool</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Download</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">
+      You can accept the redactions suggested by the redaction tool or make further changes. When reviewing the document, refer to the  <a href="https://intranet.planninginspectorate.gov.uk/task/sensitive-information-guidance/" class="govuk-link">Planning Inspectorate's sensitive information guidance</a>.
+    </p>
+  </div>
+  
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/upload_amends" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Are the suggested redactions correct?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redactions-correct" name="redactionscorrect" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="redactions-correct">
+                Yes, the document is correctly redacted and ready for finalising
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redactions-correct-2" name="redactionscorrect" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="redactions-correct-2">
+                No, I need to edit the redactions and upload a new version
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {{ govukButton({
+        text: "Continue",
+        type: "Submit"
+      }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

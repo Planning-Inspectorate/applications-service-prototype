@@ -1,0 +1,157 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Exam library tracker – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .sortButton {
+    color: #1d70b8;
+    cursor: pointer;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  #banner.hide:target,
+  #banner2.hide:target {
+    display: block;
+  }
+</style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="hide" id="banner">
+        {% set html %}
+          <h3 class="govuk-notification-banner__heading">
+            Examination library category published
+          </h3>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: "success"
+        }) }}
+      </div>
+
+      <div class="hide" id="banner2">
+        {% set html %}
+          <h3 class="govuk-notification-banner__heading">
+            Examination library category updated
+          </h3>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: "success"
+        }) }}
+      </div>
+
+      <span class="govuk-caption-l">Examination library</span>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
+        Procedural decisions and notifications from Examining Authority
+      </h1>
+
+      <p class="govuk-body">Examination library references for unpublished documents and representations are provisional only. Once the examination library is published, these references are final and cannot be changed.</p>
+      <p class="govuk-body"><a class="govuk-link" href="#">View draft documents (5)</a></p>
+      <div class="govuk-button-group">
+        <form action="unpublish_examLibrary">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Unpublish from library
+          </button>
+        </form>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <p class="govuk-body-s">Showing <b>1</b> to <b>25</b> of <b>67</b> results</p>
+        </div>
+        <div class="govuk-grid-column-one-half text-align--right">
+          <p class="govuk-body-s govuk-!-text-align-right">
+            <span class="govuk-!-margin-right-2"><strong>Results per page</strong></span>
+            <span class="govuk-!-margin-left-1">25<span class="govuk-visually-hidden"> results per page</span></a></span>
+            <span class="govuk-!-margin-left-1">|</span>
+            <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>50<span class="govuk-visually-hidden"> results per page</span></a>   </span>
+            <span class="govuk-!-margin-left-1">|</span>			
+            <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>100<span class="govuk-visually-hidden"> results per page</span></a></span>
+          </p>
+        </div>
+      </div>
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m">
+          Procedural decisions and notifications from Examining Authority documents &nbsp;&nbsp;
+          <strong class="govuk-tag govuk-tag--green">
+            Published
+          </strong>
+        </caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter sortButton">Final reference &#9660;</a></th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half sortButton">Document description&#9660;</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter sortButton">Document status &#9660;</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for i in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'] %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              PD-0{{ i }}
+            </th>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="">Example document</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              Published
+            </td>
+            
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a class="govuk-link" href="/ProjectDocumentation/document-properties">View/Edit properties</a></p>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+{% endblock %}

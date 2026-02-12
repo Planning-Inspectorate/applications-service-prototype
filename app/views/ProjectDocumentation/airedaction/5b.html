@@ -49,9 +49,8 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          Redaction suggestions created. <a class="govuk-link" href="confirm_suggestions">Review the redaction suggestions</a>.
+          Finalised redactions ready for review
         </h3>
-        <!--<p class="govuk-body"><a href="upload_amends">Upload reviewed version</a></p>-->
       </div>
     </div>
 
@@ -64,7 +63,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
     <p class="govuk-body"><strong>Final examination library reference: </strong>REP1-007</p>
     <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
-    <p class="govuk-body"><strong>Version: </strong>2</p>
+    <p class="govuk-body"><strong>Version: </strong>4</p>
     <!--
     <div class="govuk-inset-text">
       This document has been superseded by <a style="color: rgb(36, 77, 190);">EN0110007-00013</a>
@@ -74,7 +73,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
     {{ govukButton({
     text: "Upload new version",
-    href: "choose_upload_type"
+    href: "4"
     }) }}
 
     <h2 class="govuk-heading-m">Document actions</h2>
@@ -87,11 +86,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       {{ govukButton({
         text: "Download",
         classes: "govuk-button--secondary"
-      }) }}
-      {{ govukButton({
-        text: "Review redactions",
-        classes: "govuk-button--secondary",
-        href: "confirm_suggestions"
       }) }}
       {{ govukButton({
           text: "Delete",
@@ -338,13 +332,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 text: "Redaction"
               },
               value: {
-                text: "Redactions suggested"
+                text: "Redacted"
               },
               actions: {
                 items: [
                   {
                     href: "edit_redactionStatus",
-                    text: "",
+                    text: "Change",
                     visuallyHiddenText: "redaction status"
                   }
                 ]
@@ -373,7 +367,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
         <h2 class="govuk-heading-m">Document history</h2>
-
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -385,6 +378,52 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p class="govuk-body">4</p>
+              </div>
+              </td>
+              <td class="govuk-table__cell">
+                <strong><a href="#" class="govuk-link">Document_v1_Redacted.pdf</a></strong><br>
+                PDF, 1.2MB
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                    <p class="govuk-body"><strong>Uploaded: </strong>14:03, 11 Apr 2025, AI redaction tool</p>
+                  </li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">Redacted</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li><a href="#" class="govuk-link">Download</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p class="govuk-body">3</p>
+              </div>
+              </td>
+              <td class="govuk-table__cell">
+                <strong><a href="#" class="govuk-link">Document_v1_Redaction_Suggestions.pdf</a></strong><br>
+                PDF, 1.2MB
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                    <p class="govuk-body"><strong>Uploaded: </strong>13:53, 11 Apr 2025, Alex Hopkins</p>
+                  </li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">Suggestions reviewed</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li><a href="#" class="govuk-link">Download</a></li>
+                </ul>
+              </td>
+            </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <p class="govuk-body">2</p>
@@ -431,11 +470,11 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 </ul>
               </td>
             </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
 
 
 

@@ -19,40 +19,42 @@ html: 'This is not a full service. It is not production code and you might exper
 
 {{ govukBackLink({
   text: "Back",
-  href: "project-management"
+  href: "confirm_suggestions"
   }) }}
 
 {% endblock %}
-
+<script type="javascript">
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
 {% block content %}
+
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">
-      Upload version of Coverletter_v1.pdf with reviewed suggestions
+      Upload document version with reviewed redaction suggestions
     </h1>
 
     <p>
       Choose a single file to upload.
     </p>
     <p>
-      Your file must be DBF, DOC, DOCX, HTML, JPEG, JPG, MOV, MP3, MP4, MPEG, MSG, PDF, PNG, PPT, PPTX, PRJ, SHP, SHX, TIF, TIFF, XLS, or XLSX.
+      Your uploaded file must be PDF and smaller than 1GB.
     </p>
-    <p>
-      The total of your uploaded files must be smaller than 1 GB.
-    </p>
-
     <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file
+      </label>
       <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
     </div>
     
 
     <div class="govuk-inset-text">
-      Uploading the reviewed suggestions will send them to the AI redaction tool to finalise the redactions, which will appear as a new version when completed
+      The AI redaction tool will finalise the reviewed redaction suggestions in the uploaded document. Once this process is complete, it will create a new version of the document.
     </div>
 
-    <a href="4" class="govuk-button" role="button" data-module="govuk-button">
+    <a href="4b" class="govuk-button" role="button" data-module="govuk-button">
       Save and return
     </a>
 
