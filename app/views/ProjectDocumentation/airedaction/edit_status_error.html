@@ -14,23 +14,25 @@
 {% block content %}
 
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#">Select redacted or redaction not needed in the document properties to be able to change the document status to ready to publish</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="./edit_status_error" method="post">
-        <div class="govuk-error-summary" data-module="govuk-error-summary">
-          <div role="alert">
-            <h2 class="govuk-error-summary__title">
-              There is a problem
-            </h2>
-            <div class="govuk-error-summary__body">
-              <ul class="govuk-list govuk-error-summary__list">
-                <li>
-                  <a href="#">The document is awaiting AI redaction, so cannot be set to ready to publish</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
