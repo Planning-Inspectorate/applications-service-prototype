@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Exam library tracker – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
+				Unpublish Open floor hearing 1 from the examination library
+			</h1>      
+      <p>The examination library for deadline 1 will [something about how we hide documents]. Showing 1 - 67 documents.</p>
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m">
+          Open floor hearing 1 documents
+        </caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Final reference</th>
+            <th scope="col" class="govuk-table__header">Document description</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for i in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'] %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              EV1-0{{ i }}
+            </th>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="">Example document</a></p>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          Unpublishing will remove only deadline 1 from the examination library, it will not unpublish any associated documents.
+        </strong>
+      </div>
+
+      <div class="govuk-button-group">
+        <form action="hearing_unpublished#banner">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Unpublish from examination library
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+
+{% endblock %}
