@@ -74,15 +74,23 @@
 
       <span class="govuk-caption-l">Examination library</span>
       <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
-        Deadline 1
+        Deadline 1 &nbsp;&nbsp;
+        <strong class="govuk-tag govuk-tag--green">
+          Published
+        </strong>
       </h1>
 
       <p class="govuk-body">Once an examination library category has been published, the examination library references are final and cannot be changed.</p>
-      <p class="govuk-body"><a class="govuk-link" href="deadline1">View documents in published examination library (67)</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="deadline1">View items in the examination library (67)</a></p>
       <div class="govuk-button-group">
         <form action="republish_examLibrary">
           <button type="submit" class="govuk-button" data-module="govuk-button">
-            Publish to library
+            Publish updates to category
+          </button>
+        </form>
+        <form action="#">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Unpublish category from library
           </button>
         </form>
       </div>
@@ -103,10 +111,10 @@
       </div>
       <table class="govuk-table govuk-table--small-text-until-tablet">
         <caption class="govuk-table__caption govuk-table__caption--m">
-          Documents &nbsp;&nbsp;
-          <strong class="govuk-tag govuk-tag--blue">
+          Items waiting to be added to the examination library &nbsp;&nbsp;
+          <!--<strong class="govuk-tag govuk-tag--blue">
             Drafts
-          </strong>
+          </strong>-->
         </caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
