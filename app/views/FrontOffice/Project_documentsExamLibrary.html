@@ -160,259 +160,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
     {% include "../_includes/project-description.html" %}
 
-  <!-- 
-  <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
-
-    <nav class="side-nav">
-      <ul class="govuk-list">
-        <li><a href="Project_info">Project information</a></li>
-        <li><a href="Project_documents" class="selected">Documents</a></li>
-        <li><a href="Project_relReps">Relevant representations (registration comments)</a></li>
-        <li><a href="Project_examTimetable">Examination timetable</a></li>
-        <li><a href="Project_haveYourSay">Have your say</a></li>
-        <li><a href="Project_updates">Get updates</a></li>
-        <li><a href="Project_s51">Section 51 advice</a></li>
-      </ul>
-    </nav>
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <h2 class="govuk-heading-m">Filter</h2>
-    <p class="govuk-link govuk-body-s">Show all sections</p>
-
-    <dl class="govuk-summary-list">
-      <details class="govuk-details filters">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text filtersText">
-            Sort by
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" checked name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Examination library
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Name (ascending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Name (descending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Author (ascending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
-                  <label class="govuk-label govuk-radios__label" for="changedName">
-                    Author (descending)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
-                  <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    Updated (newest)
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
-                  <label class="govuk-label govuk-radios__label" for="changedName-2">
-                    Updated (oldest)
-                  </label>
-                </div>
-                
-              </div>
-            </fieldset>
-          </div>
-        </div>
-      </details>
-      <details class="govuk-details filters">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text filtersText">
-            Examination library (28)
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Application documents (APP)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Adequecy of Consultation responses (AoC)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Procedural decisions and notifications from Examining Authority (PD)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Additional submissions (AS)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 1 (EV1)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 2 (EV2)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 3 (EV3)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 4 (EV4)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 5 (EV5)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Events and hearings 6 (EV6)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Other documents (OD)
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-        </div>
-      </details>
-      <details class="govuk-details filters">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text filtersText">
-            Deadline (31)
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Procedural deadline A (PDA)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Procedural deadline B (PDB)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 1 (REP1)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 2 (REP2)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 3 (REP3)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 4 (REP4)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 5 (REP5)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 6 (REP6)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 7 (REP7)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 8 (REP8)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Deadline 9 (REP9)
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-        </div>
-      </details>
-    </dl>
-    <button class="govuk-button">Apply filters</button>
-    <hr class="layout-slots__divider">
-    <span>&nbsp;</span>
-    <p><strong>Related guides</strong></p>
-    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">The process for Nationally Significant Infrastructure Projects (NSIPs)</a></p>
-    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">Have your say about a national infrastructure project</a></p>
-    
-  </div>
-  -->
-  
-
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-xl">
       <span class="govuk-caption-l">Longfield Solar Farm</span>
@@ -979,6 +726,26 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">REP1-002</th>
+              <td class="govuk-table__cell"><a>Explanatory memorandum</a></td>
+              <td class="govuk-table__cell">Highways England</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell">REP1-003</th>
+              <td class="govuk-table__cell"><a>Draft Development Consent Order</a></td>
+              <td class="govuk-table__cell">Highways England</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell">REP1-004</th>
+              <td class="govuk-table__cell"><a>Explanatory memorandum</a></td>
+              <td class="govuk-table__cell">Highways England</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell">REP1-005</th>
+              <td class="govuk-table__cell"><a>Draft Development Consent Order</a></td>
+              <td class="govuk-table__cell">Highways England</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell">REP1-006</th>
               <td class="govuk-table__cell"><a>Explanatory memorandum</a></td>
               <td class="govuk-table__cell">Highways England</td>
             </tr>

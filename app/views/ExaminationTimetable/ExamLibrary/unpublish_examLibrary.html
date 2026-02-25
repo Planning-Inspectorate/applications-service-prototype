@@ -22,15 +22,30 @@
     </div>
   </div>
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <p class="govuk-body-s">Showing <b>1</b> to <b>25</b> of <b>67</b> results</p>
+    </div>
+    <div class="govuk-grid-column-one-half text-align--right">
+      <p class="govuk-body-s govuk-!-text-align-right">
+        <span class="govuk-!-margin-right-2"><strong>Results per page</strong></span>
+        <span class="govuk-!-margin-left-1">25<span class="govuk-visually-hidden"> results per page</span></a></span>
+        <span class="govuk-!-margin-left-1">|</span>
+        <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>50<span class="govuk-visually-hidden"> results per page</span></a>   </span>
+        <span class="govuk-!-margin-left-1">|</span>			
+        <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>100<span class="govuk-visually-hidden"> results per page</span></a></span>
+      </p>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <table class="govuk-table govuk-table--small-text-until-tablet">
         <caption class="govuk-table__caption govuk-table__caption--m">
-          Items in the examination library
+          Open floor hearing 1
         </caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Final reference</th>
-            <th scope="col" class="govuk-table__header">Document description</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Document</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -40,13 +55,41 @@
               EV1-0{{ i }}
             </th>
             <td class="govuk-table__cell">
-              <p class="govuk-body"><a href="">Example document</a></p>
+              <a href="">Example document</a>
             </td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
