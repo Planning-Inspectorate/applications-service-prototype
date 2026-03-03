@@ -1,0 +1,252 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = "Prototype" %}
+
+
+{% block content %}
+
+<style>
+
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <div class="govuk-service-navigation grey-background" data-module="govuk-service-navigation">
+      <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+          <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+            <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+              Menu
+            </button>
+            <ul class="govuk-service-navigation__list" id="navigation">
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="index">
+                  <strong class="govuk-service-navigation__active-fallback">Back office</strong>
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                <a class="govuk-service-navigation__link" href="indexFO" aria-current="true">
+                  Front office
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexDS">
+                  Design patterns
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexAD">
+                  Additional information
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--l">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Front office prototype</h1>
+    <p class="govuk-body">The NSIP Applications front office (FO) is a public facing site for making comments and viewing information on all current National Significant Infrastructure (NSIP) applications.</p>
+    <a href="FrontOffice/" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Start prototype
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
+  </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--m">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Project sections</h1>
+  </div>
+</div>
+
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Project overview &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Project information page for a particular NSIP application.</p>
+        <a href="/FrontOffice/Project_info" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href=""></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Documents &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Repository page for viewing all published documentation submitted for a particular project.</p>
+        <a href="/FrontOffice/Project_documents" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="">View examination library</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Relevant representations &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Relevant representations page for viewing all registration comments for a particular project.</p>
+        <a href="/FrontOffice/Project_relReps" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href=""></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Examination timetable &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Examination timetable page for viewing key events and deadlines for a particular project.</p>
+        <a href="/FrontOffice/Project_examTimetable" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href=""></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Have your say &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for interested parties to register to have their say, and make comments on a current project.</p>
+        <a href="/FrontOffice/Project_haveYourSay" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="">Register to have your say *</a></li>
+          <li><a class="govuk-link" href="/FrontOffice/Project_haveYourSay">Have your say</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Get updates &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for signing up to receive regular email updates on a particular ongoing project.</p>
+        <a href="/FrontOffice/Project_updates" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href=""></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">All project updates &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for viewing current and previous project updates made for a particular project.</p>
+        <a href="/FrontOffice/Project_updates_all" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href=""></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Section 51 advice &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for viewing all enquiries and advice given for a particular project due to a new statutory requirement under section 51 of the planning act 2008.</p>
+        <a href="/FrontOffice/Project_s51" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href=""></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <hr class="govuk-section-break govuk-section-break--m">
+        <h1 class="govuk-heading-l">Find a project</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">View all projects &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for viewing status and information on all live NSIP applications.</p>
+        <a href="FrontOffice/search" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="FrontOffice/searchMapViewFullscreen">View a map of all projects</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <hr class="govuk-section-break govuk-section-break--m">
+        <h3 class="govuk-heading-m">Archived designs</h3>
+        <ul class="govuk-list">
+          <li><a href="/FrontOffice/searchMapViewFullscreen2">Project map alternate filter design</a></li>
+          <li><a href="/FrontOffice/Project_documentHistory">Document history</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

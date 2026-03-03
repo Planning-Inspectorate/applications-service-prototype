@@ -5,116 +5,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
-<style>
-  .layout-slots__divider{
-    color: #ffffff
-  }
-  a {
-    color: #1d70b8;
-  }
-  .grey-box {
-    display: none;
-  }
-
-  .govuk-main-wrapper {
-    padding-top: 0px;
-  }
-
-  .govuk-header, .govuk-header__container {
-    background-color: rgb(7, 71, 69);
-    border-bottom: none;
-    padding-top: 22px;
-    padding-bottom: 22px;
-  }
-
-  .govuk-header {
-    border-bottom: 10px solid #13a19b;
-  }
-
-  .greybg {
-    box-shadow: #f3f2f1 800px 0px, #f3f2f1 -800px 0px;
-  }
-
-  .side-nav {
-        padding-right: 20px;
-      }
-
-      .side-nav ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-      }
-
-      .side-nav li {
-        margin-bottom: 5px;
-      }
-
-      .side-nav a {
-        display: block;
-        padding: 10px 8px;
-        font-size: 16px;
-        text-decoration: none;
-        color: #1d70b8;
-        border-left: 5px solid transparent;
-      }
-
-      .side-nav a:hover {
-        background-color: #f3f2f1;
-      }
-
-      .side-nav a.selected {
-        background-color: #f3f2f1;
-        font-weight: bold;
-        border-left: 6px solid #00847f;
-        color: #0b0c0c;
-      }
-
-      .govuk-details__summary::before {
-    clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
-    background-color: black;
-    color: black;
-    width: 3px;
-    height: 3px;
-    background-color: black;
-    color: black;
-  }
-
-  .filters {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #b1b4b6;
-  }
-
-  .document-item {
-    padding-top: 12px;
-    padding-bottom: 0px;
-  }
-
-  .filters .govuk-details__summary {
-    margin-left: 15px;
-  }
-
-  .filters .govuk-details__summary-text {
-    text-decoration: none;
-  }
-
-  .filters .govuk-details__text {
-    border: none;
-    padding-left: 0px;
-    margin-left: 15px;
-
-  }
-
-
-  .govuk-details[open] > .govuk-details__summary::before {
-    clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
-    width: 3px;
-    height: 3px;
-  }
-
-</style>
-
+{% include "../FrontOffice/_includes/FO-components.html" %}
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -128,7 +19,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 
 
-<section aria-label="Service information" class="govuk-service-navigation greybg"
+<section aria-label="Service information" class="govuk-service-navigation grey-background"
   data-module="govuk-service-navigation">
   <div class="govuk-width-container">
     <div class="govuk-service-navigation__container govuk-width-container">
@@ -157,9 +48,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row" style="padding-top: 48px;">
   <div class="govuk-grid-column-full">
-
-    {% include "../_includes/project-description.html" %}
-
   <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
 
     <nav class="side-nav">
@@ -177,7 +65,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     
     <h2 class="govuk-heading-m">Filter</h2>
-
+    <!--
     <h2 class="govuk-heading-s">Examination library</h2>
     <p class="govuk-link govuk-body-s">Show all sections</p>
 
@@ -365,7 +253,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       </h1>
       <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
     </div>
-    <h2 class="govuk-heading-s">Additional filters</h2>
+    <h2 class="govuk-heading-s">Additional filters</h2>-->
     <p class="govuk-link govuk-body-s">Show all sections</p>
 
     <dl class="govuk-summary-list">
@@ -699,8 +587,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       </details>
     </dl>
     <button class="govuk-button">Apply filters</button>
-    <hr class="layout-slots__divider">
-    <span>&nbsp;</span>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
     <p><strong>Related guides</strong></p>
     <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">The process for Nationally Significant Infrastructure Projects (NSIPs)</a></p>
     <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">Have your say about a national infrastructure project</a></p>
@@ -733,11 +621,12 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {% for i in range(25) %}
     <div class="document-item">
-      <div class="govuk-grid-row">
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <div class="govuk-grid-row" style="padding-top: 10px;">
         <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>Example document &#10240; (PDF, 149KB)</strong></a>
+          <p class="govuk-body"><a class="govuk-link" href="#"><strong>Example document &#10240; (PDF, 149KB)</strong></a>
             <br><span class="govuk-body-s">From Highways England</span></p>
         </div>
         <div class="govuk-grid-column-one-third">
@@ -750,48 +639,9 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
         </div>
       </div>
-      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+      
     </div>
-    <div class="document-item">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>Example document &#10240; (PDF, 149KB)</strong></a>
-            <br><span class="govuk-body-s">From Highways England</span></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
-        </div>
-      </div>
-      <!--
-      <div class="govuk-inset-text" style="margin-top: 0px;">
-        This document has a newer submission, <a href="Project_documentHistory">view all submissions<span class="govuk-visually-hidden">for Example superseded document</span></a>
-      </div>
-       -->
-      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-    </div>
-    <div class="document-item">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link"><strong>Example document &#10240; (PDF, 149KB)</strong></a>
-            <br><span class="govuk-body-s">From Highways England</span></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
 
     <nav class="govuk-pagination" aria-label="Pagination">
       <ul class="govuk-pagination__list">

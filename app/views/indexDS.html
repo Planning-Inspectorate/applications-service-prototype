@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = "Prototype" %}
+
+
+{% block content %}
+
+<style>
+
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <div class="govuk-service-navigation grey-background" data-module="govuk-service-navigation">
+      <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+          <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+            <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+              Menu
+            </button>
+            <ul class="govuk-service-navigation__list" id="navigation">
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="index">
+                  <strong class="govuk-service-navigation__active-fallback">Back office</strong>
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexFO">
+                  Front office
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                <a class="govuk-service-navigation__link" href="indexDS" aria-current="true">
+                  Design patterns
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexAD">
+                  Additional information
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--l">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Design patterns</h1>
+    <p class="govuk-body">The NSIP Applications back office and front office make use of both GOV-UK design system patterns and PINS patterns.</p>
+  </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--m">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">NSIP applications design patterns</h1>
+    <p class="govuk-body">Work in progress</p>
+    <h2 class="govuk-heading-m">GDS design patterns from our design systems</h1>
+    <ul class="govuk-list">
+      <li><a href="https://design-system.service.gov.uk/patterns/">GOV-UK design system</a></li>
+      <li><a href="https://pins-app-prototype-design-patterns.azurewebsites.net/patterns">Planning inspectorate design system</a></li>
+      <li><a href="https://design-patterns.service.justice.gov.uk/patterns/">MOJ design system</a></li>
+    </ul>
+    <h2 class="govuk-heading-m">Find patterns in use by other service prototypes</h1>
+    <ul class="govuk-list">
+      <li><a href="https://pins-app-prototype-applications-back-office.azurewebsites.net">Old Applications prototype</a></li>
+      <li><a href="https://pins-app-prototype-appeals-front-office.azurewebsites.net">Appeals Front Office prototype</a></li>
+      <li><a href="https://pins-app-prototype-appeals-back-office.azurewebsites.net">Appeals Back Office prototype</a></li>
+      <li><a href="https://pins-app-prototype-crown-dev.azurewebsites.net/">Crown Development prototype</a></li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

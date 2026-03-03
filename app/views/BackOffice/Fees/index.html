@@ -1,0 +1,1044 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Fees and forecasting – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+text: "Back to applications",
+href: "../Applications/"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <style>
+      .side-nav {
+        padding-right: 20px;
+      }
+
+      .side-nav ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .side-nav li {
+        margin-bottom: 5px;
+      }
+
+      .side-nav a {
+        display: block;
+        padding: 12px 8px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #1d70b8;
+        border-left: 5px solid transparent;
+      }
+
+      .side-nav a:hover {
+        background-color: #f3f2f1;
+      }
+
+      .side-nav a.selected {
+        background-color: #f3f2f1;
+        font-weight: bold;
+        border-left: 5px solid #1d70b8;
+        color: #0b0c0c;
+      }
+    </style>
+    <div class="govuk-grid-column-one-quarter" style="padding: 0px;">
+      <nav class="side-nav">
+        <ul class="govuk-list">
+          <li><a href="../Overview/">Overview</a></li>
+          <li><a href="../KeyDates/">Key dates</a></li>
+          <li><a href="../ProjectTeam/">Project team</a></li>
+          <li><a href="../ProjectDocumentation/">Project documentation</a></li>
+          <li><a href="../ProjectUpdates/">Project updates</a></li>
+          <li><a href="../ExaminationTimetable/">Examination timetable</a></li>
+          <li><a href="../ExaminationLibrary/">Examination library</a></li>
+          <li><a href="../Fees/" class="selected">Fees and forecasting</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <h2 class="govuk-heading-m">Fees and forecasting (internal use only)</h2>
+      <p class="govuk-body">Provide details on fees and forecasting in this project.</p>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            New maturity
+          </dt>
+          <dd class="govuk-summary-list__value">
+            A
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_maturity">Change<span class="govuk-visually-hidden"> new
+                maturity</span></a>
+          </dd>
+        </div>
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Examining inspectors
+          </dt>
+          <dd class="govuk-summary-list__value">
+            4 band 2 inspectors,
+            <br>
+            1 band 3 inspectors
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_inspectors">Change<span class="govuk-visually-hidden"> examining inspectors</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            MEM last updated
+          </dt>
+          <dd class="govuk-summary-list__value">
+            20 May 2025
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_MEM">Change<span class="govuk-visually-hidden"> MEM last updated</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional comments (optional)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Very likely to change tier from standard to basic after April 2025... <a href="#" class="govuk-link">See more</a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="edit_comments">Change<span class="govuk-visually-hidden"> comments</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Pre-application overview
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Tier
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Enhanced
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_projTier">Change<span class="govuk-visually-hidden"> tier</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Link to s61 summary
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a class="govuk-link" href="#">s61.sharepoint.com/</a>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_s61SummaryLink">Change<span class="govuk-visually-hidden"> s61</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Estimated scoping submission date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  20 May 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_scopingDate.html">Change<span class="govuk-visually-hidden"> scoping date</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Adequacy of Consultation Milestone date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  01 Jun 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_AocDate.html">Change<span class="govuk-visually-hidden"> Adequacy of Consultation Milestone date</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Evidence plan process
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Required
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_evidenceProcess.html">Change<span class="govuk-visually-hidden"> Evidence plan process</span></a>
+                </dd>
+              </div>
+              <!-- <div class="govuk-summary-list__row"> 
+                <dt class="govuk-summary-list__key">
+                  Year of service
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Apr 2025 to Mar 2026
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_yearOfService">Change<span class="govuk-visually-hidden"> year of service</span></a>
+                </dd>
+              </div> -->
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Anticipated submission date internal
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  20 May 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_submissionDate">Change<span class="govuk-visually-hidden"> submission date</span></a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Fees
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content">
+
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Stage</th>
+                  <th scope="col" class="govuk-table__header">Amount</th>
+                  <th scope="col" class="govuk-table__header">Invoice number</th>
+                  <th scope="col" class="govuk-table__header">Status</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+      
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Pre-application</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004419</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Paid</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Acceptance</td>
+                  <td class="govuk-table__cell">£9,410</td>
+                  <td class="govuk-table__cell">1800004420</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Paid</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Pre-examination</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004421</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Due</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Initial examination</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004422</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Issued</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Final examination</td>
+                  <td class="govuk-table__cell">£63,410</td>
+                  <td class="govuk-table__cell">1800004423</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Refunded</strong></td>
+                  <td class="govuk-table__cell"><a href="edit_invoice">Review</a></td>
+                </tr>
+      
+              </tbody>
+            </table>
+
+            <!--
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Pre-application fees
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="edit_invoice">Manage<span class="govuk-visually-hidden"> of pre-application fees</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoice number
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Amount due
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoiced
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      09 Jan 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Payment due date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp12 Oct 2025
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of payment
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      21 Nov 2025
+                    </dd>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Acceptance fees
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="edit_invoice">Manage<span class="govuk-visually-hidden"> of pre-exam fees</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoice number
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      1800004419
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Amount due
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      £9,410 (standard)
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoiced
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Payment due date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of payment
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp21 Nov 2025
+                    </dd>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Pre-exam fees
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="edit_invoice">Manage<span class="govuk-visually-hidden"> of pre-exam fees</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoice number
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      1800004419
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Amount due
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      £63,410
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoiced
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Payment due date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of payment
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp21 Nov 2025
+                    </dd>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Initial exam payments
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="edit_invoice">Manage<span class="govuk-visually-hidden"> of initial exam fees</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoice number
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      1800004421
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Amount due
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      £63,410
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoiced
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Payment due date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of payment
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp21 Nov 2025
+                    </dd>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">
+                    Final exam payments
+                  </h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action">
+                      <a class="govuk-link" href="edit_invoice">Manage<span class="govuk-visually-hidden"> of final exam fees</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoice number
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      1800004425
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Amount due
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      £63,410
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Invoiced
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Payment due date
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Date of payment
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp21 Nov 2025
+                    </dd>
+                  </div>
+              </div>
+            </dl>
+          -->
+            <form autocomplete="off" class="form" action="edit_invoice_new">
+              <button class="reset govuk-button govuk-button--secondary govuk-!-margin-bottom-0 govuk-!-margin-top-0" data-module="govuk-button">
+                Add new fee
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Pre-application project meetings
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Meeting agenda</th>
+                  <th scope="col" class="govuk-table__header">Date</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+      
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Inception meeting</td>
+                  <td class="govuk-table__cell">09 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_inceptionMeeting">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Project Update Meeting (PUM)</td>
+                  <td class="govuk-table__cell">11 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_meeting">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Multi-Party Meeting (MPM)</td>
+                  <td class="govuk-table__cell">12 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_meeting">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Draft document review</td>
+                  <td class="govuk-table__cell">13 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_meeting">Change</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <form autocomplete="off" class="form" action="edit_meeting">
+              <button class="reset govuk-button govuk-button--secondary govuk-!-margin-bottom-0 govuk-!-margin-top-0" data-module="govuk-button">
+                Add project meeting
+              </button>
+            </form>
+            <!--
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Inception meeting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  09 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Project Update Meeting (PUM)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  11 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Draft document review meeting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  12 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Pre-scoping meeting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  17 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Multi Party Meeting (MPM)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  21 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Post-scoping meeting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  30 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Policy Compliance Document (PCD) meeting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  11 Feb 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Design Approach Document (DAD) meeting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  21 Feb 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Project Update Meeting (PUM)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  27 Feb 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_meeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row--no-border">
+                <dd class="govuk-summary-list__actions" style="text-align: left;">
+                  <a class="govuk-link"  href="edit_meeting">Add a new meeting</a>
+                </dd>
+              </div>
+            </dl>
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-visually-hidden">Warning</span>
+                This project has reached its typical meeting allowance (9). Ensure any additional meetings are
+                necessary, as they may exceed the agreed scope for the selected tier.
+              </strong>
+            </div>
+            -->
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+                Pre-application evidence plan meetings
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-5" class="govuk-accordion__section-content">            
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Issues discussed</th>
+                  <th scope="col" class="govuk-table__header">Date</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+      
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Flood Risk Assessment</td>
+                  <td class="govuk-table__cell">19 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_evidenceMeeting">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Habitat Regulation Assessment</td>
+                  <td class="govuk-table__cell">21 Jan 2025</td>
+                  <td class="govuk-table__cell"><a href="edit_evidenceMeeting">Change</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <form autocomplete="off" class="form" action="edit_evidenceMeeting">
+              <button class="reset govuk-button govuk-button--secondary govuk-!-margin-bottom-0 govuk-!-margin-top-0" data-module="govuk-button">
+                Add evidence plan meeting
+              </button>
+            </form>
+
+            <!--
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Evidence plan process
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Required
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="edit_evidenceProcess">Change<span class="govuk-visually-hidden"> c1</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Flood Risk Assessment (FRA)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  09 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_evidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Habitat regulation assessment (HRA)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  10 Jan 2025
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <ul class="govuk-summary-list__actions-list">
+                    <li class="govuk-summary-list__actions-list-item">
+                      <a class="govuk-link" href="edit_evidenceMeeting">Change<span class="govuk-visually-hidden"> meeting</span></a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row--no-border">
+                <dd class="govuk-summary-list__actions" style="text-align: left;">
+                  <a class="govuk-link" href="edit_evidenceMeeting">Add new meeting</a>
+                </dd>
+              </div>
+            </dl>
+            -->
+          </div>
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
+                  Pre-application supplementary components
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-7" class="govuk-accordion__section-content">
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Link to issues tracker
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">tracker.sharepoint.com/</a>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_issueTracker">Change<span class="govuk-visually-hidden"> issues tracker</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Essential fast track components
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_fastTrackComps">Change<span class="govuk-visually-hidden"> C9</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Principal area disagreement summary statement (PADSS)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Submitted, 26 Feb 2025
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_PADSS">Change<span class="govuk-visually-hidden"> C2</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Policy compliance document (PCD)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Awaiting submission
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_PCD">Change<span class="govuk-visually-hidden"> C3</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Design approach document (DAD)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Awaiting submission
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_DAD">Change<span class="govuk-visually-hidden"> C4</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Mature outline control documents
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Awaiting submission
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_MOCD">Change<span class="govuk-visually-hidden"> C5</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    CA and TP evidence
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Awaiting submission
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_CATP">Change<span class="govuk-visually-hidden"> C7</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Public sector equality duty (PSED)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Awaiting submission
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_PSED">Change<span class="govuk-visually-hidden"> C8</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Fast track admission document
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Not applicable
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_FTAD">Change<span class="govuk-visually-hidden"> fast track</span></a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Multiparty application readiness gate-check (trial)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Not applicable
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_MPARGT">Change<span class="govuk-visually-hidden"> C9</span></a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
+                  Pre-application programme document
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-7" class="govuk-accordion__section-content">
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Link to programme document
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a class="govuk-link" href="#">progdoc.sharepoint.com/</a>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_progDocLink">Change<span class="govuk-visually-hidden"> documentation link</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date updated programme document is received
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    12 Oct 2025
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_dateUpdatedPD">Change<span class="govuk-visually-hidden"> iteration</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date programme document reviewed by EST
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    22 Oct 2025
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+                      <li class="govuk-summary-list__actions-list-item">
+                        <a class="govuk-link" href="edit_dateReviewedPD">Change<span class="govuk-visually-hidden"> iteration</span></a>
+                      </li>
+                    </ul>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date case team issued comments on programme document
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    23 Oct 2025
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="edit_dateCaseComments">Change<span class="govuk-visually-hidden"> iteration</span></a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

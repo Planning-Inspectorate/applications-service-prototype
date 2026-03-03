@@ -14,62 +14,60 @@
 
 .govuk-header {
   border-bottom: 0.5rem solid #13a19b;
-  margin-bottom: 20px;
 }
 
 .govuk-main-wrapper {
   padding-top: 0px;
 }
 
+.grey-background {
+  box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
+}
+
 
 /* Box styling for the search panel */
 .bo-panel {
-    border: 1px solid #b1b4b6; /* Grey outline */
-    padding: 20px;
-    position: relative;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-  }
-  
-  .bo-panel::before {
-    content: "";
-    display: block;
-    height: 5px;
-    background: #1d70b8; /* GOV.UK blue */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  /* Container to hold both the input and button on the same row */
-  .search-container {
-    display: flex;
-    gap: 10px; /* Spacing between the input and button */
-    align-items: center; /* Vertically align the button and input */
-  }
-  
-  .bo-panel .govuk-input {
-    flex-grow: 1; /* Make the input take available space */
-    max-width: 80%; /* Limit the width of the input */
-  }
-  
-  .bo-panel .govuk-button {
-    flex-shrink: 0; /* Prevent the button from shrinking */
-    width: auto; /* Keep the button at its default width */
-  }
-  
-  /* Full width for the accordion */
-  .govuk-accordion {
-    width: 100%;
-  }
-  
-  /* Space above the general-s51 link */
-  .govuk-link-container {
-    margin-top: 10px; /* Adjust the space as needed */
-    margin-bottom: 5px;
-  }
-  
+  border-left: 2px solid #b1b4b6;
+  border-right: 2px solid #b1b4b6;
+  border-bottom: 2px solid #b1b4b6;
+  border-top: 5px solid #1d70b8;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 16px;
+  background: white;
+}
+
+/* styling for the side panels */
+.side-nav {
+  padding-right: 20px;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.side-nav li {
+  margin-bottom: 5px;
+}
+
+.side-nav a {
+  display: block;
+  padding: 10px 8px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #1d70b8;
+  border-left: 5px solid transparent;
+}
+
+.side-nav a:hover {
+  background-color: #f3f2f1;
+}
+
+.side-nav a.selected {
+  background-color: #f3f2f1;
+  font-weight: bold;
+  border-left: 6px solid #00847f;
+  color: #0b0c0c;
+}

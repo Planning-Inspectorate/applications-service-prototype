@@ -5,137 +5,261 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full-width">
-      <h1 class="govuk-heading-l">{{ pageName }}</h1>
-      <div class="govuk-tabs" data-module="govuk-tabs">
-        <h2 class="govuk-tabs__title">
-          Contents
-        </h2>
-        <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#back-office">
-              Current Back Office
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#front-office">
-              Current Front Office
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#mock-ups">
-              Draft mock-ups
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#archive">
-              Archived mock-ups
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#resources">
-              Resources
-            </a>
-          </li>
-        </ul>
-        <div class="govuk-tabs__panel" id="back-office">
-          <ul>
-            <li><a href="/Applications/index">Applications homepage</a></li>
-            <li><a href="/Overview/">View case</a>
-              <ul>
-                <li><a href="/Overview/">Overview</a></li>
-                <li><a href="/KeyDates/">Key dates</a></li>
-                <li><a href="/ProjectTeam/">Project Team</a></li>
-                <li><a href="/ProjectDocumentation/">Project documentation</a>
-                <ul>
-                  <li><a href="/ProjectDocumentation/">Generic folder page</a></li>
-                  <li><a href="/ProjectDocumentation/document-properties">Generic document properties page</a></li>
-                  <li><a href="/ProjectDocumentation/relevant-representations">Relevant representations</a></li>
-                </ul>
-                </li>
-                <li><a href="/ProjectUpdates/">Project updates</a></li>
-                <li><a href="/ExaminationTimetable/">Examination timetable</a></li>
-                <li><a href="/ExaminationTimetable/overview_examLibrary">Examination library tracker</a></li>
-                <ul>
-                  <li><a href="/ExaminationTimetable/ExamLibrary/deadline2">Example EL category (Publishing journey)</a></li>
-                  <li><a href="/ExaminationTimetable/ExamLibrary/hearing">Example EL category (Unpublishing journey)</a></li>
-                  <li><a href="/ExaminationTimetable/ExamLibrary/deadline1">Example EL category (Publish updates journey)</a></li>
-                </ul>
-                <li><a href="../Fees/index">Fees and forecasting</a></li>
-              </ul>
-            </li>
-            <li><a href="/CreateCase/01_NameDescription">Create case</a>
-              <ol>
-                <li><a href="/CreateCase/01_NameDescription">Project info</a></li>
-                <li><a href="/CreateCase/02_Sector">Sector</a></li>
-                <li><a href="/CreateCase/04_GeographicalInfo">Geographical info</a></li>
-                <li><a href="/CreateCase/07_ProjectEmail">Project contact</a></li>
-                <li><a href="/CreateCase/09_Contact">Applicant contact</a></li>
-                <li><a href="/CreateCase/10_KeyDates">Key dates</a></li>
-                <li><a href="/CreateCase/11_CheckAnswers">Check answers</a></li>
-              </ol>
-            </li>
-          </ul>
-        </div>
-        <div class="govuk-tabs__panel" id="front-office">
-          <ul>
-            <li><a href="/FrontOffice/search">Search projects</a></li>
-            <ul>
-              <li><a href="/FrontOffice/searchMapViewFullscreen">Project map view</a></li>
+<style>
+
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <div class="govuk-service-navigation grey-background" data-module="govuk-service-navigation">
+      <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+          <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+            <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+              Menu
+            </button>
+            <ul class="govuk-service-navigation__list" id="navigation">
+              <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                <a class="govuk-service-navigation__link" href="index" aria-current="true">
+                  <strong class="govuk-service-navigation__active-fallback">Back office</strong>
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexFO">
+                  Front office
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexDS">
+                  Design patterns
+                </a>
+              </li>
+              <li class="govuk-service-navigation__item">
+                <a class="govuk-service-navigation__link" href="indexAD">
+                  Additional information
+                </a>
+              </li>
             </ul>
-            <li><a href="/FrontOffice/Project_info">View project</a></li>
-            <ul>
-              <li><a href="/FrontOffice/Project_info">Project info</a></li>
-              <li><a href="/FrontOffice/Project_documents">Project documents</a></li>
-              <ul>
-                <li><a href="/FrontOffice/Project_documentsExamLibrary">Examination library</a></li>
-              </ul>
-              <li><a href="/FrontOffice/Project_relReps">Relevant representations</a></li>
-              <li><a href="/FrontOffice/Project_examTimetable">Exam timetable</a></li>
-              <li><a href="/FrontOffice/Project_updates">Get updates</a></li>
-              <li><a href="/FrontOffice/Project_updates_all">All project updates</a></li>
-              <li><a href="/FrontOffice/Project_s51">Project section 51</a></li>
-              <li><a href="/FrontOffice/Project_haveYourSay">Have your say</a></li>
-            </ul>
-          </ul>
-        </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="mock-ups">
-          <ul>
-            <li><a href="/ProjectDocumentation/airedaction/1">AI redaction suggestion user flow</a></li>
-            <li><a href="/FrontOffice/searchMapViewFullscreen">Front Office - Project Map filter design</a></li>
-            <li><a href="/FrontOffice/Project_documentsExamLibrary">Front Office - Exam library</a></li>
-            <li><a href="/FrontOffice/Project_documentHistory">Document history</a></li>
-            <li><a href="../ProjectDocumentation/relevant-representations">Bulk unpublishing of relevant representations</a></li>
-            <li><a href="../ProjectDocumentation/project-management">Open in Adobe link (folder page)</a></li>
-            <li><a href="../ProjectDocumentation/document-properties">Open in Adobe link (document properties page)</a></li>
-            <li><a href="../ProjectDocumentation/file-upload">File upload option 1:</a> individual file upload indicator</li>
-            <li><a href="../ProjectDocumentation/file-upload-option-2">File upload option 2:</a> progress bar indicator for all files</li>
-            <li><a href="../misc/submission-completed">'Submission completed' page:</a> page shown when a user attempts to navigate back via the browser from a form confirmation page to prevent duplicate submissions and guide them to next steps</a></li>
-          </ul>
-        </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="archive">
-          <ul>
-            <li><a href="/FrontOffice/searchMapViewFullscreen2">Front Office Project Map alternate filter design</a></li>
-          </ul>
-        </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="resources">
-          <ul>
-            <li>Prototypes</li>
-            <li><a href="https://pins-app-prototype-applications-back-office.azurewebsites.net">Old Applications prototype</a></li>
-            <li><a href="https://pins-app-prototype-appeals-front-office.azurewebsites.net">Appeals Front Office prototype</a></li>
-            <li><a href="https://pins-app-prototype-appeals-back-office.azurewebsites.net">Appeals Back Office prototype</a></li>
-            <li><a href="https://pins-app-prototype-crown-dev.azurewebsites.net/">Crown Development prototype</a></li>
-            <li>password=sesame</li>
-          </ul>
-          <ul>
-            <li>Research</li>
-            <li><a href="https://pins-ds.atlassian.net/wiki/spaces/AS2/pages/1223655425/Applications+User+Research">Applications - User research</a></li>
-          </ul>
+          </nav>
         </div>
       </div>
-
     </div>
   </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--l">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Back office prototype</h1>
+    <p class="govuk-body">The NSIP Applications back office (CBOS) is an internal facing dashboard for creating and managing National Significant Infrastructure (NSIP) applications.</p>
+    <a href="BackOffice/Applications/" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Start prototype
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
+  </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--m">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Project sections</h1>
+  </div>
+</div>
+
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Project overview &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Home page for a particular NSIP application.</p>
+        <a href="BackOffice/Overview/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="">Publish a case *</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Project key dates &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page containing all stages and key dates for a particular project.</p>
+        <a href="BackOffice/KeyDates/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Project team &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for adding and managing team members assigned to a particular project.</p>
+        <a href="BackOffice/ProjectTeam/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#">Add team member *</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Project documentation &nbsp;&nbsp;
+          <strong class="govuk-tag govuk-tag--yellow">Updates in dev</strong>
+        </h2>
+        <p class="govuk-body-s">Page for managing all documentation associated with a project.</p>
+        <a href="BackOffice/ProjectDocumentation/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="BackOffice/ProjectDocumentation/document-properties">Review document properties</a></li>
+          <li><a class="govuk-link" href="BackOffice/ProjectDocumentation/RelRep_details">Review representation details</a></li>
+          <li><a class="govuk-link" href="#">Review s51 advice *</a></li>
+          <li><a class="govuk-link" href="BackOffice/ProjectDocumentation/airedaction/1">Document redaction</a></li>
+          <li><a class="govuk-link" href="#">Publishing queue *</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Project updates &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for creating and publishing project updates to the front office and interested parties.</p>
+        <a href="BackOffice/ProjectUpdates/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#">Create a project update *</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Examination timetable &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Page for managing deadlines and events associated with the examination of an NSIP application.</p>
+        <a href="BackOffice/ExaminationTimetable/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="#">Create a timetable item *</a></li>
+          <li><a class="govuk-link" href="#">Publish timetable updates *</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Examination library &nbsp;&nbsp;
+          <strong class="govuk-tag govuk-tag--orange">In design</strong>
+        </h2>
+        <p class="govuk-body-s">Page for tracking and managing all published documentation and their associated reference numbers at key stages and examination timetable events.</p>
+        <a href="BackOffice/ExaminationLibrary/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="BackOffice/ExaminationLibrary/deadline2">Publish an EL category</a></li>
+          <li><a class="govuk-link" href="BackOffice/ExaminationLibrary/deadline1">Publish an update</a></li>
+          <li><a class="govuk-link" href="BackOffice/ExaminationLibrary/hearing">Unpublish an EL category</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Fees and forecasting &nbsp;&nbsp;
+          <strong class="govuk-tag govuk-tag--yellow">In development</strong>
+        </h2>
+        <p class="govuk-body-s">Page for tracking and managing all fees information for a project, and providing relevant information for forecasting information.</p>
+        <a href="BackOffice/Fees/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="BackOffice/Fees/edit_invoice_new">Add a new fee</a></li>
+          <li><a class="govuk-link" href="BackOffice/Fees/edit_meeting_new">Add a project meeting</a></li>
+          <li><a class="govuk-link" href="BackOffice/Fees/edit_evidenceMeeting_new">Add an evidence plan meeting</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <hr class="govuk-section-break govuk-section-break--m">
+        <h1 class="govuk-heading-l">Projects dashboard</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row project-card bo-panel"> <!--Project card-->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">View all applications &nbsp;&nbsp;
+          <strong class="govuk-tag">Developed</strong>
+        </h2>
+        <p class="govuk-body-s">Internal dashboard for all NSIP applications.</p>
+        <a href="BackOffice/Applications/" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Open
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Key journeys</h3>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="BackOffice/CreateCase/01_NameDescription.html">Create a new case</a></li>
+          <li><a class="govuk-link" href="#">Manage general s51 advice *</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <hr class="govuk-section-break govuk-section-break--m">
+        <h3 class="govuk-heading-m">Archived designs</h3>
+        <ul class="govuk-list">
+          <li><a href="BackOffice/ProjectDocumentation/relevant-representations">Bulk unpublishing of relevant representations</a></li>
+          <li><a href="BackOffice/ProjectDocumentation/project-management">Open in Adobe link (folder page)</a></li>
+          <li><a href="BackOffice/ProjectDocumentation/document-properties">Open in Adobe link (document properties page)</a></li>
+          <li><a href="BackOffice/ProjectDocumentation/file-upload">File upload option 1:</a> individual file upload indicator</li>
+          <li><a href="BackOffice/ProjectDocumentation/file-upload-option-2">File upload option 2:</a> progress bar indicator for all files</li>
+          <li><a href="BackOffice/misc/submission-completed">'Submission completed' page:</a> page shown when a user attempts to navigate back via the browser from a form confirmation page to prevent duplicate submissions</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
 
 {% endblock %}

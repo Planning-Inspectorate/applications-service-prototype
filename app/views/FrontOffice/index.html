@@ -6,47 +6,12 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
 
 
 {% block content %}
+{% include "../FrontOffice/_includes/FO-components.html" %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-
-
   <style>
-    .side-nav {
-      padding-right: 20px;
-    }
-
-    .side-nav ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .side-nav li {
-      margin-bottom: 5px;
-    }
-
-    .side-nav a {
-      display: block;
-      padding: 10px 8px;
-      text-decoration: none;
-      font-size: 16px;
-      color: #1d70b8;
-      border-left: 5px solid transparent;
-    }
-
-    .side-nav a:hover {
-      background-color: #f3f2f1;
-    }
-
-    .side-nav a.selected {
-      background-color: #f3f2f1;
-      font-weight: bold;
-      border-left: 5px solid #1d70b8;
-      color: #0b0c0c;
-    }
-
     .masthead {
       background-color: #00847f;
       padding-top: 30px;
@@ -56,41 +21,21 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
     .masthead p, .masthead h1, .masthead a:link, .masthead a:visited {
       color: white;
     }
-
-    .govuk-header, .govuk-header__container {
-    background-color: rgb(7, 71, 69);
-    border-bottom: none;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    }
-
-  .govuk-header {
-    border-bottom: 10px solid #13a19b;
-  }
-
-    .govuk-main-wrapper {
-      padding-top: 0px;
-    }
-
-    .greybg {
-      box-shadow: #f3f2f1 600px 0px, #f3f2f1 -600px 0px;
-    }
-
   </style>
+
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Beta
+    <strong class="govuk-tag govuk-tag--pink govuk-phase-banner__content__tag">
+      Prototype
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a beta service - your  <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      This is not a complete service. You may experience problems and any proposed screens are subject to be changed.
     </span>
   </p>
 </div>
 
-  <section aria-label="Service information" class="govuk-service-navigation greybg"
-  data-module="govuk-service-navigation">
+<section aria-label="Service information" class="govuk-service-navigation grey-background" data-module="govuk-service-navigation">
   <div class="govuk-width-container">
     <div class="govuk-service-navigation__container govuk-width-container">
       <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
@@ -136,7 +81,7 @@ Welcome to Find a National Infrastructure Project – {{ serviceName }} – GOV.
   </main>
 </div>
 
-<section class="page-section full-width-section full-width-section--bg-lightgrey govuk-!-margin-bottom-6 govuk-!-padding-top-6 greybg" style="background-color: #f3f2f1;">
+<section class="page-section full-width-section full-width-section--bg-lightgrey govuk-!-margin-bottom-6 govuk-!-padding-top-6 grey-background" style="background-color: #f3f2f1;">
   <div class="page-section__content">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">

@@ -5,104 +5,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
-<style>
-
-  /* Tooltip text */
-  #tooltiptext {
-    visibility: hidden;
-    background-color: white;
-    color: #000;
-    text-align: left;
-    margin: 10px;
-    padding: 16px;
-    border-radius: 4px;
-    left: 48%;
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-
-  #tooltiptext:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    z-index: 1;
-    border-style: solid;
-    border-color: #ffffff transparent;
-    border-width: 10px 10px 0;
-    bottom: -10px;
-    left: 50%;
-    margin-left: -10px;
-  }
-
-  #tooltip {
-    background-image: url("https://www.ordnancesurvey.co.uk/img-assets/products/overview-england-wales.x4fa67183.xe4e2d2f0.jpg");
-    background-size: cover;
-    height: 700px;
-    width: 100%;
-    background-color: rgb(188, 214, 188);
-    text-align: center;
-    padding-top: 400px;
-  }
-  
-  .layout-slots__divider{
-    color: #ffffff
-  }
-  a {
-    color: #1d70b8;
-  }
-  .grey-box {
-    display: none;
-  }
-
-  .govuk-main-wrapper {
-    padding-top: 0px;
-  }
-
-  .filter {
-    background-color: #f3f2f1;
-    padding: 8px;
-    border-radius: 5px;
-    margin-left: 10px;
-    border: 1px solid #505a5f;
-    text-decoration: none;
-    color: black;
-  }
-
-  .filter:visited {
-    color: black;
-  }
-
-  .govuk-header, .govuk-header__container {
-    background-color: rgb(7, 71, 69);
-    border-bottom: none;
-    padding-top: 22px;
-    padding-bottom: 22px;
-  }
-
-  .govuk-header {
-    border-bottom: 10px solid #13a19b;
-  }
-
-  .greybg {
-    box-shadow: #f3f2f1 800px 0px, #f3f2f1 -800px 0px;
-  }
-
-  .listbox {
-    border: 1px solid rgb(147, 147, 147);
-    padding: 16px;
-    margin: 12px;
-    transform: translateY(600px);
-    position: absolute;
-    background-color: white;
-    width: 554px;
-  }
-
-</style>
-
-
+{% include "../FrontOffice/_includes/FO-components.html" %}
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -118,7 +21,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-<section aria-label="Service information" class="govuk-service-navigation greybg"
+<section aria-label="Service information" class="govuk-service-navigation grey-background"
   data-module="govuk-service-navigation">
   <div class="govuk-width-container">
     <div class="govuk-service-navigation__container govuk-width-container">
@@ -147,9 +50,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row" style="padding-top: 24px;">
   <div class="govuk-grid-column-full">
-
-    {% include "../_includes/project-description.html" %}
-
     <h2 class="govuk-heading-xl" style="margin-bottom: 24px;">Projects map</h2>
     <p class="govuk-body-m">This is a map of all project boundaries. To find a specific project select a project boundary.</p>
     <p class="govuk-link" style="color: #1d70b8;">Download a geospatial file containing a complete map of all 241 projects (JSON)</p>
