@@ -15,8 +15,8 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Redaction journey
 router.post('/upload_amends', function(req, res) {
     if (req.session.data['redactionscorrect'] == 'yes') {
-        res.redirect('/ProjectDocumentation/airedaction/4a');
+        res.redirect('/BackOffice/ProjectDocumentation/airedaction/4a');
     } else {
-        res.redirect('/ProjectDocumentation/airedaction/upload_amends');
+        res.redirect('/BackOffice/ProjectDocumentation/airedaction/upload_amends');
     }
 });
