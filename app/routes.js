@@ -20,3 +20,22 @@ router.post('/upload_amends', function(req, res) {
         res.redirect('/BackOffice/ProjectDocumentation/airedaction/upload_amends');
     }
 });
+
+// relevant representation status
+router.post('/RelRep_status', function(req, res) {
+    if (req.session.data['RelRep-status'] == 'invalid') {
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+    }
+    else if (req.session.data['RelRep-status'] == 'referred') {
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_referred');
+    }
+    else if (req.session.data['RelRep-status'] == 'awaiting-review') {
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_awaiting');
+    }
+    else if (req.session.data['RelRep-status'] == 'withdrawn') {
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_withdrawn');
+    }
+    else {
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_details');
+    }
+});

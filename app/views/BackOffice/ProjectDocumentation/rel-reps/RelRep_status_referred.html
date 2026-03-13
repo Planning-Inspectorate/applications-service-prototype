@@ -1,0 +1,82 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+      Who are you referring the representation to?
+    </h1>
+
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      <strong class="govuk-tag govuk-tag--blue">Referred</strong>
+    </p>
+
+    <form class="form" action="./RelRep_details" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referring-1" name="referring" type="radio" value="case-team">
+              <label class="govuk-label govuk-radios__label" for="referring-1">
+                Case Team
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referring-2" name="referring" type="radio" value="inspector">
+              <label class="govuk-label govuk-radios__label" for="referring-2">
+                Inspector
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referring-3" name="referring" type="radio" value="central-admin-team">
+              <label class="govuk-label govuk-radios__label" for="referring-3">
+                Central Admin Team
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referring-3" name="referring" type="radio" value="interested-party">
+              <label class="govuk-label govuk-radios__label" for="referring-4">
+                Interested Party
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          Notes (optional)
+        </label>
+        <div id="more-detail-hint" class="govuk-hint">
+          Use this space to provide more details
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5">These are the existing notes on the representation.</textarea>
+      </div>
+
+      {{ govukButton({
+        text: "Save changes"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

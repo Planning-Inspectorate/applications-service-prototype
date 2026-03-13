@@ -1,0 +1,75 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">John Doe</span>
+    <h1 class="govuk-heading-l">
+      Change status
+    </h1>
+
+    <form class="form" action="/RelRep_status" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-status-1" name="RelRep-status" type="radio" value="awaiting-review">
+              <label class="govuk-label govuk-radios__label" for="representation-status-1">
+                Awaiting review
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-status-2" name="RelRep-status" type="radio" value="referred">
+              <label class="govuk-label govuk-radios__label" for="representation-status-2">
+                Referred
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-status-3" name="RelRep-status" type="radio" value="invalid">
+              <label class="govuk-label govuk-radios__label" for="representation-status-3">
+                Invalid
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-status-4" name="RelRep-status" type="radio" value="valid">
+              <label class="govuk-label govuk-radios__label" for="representation-status-4">
+                Valid
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-status-5" name="RelRep-status" type="radio" value="withdrawn">
+              <label class="govuk-label govuk-radios__label" for="representation-status-5">
+                Withdrawn
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Save changes"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}
