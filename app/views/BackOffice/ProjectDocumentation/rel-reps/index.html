@@ -7,30 +7,19 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-{{ govukBreadcrumbs({
-items: [
-{
-text: "Home",
-href: "../Applications/"
-},
-{
-text: "Longfield Solar Farm",
-href: "../Overview/"
-},
-{
-text: "Project documentation",
-href: "index"
-}
-,
-{
-text: "Relevant representations"
-}
-]
-}) }}
-
+  {{ super() }}
+  {{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Project documentation",
+      href: "../index"
+    }
+    ,
+    {
+      text: "Relevant representations"
+    }
+  ]
+  }) }}
 {% endblock %}
 
 {% block content %}

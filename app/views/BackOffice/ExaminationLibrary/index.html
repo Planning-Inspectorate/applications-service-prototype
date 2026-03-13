@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block beforeContent %}
+  {{ super() }}
   {{ govukBackLink({
-  text: "Back to applications",
-  href: "../Applications/"
-}) }}
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}

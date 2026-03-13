@@ -5,35 +5,22 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
-{{ govukPhaseBanner({
-tag: {
-text: "Prototype",
-classes: "govuk-tag--pink"
-},
-html: 'This is not a full service. It is not production code and you might experience problems.'
-}) }}
-
-{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-{{ govukBreadcrumbs({
-items: [
-{
-text: "Project overview",
-href: "/Overview/"
-},
-{
-text: "Project documentation",
-href: "index"
-},
-{
-  text: "Project management"
-  }
-]
-}) }}
-
+  {{ super() }}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Project overview",
+        href: "../Overview/"
+      },
+      {
+        text: "Project documentation",
+        href: "index"
+      },
+      {
+        text: "Project management"
+      }
+    ]
+  }) }}
 {% endblock %}
 
 {% block content %}

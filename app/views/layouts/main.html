@@ -4,3 +4,13 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block beforeContent %}
+    {{ govukPhaseBanner({
+        tag: {
+        text: "Prototype",
+        classes: "govuk-tag--pink"
+        },
+        html: 'This is not a complete service. You may experience problems and any proposed screens are subject to be changed.'
+    }) }}
+{% endblock %}

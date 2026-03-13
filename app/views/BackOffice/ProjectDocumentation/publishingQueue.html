@@ -1,9 +1,3 @@
-<style>
-  .tableLink {
-    color: #1d70b8;
-  }
-</style>
-
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
@@ -11,23 +5,11 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
-{{ govukPhaseBanner({
-tag: {
-text: "Prototype",
-classes: "govuk-tag--pink"
-},
-html: 'This is not a full service. It is not production code and you might experience problems.'
-}) }}
-
-
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
   }) }}
-
 {% endblock %}
 
 {% block content %}

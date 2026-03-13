@@ -1,15 +1,15 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-{{ govukBackLink({
-text: "Back to applications",
-href: "../Applications/"
-}) }}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back to applications",
+    href: "../Applications/"
+  }) }}
 {% endblock %}
 
 {% block content %}

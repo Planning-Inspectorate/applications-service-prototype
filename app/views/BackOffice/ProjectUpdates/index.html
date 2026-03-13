@@ -5,11 +5,11 @@ Project team – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-
-{{ govukBackLink({
-text: "Back to project overview",
-href: "../Overview"
-}) }}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back to project overview",
+    href: "../Overview"
+  }) }}
 {% endblock %}
 
 {% block content %}

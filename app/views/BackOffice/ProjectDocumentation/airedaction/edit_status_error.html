@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block beforeContent %}
+  {{ super() }}
   {{ govukBackLink({
-  text: "Back",
-  href: "1"
-}) }}
+    text: "Back",
+    href: "1"
+  }) }}
 {% endblock %}
 
 {% block content %}

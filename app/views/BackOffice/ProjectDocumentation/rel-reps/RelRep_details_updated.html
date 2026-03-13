@@ -7,10 +7,11 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
+  {{ super() }}
   {{ govukBackLink({
-  text: "Back",
-  href: "index"
-}) }}
+    text: "Back",
+    href: "index"
+  }) }}
 {% endblock %}
 
 
