@@ -5,5 +5,7 @@ module.exports = {
   'rep_edited': 'unedited',
   'rep_redacted': 'unredacted',
   'library-category': 'No examination library category',
-  'library-published': 'notpublished'
+  'library-published': 'notpublished',
+  'document-status': 'Published',
+  'document-redaction': 'Unredacted'
 }

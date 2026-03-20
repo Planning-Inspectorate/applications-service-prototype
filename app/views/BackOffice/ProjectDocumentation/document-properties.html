@@ -58,12 +58,20 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Download
       </button>
+      {% if data['document-redaction'] == 'Unredacted' %}
       <a href="airedaction/2" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Suggest redactions
       </a>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Delete
-      </button>
+      {% endif %}
+      {% if data['document-status'] == 'Published' %}
+      <a href="unpublish" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Unpublish
+      </a>
+      {% elseif data['document-status'] == 'Ready to publish' %}
+      <a href="publishingQueue" type="submit" class="govuk-link">
+        View publishing queue
+      </a>
+      {% endif %}
     </div>
 
   </div>
@@ -237,10 +245,10 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Original publish date
             </dt>
             <dd class="govuk-summary-list__value">
-              14 June 2026
+              {{ data['first-published-day'] }} {{ data['first-published-month'] }} {{ data['first-published-year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit_publishedDate">Change<span class="govuk-visually-hidden"> original publish date</span></a>
+              {% if data['first-published-day'] %}<a class="govuk-link" href="edit_publishedDate">Change<span class="govuk-visually-hidden"> original publish date</span></a>{% endif %}
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -248,7 +256,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Redaction
             </dt>
             <dd class="govuk-summary-list__value">
-              Redacted
+              {{ data['document-redaction'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="edit_redactionStatus">Change<span class="govuk-visually-hidden"> redaction status</span></a>
@@ -259,7 +267,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Status
             </dt>
             <dd class="govuk-summary-list__value">
-              Published
+              {{ data['document-status']}}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="edit_status">Change<span class="govuk-visually-hidden"> document status</span></a>

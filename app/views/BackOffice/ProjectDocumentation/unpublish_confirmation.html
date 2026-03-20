@@ -1,0 +1,34 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Document/s successfully unpublished",
+      html: '
+        <p class="govuk-body" style="color: #ffffff;">
+          Case: Longfield solar farm
+          <br>Reference: EN0110007
+        </p>
+
+      '
+    }) }}
+
+    <p class="govuk-body">Return to folder: <a href="project-management" class="govuk-link">Project overview > Project documentation > Project management</a></p>
+  </div>
+</div>
+
+{% endblock %}
