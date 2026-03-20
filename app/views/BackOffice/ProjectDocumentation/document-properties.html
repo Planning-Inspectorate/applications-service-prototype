@@ -58,19 +58,19 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Download
       </button>
-      {% if data['document-redaction'] == 'Unredacted' %}
-      <a href="airedaction/2" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Suggest redactions
-      </a>
+      {% if data['document-redaction'] == 'Unredacted' %} <!--if unredacted show redaction button-->
+        <a href="airedaction/2" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Suggest redactions
+        </a>
       {% endif %}
-      {% if data['document-status'] == 'Published' %}
-      <a href="unpublish" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Unpublish
-      </a>
-      {% elseif data['document-status'] == 'Ready to publish' %}
-      <a href="publishingQueue" type="submit" class="govuk-link">
-        View publishing queue
-      </a>
+      {% if data['document-status'] == 'Published' %} <!--if published show unpublish button-->
+        <a href="unpublish" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Unpublish
+        </a>
+      {% elseif data['document-status'] == 'Ready to publish' %} <!--if ready for publish show publish queue button-->
+        <a href="publishingQueue" type="submit" class="govuk-link" style="display: inline-flex;">
+          View publishing queue
+        </a>
       {% endif %}
     </div>
 
