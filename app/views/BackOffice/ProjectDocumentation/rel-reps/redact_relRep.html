@@ -93,19 +93,12 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       </h2>
       <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="2" aria-describedby="more-detail-hint">John Doe</textarea>
     </div>
-
-    <!--
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-visually-hidden">Warning</span>
-        You must check and confirm these suggested redactions. They were produced by an assistive tool and may not be accurate.
-      </strong>
-    </div>
-    -->
-    <a href="RelRep_details_updatedRedacted" type="submit" class="govuk-button" data-module="govuk-button">
-      Save and return
-    </a>
+    <form action="RelRep_details" method="post" novalidate>
+      <input type="hidden" name="rep_redacted" value="redacted">
+      {{ govukButton({
+        text: "Save and return"
+      }) }}
+    </form>
   </div>
 </div>
 

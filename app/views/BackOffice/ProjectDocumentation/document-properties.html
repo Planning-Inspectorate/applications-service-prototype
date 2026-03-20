@@ -86,265 +86,186 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       </ul>
       <div class="govuk-tabs__panel" id="properties">
         <h2 class="govuk-heading-m">Document properties</h2>
-        {{ govukSummaryList({
-          rows: [
-            {
-              key: {
-                text: "File name"
-              },
-              value: {
-                text: "Coverletter_v1.pdf"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "name"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Description"
-              },
-              value: {
-                text: "1.1 Cover letter"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "Document description"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "IP number (optional)"
-              },
-              value: {
-                text: ""
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "Interested party number"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Who the document is from"
-              },
-              value: {
-                text: "Highways England"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "Who the document is from"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Type of party"
-              },
-              value: {
-                text: data['party-type']
-              },
-              actions: {
-                items: [
-                  {
-                    href: "edit_partyType",
-                    text: "Change",
-                    visuallyHiddenText: "Type of party"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Agent (optional)"
-              },
-              value: {
-                text: ""
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "Agent"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Document case stage"
-              },
-              value: {
-                text: "Examination"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "document case stage"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Webfilter"
-              },
-              value: {
-                text: "Deadline 2"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "webfilter"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Examination library category"
-              },
-              value: {
-                html: '<a href="../ExaminationLibrary/deadline2">Deadline 2 (REP2)</a>'
-              },
-              actions: {
-                items: [
-                  {
-                    href: "edit_examLibraryCategory",
-                    text: "Change",
-                    visuallyHiddenText: "examination library category"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Examination library reference"
-              },
-              value: {
-                text: "REP2-001 (Draft)"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "edit_examLibraryNumber",
-                    text: "Change",
-                    visuallyHiddenText: "examination library reference"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Document type (optional)"
-              },
-              value: {
-                text: ""
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "document type"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Date received"
-              },
-              value: {
-                text: "11 May 2025"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "date received"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "First published"
-              },
-              value: {
-                text: "30 May 2025"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "edit_publishedDate",
-                    text: "Change",
-                    visuallyHiddenText: "first published date"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Redaction"
-              },
-              value: {
-                text: "Redacted"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "edit_redactionStatus",
-                    text: "Change",
-                    visuallyHiddenText: "redaction status"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Status"
-              },
-              value: {
-                text: "Published"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "edit_status",
-                    text: "Change",
-                    visuallyHiddenText: "document status"
-                  }
-                ]
-              }
-            }
-          ]
-        }) }}
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              File name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Coverletter_v1.pdf
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Description
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1.1 Cover letter
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document description</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              IP number (optional)
+            </dt>
+            <dd class="govuk-summary-list__value">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> interested party number</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Who the document is from
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Highways England
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> who the document is from</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of party
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['party-type'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit_partyType">Change<span class="govuk-visually-hidden"> type of party</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Agent (optional)
+            </dt>
+            <dd class="govuk-summary-list__value">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> agent</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Document case stage
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Examination
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document case stage</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Webfilter
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Deadline 2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> webfilter</span></a>
+            </dd>
+          </div>
+          {% if data['library-category'] == "No examination library category" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Examination library category
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No examination library category
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit_examLibraryCategory">Change<span class="govuk-visually-hidden"> examination library category</span></a>
+            </dd>
+          </div>
+          {% else %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Examination library category
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="../ExaminationLibrary/deadline2">{{ data['library-category'] }}</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              {% if data['library-published'] == 'notpublished' %}<a class="govuk-link" href="edit_examLibraryCategory">Change<span class="govuk-visually-hidden"> examination library category</span></a>{% endif %}
+            </dd>
+          </div>
+          {% endif %}
+          {% if data['library-category'] != "No examination library category" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Examination library reference
+            </dt>
+            <dd class="govuk-summary-list__value">
+              REP2-001 {% if data['library-published'] == 'notpublished' %} (Draft) {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              {% if data['library-published'] == 'notpublished' %}<a class="govuk-link" href="edit_examLibraryNumber">Change<span class="govuk-visually-hidden"> examination library reference</span></a>{% endif %}
+            </dd>
+          </div>
+          {% endif %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Document type (optional)
+            </dt>
+            <dd class="govuk-summary-list__value">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Document type</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date received
+            </dt>
+            <dd class="govuk-summary-list__value">
+              11 May 2026
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date received</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Original publish date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              14 June 2026
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit_publishedDate">Change<span class="govuk-visually-hidden"> original publish date</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Redaction
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Redacted
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit_redactionStatus">Change<span class="govuk-visually-hidden"> redaction status</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Published
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit_status">Change<span class="govuk-visually-hidden"> document status</span></a>
+            </dd>
+          </div>
+        </dl>
       </div>
 
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">

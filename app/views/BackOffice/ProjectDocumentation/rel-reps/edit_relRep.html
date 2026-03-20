@@ -46,10 +46,12 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         Editing a representation will remove any current redactions
       </strong>
     </div>
-
-    <a href="RelRep_details_updated" type="submit" class="govuk-button" data-module="govuk-button">
-      Save and return
-    </a>
+    <form action="RelRep_details" method="post" novalidate>
+      <input type="hidden" name="rep_edited" value="edited">
+      {{ govukButton({
+        text: "Save and return"
+      }) }}
+    </form>
   </div>
 </div>
 

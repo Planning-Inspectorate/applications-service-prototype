@@ -14,8 +14,8 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
   }) }}
 {% endblock %}
 
+
 {% block content %}
-<!--test-->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
@@ -139,39 +139,65 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           <a class="govuk-link" href="#"></a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Redacted representation
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Hello, my name is &#9608;&#9608;&#9608;&#9608;&#9608;&#9608; and I have some strong thoughts on this solar farm, please contact me on &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#"></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Redacted notes
-        </dt>
-        <dd class="govuk-summary-list__value">
-          John Doe 0777771723
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#"></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Redacted by
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Alex Hopkins
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#"></a>
-        </dd>
-      </div>
+      {% if data['rep_edited'] == "edited" %} <!--Show edit fields when edited-->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Edited representation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Hello, my name is John doe and I don't like this solar farm, it is too big and too close to my house.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#"></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Edit notes
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Added additional detail on rep's reason against solar farm after phone conversation
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#"></a>
+          </dd>
+        </div>
+      {% endif %}
+      {% if data['rep_redacted'] == "redacted" %} <!--Show redact fields when redacted-->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Redacted representation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Hello, my name is &#9608;&#9608;&#9608;&#9608;&#9608;&#9608; and I don't like this solar farm, it is too big and too close to my house.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#"></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Redacted notes
+          </dt>
+          <dd class="govuk-summary-list__value">
+            John Doe
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#"></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Redacted by
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Alex Hopkins
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#"></a>
+          </dd>
+        </div>
+      {% endif %}
     </dl>
     <div class="govuk-button-group">
       <a href="edit_relRep" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -181,7 +207,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         Redact
       </a>
     </div>
-    
+
     <h2 class="govuk-heading-m" style="padding-top: 24px;">Workflow</h2>
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -206,15 +232,9 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           <a class="govuk-link" href="RelRep_status">Change</a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-        <dt class="govuk-summary-list__key">
-          Notes
-        </dt>
-        <dd class="govuk-summary-list__value">
-          These are the existing notes on the representation.
-        </dd>
-      </div>
     </dl>
+
+
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       View task log
     </button>
