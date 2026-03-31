@@ -10,71 +10,72 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     items: [
       {
         text: "Project overview",
-        href: "../Overview/"
+        href: "../../Overview/"
       },
       {
         text: "Project documentation",
-        href: "index"
+        href: "../index"
       },
       {
-        text: "Project management"
+        text: "Pre-application",
+        href: "pre-application"
+      },
+      {
+        text: "EST",
+        href: "est"
+      },
+      {
+        text: "GIS Output"
       }
     ]
   }) }}
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Success
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <h3 class="govuk-notification-banner__heading">
-      18 files successfully uploaded
-    </h3>
-  </div>
-</div>
-<!--test-->
-<div class="govuk-grid-row">
+<div class="govuk-grid-row govuk-!-padding-bottom-9">
   <div class="govuk-grid-column-full">
 
-    {% include "../_includes/project-description.html" %}
+    {% include "../../_includes/project-description.html" %}
+  </div>
+</div>
 
-
-    <h1 class="govuk-heading-l">
-      Project management folder
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-0">
+      GIS Output folder
     </h1>
 
-    {% from "govuk/components/details/macro.njk" import govukDetails %}
-
-    {{ govukDetails({
-    summaryText: "Subfolders",
-    html: '<ul class="govuk-list">
-      <li><a href="#" class="govuk-link">Create folder</a></li>
-      <li><a href="#" class="govuk-link">Folder one</a></li>
-    </ul>'
-    }) }}
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
+    <div class="govuk-accordion hide-accordion-controls" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" style="border-top: none;" id="accordion-default-heading-1">
+              
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <ul class="govuk-list govuk-list--spaced">
+            <li><a href="#" class="govuk-link">Create folder</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <h3 class="govuk-heading-m"> Documents</h3>
     <p class="govuk-body"> This folder contains 5 documents. Showing 1 - 5 documents</p>
 
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
-    <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; justify-content: space-between;">
       {{ govukButton({
       text: "Upload files",
       classes: "govuk-button--secondary",
-      href: "file-upload.html"
+      href: "../file-upload.html"
       }) }}
 
-      <p class="govuk-body" style="margin: 0;">
-        <a href="#" class="govuk-link">View publishing queue</a>
+      <p class="govuk-body">
+        <a href="publishingQueue" class="govuk-link">View publishing queue</a>
       </p>
     </div>
 
@@ -210,16 +211,16 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </td>
       <td class="govuk-table__cell">
-        <strong><a href="#" class="govuk-link">Document_{{ i }}.pdf</a></strong><br>
+        <strong><a href="#" class="govuk-link">Coverletter_v{{ i }}</a></strong><br>
         From: John Smith<br>
         File type and size: PDF, 1.2MB
       </td>
-      <td class="govuk-table__cell">12 April 2025</td>
-      <td class="govuk-table__cell">Unredacted</td>
-      <td class="govuk-table__cell">Not checked</td>
+      <td class="govuk-table__cell">1{{ i }} May 2025</td>
+      <td class="govuk-table__cell">{{data['document-redaction']}}</td>
+      <td class="govuk-table__cell">{{data['document-status']}}</td>
       <td class="govuk-table__cell">
         <ul class="govuk-list govuk-list--spaced">
-          <li><a href="document-properties" class="govuk-link">View/edit properties</a></li>
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
           <li><a href="#" class="govuk-link">Open in Adobe</a></li>
         </ul>

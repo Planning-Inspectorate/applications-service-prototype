@@ -1,0 +1,193 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Project overview",
+        href: "../../Overview/"
+      },
+      {
+        text: "Project documentation",
+        href: "../index"
+      },
+      {
+        text: "S51 advice"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-padding-bottom-9">
+  <div class="govuk-grid-column-full">
+
+    {% include "../../_includes/project-description.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-0">
+      S51 advice folder
+    </h1>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h3 class="govuk-heading-m"> S51 advice</h3>
+    <p class="govuk-body"> This folder contains 1 item(s) of S51 advice.</p>
+    <div style="display: flex; justify-content: space-between;">
+      {{ govukButton({
+      text: "Create new S51 advice",
+      classes: "govuk-button--secondary",
+      href: "../file-upload-shapefile.html"
+      }) }}
+
+      <p class="govuk-body">
+        <a href="publishingQueue" class="govuk-link">View S51 publishing queue</a>
+      </p>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  </div>
+</div>
+
+<div class="govuk-grid-row equal-height">
+
+  <!-- Status section -->
+  <div class="govuk-grid-column-two-thirds">
+    <div class="grey-box">
+      <form autocomplete="off" class="status" action="status?project={{projectNo}}" method="post"
+        onsubmit="return validateStatusLib(event)">
+        <div class="govuk-form-group status">
+          <h4 id="select-status" class="govuk-heading-s">Statuses</h4>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            {{ govukRadios({
+              classes: "govuk-radios--small",
+              name: "redaction",
+              fieldset: {
+                legend: {
+                  text: "Redaction",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                { value: "Unredacted", text: "Unredacted" },
+                { value: "Redacted", text: "Redacted" },
+                { value: "Redaction not needed", text: "Redaction not needed" }
+              ]
+            }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            {{ govukRadios({
+              classes: "govuk-radios--small",
+              name: "status",
+              fieldset: {
+                legend: {
+                  text: "Status",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                { value: "Checked", text: "Checked" },
+                { value: "Not Checked", text: "Not checked" },
+                { value: "Ready to publish", text: "Ready to publish" },
+                { value: "Do not publish", text: "Do not publish" }
+              ]
+            }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <button class="govuk-button">Apply changes</button>
+            <p class="govuk-body clear-all"><a href="">Clear selected</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+  <h3 class="govuk-heading-s">Select items to make changes to statuses</h3>
+  <p class="govuk-body">This folder contains 1 item(s). Showing 1 - 1 item(s).
+  </p>
+  <p class="govuk-body">0 item(s) selected
+  </p>
+
+  </div>
+
+
+<div class="govuk-grid-column-full">
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">S51 advice item</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Date</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Redaction</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Status</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <!-- Row 1 – Select All -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
+            <label class="govuk-label govuk-checkboxes__label" for="select-all"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">Select all items on page</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+
+    <!-- Processing new upload -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">
+        <strong>00001 - Advice to Alex Hopkins</strong><br>
+      </td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-body-s">
+          <li><strong>Published:</strong> 22 May 2025</li>
+          <li><strong>Enquiry date:</strong> 25 Jul 2024</li>
+        </ul>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">Redacted</td>
+      <td class="govuk-table__cell govuk-body-s">Published</td>
+      <td class="govuk-table__cell govuk-body-s">
+          <a href="../document-properties-shapefile" class="govuk-link">View/edit advice</a>
+      </td>
+    </tr>    
+  </tbody>
+</table>
+</div>
+
+
+{% endblock %}

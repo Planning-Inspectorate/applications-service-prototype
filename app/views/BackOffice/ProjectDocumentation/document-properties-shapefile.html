@@ -30,13 +30,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-full">
 
     <span class="govuk-caption-xl">Document properties</span>
-    <h1 class="govuk-heading-xl"> Document_1.pdf</h1>
+    <h1 class="govuk-heading-xl">Shapefile.zip</h1>
   </div>
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body"><strong>Description: </strong>1.1 Cover letter</p>
+    <p class="govuk-body"><strong>Description: </strong>Shapefile</p>
     <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
-    <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
+    <p class="govuk-body"><strong>File type and size: </strong>ZIP, 71 KB</p>
     <p class="govuk-body"><strong>Version: </strong>2</p>
     <!--
     <div class="govuk-inset-text">
@@ -58,11 +58,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Download
       </button>
-      {% if data['document-redaction'] == 'Unredacted' %} <!--if unredacted show redaction button-->
-        <a href="airedaction/2" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Suggest redactions
-        </a>
-      {% endif %}
       {% if data['document-status'] == 'Published' %} <!--if published show unpublish button-->
         <a href="unpublish" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Unpublish
@@ -100,7 +95,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               File name
             </dt>
             <dd class="govuk-summary-list__value">
-              Coverletter_v1.pdf
+              Shapefile.zip
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document name</span></a>
@@ -111,7 +106,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Description
             </dt>
             <dd class="govuk-summary-list__value">
-              1.1 Cover letter
+              Shapefile
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document description</span></a>
@@ -164,7 +159,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Document case stage
             </dt>
             <dd class="govuk-summary-list__value">
-              Examination
+              Acceptance
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document case stage</span></a>
@@ -175,7 +170,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Webfilter
             </dt>
             <dd class="govuk-summary-list__value">
-              Deadline 2
+              Shapefile
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> webfilter</span></a>
@@ -224,6 +219,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Document type (optional)
             </dt>
             <dd class="govuk-summary-list__value">
+              GIS shapefile
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="edit_documentType">Change<span class="govuk-visually-hidden"> Document type</span></a>
@@ -291,15 +287,15 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </thead>
           <tbody class="govuk-table__body">
 
-            {% for i in [2,1] %}
+            {% for i in [4,3,2,1] %}
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <p class="govuk-body">{{ i }}</p>
               </div>
               </td>
               <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Document_v{{ i }}.pdf</a></strong><br>
-                PDF, 1.2MB
+                <strong><a href="#" class="govuk-link">Shapefile{{ i }}.zip</a></strong><br>
+                ZIP, 1.2MB
               </td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">

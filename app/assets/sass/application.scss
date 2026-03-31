@@ -71,3 +71,14 @@
   border-left: 6px solid #00847f;
   color: #0b0c0c;
 }
+
+//single accordion component
+.hide-accordion-controls .govuk-accordion__controls {
+  display: none;
+}
+
+//sort button on tables
+.sortButton {
+  color: #1d70b8;
+  cursor: pointer;
+}

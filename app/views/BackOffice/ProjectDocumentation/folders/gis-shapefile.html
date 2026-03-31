@@ -1,0 +1,329 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Project overview",
+        href: "../../Overview/"
+      },
+      {
+        text: "Project documentation",
+        href: "../index"
+      },
+      {
+        text: "Project management",
+        href: "project-management"
+      },
+      {
+        text: "EST",
+        href: "est"
+      },
+      {
+        text: "GIS Shapefile"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!--notifcation banner-->
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+      <div role="alert">
+        <h2 class="govuk-error-summary__title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#">The uploaded ZIP file did not contain a valid SHP shapefile so could not be processed, try again</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-bottom-9">
+  <div class="govuk-grid-column-full">
+
+    {% include "../../_includes/project-description.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-0">
+      GIS Shapefile folder
+    </h1>
+
+    <div class="govuk-accordion hide-accordion-controls" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" style="border-top: none;" id="accordion-default-heading-1">
+              
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <ul class="govuk-list govuk-list--spaced">
+            <li><a href="#" class="govuk-link">Create folder</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="govuk-heading-m"> Documents</h3>
+    <p class="govuk-body"> This folder contains 5 documents. Showing 1 - 5 documents</p>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    <div style="display: flex; justify-content: space-between;">
+      {{ govukButton({
+      text: "Upload files",
+      classes: "govuk-button--secondary",
+      href: "../file-upload-shapefile.html"
+      }) }}
+
+      <p class="govuk-body">
+        <a href="publishingQueue" class="govuk-link">View publishing queue</a>
+      </p>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  </div>
+</div>
+
+<div class="govuk-grid-row equal-height">
+
+  <!-- Status section -->
+  <div class="govuk-grid-column-two-thirds">
+    <div class="grey-box">
+      <form autocomplete="off" class="status" action="status?project={{projectNo}}" method="post"
+        onsubmit="return validateStatusLib(event)">
+        <div class="govuk-form-group status">
+          <h4 id="select-status" class="govuk-heading-s">Statuses</h4>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
+            {{ govukRadios({
+              name: "redaction",
+              fieldset: {
+                legend: {
+                  text: "Redaction",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                { value: "Unredacted", text: "Unredacted" },
+                { value: "Redacted", text: "Redacted" }
+              ]
+            }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            {{ govukRadios({
+              name: "status",
+              classes: "status",
+              fieldset: {
+                legend: {
+                  text: "Status",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                { value: "Checked", text: "Checked" },
+                { value: "Not Checked", text: "Not checked" },
+                { value: "Ready to publish", text: "Ready to publish" },
+                { value: "Do not publish", text: "Do not publish" }
+              ]
+            }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <button class="govuk-button">Apply changes</button>
+            <p class="govuk-body clear-all"><a href="">Clear selected</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Actions section -->
+  <div class="govuk-grid-column-one-third">
+    <div class="grey-box">
+      <h4 class="govuk-heading-s">Document actions</h4>
+      <ul class="govuk-list">
+        <li><a href="#">Download selected</a></li>
+        <li><a href="#">Move selected</a></li>
+        <li><a href="#">Unpublish selected</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+  <h3 class="govuk-heading-s">Select documents to make changes to statuses</h3>
+  <p class="govuk-body">This folder contains 1 document(s). Showing 1 - 1 document(s).
+  </p>
+  <p class="govuk-body">0 document(s) selected
+  </p>
+
+  </div>
+
+
+<div class="govuk-grid-column-full">
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Select</th>
+      <th scope="col" class="govuk-table__header sortButton">Document information &#9660;</th>
+      <th scope="col" class="govuk-table__header sortButton">Date received &#9660;</th>
+      <th scope="col" class="govuk-table__header sortButton">Redaction &#9660;</th>
+      <th scope="col" class="govuk-table__header sortButton">Status &#9660;</th>
+      <th scope="col" class="govuk-table__header">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <!-- Row 1 – Select All -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
+            <label class="govuk-label govuk-checkboxes__label" for="select-all"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell">Select all documents on page</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+
+    <!-- Processing new upload -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell">
+        <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
+        From: Alex Hopkins<br>
+        File type and size: ZIP, 17.5MB
+      </td>
+      <td class="govuk-table__cell">22 May 2025</td>
+      <td class="govuk-table__cell">Unredacted</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Processing shapefile</strong></td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="#" class="govuk-link">Download</a></li>
+        </ul>
+      </td>
+    </tr>    
+    <!-- New upload -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell">
+        <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
+        From: Alex Hopkins<br>
+        File type and size: ZIP, 17.5MB
+      </td>
+      <td class="govuk-table__cell">22 May 2025</td>
+      <td class="govuk-table__cell">Unredacted</td>
+      <td class="govuk-table__cell">Not checked</td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="#" class="govuk-link">Download</a></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- Published map -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell">
+        <strong><a href="#" class="govuk-link">Processed shapefile</a></strong><br>
+        From: Alex Hopkins<br>
+        File type and size: GeoJSON, 17.5MB
+      </td>
+      <td class="govuk-table__cell">22 May 2025</td>
+      <td class="govuk-table__cell">Unredacted</td>
+      <td class="govuk-table__cell">{{data['document-status']}}</td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="#" class="govuk-link">Download</a></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- Error upload -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group govuk-form-group--error">
+        <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
+        From: Alex Hopkins<br>
+        File type and size: ZIP, 17.5MB
+      </td>
+      <td class="govuk-table__cell">22 May 2025</td>
+      <td class="govuk-table__cell">Unredacted</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Invalid shapefile</strong></td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="../document-properties-shapefile-error" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="#" class="govuk-link">Download</a></li>
+        </ul>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+{% endblock %}
