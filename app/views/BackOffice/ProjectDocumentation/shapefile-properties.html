@@ -1,0 +1,176 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBreadcrumbs({
+    items: [
+    {
+      text: "Project overview",
+      href: "../Overview/"
+    },
+    {
+      text: "Project documentation",
+      href: "index"
+    },
+    {
+      text: "GIS shapefile",
+      href: "folders/gis-shapefile"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <span class="govuk-caption-xl">Document properties</span>
+    <h1 class="govuk-heading-xl">Longfield-Solar-Farm.json</h1>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
+    <p class="govuk-body"><strong>File type and size: </strong>JSON, 71 KB</p>
+
+    <div class="govuk-inset-text">
+      This processed GIS shapefile is currently published to the NSIP website project map and available for download</a>
+    </div>
+
+    <h2 class="govuk-heading-m">GIS shapefile actions</h2>
+
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Delete
+      </button>
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Download
+      </button>
+      {% if data['shapefile-status'] == "Published" %}
+      <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Unpublish
+      </a>
+      {% else %}
+      <a href="publish_shapefile" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Publish
+      </a>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#properties">
+            Shapefile properties
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#history">
+            Attachments
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-tabs__panel" id="properties">
+        <h2 class="govuk-heading-m">Shapefile properties</h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              File name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Longfield-Solar-Farm.json
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Document case stage
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Acceptance
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document case stage</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date received
+            </dt>
+            <dd class="govuk-summary-list__value">
+              11/10/2026
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date received</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Published date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              20/12/2026
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> published date</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['shapefile-status'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit_status">Change<span class="govuk-visually-hidden"> document status</span></a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
+        <h2 class="govuk-heading-m">Attachments</h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">File name</th>
+              <th scope="col" class="govuk-table__header">Date added</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong><a href="#" class="govuk-link">Longfield-Solar-Farm.zip</a></strong><br>
+                ZIP, 1.2MB
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  20/12/2026
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <a href="#" class="govuk-link">Download</a>
+              </td>
+            </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -32,27 +32,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <!--notifcation banner-->
-    <div class="govuk-error-summary" data-module="govuk-error-summary">
-      <div role="alert">
-        <h2 class="govuk-error-summary__title">
-          There is a problem
-        </h2>
-        <div class="govuk-error-summary__body">
-          <ul class="govuk-list govuk-error-summary__list">
-            <li>
-              <a href="#">The uploaded ZIP file did not contain a valid SHP shapefile so could not be processed, try again</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>  
-</div>
-
 <div class="govuk-grid-row govuk-!-padding-bottom-9">
   <div class="govuk-grid-column-full">
 
@@ -84,15 +63,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
 
     <h3 class="govuk-heading-m"> Documents</h3>
-    <p class="govuk-body"> This folder contains 5 documents. Showing 1 - 5 documents</p>
-
-    {% from "govuk/components/button/macro.njk" import govukButton %}
-
+    <p class="govuk-body"> This folder contains 4 documents. Showing 1 - 4 documents</p>
+    
     <div style="display: flex; justify-content: space-between;">
       {{ govukButton({
       text: "Upload files",
       classes: "govuk-button--secondary",
-      href: "../file-upload-shapefile.html"
+      href: "../file-upload.html"
       }) }}
 
       <p class="govuk-body">
@@ -121,6 +98,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             {% from "govuk/components/radios/macro.njk" import govukRadios %}
             {{ govukRadios({
               name: "redaction",
+              classes: "govuk-radios--small",
               fieldset: {
                 legend: {
                   text: "Redaction",
@@ -138,7 +116,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-grid-column-one-third">
             {{ govukRadios({
               name: "status",
-              classes: "status",
+              classes: "govuk-radios--small",
               fieldset: {
                 legend: {
                   text: "Status",
@@ -172,6 +150,14 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         <li><a href="#">Download selected</a></li>
         <li><a href="#">Move selected</a></li>
         <li><a href="#">Unpublish selected</a></li>
+        {% if data['shapefile-status'] == 'Processing' %}
+          <form action="gis-shapefile" method="post" novalidate>
+            <input type="hidden" name="shapefile-status" value="Not checked">
+            {{ govukButton({
+              text: "[advance prototype]"
+            }) }}
+          </form> 
+        {% endif %}
       </ul>
     </div>
   </div>
@@ -179,7 +165,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
 
   <h3 class="govuk-heading-s">Select documents to make changes to statuses</h3>
-  <p class="govuk-body">This folder contains 1 document(s). Showing 1 - 1 document(s).
+  <p class="govuk-body">This folder contains 4 document(s). Showing 1 - 4 document(s).
   </p>
   <p class="govuk-body">0 document(s) selected
   </p>
@@ -192,12 +178,12 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Select</th>
-      <th scope="col" class="govuk-table__header sortButton">Document information &#9660;</th>
-      <th scope="col" class="govuk-table__header sortButton">Date received &#9660;</th>
-      <th scope="col" class="govuk-table__header sortButton">Redaction &#9660;</th>
-      <th scope="col" class="govuk-table__header sortButton">Status &#9660;</th>
-      <th scope="col" class="govuk-table__header">Actions</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
+      <th scope="col" class="govuk-table__header govuk-body-s sortButton">Document information &#9660;</th>
+      <th scope="col" class="govuk-table__header govuk-body-s sortButton">Date received &#9660;</th>
+      <th scope="col" class="govuk-table__header govuk-body-s sortButton">Redaction &#9660;</th>
+      <th scope="col" class="govuk-table__header govuk-body-s sortButton">Status &#9660;</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Actions</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
@@ -212,14 +198,15 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
       </td>
-      <td class="govuk-table__cell">Select all documents on page</td>
+      <td class="govuk-table__cell govuk-body-s">Select all documents on page</td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
     </tr>
 
-    <!-- Processing new upload -->
+    {% if data['shapefile-status'] == 'Not uploaded' %}
+    {% elseif data['shapefile-status'] == 'Processing' %}
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -229,22 +216,22 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
       </td>
-      <td class="govuk-table__cell">
+      <td class="govuk-table__cell govuk-body-s">
         <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
         From: Alex Hopkins<br>
         File type and size: ZIP, 17.5MB
       </td>
-      <td class="govuk-table__cell">22 May 2025</td>
-      <td class="govuk-table__cell">Unredacted</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Processing shapefile</strong></td>
+      <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
+      <td class="govuk-table__cell govuk-body-s">Unredacted</td>
+      <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
       <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
+        <ul class="govuk-list govuk-list--spaced govuk-body-s">
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
       </td>
-    </tr>    
-    <!-- New upload -->
+    </tr>
+    {% else %}
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -254,17 +241,67 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
       </td>
+      <td class="govuk-table__cell govuk-body-s">
+        <strong><a href="#" class="govuk-link">Processed shapefile</a></strong><br>
+        From: Alex Hopkins<br>
+        File type and size: JSON, 17.5MB
+      </td>
+      <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
+      <td class="govuk-table__cell govuk-body-s">Unredacted</td>
+      <td class="govuk-table__cell govuk-body-s">{{data['document-status']}}</td>
       <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--spaced govuk-body-s">
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="#" class="govuk-link">Download</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">
         <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
         From: Alex Hopkins<br>
         File type and size: ZIP, 17.5MB
       </td>
-      <td class="govuk-table__cell">22 May 2025</td>
-      <td class="govuk-table__cell">Unredacted</td>
-      <td class="govuk-table__cell">Not checked</td>
+      <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
+      <td class="govuk-table__cell govuk-body-s">Unredacted</td>
+      <td class="govuk-table__cell govuk-body-s">Not checked</td>
       <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
+        <ul class="govuk-list govuk-list--spaced govuk-body-s">
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="#" class="govuk-link">Download</a></li>
+        </ul>
+      </td>
+    </tr>
+    {% endif %}
+    <!-- Processed map -->
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="doc-1" name="document-select-1" type="checkbox" value="doc-1">
+            <label class="govuk-label govuk-checkboxes__label" for="doc-1"></label>
+          </div>
+        </div>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">
+        <strong><a href="#" class="govuk-link">Processed shapefile</a></strong><br>
+        From: Alex Hopkins<br>
+        File type and size: JSON, 17.5MB
+      </td>
+      <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
+      <td class="govuk-table__cell govuk-body-s">Unredacted</td>
+      <td class="govuk-table__cell govuk-body-s">Published</td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--spaced govuk-body-s">
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
       </td>
@@ -279,22 +316,22 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
       </td>
-      <td class="govuk-table__cell">
-        <strong><a href="#" class="govuk-link">Processed shapefile</a></strong><br>
+      <td class="govuk-table__cell govuk-body-s">
+        <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
         From: Alex Hopkins<br>
-        File type and size: GeoJSON, 17.5MB
+        File type and size: ZIP, 17.5MB
       </td>
-      <td class="govuk-table__cell">22 May 2025</td>
-      <td class="govuk-table__cell">Unredacted</td>
-      <td class="govuk-table__cell">{{data['document-status']}}</td>
+      <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
+      <td class="govuk-table__cell govuk-body-s">Unredacted</td>
+      <td class="govuk-table__cell govuk-body-s">Not checked</td>
       <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
+        <ul class="govuk-list govuk-list--spaced govuk-body-s">
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
       </td>
     </tr>
-    <!-- Error upload -->
+    <!-- Invalid map -->
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -304,21 +341,19 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
       </td>
-      <td class="govuk-table__cell">
-        <div class="govuk-form-group govuk-form-group--error">
+      <td class="govuk-table__cell govuk-body-s">
         <strong><a href="#" class="govuk-link">Shapefile</a></strong><br>
         From: Alex Hopkins<br>
         File type and size: ZIP, 17.5MB
       </td>
-      <td class="govuk-table__cell">22 May 2025</td>
-      <td class="govuk-table__cell">Unredacted</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Invalid shapefile</strong></td>
+      <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
+      <td class="govuk-table__cell govuk-body-s">Unredacted</td>
+      <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--red">Invalid shapefile</strong></td>
       <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="../document-properties-shapefile-error" class="govuk-link">View/Edit properties</a></li>
+        <ul class="govuk-list govuk-list--spaced govuk-body-s">
+          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
-        </div>
       </td>
     </tr>
   </tbody>

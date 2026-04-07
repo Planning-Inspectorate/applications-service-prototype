@@ -18,7 +18,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">
-      Upload files to Project management folder
+      Upload files to GIS shapefile folder
     </h1>
 
     <p>
@@ -40,9 +40,12 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       Saving files will default them to ‘Unredacted’ and ‘Not checked’
     </div>
 
-    <a href="project-management" class="govuk-button" role="button" data-module="govuk-button">
-      Save and return
-    </a>
+    <form action="folders/gis-shapefile" method="post" novalidate>
+      <input type="hidden" name="shapefile-status" value="Processing">
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+    </form>
 
   </div>
 </div>

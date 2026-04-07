@@ -6,6 +6,7 @@ module.exports = {
   'rep_redacted': 'unredacted',
   'library-category': 'No examination library category',
   'library-published': 'notpublished',
-  'document-status': 'Published',
-  'document-redaction': 'Unredacted'
+  'document-status': 'Not checked',
+  'document-redaction': 'Unredacted',
+  'shapefile-status': 'Not uploaded'
 }

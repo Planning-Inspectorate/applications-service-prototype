@@ -230,7 +230,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Date received
             </dt>
             <dd class="govuk-summary-list__value">
-              11 May 2026
+              11/10/2026
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date received</span></a>
@@ -238,10 +238,10 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Original publish date
+              Published date
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['first-published-day'] }} {{ data['first-published-month'] }} {{ data['first-published-year'] }}
+              {{ data['first-published-day'] }}/{{ data['first-published-month'] }}/{{ data['first-published-year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               {% if data['first-published-day'] %}<a class="govuk-link" href="edit_publishedDate">Change<span class="govuk-visually-hidden"> original publish date</span></a>{% endif %}
@@ -287,7 +287,39 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </thead>
           <tbody class="govuk-table__body">
 
-            {% for i in [4,3,2,1] %}
+            {% for i in [7,5,3,1] %}
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p class="govuk-body">{{ i+1 }}</p>
+              </div>
+              </td>
+              <td class="govuk-table__cell">
+                <strong><a href="#" class="govuk-link">Longfield-Solar-Farm.json</a></strong><br>
+                GeoJSON, 1.2MB
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li>
+                    <p class="govuk-body govuk-body-s"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
+                  </li>
+                  <li>
+                    <p class="govuk-body govuk-body-s"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
+                  </li>
+                  {% if i != 7 %} 
+                  <li>
+                    <p class="govuk-body govuk-body-s"><strong>Unpublished: </strong>13:23, 13 Apr 2025, Hopkins, Alex</p>
+                  </li>
+                  {% endif %}
+                </ul>
+              </td>
+              <td class="govuk-table__cell">Unredacted</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--spaced">
+                  <li><a href="#" class="govuk-link">Download</a></li>
+                  <li><a href="#" class="govuk-link">Open in Adobe</a></li>
+                </ul>
+              </td>
+            </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <p class="govuk-body">{{ i }}</p>
@@ -300,14 +332,11 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li>
-                    <p class="govuk-body"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
-                  </li>
-                  <li>
-                    <p class="govuk-body"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
+                    <p class="govuk-body govuk-body-s"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">Redacted</td>
+              <td class="govuk-table__cell">Unredacted</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>

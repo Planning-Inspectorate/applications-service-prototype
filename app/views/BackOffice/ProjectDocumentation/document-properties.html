@@ -234,7 +234,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Date received
             </dt>
             <dd class="govuk-summary-list__value">
-              11 May 2026
+              11/10/2026
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date received</span></a>
@@ -242,10 +242,10 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Original publish date
+              Published date
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['first-published-day'] }} {{ data['first-published-month'] }} {{ data['first-published-year'] }}
+              {% if data['first-published-day'] %} {{ data['first-published-day'] }}/{{ data['first-published-month'] }}/{{ data['first-published-year'] }} {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
               {% if data['first-published-day'] %}<a class="govuk-link" href="edit_publishedDate">Change<span class="govuk-visually-hidden"> original publish date</span></a>{% endif %}

@@ -21,7 +21,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       Upload shapefile to GIS Shapefile folder
     </h1>
     <p>
-      Your file must be a ZIP file containing a single geospatial SHP file.
+      Your file must be a ZIP file containing at least a single geospatial SHP file.
     </p>
     <p>
       The total size of your uploaded files must be smaller than 1GB.
@@ -34,9 +34,12 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
     </div>
 
-    <a href="project-management" class="govuk-button" role="button" data-module="govuk-button">
-      Save and continue
-    </a>
+    <form action="folders/new-gis-shapefile" method="post" novalidate>
+      <input type="hidden" name="shapefile-status" value="Processing">
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+    </form>
 
   </div>
 </div>

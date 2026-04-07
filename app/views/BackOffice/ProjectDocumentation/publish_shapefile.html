@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Publish shapefile</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-body-s">File name</th>
+          <th scope="col" class="govuk-table__header govuk-body-s">File size</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Longfield-Solar-Farm.json</td>
+          <td class="govuk-table__cell">71 KB</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-inset-text">
+      Publishing a new shapefile will automatically unpublish the previously published shapefile
+    </div>
+
+    <form action="publish_shapefile_confirmation" method="post" novalidate>
+      <input type="hidden" name="shapefile-status" value="Published">
+      {{ govukButton({
+        text: "Publish shapefile"
+      }) }}
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

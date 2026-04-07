@@ -100,6 +100,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             {% from "govuk/components/radios/macro.njk" import govukRadios %}
             {{ govukRadios({
               name: "redaction",
+              classes: "govuk-radios--small",
               fieldset: {
                 legend: {
                   text: "Redaction",
@@ -117,7 +118,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-grid-column-one-third">
             {{ govukRadios({
               name: "status",
-              classes: "status",
+              classes: "govuk-radios--small",
               fieldset: {
                 legend: {
                   text: "Status",
@@ -166,70 +167,70 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   </div>
 
 
+<!-- docs table -->
 <div class="govuk-grid-column-full">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
+        <th scope="col" class="govuk-table__header sortButton govuk-body-s">Document information &#9660;</th>
+        <th scope="col" class="govuk-table__header sortButton govuk-body-s">Date received &#9660;</th>
+        <th scope="col" class="govuk-table__header sortButton govuk-body-s">Redaction &#9660;</th>
+        <th scope="col" class="govuk-table__header sortButton govuk-body-s">Status &#9660;</th>
+        <th scope="col" class="govuk-table__header govuk-body-s">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
 
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Select</th>
-      <th scope="col" class="govuk-table__header">Document information</th>
-      <th scope="col" class="govuk-table__header">Date received</th>
-      <th scope="col" class="govuk-table__header">Redaction</th>
-      <th scope="col" class="govuk-table__header">Status</th>
-      <th scope="col" class="govuk-table__header">Actions</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-
-    <!-- Row 1 – Select All -->
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes govuk-checkboxes--small">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
-            <label class="govuk-label govuk-checkboxes__label" for="select-all"></label>
+      <!-- Row 1 – Select All -->
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="select-all">
+              <label class="govuk-label govuk-checkboxes__label" for="select-all"></label>
+            </div>
           </div>
-        </div>
-      </td>
-      <td class="govuk-table__cell">Select all documents on page</td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
+        </td>
+        <td class="govuk-table__cell govuk-body-s">Select all documents on page</td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"></td>
+      </tr>
 
-    <!-- Rows 2–6 -->
-    {% for i in [1,2,3,4,5] %}
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes govuk-checkboxes--small">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="doc-{{ i }}" name="document-select-{{ i }}" type="checkbox"
-              value="doc-{{ i }}">
-            <label class="govuk-label govuk-checkboxes__label" for="doc-{{ i }}"></label>
+      <!-- Rows 2–6 -->
+      {% for i in [1,2,3,4,5] %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="doc-{{ i }}" name="document-select-{{ i }}" type="checkbox"
+                value="doc-{{ i }}">
+              <label class="govuk-label govuk-checkboxes__label" for="doc-{{ i }}"></label>
+            </div>
           </div>
-        </div>
-      </td>
-      <td class="govuk-table__cell">
-        <strong><a href="#" class="govuk-link">Coverletter_v{{ i }}</a></strong><br>
-        From: John Smith<br>
-        File type and size: PDF, 1.2MB
-      </td>
-      <td class="govuk-table__cell">1{{ i }} May 2025</td>
-      <td class="govuk-table__cell">{{data['document-redaction']}}</td>
-      <td class="govuk-table__cell">{{data['document-status']}}</td>
-      <td class="govuk-table__cell">
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
-          <li><a href="#" class="govuk-link">Download</a></li>
-          <li><a href="#" class="govuk-link">Open in Adobe</a></li>
-        </ul>
-      </td>
-    </tr>
-    {% endfor %}
+        </td>
+        <td class="govuk-table__cell govuk-body-s">
+          <strong><a href="#" class="govuk-link">Coverletter_v{{ i }}</a></strong><br>
+          From: John Smith<br>
+          File type and size: PDF, 1.2MB
+        </td>
+        <td class="govuk-table__cell govuk-body-s">1{{ i }} May 2025</td>
+        <td class="govuk-table__cell govuk-body-s">{{data['document-redaction']}}</td>
+        <td class="govuk-table__cell govuk-body-s">{{data['document-status']}}</td>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list govuk-list--spaced govuk-body-s">
+            <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
+            <li><a href="#" class="govuk-link">Download</a></li>
+            <li><a href="#" class="govuk-link">Open in Adobe</a></li>
+          </ul>
+        </td>
+      </tr>
+      {% endfor %}
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
 </div>
 
 
