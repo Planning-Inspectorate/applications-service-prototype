@@ -30,13 +30,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-full">
 
     <span class="govuk-caption-xl">Document properties</span>
-    <h1 class="govuk-heading-xl">Shapefile.zip</h1>
+    <h1 class="govuk-heading-xl">Shapefile.json</h1>
   </div>
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-body"><strong>Description: </strong>Shapefile</p>
     <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
-    <p class="govuk-body"><strong>File type and size: </strong>ZIP, 71 KB</p>
+    <p class="govuk-body"><strong>File type and size: </strong>JSON, 71 KB</p>
     <p class="govuk-body"><strong>Version: </strong>2</p>
     <!--
     <div class="govuk-inset-text">
@@ -95,7 +95,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               File name
             </dt>
             <dd class="govuk-summary-list__value">
-              Shapefile.zip
+              Shapefile.json
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> document name</span></a>
@@ -170,7 +170,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Webfilter
             </dt>
             <dd class="govuk-summary-list__value">
-              Shapefile
+              GIS shapefile
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> webfilter</span></a>
@@ -241,7 +241,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Published date
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['first-published-day'] }}/{{ data['first-published-month'] }}/{{ data['first-published-year'] }}
+              {% if data['first-published-day'] %} {{ data['first-published-day'] }}/{{ data['first-published-month'] }}/{{ data['first-published-year'] }} {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
               {% if data['first-published-day'] %}<a class="govuk-link" href="edit_publishedDate">Change<span class="govuk-visually-hidden"> original publish date</span></a>{% endif %}
@@ -286,28 +286,23 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-
-            {% for i in [7,5,3,1] %}
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <p class="govuk-body">{{ i+1 }}</p>
+                <p class="govuk-body">1</p>
               </div>
               </td>
               <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Longfield-Solar-Farm.json</a></strong><br>
-                GeoJSON, 1.2MB
+                <strong><a href="#" class="govuk-link">shapefile.json</a></strong><br>
+                JSON, 1.2MB
               </td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li>
                     <p class="govuk-body govuk-body-s"><strong>Uploaded: </strong>13:23, 11 Apr 2025, Hopkins, Alex</p>
                   </li>
+                  {% if data['document-status'] == 'Published' %} 
                   <li>
-                    <p class="govuk-body govuk-body-s"><strong>Published: </strong>13:23, 12 Apr 2025, Hopkins, Alex</p>
-                  </li>
-                  {% if i != 7 %} 
-                  <li>
-                    <p class="govuk-body govuk-body-s"><strong>Unpublished: </strong>13:23, 13 Apr 2025, Hopkins, Alex</p>
+                    <p class="govuk-body govuk-body-s"><strong>Published: </strong>13:25, 13 Apr 2025, Hopkins, Alex</p>
                   </li>
                   {% endif %}
                 </ul>
@@ -316,17 +311,16 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
-                  <li><a href="#" class="govuk-link">Open in Adobe</a></li>
                 </ul>
               </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <p class="govuk-body">{{ i }}</p>
+                <p class="govuk-body">1</p>
               </div>
               </td>
               <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Shapefile{{ i }}.zip</a></strong><br>
+                <strong><a href="#" class="govuk-link">shapefile.zip</a></strong><br>
                 ZIP, 1.2MB
               </td>
               <td class="govuk-table__cell">
@@ -340,13 +334,10 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
-                  <li><a href="#" class="govuk-link">Open in Adobe</a></li>
                 </ul>
               </td>
             </tr>
-            {% endfor %}
-
-      </tbody>
+        </tbody>
       </table>
     </div>
   </div>
