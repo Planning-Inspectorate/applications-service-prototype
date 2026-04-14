@@ -17,14 +17,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         href: "../index"
       },
       {
-        text: "Project management",
-        href: "project-management"
-      },
-      {
-        text: "EST",
-        href: "est"
-      },
-      {
         text: "GIS shapefile"
       }
     ]
@@ -63,13 +55,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
 
     <h3 class="govuk-heading-m"> Documents</h3>
-    <p class="govuk-body"> This folder contains 4 documents. Showing 1 - 4 documents</p>
+    <p class="govuk-body"> This folder contains 3 documents. Showing 1 - 3 documents</p>
     
     <div style="display: flex; justify-content: space-between;">
       {{ govukButton({
       text: "Upload files",
       classes: "govuk-button--secondary",
-      href: "../file-upload.html"
+      href: "../file-upload"
       }) }}
 
       <p class="govuk-body">
@@ -165,7 +157,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
 
   <h3 class="govuk-heading-s">Select documents to make changes to statuses</h3>
-  <p class="govuk-body">This folder contains 4 document(s). Showing 1 - 4 document(s).
+  <p class="govuk-body">This folder contains 3 document(s). Showing 1 - 3 document(s).
   </p>
   <p class="govuk-body">0 document(s) selected
   </p>
@@ -223,10 +215,10 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       </td>
       <td class="govuk-table__cell govuk-body-s">22 May 2025</td>
       <td class="govuk-table__cell govuk-body-s">Unredacted</td>
-      <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
+      <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Awaiting virus check</strong></td>
       <td class="govuk-table__cell">
         <ul class="govuk-list govuk-list--spaced govuk-body-s">
-          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
       </td>
@@ -277,7 +269,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <td class="govuk-table__cell govuk-body-s">Published</td>
       <td class="govuk-table__cell">
         <ul class="govuk-list govuk-list--spaced govuk-body-s">
-          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="../document-properties-shapefile" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
       </td>
@@ -301,7 +293,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--red">Invalid shapefile</strong></td>
       <td class="govuk-table__cell">
         <ul class="govuk-list govuk-list--spaced govuk-body-s">
-          <li><a href="../document-properties" class="govuk-link">View/Edit properties</a></li>
+          <li><a href="../document-properties-shapefile-error" class="govuk-link">View/Edit properties</a></li>
           <li><a href="#" class="govuk-link">Download</a></li>
         </ul>
       </td>
