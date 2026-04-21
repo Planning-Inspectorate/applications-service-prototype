@@ -34,7 +34,11 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
     </div>
 
-    <form action="folders/new-gis-shapefile" method="post" novalidate>
+    <div class="govuk-inset-text">
+      Saved shapefiles will be processed into a GeoJSON file with a document status of ‘Not checked’
+    </div>
+
+    <form action="folders/gis-shapefile" method="post" novalidate>
       <input type="hidden" name="shapefile-status" value="Processing">
       {{ govukButton({
         text: "Save and continue"
