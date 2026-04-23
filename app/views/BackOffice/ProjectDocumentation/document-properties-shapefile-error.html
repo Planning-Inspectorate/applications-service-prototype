@@ -17,7 +17,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       href: "index"
     },
     {
-      text: "GIS shapefile",
+      text: "GIS shapefiles",
       href: "folders/gis-shapefile"
       }
     ]
@@ -288,7 +288,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               Invalid shapefile
             </dd>
             <dd class="govuk-summary-list__actions">
-              {% if data['document-status'] != 'Published' %}<a class="govuk-link" href="edit_status">Change<span class="govuk-visually-hidden"> document status</span></a>{% endif %}
             </dd>
           </div>
         </dl>
