@@ -14,7 +14,7 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-thirds-from-desktop">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
         Check your answers before creating a new project
@@ -24,367 +24,235 @@
         Project information
       </h2>
 
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Project name"
-            },
-            value: {
-              text: data['project-name']
-            },
-            actions: {
-              items: [
-                {
-                  href: "01_NameDescription",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Project description"
-            },
-            value: {
-              text: data['project-description']
-            },
-            actions: {
-              items: [
-                {
-                  href: "01_NameDescription",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Sector"
-            },
-            value: {
-              text: data['project-sector']
-            },
-            actions: {
-              items: [
-                {
-                  href: "02_Sector",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Subsector"
-            },
-            value: {
-              text: data['project-subsector']
-            },
-            actions: {
-              items: [
-                {
-                  href: "03_Subsector",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Project type"
-            },
-            value: {
-              text: data['project-sectortype']
-            },
-            actions: {
-              items: [
-                {
-                  href: "03-1_SectorType",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Project location"
-            },
-            value: {
-              text: data['geographicalInformation.locationDescription']
-            },
-            actions: {
-              items: [
-                {
-                  href: "04_GeographicalInfo",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Grid reference Easting"
-            },
-            value: {
-              text: data['geographicalInformation.gridReference.easting']
-            },
-            actions: {
-              items: [
-                {
-                  href: "04_GeographicalInfo",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Grid reference Northing"
-            },
-            value: {
-              text: data['geographicalInformation.gridReference.northing']
-            },
-            actions: {
-              items: [
-                {
-                  href: "04_GeographicalInfo",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Regions"
-            },
-            value: {
-              text: data['geographicalInformation.regionNames']
-            },
-            actions: {
-              items: [
-                {
-                  href: "05_Regions",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Map zoom level"
-            },
-            value: {
-              text: data['geographicalInformation.mapZoomLevelName']
-            },
-            actions: {
-              items: [
-                {
-                  href: "06_MapZoom",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Project email"
-            },
-            value: {
-              text: data['caseEmail']
-            },
-            actions: {
-              items: [
-                {
-                  href: "07_ProjectEmail",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Project name
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['project-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="01_NameDescription">Change<span class="govuk-visually-hidden"> project name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Project description
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['project-description'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="01_NameDescription">Change<span class="govuk-visually-hidden"> project description</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Sector
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['project-sector'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="02_Sector">Change<span class="govuk-visually-hidden"> sector</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Subsector
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['project-subsector'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="03_Subsector">Change<span class="govuk-visually-hidden"> subsector</span></a>
+          </dd>
+        </div>
+        {% if data['project-sectortype'] %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Project type
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['project-sectortype'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="03-1_SectorType">Change<span class="govuk-visually-hidden"> project type</span></a>
+          </dd>
+        </div>
+        {% endif %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Project location
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['geographicalInformation.locationDescription'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="04_GeographicalInfo">Change<span class="govuk-visually-hidden"> project location</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Grid reference Easting
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['geographicalInformation.gridReference.easting'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="04_GeographicalInfo">Change<span class="govuk-visually-hidden"> grid reference easting</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Grid reference Northing
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['geographicalInformation.gridReference.northing'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="04_GeographicalInfo">Change<span class="govuk-visually-hidden"> grid reference northing</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Regions
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['geographicalInformation.regionNames'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="05_Regions">Change<span class="govuk-visually-hidden"> regions</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Map zoom level
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['geographicalInformation.mapZoomLevelName'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="06_MapZoom">Change<span class="govuk-visually-hidden"> map zoom level</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Project email
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['caseEmail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="07_ProjectEmail">Change<span class="govuk-visually-hidden"> project email</span></a>
+          </dd>
+        </div>
+      </dl></dd>
+
+
 
       <h2 class="govuk-heading-m">
         Applicant information
       </h2>
 
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Organisation name"
-            },
-            value: {
-              text: data['caseOrg']
-            },
-            actions: {
-              items: [
-                {
-                  href: "08_Organisation",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Contact name"
-            },
-            value: {
-              text: data['applicant.firstName']+' '+data['applicant.lastName']
-            },
-            actions: {
-              items: [
-                {
-                  href: "09-1_ContactName",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Address"
-            },
-            value: {
-              text: data['applicant.address']
-            },
-            actions: {
-              items: [
-                {
-                  href: "09-2_ContactAddress",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Website"
-            },
-            value: {
-              text: data['applicant.website']
-            },
-            actions: {
-              items: [
-                {
-                  href: "09-3_ContactWebsite",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Email address"
-            },
-            value: {
-              text: data['applicant.email']
-            },
-            actions: {
-              items: [
-                {
-                  href: "09-4_ContactEmail",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Telephone number"
-            },
-            value: {
-              text: data['applicant.number']
-            },
-            actions: {
-              items: [
-                {
-                  href: "09-5_ContactNumber",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Organisation name
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['caseOrg'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="08_Organisation">Change<span class="govuk-visually-hidden"> organisation name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Contact name
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['applicant.firstName'] }} {{ data['applicant.lastName'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="09-1_ContactName">Change<span class="govuk-visually-hidden"> contact name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['applicant.address'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="09-2_ContactAddress">Change<span class="govuk-visually-hidden"> address</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Website
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['applicant.website'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="09-3_ContactWebsite">Change<span class="govuk-visually-hidden"> website</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['applicant.email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="09-4_ContactEmail">Change<span class="govuk-visually-hidden"> email address</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Telephone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['applicant.number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="09-5_ContactNumber">Change<span class="govuk-visually-hidden"> telephone number</span></a>
+          </dd>
+        </div>
+      </dl>
 
       <h2 class="govuk-heading-m">
         Key dates
       </h2>
 
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Anticipated submission date published"
-            },
-            value: {
-              text: data['submission-external']
-            },
-            actions: {
-              items: [
-                {
-                  href: "10_KeyDates",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Anticipated submission date internal"
-            },
-            value: {
-              text: data['submission-internal-day']+'/'+data['submission-internal-month']+'/'+data['submission-internal-year']
-            },
-            actions: {
-              items: [
-                {
-                  href: "10_KeyDates",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Anticipated submission date published
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['submission-external'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="10_KeyDates">Change<span class="govuk-visually-hidden"> anticipated submission date published</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+        Anticipated submission date internal
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['submission-internal-day'] }}/{{ data['submission-internal-month'] }}/{{ data['submission-internal-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="10_KeyDates">Change<span class="govuk-visually-hidden"> anticipated submission date internal</span></a>
+          </dd>
+        </div>
+      </dl>
 
 
       <h2 class="govuk-heading-m">

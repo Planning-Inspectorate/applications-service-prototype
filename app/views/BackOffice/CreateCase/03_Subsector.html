@@ -21,8 +21,82 @@
         Choose a subsector
       </h1>
 
-      <form class="form" action="./03-1_SectorType" method="post">
+      {% if data['project-sector'] == 'Business and Commercial' %} <!--Business and Commercial-->
+      <form class="form" action="./04_GeographicalInfo" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="project-subsector" type="radio" value="Office Use">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Office Use
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="project-subsector" type="radio" value="Research and Development of Products or Processes">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Research and Development of Products or Processes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-3" name="project-subsector" type="radio" value="An Industrial Process or Processes">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                  An Industrial Process or Processes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-4" name="project-subsector" type="radio" value="Storage or Distribution of Goods">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+                  Storage or Distribution of Goods
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Conferences">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Conferences
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Exhibitions">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Exhibitions
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Sport">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Sport
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Leisure">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Leisure
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Tourism">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Tourism
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Data Centres">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Data Centres
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+      {% elseif data['project-sector'] == 'Energy' %} <!--Energy-->
+      <form class="form" action="./03-1_SectorType" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios" data-module="govuk-radios">
@@ -77,6 +151,117 @@
         }) }}
 
       </form>
+      {% elseif data['project-sector'] == 'Transport' %} <!--Transport-->
+      <form class="form" action="./04_GeographicalInfo" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="project-subsector" type="radio" value="Highways">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Highways
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="project-subsector" type="radio" value="Airports">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Airports
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-3" name="project-subsector" type="radio" value="Harbour Facilities">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                  Harbour Facilities
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-4" name="project-subsector" type="radio" value="Railways">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+                  Railways
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-5" name="project-subsector" type="radio" value="Rail Freight Interchanges">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                  Rail Freight Interchanges
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+      {% elseif data['project-sector'] == 'Waste' %} <!--Waste-->
+      <form class="form" action="./04_GeographicalInfo" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="project-subsector" type="radio" value="Hazardous Waste Facilities">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Hazardous Waste Facilities
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+      {% elseif data['project-sector'] == 'Waste Water' %} <!--Waste Water-->
+      <form class="form" action="./04_GeographicalInfo" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="project-subsector" type="radio" value="Waste Water Treatment Plants">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Waste Water Treatment Plants
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+      {% else %} <!--Water-->
+      <form class="form" action="./04_GeographicalInfo" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="project-subsector" type="radio" value="Dams and Reservoirs">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Dams and Reservoirs
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="project-subsector" type="radio" value="Transfer of Water Resources">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Transfer of Water Resources
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+      {% endif %}
 
     </div>
   </div>
