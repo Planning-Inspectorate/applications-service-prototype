@@ -65,10 +65,22 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
                     </h2>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                    {% for item in [
+                        "BC01 Office Use",
+                        "BC02 Research and Development of Products or Processes",
+                        "BC03 An Industrial Process or Processes",
+                        "BC04 Storage or Distribution of Goods",
+                        "BC05 Conferences",
+                        "BC06 Exhibitions",
+                        "BC07 Sport",
+                        "BC08 Leisure",
+                        "BC09 Tourism",
+                        "BC10 Data Centres"
+                    ] %}
                     <details class="govuk-details">
                         <summary class="govuk-details__summary">
                             <span class="govuk-details__summary-text">
-                                BC01 Office Use
+                                {{ item }}
                             </span>
                         </summary>
                         <div class="govuk-details__text">
@@ -156,6 +168,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
                             </table>
                         </div>
                     </details>
+                    {% endfor %}
                 </div>
             </div>
             <div class="govuk-accordion__section">
