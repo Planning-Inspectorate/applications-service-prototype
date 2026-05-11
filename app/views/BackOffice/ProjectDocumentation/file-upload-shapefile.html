@@ -6,9 +6,24 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block beforeContent %}
   {{ super() }}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Project overview",
+        href: "../../Overview/"
+      },
+      {
+        text: "Project documentation",
+        href: "../index"
+      },
+      {
+        text: "GIS shapefiles",
+        href: "./folders/gis-shapefile"
+      },
+      {
+        text: "GIS shapefiles documents"
+      }
+    ]
   }) }}
 {% endblock %}
 
