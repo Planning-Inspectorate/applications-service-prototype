@@ -21,8 +21,18 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
       John Doe
     </h1>
-    <div class="govuk-tag govuk-tag--grey" style="margin-bottom: 24px;">Awaiting review</div>
-    <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
+    {% if data['RelRep-status'] == 'awaiting-review' %}
+    <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
+    {% elseif data['RelRep-status'] == 'withdrawn' %}
+    <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
+    {% elseif data['RelRep-status'] == 'invalid' %}
+    <div class="govuk-tag govuk-tag--red">Invalid</div>
+    {% elseif data['RelRep-status'] == 'referred' %}
+    <div class="govuk-tag govuk-tag--blue">Referred</div>
+    {% else %}
+    <div class="govuk-tag govuk-tag--green">Valid</div>
+    {% endif %}
+    <p class="govuk-body-s" style="padding-top: 20px;"><strong>Project name:</strong> Longfield solar farm</p>
     <h2 class="govuk-heading-m" style="padding-top: 24px;">Contact details</h2>
 
     <dl class="govuk-summary-list">
@@ -114,7 +124,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           RR-001 (Draft)
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="../edit_examLibraryNumber">Change</a>
+          <a class="govuk-link" href="edit_examLibraryNumber">Change</a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -226,7 +236,17 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           Status
         </dt>
         <dd class="govuk-summary-list__value">
+          {% if data['RelRep-status'] == 'awaiting-review' %}
           <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
+          {% elseif data['RelRep-status'] == 'withdrawn' %}
+          <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
+          {% elseif data['RelRep-status'] == 'invalid' %}
+          <div class="govuk-tag govuk-tag--red">Invalid</div>
+          {% elseif data['RelRep-status'] == 'referred' %}
+          <div class="govuk-tag govuk-tag--blue">Referred</div>
+          {% else %}
+          <div class="govuk-tag govuk-tag--green">Valid</div>
+          {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="RelRep_status">Change</a>

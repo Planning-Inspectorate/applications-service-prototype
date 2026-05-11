@@ -1,0 +1,56 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+      Edit the contents of the notification
+    </h1>
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      {% if data['RelRep-status'] == 'invalid' %}
+      {% else %}
+      <div class="govuk-tag govuk-tag--green">Valid</div>
+      {% endif %}
+    </p>
+
+    <form class="form" action="./RelRep_notify_confirm" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="more-detail">
+            Email content
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          Subject: There is a problem with your registration comments
+        </div>
+        <div style="width: 100%; background-color: rgb(241, 241, 241);"><p class="govuk-body" style="margin-bottom: 0px;">&nbsp; <strong>Placeholder for text editor used on project updates page</strong></p></div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint" style="border-color: rgb(216, 216, 216);">{Insert email content with styling here}</textarea>
+      </div>
+
+      {{ govukButton({
+        text: "Save changes"
+      }) }}
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

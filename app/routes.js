@@ -48,7 +48,7 @@ router.post('/RelRep_status', function(req, res) {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_withdrawn');
     }
     else {
-        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_details');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
     }
     //console.log(req.session.data);
 });

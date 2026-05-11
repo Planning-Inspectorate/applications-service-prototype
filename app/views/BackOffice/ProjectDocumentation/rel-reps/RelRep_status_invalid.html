@@ -27,7 +27,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       <strong class="govuk-tag govuk-tag--red">Invalid</strong>
     </p>
 
-    <form class="form" action="./RelRep_details" method="post">
+    <form class="form" action="./RelRep_notify" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -66,6 +66,27 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               <input class="govuk-radios__input" id="whereDoYouLive-5" name="whereDoYouLive" type="radio" value="other">
               <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
                 Test submission
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Notify interested party?
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            You will be able to check the email notification content on the next page
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" checked value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Notify interested party
               </label>
             </div>
           </div>

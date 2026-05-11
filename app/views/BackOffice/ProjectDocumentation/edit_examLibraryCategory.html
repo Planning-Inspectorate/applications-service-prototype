@@ -71,6 +71,23 @@
                 </label>
               </div>
               <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="library-category" type="radio" value="Change requests (CR)" data-aria-controls="conditional-contact-cr">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Change requests (CRX)
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-cr">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Change requests
+                  </label>
+                  <select class="govuk-select" id="sort" name="library-category-2">
+                    <option value="Change request 1 (CR1)">Change request 1 (CR1)</option>
+                    <option value="Change request 2 (CR2)" selected>Change request 2 (CR2)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-3" name="library-category" type="radio" value="Additional submissions (AS)">
                 <label class="govuk-label govuk-radios__label" for="contact-3">
                   Additional submissions (AS)
