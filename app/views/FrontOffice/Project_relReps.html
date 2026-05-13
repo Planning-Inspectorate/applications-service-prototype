@@ -112,40 +112,38 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </button>
     </div>
     <p class="govuk-body">Showing <strong>1</strong> to <strong>25</strong> of <strong>676</strong> documents, newest first.</p>    
-    <p class="govuk-body"><strong style="padding-right: 16px;">Results per page</strong> 25&#10240;&VerticalLine;&#10240;<a>50</a>&#10240;&VerticalLine;&#10240;<a>100</a></p>
+    <p class="govuk-body"><strong style="padding-right: 16px;">Results per page</strong> 25&#10240;&VerticalLine;&#10240;<a href="#">50</a>&#10240;&VerticalLine;&#10240;<a href="#">100</a></p>
 
     
 
 
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <div class="document-item">
+    {% for i in range(1,25) %}
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <div class="document-item govuk-!-margin-top-2">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link" href="#"><strong>Representation name</strong></a>
-            <br><span class="govuk-body-s">Submitted by Members of the public/businesses on 20 September 2025</span></p>
-          <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development. I accept that there is a requirement and... <a>Read More</a></p>
+        <div class="govuk-grid-column-three-quarters">
+          <p class="govuk-body"><a class="govuk-link" href="#"><strong>Example representation</strong></a></p>
         </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">RR-001</p>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body govuk-!-text-align-right" style="color: #505a5f;">RR-0{% if i > 9 %}0{% endif %}{{i}}</p>
         </div>
       </div>
-      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-    </div>
-    <div class="document-item">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <p class="govuk-body"><a class="govuk-link" href="#"><strong>Current representation style</strong></a></p>
-          <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development. I accept that there is a requirement and... <a>Read More</a></p>
+          <p class="govuk-body govuk-body-s">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development. I accept that there is a requirement and... <a href="#">Read more</a></p>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p class="govuk-body govuk-body-s"><Strong>Submitted by:</Strong> Statutory consultees</p>
         </div>
         <div class="govuk-grid-column-one-half">
-          <p class="govuk-body govuk-body-s"><Strong>Submitted by:</Strong> Members of the public/businesses</p>
-        </div>
-        <div class="govuk-grid-column-one-half">
-          <p class="govuk-body govuk-body-s govuk-!-text-align-right"><strong>Date submitted:</strong> 24 January 2025</p>
+          <p class="govuk-body govuk-body-s govuk-!-text-align-right"><strong>Date submitted:</strong> {{ i }} January 2025</p>
         </div>
       </div>
     </div>
+    {% endfor %}
 
     <nav class="govuk-pagination" aria-label="Pagination">
       <ul class="govuk-pagination__list">
