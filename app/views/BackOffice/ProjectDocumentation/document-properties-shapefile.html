@@ -27,30 +27,24 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-
-    <span class="govuk-caption-xl">Document properties</span>
-    <h1 class="govuk-heading-xl">Shapefile.json</h1>
-  </div>
   <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Document properties</span>
+    <h1 class="govuk-heading-xl">Shapefile.json</h1>  
     <p class="govuk-body"><strong>Description: </strong>Shapefile</p>
     <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
     <p class="govuk-body"><strong>File type and size: </strong>JSON, 71 KB</p>
     <p class="govuk-body"><strong>Version: </strong>2</p>
-    <!--
-    <div class="govuk-inset-text">
-      This document has been superseded by <a style="color: rgb(36, 77, 190);">EN0110007-00013</a>
-    </div>
-    -->
-    {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
     text: "Upload new version"
     }) }}
 
     <h2 class="govuk-heading-m">Document actions</h2>
-
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
     <div class="govuk-button-group">
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Open
@@ -58,21 +52,28 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Download
       </button>
+      {% if data['document-redaction'] == 'Unredacted' %} <!--if unredacted show redaction button-->
+        <a href="airedaction/2" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Suggest redactions
+        </a>
+      {% endif %}
       {% if data['document-status'] == 'Published' %} <!--if published show unpublish button-->
         <a href="unpublish" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Unpublish
         </a>
-      {% elseif data['document-status'] == 'Ready to publish' %} <!--if ready for publish show publish queue button-->
-        <a href="publishingQueue" type="submit" class="govuk-link" style="display: inline-flex;">
-          View publishing queue
-        </a>
       {% endif %}
     </div>
-
   </div>
-
+  <div class="govuk-grid-column-one-half">
+    {% if data['document-status'] == 'Ready to publish' %} <!--if ready for publish show publish queue button-->
+    <p class="govuk-body govuk-!-text-align-right"><a href="publishingQueue" type="submit" class="govuk-link">
+      View publishing queue
+    </a></p>
+    {% endif %}
+  </div>
+</div>
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
     <div class="govuk-tabs" data-module="govuk-tabs">
 
       <ul class="govuk-tabs__list">

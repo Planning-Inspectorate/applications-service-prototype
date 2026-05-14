@@ -17,8 +17,7 @@ Project team – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-  {% include "../_includes/project-description.html" %}
-  <div class="govuk-grid-column-full">
+    {% include "../_includes/project-description.html" %}
     <h2 class="govuk-heading-m">Project updates</h2>
     <div class="govuk-button-group">
       {{ govukButton({
@@ -26,18 +25,22 @@ Project team – {{ serviceName }} – GOV.UK Prototype Kit
         href: "edit_updateText"
       }) }}
     </div>
-
+  </div>
+  </div>
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-half">
-      <p style="font-size: 16px;">Showing<b> 1</b> to <b>4 </b>of <b>4</b> results</p>
+      <p class="govuk-body-s">Showing<b> 1</b> to <b>4 </b>of <b>4</b> results</p>
     </div>
-    <div class="govuk-grid-column-one-half text-align--right">
-      <p style="font-size: 16px;">
+    <div class="govuk-grid-column-one-half govuk-!-text-align-right">
+      <p class="govuk-body-s">
       <span class="govuk-!-margin-right-2"><strong>Results per page</strong></span>
-      <span class="govuk-!-margin-left-1"><a class="govuk-link"><span class="govuk-visually-hidden">View </span>25<span class="govuk-visually-hidden"> results per page</span></a></span>
-      <span class="govuk-!-margin-left-1">|</span><span class="govuk-!-margin-left-1"><a class="govuk-link"><span class="govuk-visually-hidden">View </span>50<span class="govuk-visually-hidden"> results per page</span></a></span>
-      <span class="govuk-!-margin-left-1">|</span><span class="govuk-!-margin-left-1"><a class="govuk-link"><span class="govuk-visually-hidden">View </span>100<span class="govuk-visually-hidden"> results per page</span></a></span></p>
+      <span class="govuk-!-margin-left-1"><span class="govuk-visually-hidden">View </span>25<span class="govuk-visually-hidden"> results per page</span></span>
+      <span class="govuk-!-margin-left-1">|</span><span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>50<span class="govuk-visually-hidden"> results per page</span></a></span>
+      <span class="govuk-!-margin-left-1">|</span><span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>100<span class="govuk-visually-hidden"> results per page</span></a></span></p>
     </div>
-  
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
