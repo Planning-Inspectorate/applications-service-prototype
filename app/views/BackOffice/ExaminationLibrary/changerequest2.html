@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Exam library tracker – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .hide {
+    display: none;
+  }
+
+  #banner.hide:target,
+  #banner2.hide:target {
+    display: block;
+  }
+</style>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="hide" id="banner">
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Examination library category published
+        </h3>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: "success"
+      }) }}
+    </div>
+
+    <div class="hide" id="banner2">
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Examination library category updated
+        </h3>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: "success"
+      }) }}
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Examination library</span>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
+      Change request 2 &nbsp;&nbsp;
+      <strong class="govuk-tag govuk-tag--blue">
+        In progress
+      </strong>
+    </h1>
+
+    <p class="govuk-body">Once an examination library category has been published, the examination library references are final and cannot be changed.</p>
+    <h2 class="govuk-heading govuk-heading-m">Items in the examination library</h2>
+    <p class="govuk-body">There are no items assigned to this examination library category.</p>
+  </div>
+</div>
+
+{% endblock %}

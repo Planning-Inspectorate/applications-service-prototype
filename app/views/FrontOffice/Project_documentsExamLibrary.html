@@ -36,7 +36,6 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row" style="padding-top: 48px;">
   <div class="govuk-grid-column-full">
-  <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-xl">
       <span class="govuk-caption-l">Longfield Solar Farm</span>
       Examination library
@@ -47,205 +46,239 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       Each document has an individual reference number. It's important to quote these reference numbers if you refer to any documents when making comments about a project.
     </p>
 
-    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
-
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        text: "Application documents"
-      },
-      summary: {
-        text: "Documents and plans submitted by the applicant for a development consent order."
-      },
-      content: {
-        html: '
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Application form</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Application documents
+          </span>
+          </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Documents and plans submitted by the applicant for a development consent order.
+            </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Application form</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
               <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(1,35) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Plans / drawings / sections</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(35,55) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Draft development consent order</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(55,95) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Compulsory acquisition information</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(95,115) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-{%if (100 > i)%}0{%endif%}{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Consultation report</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(115,125) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-{%if (100 > i)%}0{%endif%}{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Reports and statements</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(125,145) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-{%if (100 > i)%}0{%endif%}{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Environmental statement</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(145,150) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-{%if (100 > i)%}0{%endif%}{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Other documents</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(150,190) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">APP-{%if (100 > i)%}0{%endif%}{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Adequecy of consultation responses
+          </span>
+          </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Comments from local authorities, statutory consultees, the Planning Inspectorate.
+            </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Adequecy of consultation responses
+          </caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,100) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-001</th>
-              <td class="govuk-table__cell"><a href="#">1.1 Covering Letter</a></td>
+              <th scope="row" class="govuk-table__cell">AoC-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-002</th>
-              <td class="govuk-table__cell"><a href="#">1.2 Guide to the Application</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-003</th>
-              <td class="govuk-table__cell"><a href="#">1.3 Application Form</a></td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>
-        
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Plans / drawings / sections</caption>
+          </table>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+      <h2 class="govuk-heading-m govuk-!-margin-top-2">Relevant representations (registration comments)</h2>
+      <p class="govuk-body">Comments from individuals and organisations.</p>
+      <p class="govuk-body govuk-!-margin-top-2"><a class="govuk-link" href="Project_relReps">View relevant representations (registration comments)</a></p>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Procedural decisions and notifications from Examining Authority
+          </span>
+          </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Written questions, event notifications and decisions about how the application will be examined.
+            </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Procedural decisions and notifications from Examining Authority
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Document</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,100) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-004</th>
-              <td class="govuk-table__cell"><a href="#">2.1 Location plans</a></td>
+              <th scope="row" class="govuk-table__cell">PD-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-005</th>
-              <td class="govuk-table__cell"><a href="#">2.2 Land plans</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-006</th>
-              <td class="govuk-table__cell"><a href="#">2.3 Floor plans</a></td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>
-    
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Draft development consent order</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-007</th>
-              <td class="govuk-table__cell"><a href="#">3.1 Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-008</th>
-              <td class="govuk-table__cell"><a href="#">3.2 Explanatory memorandum</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-009</th>
-              <td class="govuk-table__cell"><a href="#">3.3 Validation report</a></td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Compulsory acquisition information</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-010</th>
-              <td class="govuk-table__cell"><a href="#">3.4 Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-011</th>
-              <td class="govuk-table__cell"><a href="#">3.5 Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Consultation Report</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-013</th>
-              <td class="govuk-table__cell"><a href="#">4.1 Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-014</th>
-              <td class="govuk-table__cell"><a href="#">4.2 Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Reports and statements</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-015</th>
-              <td class="govuk-table__cell"><a href="#">5.1 Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-016</th>
-              <td class="govuk-table__cell"><a href="#">5.2 Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Environmental statement</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-017</th>
-              <td class="govuk-table__cell"><a href="#">6.1 Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-018</th>
-              <td class="govuk-table__cell"><a href="#">6.2 Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>
-    
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Other documents</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-020</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">APP-021</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>
-        '
-      }
-    },
-    {
-      heading: {
-        text: "Adequecy of consultation responses"
-      },
-      summary: {
-        text: "Comments from local authorities, statutory consultees, the Planning Inspectorate."
-      },
-      content: {
-        html: '
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Adequecy of consultation representations</caption>
+          </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Change requests
+          </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Change request 1
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
@@ -254,79 +287,52 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,50) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AoC-001</th>
-              <td class="govuk-table__cell"><a href="#">Adequacy of Consultation Representation</a></td>
-              <td class="govuk-table__cell">City of Doncaster Council</td>
+              <th scope="row" class="govuk-table__cell">CR1-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AoC-002</th>
-              <td class="govuk-table__cell"><a href="#">Adequacy of Consultation Representation</a></td>
-              <td class="govuk-table__cell">North Lincolnshire Council</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AoC-003</th>
-              <td class="govuk-table__cell"><a href="#">Adequacy of Consultation Representation</a></td>
-              <td class="govuk-table__cell">Nottinghamshire County Council</td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Relevant representations (registration comments)"
-      },
-      summary: {
-        text: "Comments from individuals and organisations."
-      },
-      content: {
-        html: '
-        <p class="govuk-body">To assist navigation of this Examination Library, the Relevant Representations are
-          recorded in a separate library available here:
-          <a class="govuk-link" href="Project_relReps">Relevant Representations (registration comments)</a></p>
-        '
-      }
-    },
-    {
-      heading: {
-        text: "Procedural decisions and notifications from Examining Authority"
-      },
-      summary: {
-        text: "Written questions, event notifications and decisions about how the application will be examined."
-      },
-      content: {
-        html: '<table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Procedural decisions and notifications from Examining Authority</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-full">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">PD-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">PD-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Additional submissions"
-      },
-      summary: {
-        text: "Anything accepted by the Examining Authority outside of a formal deadline."
-      },
-      content: {
-        html: '<table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Additional submissions</caption>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Change request 2
+            </caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(1,50) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">CR2-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+                <td class="govuk-table__cell">Highways England</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Additional submissions
+          </span>
+          </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Anything accepted by the Examining Authority outside of a formal deadline.
+            </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Additional submissions
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
@@ -337,94 +343,87 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">AS-001</th>
-              <td class="govuk-table__cell">Example document (currently unavailable)</td>
+              <td class="govuk-table__cell">Example document (currently unavailable)</td> <!--if doc unpublished-->
               <td class="govuk-table__cell">Highways England</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__cell">AS-002</th>
-              <td class="govuk-table__cell">Reference not in use</td>
+              <td class="govuk-table__cell">Reference not in use</td> <!--if doc deleted-->
               <td class="govuk-table__cell"></td>
             </tr>
+            {% for i in range(3,50) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AS-003</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
+              <th scope="row" class="govuk-table__cell">AS-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
               <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AS-004</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AS-005</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">AS-006</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Events and hearings"
-      },
-      summary: {
-        text: "Agendas, recordings, notes, actions."
-      },
-      content: {
-        html: '
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Open floor hearing 2</caption>
+          </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Events and hearings
+          </span>
+          </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Agendas, recordings, notes, actions.
+            </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Open floor hearing 2
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header  govuk-!-width-three-quarter"">Document</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Document</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,5) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">EV2-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
+              <th scope="row" class="govuk-table__cell">EV2-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">EV2-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Issue specific hearing 1</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Issue specific hearing 1
+            </caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-three-quarter">Document</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">EV3-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">EV3-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-            </tr>
-          </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Procedural deadlines"
-      },
-      content: {
-        html: '<table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Procedural deadline 1</caption>
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Document</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(1,6) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">EV3-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Procedural deadlines
+          </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Procedural deadline 1
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
@@ -433,20 +432,49 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,100) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">PD1-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
+              <th scope="row" class="govuk-table__cell">PD1-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
               <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">PD1-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Procedural deadline 2</caption>
+          </table>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Procedural deadline 2
+            </caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              {% for i in range(1,100) %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">PD2-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+                <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
+                <td class="govuk-table__cell">Highways England</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Deadline 1
+          </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Deadline 1
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
@@ -455,27 +483,30 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,100) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">PD2-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
+              <th scope="row" class="govuk-table__cell">REP1-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
               <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">PD2-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Deadline 1"
-      },
-      content: {
-        html: '<table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Deadline 1</caption>
+          </table>
+        </div>
+      </div>
+      {% if data['library-published'] == 'published' %} <!--If published show deadline 2-->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Deadline 2
+          </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Deadline 2
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
@@ -484,47 +515,33 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,100) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP1-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
+              <th scope="row" class="govuk-table__cell">REP2-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
               <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP1-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP1-003</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP1-004</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP1-005</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP1-006</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Deadline 2"
-      },
-      content: {
-        html: '<table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Deadline 2</caption>
+          </table>
+        </div>
+      </div>
+      {% endif %}
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Other documents
+          </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Certificates, transboundary documents, further information.
+          </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Other documents
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
@@ -533,145 +550,18 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            {% for i in range(1,100) %}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-001</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
+              <th scope="row" class="govuk-table__cell">OD-0{%if (10 > i)%}0{%endif%}{{i}}</th>
+              <td class="govuk-table__cell"><a href="#">1.{{i}} Example document</a></td>
               <td class="govuk-table__cell">Highways England</td>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-002</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-003</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-004</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-005</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-006</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-007</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-008</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-009</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-010</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-011</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-012</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-013</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-014</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-015</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-016</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-017</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-018</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-019</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">REP2-020</th>
-              <td class="govuk-table__cell"><a href="#">Example document</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
+            {% endfor %}
           </tbody>
-        </table>'
-      }
-    },
-    {
-      heading: {
-        text: "Other documents"
-      },
-      summary: {
-        text: "Certificates, transboundary documents, further information."
-      },
-      content: {
-        html: '
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Other documents</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reference</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">OD-001</th>
-              <td class="govuk-table__cell"><a href="#">Draft Development Consent Order</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">OD-002</th>
-              <td class="govuk-table__cell"><a href="#">Explanatory memorandum</a></td>
-              <td class="govuk-table__cell">Highways England</td>
-            </tr>
-          </tbody>
-        </table>'
-      }
-    }
-  ]
-}) }}
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
