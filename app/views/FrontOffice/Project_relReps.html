@@ -122,11 +122,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
     <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
     <div class="document-item govuk-!-margin-top-2">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">
+        <div class="govuk-grid-column-full">
           <p class="govuk-body"><a class="govuk-link" href="#"><strong>Example representation</strong></a></p>
-        </div>
-        <div class="govuk-grid-column-one-quarter">
-          <p class="govuk-body govuk-!-text-align-right" style="color: #505a5f;">RR-0{% if 10 > i %}0{% endif %}{{i}}</p>
         </div>
       </div>
       <div class="govuk-grid-row">
@@ -135,11 +132,11 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </div>
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-          <p class="govuk-body govuk-body-s"><Strong>Submitted by:</Strong> Statutory consultees</p>
+        <div class="govuk-grid-column-three-quarters">
+          <p class="govuk-body govuk-body-s" style="font-size: 14px;"><Strong>Submitted:</Strong> {{ i }} September 2025 by Members of the public/businesses</p>
         </div>
-        <div class="govuk-grid-column-one-half">
-          <p class="govuk-body govuk-body-s govuk-!-text-align-right"><strong>Date submitted:</strong> {{ i }} January 2025</p>
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body govuk-body-s govuk-!-text-align-right" style="font-size: 14px;"><strong>Reference:</strong> RR-0{% if 10 > i %}0{% endif %}{{i}}</p>
         </div>
       </div>
     </div>
