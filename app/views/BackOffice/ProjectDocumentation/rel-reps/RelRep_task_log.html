@@ -1,0 +1,89 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" style="margin-bottom: 12px;">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
+      John Doe
+    </h1>
+    <strong class="govuk-heading-s">
+      {% if data['RelRep-status'] == 'awaiting-review' %}
+      <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
+      {% elseif data['RelRep-status'] == 'withdrawn' %}
+      <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
+      {% elseif data['RelRep-status'] == 'invalid' %}
+      <div class="govuk-tag govuk-tag--red">Invalid</div>
+      {% elseif data['RelRep-status'] == 'referred' %}
+      <div class="govuk-tag govuk-tag--blue">Referred</div>
+      {% else %}
+      <div class="govuk-tag govuk-tag--green">Valid</div>
+      {% endif %}
+    </strong>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Task log</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">Log type</th>
+          <th scope="col" class="govuk-table__header">Change from</th>
+          <th scope="col" class="govuk-table__header">Change to</th>
+          <th scope="col" class="govuk-table__header">Author</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">8 May 2026</td>
+          <td class="govuk-table__cell">Status change</td>
+          <td class="govuk-table__cell"><div class="govuk-tag govuk-tag--grey">Awaiting review</div></td>
+          <td class="govuk-table__cell"><div class="govuk-tag govuk-tag--green">Valid</div></td>
+          <td class="govuk-table__cell">Alex Hopkins</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">7 May 2026</td>
+          <td class="govuk-table__cell">Edit representation</td>
+          <td class="govuk-table__cell">Redacted</td>
+          <td class="govuk-table__cell">Unredacted</td>
+          <td class="govuk-table__cell">Alex Hopkins</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">7 May 2026</td>
+          <td class="govuk-table__cell">Redacted change</td>
+          <td class="govuk-table__cell">Unredacted</td>
+          <td class="govuk-table__cell">Redacted</td>
+          <td class="govuk-table__cell">Alex Hopkins</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="govuk-button-group">
+      <form action="RelRep_details" method="post" novalidate>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Return to dashboard
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -17,74 +17,88 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
-      Notify the interested party?
-    </h1>
-
-    <p class="govuk-body govuk-!-margin-bottom-6">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <span class="govuk-caption-l">John Doe</span>
+    <h1 class="govuk-heading-l">Confirm notification to interested party</h1>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if data['RelRep-status'] == 'invalid' %}
+          <div class="govuk-tag govuk-tag--red">Invalid</div>
+          {% else %}
+          <div class="govuk-tag govuk-tag--green">Valid</div>
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> status</span></a>
+        </dd>
+      </div>
       {% if data['RelRep-status'] == 'invalid' %}
-      {% else %}
-      <div class="govuk-tag govuk-tag--green">Valid</div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reason
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Missing information
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> reason</span></a>
+        </dd>
+      </div>
       {% endif %}
-    </p>
+    </dl>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Preview email notification
+        </span>
+      </summary>
+      {% if data['RelRep-status'] == 'invalid' %} 
+      <div class="govuk-details__text">
+        <p><strong>Subject:</strong> There is a problem with your registration</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <p>Dear John Doe,</p>
+        <p>We’ve reviewed your registration to have your say about Longfield solar farm with registration reference number: B100000045</p>
+        <p>Unfortunately, we have not been able to register you. This is because your registration is missing information.</p>
+        <p>Read our <a href="https://www.gov.uk/guidance/nationally-significant-infrastructure-projects-advice-for-submitting-representations-or-comments">advice for submitting representations</a> or comments to find out what you should and should not include in your registration.</p>
+        <p><strong>Next steps</strong></p>
 
-    <form class="form" action="./RelRep_notify_confirm" method="post">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                Yes, send an email notification
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
-              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-                No, do not send an email notification
-              </label>
-            </div>
-          </div>
-        </fieldset>
+        <p>You will need to start the registration process again and submit your registration comments by {Date}. </p>
+        <p><a href="#">Register to have your say</a></p>
+        <p>The Planning Inspectorate​
+        </br>Example.project@email.com</p>
       </div>
+      {% else %}
+      <div class="govuk-details__text">
+        <p><strong>Subject:</strong> Registration complete</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <p>Dear John Doe,</p>
+        <p>You are now registered to have your say about Longfield solar farm.</p>
+        <p>Your interested party reference number is: B100000045</p>
+        <p>As an interested party, you will be able to make further comments, attend certain meetings and receive notifications.</p>
 
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Email notification content
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p><strong>Subject:</strong> There is a problem with your registration comments</p>
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-          <p>Dear {User},</p>
-          <p>We’ve reviewed your registration comments about {project name} with registration reference number: {registration identification number} </p>
-          <p>Unfortunately, we are not able to accept your registration comments. This is because {case officer fills in information here}.</p>
-          <p><strong>Next steps</strong></p>
-
-          <p>You will need to start the registration process again and submit your registration comments by {Date}. </p>
-          <p><a href="#">Register to have your say</a></p>
-          <p>The Planning Inspectorate​</p>
-          <p>{project email}</p>
-
-        </div>
-      </details>
-
-      <div class="govuk-button-group">
-        {{ govukButton({
-          text: "Confirm notification"
-        }) }}
-
-        {{ govukButton({
-          text: "Edit notification content",
-          classes: "govuk-button--secondary"
-        }) }}
+        <p>The Planning Inspectorate​
+      </br>Example.project@email.com</p>
       </div>
-
-    </form>
-
+      {% endif %}
+    </details>
+    <div class="govuk-button-group">
+      <form action="/form-handler" method="post" novalidate>
+        <input type="hidden" name="notification" value="sent">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and send
+        </button>
+      </form>
+      <form action="/form-handler" method="post" novalidate>
+        <input type="hidden" name="notification" value="sent">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Skip notification
+        </button>
+      </form>
+    </div>
   </div>
 </div>
 
