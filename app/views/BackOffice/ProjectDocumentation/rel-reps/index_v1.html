@@ -1,0 +1,297 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Project documentation",
+      href: "../index"
+    }
+    ,
+    {
+      text: "Relevant representations"
+    }
+  ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+<!--test-->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% include "../../_includes/project-description.html" %}
+
+    <hr class="govuk-section-break govuk-section-break--l">
+    <h1 class="govuk-heading-l">
+      Relevant representations
+    </h1>
+  </div>
+</div>
+
+    
+    <!--
+    <div class="govuk-grid-row equal-height">
+      <div class="govuk-grid-column-one-third">
+
+        <h3 class="govuk-heading-m">Key dates</h3>
+        <h4 class="govuk-heading-s">Closed date</h4>
+        <p class="govuk-body">30 April 2025</p>
+        <h4 class="govuk-heading-s">Published date</h4>
+        <p class="govuk-body">29 April 2025</p>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Add a representation
+        </button>
+
+        <p class="govuk-body">
+          <a href="unpublish-representations" class="govuk-link">Unpublish all published representations</a>
+        </p>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">View publishing queue</a>
+        </p>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Download mailing list (CSV)</a>
+        </p>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Download valid representations (CSV)</a>
+        </p>
+
+      </div>
+    </div>
+    -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group govuk-!-margin-bottom-0">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Search representations
+      </label>
+      <input class="govuk-input govuk-!-width-one-half" id="one-half" name="oneHalf" type="text">
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Search
+      </button>
+    </div>
+    <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Filter representations
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="background-color:#F3F2F1; padding:20px;">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Filters
+                </h1>
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Awaiting review (72)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Draft (186)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Referred (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Invalid (7)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Under 18 (3)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Valid (28)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Published (21)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Withdrawn (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Unpublished (4)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          {{ govukButton({
+            text: "Apply filters",
+            href: "searchFiltered"
+          }) }} 
+        </div>
+    </details>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+      <p class="govuk-body-s">Showing <b>1</b> to <b>25</b> of <b>62</b> results</p>
+  </div>
+  <div class="govuk-grid-column-one-half text-align--right">
+    <p class="govuk-body-s govuk-!-text-align-right">
+      <span class="govuk-!-margin-right-2"><strong>Results per page</strong></span>
+      <span class="govuk-!-margin-left-1">25<span class="govuk-visually-hidden"> results per page</span></span>
+      <span class="govuk-!-margin-left-1">|</span>
+      <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>50<span class="govuk-visually-hidden"> results per page</span></a>   </span>
+      <span class="govuk-!-margin-left-1">|</span>			
+      <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View </span>100<span class="govuk-visually-hidden"> results per page</span></a></span>
+    </p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Reference</th>
+          <th scope="col" class="govuk-table__header">From</th>
+          <th scope="col" class="govuk-table__header">Date received</th>
+          <th scope="col" class="govuk-table__header">Redacted</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B100000024</td>
+          <td class="govuk-table__cell">John Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Redacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag">
+              Valid
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B100000025</td>
+          <td class="govuk-table__cell">Jim Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Redacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Published
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B100000026</td>
+          <td class="govuk-table__cell">Jack Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Redacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">
+              Withdrawn
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details">Review</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B100000027</td>
+          <td class="govuk-table__cell">Jane Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Unredacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+              Invalid
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B100000028</td>
+          <td class="govuk-table__cell">James Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Unredacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+              Awaiting review
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B100000029</td>
+          <td class="govuk-table__cell">Joe Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Unredacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">
+              Referred
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    {% endblock %}

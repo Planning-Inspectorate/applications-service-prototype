@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Exam library tracker – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+				Create new item
+			</h1>   
+      <p class="govuk-body">Add examination timetable details</p>
+      <form action="create_item_details">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="sort">
+            Timetable item type
+          </label>
+          <select class="govuk-select" id="timetable-type" name="timetable-type">
+            <option value="Accompanied Site Inspection">Accompanied site inspection</option>
+            <option value="Change Request">Change request</option>
+            <option value="Compulsory Acquisition Hearing">Compulsory acquisition hearing</option>
+            <option value="Deadline">Deadline</option>
+            <option value="Deadline For Close Of Examination">Deadline for close of examination</option>
+            <option value="Issued By">Issued by</option>
+            <option value="Issue Specific Hearing">Issue specific hearing</option>
+            <option value="Open Floor Hearing">Open floor hearing</option>
+            <option value="Other Meeting">Other meeting</option>
+            <option value="Preliminary Meeting">Preliminary meeting</option>
+            <option value="Procedural Deadline (Pre-Examination)">Procedural deadline (pre-examination)</option>
+            <option value="Procedural Decision">Procedural decision</option>
+            <option value="Publication Of">Publication of</option>
+            <option value="Unaccompanied Site Inspection">Unaccompanied site inspection</option>
+          </select>
+        </div>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

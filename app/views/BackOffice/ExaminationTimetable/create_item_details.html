@@ -1,0 +1,220 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Exam library tracker – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="create_item_details">
+      <h1 class="govuk-heading-l">
+				Create new item
+			</h1>   
+      <p class="govuk-body"><strong>Timetable item type</strong></p>
+      <p class="govuk-body">{{ data['timetable-type'] }}</p>
+      <!--Name-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Item name
+        </label>
+        <div id="event-name-hint" class="govuk-hint">
+          There is a limit of 200 characters
+        </div>
+        <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+      </div>
+
+      {% if (data['timetable-type'] == 'Procedural Deadline (Pre-Examination)')
+      or (data['timetable-type'] == 'Deadline For Close Of Examination')
+      or (data['timetable-type'] == 'Deadline') %}{% else %}
+      <!--date-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Date
+          </legend>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 27 3 2007
+          </div>
+          <div class="govuk-date-input" id="date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="date-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="date-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="date-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {% endif %}
+
+      {% if (data['timetable-type'] == 'Procedural Deadline (Pre-Examination)')
+      or (data['timetable-type'] == 'Deadline For Close Of Examination')
+      or (data['timetable-type'] == 'Deadline') %}
+      <!--Start date-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Start date
+          </legend>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 27 3 2007
+          </div>
+          <div class="govuk-date-input" id="date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="date-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="date-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="date-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {% endif %}
+
+      {% if (data['timetable-type'] == 'Publication Of')
+      or (data['timetable-type'] == 'Issued By')
+      or (data['timetable-type'] == 'Change Request') %} {% else %}
+      <!--Start time-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Start time (optional)
+        </label>
+        <div id="event-name-hint" class="govuk-hint">
+          For example, 13 : 00
+        </div>
+        <input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint"><span class="govuk-!-margin-left-2 govuk-!-margin-right-2">:</span><input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+      </div>
+      {% endif %}
+
+      {% if (data['timetable-type'] == 'Procedural Deadline (Pre-Examination)')
+      or (data['timetable-type'] == 'Deadline For Close Of Examination')
+      or (data['timetable-type'] == 'Deadline') %}
+      <!--End date-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            End date
+          </legend>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 27 3 2007
+          </div>
+          <div class="govuk-date-input" id="date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="date-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="date-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="date-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {% endif %}
+
+      {% if (data['timetable-type'] == 'Publication Of')
+      or (data['timetable-type'] == 'Issued By')
+      or (data['timetable-type'] == 'Change Request') %} {% else %}
+      <!--End time-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          End time (optional)
+        </label>
+        <div id="event-name-hint" class="govuk-hint">
+          For example, 13 : 00
+        </div>
+        <input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint"><span class="govuk-!-margin-left-2 govuk-!-margin-right-2">:</span><input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+      </div>
+      {% endif %}
+
+      {% if (data['timetable-type'] == 'Deadline') %}
+      <div class="govuk-inset-text">
+        The portal for this deadline will open when the previous one closes or on your chosen start and end dates.
+      </div>
+      {% endif %}
+
+      {% if (data['timetable-type'] == 'Unaccompanied Site Inspection') %}
+      <div class="govuk-inset-text">
+        The event for this unaccompanied site inspection will only be visible in the timetable the day following the chosen date and end time.
+      </div>
+      {% endif %}
+      <!--Description-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="more-detail">
+          Timetable item description (optional)
+        </label>
+        <div id="event-name-hint" class="govuk-hint">
+          Use an asterisk (*) to denote a new bullet point
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="20"></textarea>
+      </div>
+      </form>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </div>
+  </div>
+
+{% endblock %}
