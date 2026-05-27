@@ -33,6 +33,16 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l">
       Relevant representations
     </h1>
+    <p class="govuk-body">There have been 162 representations submitted</p>
+    <div style="display: flex; justify-content: space-between;">
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add a representation
+      </button>
+      <p class="govuk-body">
+        <a href="publishingQueue" class="govuk-link">View publishing queue</a>
+      </p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
 </div>
 
@@ -160,10 +170,15 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
     </details>
   </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-s">Download</h2>
+    <p class="govuk-body"><a class="govuk-link" href="#">Download mailing list (CSV)</a></p>
+    <p class="govuk-body"><a class="govuk-link" href="#">Download valid and published representations (CSV)</a></p>
+  </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
-      <p class="govuk-body-s">Showing <b>1</b> to <b>25</b> of <b>62</b> results</p>
+      <p class="govuk-body-s">Showing <b>1</b> to <b>25</b> of <b>162</b> results</p>
   </div>
   <div class="govuk-grid-column-one-half text-align--right">
     <p class="govuk-body-s govuk-!-text-align-right">
@@ -182,18 +197,18 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Reference</th>
-          <th scope="col" class="govuk-table__header">From</th>
-          <th scope="col" class="govuk-table__header">Date received</th>
-          <th scope="col" class="govuk-table__header">Redacted</th>
-          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header sortButton">Reference&#9660;</th>
+          <th scope="col" class="govuk-table__header sortButton">From&#9660;</th>
+          <th scope="col" class="govuk-table__header sortButton">Date received&#9660;</th>
+          <th scope="col" class="govuk-table__header sortButton">Redacted&#9660;</th>
+          <th scope="col" class="govuk-table__header sortButton">Status&#9660;</th>
           <th scope="col" class="govuk-table__header">Action</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
-
+        {% for i in range(4) %}
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">B100000024</td>
+          <td class="govuk-table__cell">B1000000{{i}}4</td>
           <td class="govuk-table__cell">John Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Redacted</td>
@@ -204,7 +219,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">B100000025</td>
+          <td class="govuk-table__cell">B1000000{{i}}5</td>
           <td class="govuk-table__cell">Jim Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Redacted</td>
@@ -215,7 +230,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">B100000026</td>
+          <td class="govuk-table__cell">B1000000{{i}}6</td>
           <td class="govuk-table__cell">Jack Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Redacted</td>
@@ -226,7 +241,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">B100000027</td>
+          <td class="govuk-table__cell">B1000000{{i}}7</td>
           <td class="govuk-table__cell">Jane Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Unredacted</td>
@@ -237,7 +252,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">B100000028</td>
+          <td class="govuk-table__cell">B1000000{{i}}8</td>
           <td class="govuk-table__cell">James Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Unredacted</td>
@@ -248,7 +263,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">B100000029</td>
+          <td class="govuk-table__cell">B1000000{{i}}9</td>
           <td class="govuk-table__cell">Joe Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Unredacted</td>
@@ -257,7 +272,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             </strong></td>
           <td class="govuk-table__cell"><a href="RelRep_details_updated">Review</a></td>
         </tr>
-
+        {% endfor %}
       </tbody>
     </table>
 
@@ -277,6 +292,26 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         <li class="govuk-pagination__item">
           <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
             3
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 4">
+            4
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 5">
+            5
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">
+            6
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7">
+            7
           </a>
         </li>
       </ul>
