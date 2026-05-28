@@ -46,40 +46,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   </div>
 </div>
 
-    
-    <!--
-    <div class="govuk-grid-row equal-height">
-      <div class="govuk-grid-column-one-third">
-
-        <h3 class="govuk-heading-m">Key dates</h3>
-        <h4 class="govuk-heading-s">Closed date</h4>
-        <p class="govuk-body">30 April 2025</p>
-        <h4 class="govuk-heading-s">Published date</h4>
-        <p class="govuk-body">29 April 2025</p>
-        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Add a representation
-        </button>
-
-        <p class="govuk-body">
-          <a href="unpublish-representations" class="govuk-link">Unpublish all published representations</a>
-        </p>
-
-        <p class="govuk-body">
-          <a href="#" class="govuk-link">View publishing queue</a>
-        </p>
-
-        <p class="govuk-body">
-          <a href="#" class="govuk-link">Download mailing list (CSV)</a>
-        </p>
-
-        <p class="govuk-body">
-          <a href="#" class="govuk-link">Download valid representations (CSV)</a>
-        </p>
-
-      </div>
-    </div>
-    -->
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-form-group govuk-!-margin-bottom-0">
@@ -92,82 +58,143 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       </button>
     </div>
     <details class="govuk-details filters">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text filtersText">
-            Filter representations
-          </span>
-        </summary>
-        <div class="govuk-details__text" style="background-color:#F3F2F1; padding:20px;">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                  Filters
-                </h1>
-              </legend>
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Awaiting review (72)
-                  </label>
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text filtersText">
+          Filter representations
+        </span>
+      </summary>
+      <!--Status filters-->
+      <div class="govuk-details__text"" style="background-color:#F3F2F1;"">
+        <details class="govuk-details filters">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text filtersText">
+              <strong style="color: black;">Status</strong>
+            </span>
+          </summary>
+          <div class="govuk-details__text" style="background-color:#F3F2F1;">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      Awaiting review (72)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Draft (186)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                      Referred (2)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Invalid (7)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Valid (28)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Published (21)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Withdrawn (2)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Unpublished (4)
+                    </label>
+                  </div>
                 </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                    Draft (186)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-                    Referred (2)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Invalid (7)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Under 18 (3)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Valid (28)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Published (21)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Withdrawn (2)
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                    Unpublished (4)
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
           </div>
-          {{ govukButton({
-            text: "Apply filters",
-            href: "searchFiltered"
-          }) }} 
+        </details>
+      </div>
+      <!--Type of party-->
+      <div class="govuk-details__text" style="background-color:#F3F2F1;">
+        <details class="govuk-details filters">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text filtersText">
+              <strong style="color: black;">Type</strong>
+            </span>
+          </summary>
+          <div class="govuk-details__text" style="background-color:#F3F2F1;">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      Local authorities (72)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Members of the public/businesses (186)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                      Non-statutory organisations (2)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Statutory consultees (7)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Parish councils (28)
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </details>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Filters
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Under 18 (3)
+                </label>
+              </div>
+            </div>
+          </fieldset>
         </div>
+        <button class="govuk-button">Apply filters</button>
+      </div>
     </details>
   </div>
   <div class="govuk-grid-column-one-third">

@@ -45,10 +45,33 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive-5" name="whereDoYouLive" type="radio" value="other">
+              <input class="govuk-radios__input" id="whereDoYouLive-5" name="whereDoYouLive" type="radio" value="other" data-aria-controls="conditional-missing-information">
               <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
                 Missing information
               </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-missing-information">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend">
+                    What information is missing?
+                  </legend>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste">
+                        Full name
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                        Reason for comments
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
@@ -66,6 +89,11 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               <input class="govuk-radios__input" id="whereDoYouLive-5" name="whereDoYouLive" type="radio" value="other">
               <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
                 Test submission
+              </label>
+            </div><div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-5" name="whereDoYouLive" type="radio" value="other">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5">
+                Undeclared AI usage
               </label>
             </div>
           </div>
