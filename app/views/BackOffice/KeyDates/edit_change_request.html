@@ -18,13 +18,13 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Change request 1
+        Change request {{data['change-request']}}
       </h1>
 
       <form class="form" action="./index" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="Change-request-notification-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
                 Change request notification
@@ -33,89 +33,71 @@
             <div id="passport-issued-hint" class="govuk-hint">
               Applicant notifies the Planning Inspectorate of a change request.
             </div>
-            <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input" id="change-request-notification">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-notification-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-notification-day" name="change-request-notification-day" type="text" inputmode="numeric">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-notification-month">
                     Month
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-notification-month" name="change-request-notification-month" type="text" inputmode="numeric">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-notification-year">
                     Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-notification-year" name="change-request-notification-year" type="text" inputmode="numeric">
                 </div>
               </div>
             </div>
           </fieldset>
         </div>
-
+        <!--
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
-                Change request decision date
+                Change request acknowledged
               </h1>
             </legend>
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Yes, the Planning Inspectorate acknowledged the change request
+                </label>
               </div>
             </div>
           </fieldset>
         </div>
-        
+        -->
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
-                Change request notification decision outcome
+                Planning Inspectorate acknowledgement
               </h1>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                  Accepted
+                <input class="govuk-radios__input" id="change-request-acknowledged" name="change-request-acknowledged" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="change-request-acknowledged">
+                  Yes, the change request has been acknowledged
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                  Rejected
+                <input class="govuk-radios__input" id="change-request-acknowledged" name="change-request-acknowledged" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="change-request-acknowledged">
+                  No, the change request has not been acknowledged
                 </label>
               </div>
             </div>
@@ -123,38 +105,38 @@
         </div>
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-application-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
                 Change request application received
               </h1>
             </legend>
-            <div id="passport-issued-hint" class="govuk-hint">
+            <div id="change-request-application-hint" class="govuk-hint">
               Date the Planning Inspectorate receives the change request application.
             </div>
-            <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input" id="change-request-application">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-application-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-application-day" name="change-request-application-day" type="text" inputmode="numeric">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-application-month">
                     Month
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-application-month" name="change-request-application-month" type="text" inputmode="numeric">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-application-year">
                     Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-application-year" name="change-request-application-year" type="text" inputmode="numeric">
                 </div>
               </div>
             </div>
@@ -162,35 +144,35 @@
         </div>
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-decision-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
                 Change request application decision date
               </h1>
             </legend>
-            <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input" id="change-request-decision">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-decision-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-decision-day" name="change-request-decision-day" type="text" inputmode="numeric">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-decision-month">
                     Month
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-decision-month" name="change-request-decision-month" type="text" inputmode="numeric">
                 </div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  <label class="govuk-label govuk-date-input__label" for="change-request-decision-year">
                     Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-decision-year" name="change-request-decision-year" type="text" inputmode="numeric">
                 </div>
               </div>
             </div>
@@ -201,19 +183,19 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
-                Change request application decision outcome
+                Change request application outcome
               </h1>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                <input class="govuk-radios__input" id="change-request-decision-outcome" name="change-request-decision-outcome" type="radio" value="Accepted">
+                <label class="govuk-label govuk-radios__label" for="change-request-decision-outcome">
                   Accepted
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                <input class="govuk-radios__input" id="change-request-decision-outcome" name="change-request-decision-outcome" type="radio" value="Rejected">
+                <label class="govuk-label govuk-radios__label" for="change-request-decision-outcome">
                   Rejected
                 </label>
               </div>

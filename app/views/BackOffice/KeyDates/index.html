@@ -401,6 +401,12 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                 </dl>
               </div>
             </div>
+            <form action="edit_change_request" method="post" novalidate>
+              <input type="hidden" name="change-request" value="1">
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Add change request
+              </button>
+            </form>
           </div>
         </div>
         <div class="govuk-accordion__section">
@@ -468,6 +474,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                 </dl>
               </div>
             </div>
+            {% if data['change-request'] == '1' %}
             <div class="govuk-summary-card">
               <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">
@@ -486,23 +493,17 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                       Change request notification
                     </dt>
                     <dd class="govuk-summary-list__actions">
-                      12 Feb 2025
+                      {% if data['change-request-notification-day']%}
+                      {{data['change-request-notification-day']}}/{{data['change-request-notification-month']}}/{{data['change-request-notification-year']}}
+                      {% endif %}
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request decision date
+                      Planning Inspectorate acknowledgement
                     </dt>
                     <dd class="govuk-summary-list__actions">
-                      21 Feb 2025
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Change request decision outcome
-                    </dt>
-                    <dd class="govuk-summary-list__actions">
-                      Accepted
+                      {{data['change-request-acknowledged']}}
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
@@ -510,7 +511,9 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                       Change request application received
                     </dt>
                     <dd class="govuk-summary-list__actions">
-                      22 Mar 2025
+                      {% if data['change-request-application-day']%}
+                      {{data['change-request-application-day']}}/{{data['change-request-application-month']}}/{{data['change-request-application-year']}}
+                      {% endif %}
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
@@ -518,23 +521,36 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                       Change request application decision date
                     </dt>
                     <dd class="govuk-summary-list__actions">
-                      30 Mar 2025
+                      {% if data['change-request-decision-day']%}
+                      {{data['change-request-decision-day']}}/{{data['change-request-decision-month']}}/{{data['change-request-decision-year']}}
+                      {% endif %}
                     </dd>
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request application decision outcome
+                      Change request application outcome
                     </dt>
                     <dd class="govuk-summary-list__actions">
-                      Accepted
+                      {{data['change-request-decision-outcome']}}
                     </dd>
                   </div>
                 </dl>
               </div>
             </div>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Add change request
-            </button>
+            <form action="edit_change_request" method="post" novalidate>
+              <input type="hidden" name="change-request" value="2">
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Add change request
+              </button>
+            </form>  
+            {% else %}
+            <form action="edit_change_request" method="post" novalidate>
+              <input type="hidden" name="change-request" value="1">
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Add change request
+              </button>
+            </form>      
+            {% endif %}  
           </div>
         </div>
         <div class="govuk-accordion__section">

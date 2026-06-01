@@ -42,9 +42,9 @@
 
     <form action="publish_shapefile_confirmation" method="post" novalidate>
       <input type="hidden" name="shapefile-status" value="Published">
-      {{ govukButton({
-        text: "Publish shapefile"
-      }) }}
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Publish shapefile
+      </button>
     </form>
 
   </div>

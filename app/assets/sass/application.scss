@@ -90,10 +90,13 @@
 /* Front office filters dropdown */
 .filters .govuk-details__summary::before {
   clip-path: polygon(6.38% 22.63%, 49.5% 65.75%, 92.63% 22.63%, 100% 30%, 50% 80%, 0% 30%);
-  background-color: black;
-  color: black;
   width: 3px;
   height: 3px;
+  border-color: inherit;
+  border-width: 8px 0 4px 12.124px;
+}
+
+.filters dl .govuk-details__summary::before {
   background-color: black;
   color: black;
 }
@@ -113,6 +116,7 @@ dl .filters {
 
 .filters .govuk-details__text {
   border: none;
+  padding: 20px;
 }
 
 .filters .govuk-details__summary-text {
@@ -120,9 +124,10 @@ dl .filters {
 }
 
 .filters.govuk-details[open] > .govuk-details__summary::before {
-  clip-path: polygon(0% 71.88%, 49.5% 22.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 36.88%, 7.37% 79.29%);
+  clip-path: polygon(0% 71.88%, 49.5% 12.63%, 98.5% 71.88%, 91.63% 78.71%, 50% 26.88%, 7.37% 79.29%);
   width: 3px;
   height: 3px;
+  border-color: inherit;
 }
 
 /* Front office filter chip */

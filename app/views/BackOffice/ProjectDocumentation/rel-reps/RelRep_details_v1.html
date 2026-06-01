@@ -135,7 +135,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               </dd>
             </div>
           {% endif %}
-          {% if data['rep_redacted'] == "redacted" %} <!--Show redact fields when redacted-->
+          {% if data['rep_redacted'] == "Redacted" %} <!--Show redact fields when redacted-->
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Redacted representation
@@ -265,7 +265,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               Redaction
             </dt>
             <dd class="govuk-summary-list__value">
-              Redacted
+              {{data['rep_redacted']}}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change</a>
