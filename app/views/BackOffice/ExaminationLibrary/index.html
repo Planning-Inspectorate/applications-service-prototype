@@ -131,18 +131,20 @@
               </strong>
             </div>
           </li>
+          {% if data['change-request'] == '2' %}
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
             <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="changerequest2" aria-describedby="change-request-1-status">
+              <a class="govuk-link govuk-task-list__link" href="changerequest2" aria-describedby="change-request-2-status">
                 Change request 2
               </a>
             </div>
-            <div class="govuk-task-list__status" id="change-request-1-status">
+            <div class="govuk-task-list__status" id="change-request-2-status">
               <strong class="govuk-tag govuk-tag--blue">
                 In progress
               </strong>
             </div>
           </li>
+          {% endif %}
         </ul>
 
         <h2 class="govuk-heading-m">
