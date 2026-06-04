@@ -50,9 +50,36 @@
           DCO status
         </dt>
         <dd class="govuk-summary-list__value">
+          <!--DCO tags-->
+          {% if data['DCO-status'] == 'Refused' %}
+          <strong class="govuk-tag govuk-tag--red">
+            Refused
+          </strong>
+          {% elseif data['DCO-status'] == 'Partially consented' %}
+          <strong class="govuk-tag govuk-tag--turquoise">
+            Partially consented
+          </strong>
+          {% elseif data['DCO-status'] == 'Quashed' %}
+          <strong class="govuk-tag govuk-tag--pink">
+            Quashed
+          </strong>
+          {% elseif data['DCO-status'] == 'Redetermination' %}
+          <strong class="govuk-tag govuk-tag--yellow">
+            Redetermination
+          </strong>
+          {% elseif data['DCO-status'] == 'Withdrawn' %}
+          <strong class="govuk-tag govuk-tag--orange">
+            Withdrawn
+          </strong>
+          {% elseif data['DCO-status'] == 'Revoked' %}
+          <strong class="govuk-tag govuk-tag--purple">
+            Revoked
+          </strong>
+          {% else %}
           <strong class="govuk-tag govuk-tag--green">
             Granted
           </strong>
+          {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="edit_DCO">Change<span class="govuk-visually-hidden"> Development Consent Order status</span></a>
@@ -66,7 +93,7 @@
             Recommend consent
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="edit_recommendedOutcome">Change<span class="govuk-visually-hidden"> Development Consent Order status</span></a>
+          <a class="govuk-link" href="edit_recommendedOutcome">Change<span class="govuk-visually-hidden"> recommendation status</span></a>
         </dd>
       </div>
       <!--<div class="govuk-summary-list__row">
