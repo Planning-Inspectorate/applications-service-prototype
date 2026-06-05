@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="04_orgName" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Are you 18 or over?
+            </h1>
+          </legend>
+          <div id="over-18-hint" class="govuk-hint">You can still register to have your say if you are under 18, but we will process your personal details in a different way</div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="over18-1" name="over18" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="over18-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="over18-2" name="over18" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="over18-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

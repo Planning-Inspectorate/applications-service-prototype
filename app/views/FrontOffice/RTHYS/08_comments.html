@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="09_checkAnswers" method="post" novalidate>
+      <h1 class="govuk-heading-l">What do you want to tell us about this proposed project?</h1>
+      <p class="govuk-body">You must include comments with your registration. Your comments must be about what you consider to be the main issues and impacts. You should include as much detail as possible and cover anything that may affect your day-to-day life.</p>
+      <p class="govuk-body">This information will be:</p>
+      <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  seen by the examining authority
+                </li>
+
+                <li>
+                  published on our website
+                </li>
+              </ul>
+      <p class="govuk-body">You will be able to submit further comments during the examination of the application once you have registered</p>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="comment">
+            Registration comments
+          </label>
+        </h1>
+
+
+
+        <textarea class="govuk-textarea" id="comment" name="comment" rows="5" data-cy="comment" maxlength="130468"></textarea>
+
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Do not include these details.
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          
+                  <h2 class="govuk-heading-m">Use of language, hyperlinks and sensitive information</h2>
+                  <p class="govuk-body">You should not use racist, inflammatory or abusive language, or include sensitive information (also called special category information) about yourself or others in your comments.</p>
+                  <p class="govuk-body">Do not include links to third party websites. You can include links to either GOV.UK or websites for chartered professional institutes like IEMA.</p>
+                  <h2 class="govuk-heading-m">Examples of sensitive information</h2>
+                  <p class="govuk-body">Sensitive information refers to:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>comments from children</li>
+                    <li>information relating to children</li>
+                    <li>information relating to health</li>
+                    <li>information relating to crime</li>
+                  </ul>
+                  <p class="govuk-body">It also means any information relating to an individual's:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>race</li>
+                    <li>ethnic origin</li>
+                    <li>politics</li>
+                    <li>religion</li>
+                    <li>trade union membership</li>
+                    <li>genetics</li>
+                    <li>physical characteristics</li>
+                    <li>sex life</li>
+                    <li>sexual orientation</li>
+                  </ul>
+        </div>
+      </details>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

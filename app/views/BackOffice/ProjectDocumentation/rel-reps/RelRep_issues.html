@@ -1,0 +1,202 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "index"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
+      Issues
+    </h1>
+    <h2 class="govuk-heading-m">John Doe</h2>
+    <div class="representation-content">
+      <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development.</p>
+      <p class="govuk-body">I accept that there is a requirement and fundamental need to decarbonise the UK economy, there are other ways to achieve this which are less environmentally damaging. By investing in initiatives such as rooftop solar both for homes and industrial buildings, we can achieve the same without removing loads of land across the UK from the agricultural system. The idea for this solarfarm is a prime example of this.</p>
+      <p class="govuk-body">The building of a huge solarfarm around these small towns is inappropriate for the area, my uncle John would not be happy about it. The removal of significant amounts of productive farmland will only result in increased challenges to providing food for England.</p>
+      <p class="govuk-body">The original proposal was for a normal solarfarm. The scheme now proposes a big solar farm with big batteries. The original proposal was for the battery storage to be located at a disused powerplant. This proposal was much more appropriate as it was further away from my house at 8 Timsbury lane and instead provided a direct link into the National Grid.</p>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What are the issues identified?
+          </h1>
+        </legend>
+        <div id="waste-hint" class="govuk-hint">
+          Select all that apply
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-1" name="issue" type="checkbox" value="Agriculture and soils">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-1">
+              Agriculture and soils
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-2" name="issue" type="checkbox" value="Air quality and emissions">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-2">
+              Air quality and emissions
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-3" name="issue" type="checkbox" value="Alternatives">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-3">
+              Alternatives
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-4" name="issue" type="checkbox" value="Aviation safety">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-4">
+              Aviation safety
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-5" name="issue" type="checkbox" value="Biodiversity/ecology, HRA">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-5">
+              Biodiversity/ecology, HRA
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-6" name="issue" type="checkbox" value="CA and Land Rights">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-6">
+              CA and Land Rights
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-7" name="issue" type="checkbox" value="Climate change">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-7">
+              Climate change
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-8" name="issue" type="checkbox" value="Contaminated land, geology and hydrogeology">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-8">
+              Contaminated land, geology and hydrogeology
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-9" name="issue" type="checkbox" value="Cumulative effects">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-9">
+              Cumulative effects
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-10" name="issue" type="checkbox" value="DCO">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-10">
+              DCO
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-11" name="issue" type="checkbox" value="Good design">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-11">
+              Good design
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-12" name="issue" type="checkbox" value="Health and wellbeing">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-12">
+              Health and wellbeing
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-13" name="issue" type="checkbox" value="Historic Environment incl archaeology">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-13">
+              Historic Environment incl archaeology
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-14" name="issue" type="checkbox" value="Hydrology, land drainage and flood risk">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-14">
+              Hydrology, land drainage and flood risk
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-15" name="issue" type="checkbox" value="Landscape and visual">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-15">
+              Landscape and visual
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-16" name="issue" type="checkbox" value="Major accidents & disasters">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-16">
+              Major accidents & disasters
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-17" name="issue" type="checkbox" value="Noise and vibration">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-17">
+              Noise and vibration
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-18" name="issue" type="checkbox" value="Principle and need">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-18">
+              Principle and need
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-19" name="issue" type="checkbox" value="Property value">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-19">
+              Property value
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-20" name="issue" type="checkbox" value="Public rights of way">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-20">
+              Public rights of way
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-21" name="issue" type="checkbox" value="Socio economics, tourism, recreation">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-21">
+              Socio economics, tourism, recreation
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-22" name="issue" type="checkbox" value="Traffic and transport">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-22">
+              Traffic and transport
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-23" name="issue" type="checkbox" value="Safety & security">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-23">
+              Safety & security
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="issue-24" name="issue" type="checkbox" value="Other">
+            <label class="govuk-label govuk-checkboxes__label" for="issue-24">
+              Other
+            </label>
+          </div>
+        </div> 
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    {% endblock %}

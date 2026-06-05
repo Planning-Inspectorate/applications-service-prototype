@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="02_fullName" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Who are you registering for?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-1" name="whoFor" type="radio" value="Myself">
+              <label class="govuk-label govuk-radios__label" for="whoFor-1">
+                Myself
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-2" name="whoFor" type="radio" value="An organisation I work or volunteer for">
+              <label class="govuk-label govuk-radios__label" for="whoFor-2">
+                An organisation I work or volunteer for
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-3" name="whoFor" type="radio" value="On behalf of another person, a household or an organisation I do not work for">
+              <label class="govuk-label govuk-radios__label" for="whoFor-3">
+                On behalf of another person, a household or an organisation I do not work for
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

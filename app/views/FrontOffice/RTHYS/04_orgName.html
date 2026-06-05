@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="04-1_jobRole" method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--l" for="organisation-name">
+          {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+            What is the name of the organisation you work for?
+          {% else %}
+            What is the name of your organisation or charity?
+          {% endif %}
+        </label>
+        <div id="organisation-name-hint" class="govuk-hint">
+          {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+            We will publish your organisation name, your clients name and their comments on the website
+          {% else %}
+            We will publish your organisation name on the website along with your comments about the project
+          {% endif %}
+        </div>
+        <input class="govuk-input" id="organisation-name" name="orgName" type="text" spellcheck="false" autocomplete="name">
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+      {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+      <p class="govuk-body"><a href="05_email">
+        I don't work for an organisation
+      </a>
+      </p>
+      {% endif %}
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

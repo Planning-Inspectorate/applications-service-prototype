@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="05_email" method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--l" for="job-title">
+          What is your job title or volunteer title?
+        </label>
+        <input class="govuk-input" id="organisation-name" name="jobTitle" type="text" spellcheck="false" autocomplete="name">
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

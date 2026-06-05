@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="08_comments" method="post" novalidate>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--l" for="phone-number">
+          What is your telephone number?
+        </label>
+        <div id="phone-number-hint" class="govuk-hint">We will use your phone number to contact you about the project if we cannot reach you by email. We will not publish your telephone number.</div>
+        <input class="govuk-input" id="phone-number" name="phone-number" type="text" spellcheck="false" autocomplete="name">
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

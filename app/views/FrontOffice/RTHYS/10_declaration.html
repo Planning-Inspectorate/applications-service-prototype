@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Declaration</h1>
+    <p class="govuk-body">By submitting this form, you are registering to have your say and telling us your registration comments.</p>
+    <p class="govuk-body">The Examining Authority must consider your views when they recommend if the project should go ahead. We will contact you if we need more information about the comments you provided in the registration form.</p>
+    <p class="govuk-body">You are agreeing that we will use your details to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>contact you about the project or if we need more information</li>
+      <li>let you know when you can submit more information</li>
+    </ul>
+    <p class="govuk-body">You are also agreeing that all comments you submit, along with your name, will be published on this website. No contact details will be made public.</p>
+    <p class="govuk-body">Once we publish your comments, they cannot be removed from the website. You can withdraw your registration comments from the examination of the project and they will no longer be taken into account.</p>
+    <form action="Completion" autocomplete="off" method="post" novalidate="">
+      <input type="hidden" name="declaration-confirmed" value="true">
+    <button type="Submit" class="govuk-button" data-module="govuk-button">Accept and continue</button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -33,6 +33,23 @@ router.post('/upload_amends', function(req, res) {
     }
 });
 
+// Register to have your say journey
+router.post('/04_orgName', function(req, res) {
+    if (req.session.data['whoFor'] == 'Myself') {
+        res.redirect('/FrontOffice/RTHYS/05_email');
+    } else {
+        res.redirect('/BackOffice/RTHYS/04_orgName');
+    }
+});
+
+router.post('/04-1_jobRole', function(req, res) {
+    if (req.session.data['whoFor'] == 'An organisation I work or volunteer for') {
+        res.redirect('/FrontOffice/RTHYS/04-1_jobRole');
+    } else {
+        res.redirect('/BackOffice/RTHYS/05_email');
+    }
+});
+
 // relevant representation status
 router.post('/RelRep_status', function(req, res) {
     if (req.session.data['RelRep-status'] == 'invalid') {
@@ -50,5 +67,4 @@ router.post('/RelRep_status', function(req, res) {
     else {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
     }
-    //console.log(req.session.data);
 });
