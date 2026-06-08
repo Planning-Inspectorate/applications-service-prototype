@@ -18,16 +18,13 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/03_over18" method="post" novalidate>
+    <form action="08_comments" method="post" novalidate>
       <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--l" for="full-name">
-          What is your full name?
+        <label class="govuk-label govuk-label--l" for="agent-phone-number">
+          What is your telephone number?
         </label>
-        {% if data['whoFor'] == 'Myself' %}
-        <div class="govuk-body">We will publish this on the website along with your comments about the project.</div>
-        <div class="govuk-body">You must register as an individual. If your partner wants to register, they will have to fill in a separate form with their details.</div>
-        {% endif %}
-        <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
+        <div id="agent-phone-number-hint" class="govuk-hint">We will not contact anyone using these contact details.</div>
+        <input class="govuk-input" id="agent-phone-number" name="agent-phone-number" type="text" spellcheck="false">
       </div>
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Continue

@@ -19,7 +19,7 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <h1 class="govuk-heading-l">Check your answers before registering</h1>
-    <h2 class="govuk-heading-m">Personal details</h2>
+    <h2 class="govuk-heading-m">{% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}Your{% else %}Personal{% endif %} details</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -117,6 +117,99 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           <a class="govuk-link" href="07_phone">Change<span class="govuk-visually-hidden"> telephone number</span></a>
         </dd>
       </div>
+      {% if data['whoFor'] != 'On behalf of another person, a household or an organisation I do not work for' %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Registration comments
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['comment']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="08_comments">Change<span class="govuk-visually-hidden"> registration comments</span></a>
+        </dd>
+      </div>
+      {% endif %}
+    </dl>
+    {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+    <h2 class="govuk-heading-m">Who you are representing</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who are you representing?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['agent-whoFor']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="01_whoFor">Change<span class="govuk-visually-hidden"> who you are registering for</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          {% if data['agent-whoFor'] == 'A person' %}
+          What is the full name of the person you are representing?
+          {% elseif data['agent-whoFor'] == 'A household' %}
+          What is the name of the household you are representing?
+          {% else %}
+          What is the full name of the organisation or charity that you are representing?
+          {% endif %}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['agent-fullName']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="02_fullName">Change<span class="govuk-visually-hidden"> full name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Are they 18 or over?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['agent-over18']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="03_over18">Change<span class="govuk-visually-hidden"> 18 or over</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Their email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['agent-email']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="05_email">Change<span class="govuk-visually-hidden"> email address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Their address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">{{data['agent-addressLine1']}}</p>
+          <p class="govuk-body">{{data['agent-addressLine2']}}</p>
+          <p class="govuk-body">{{data['agent-addressTown']}}</p>
+          <p class="govuk-body">{{data['agent-addressPostcode']}}</p>
+          <p class="govuk-body">{{data['agent-addressCountry']}}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="06_address">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Their telephone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['agent-phone-number']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="07_phone">Change<span class="govuk-visually-hidden"> telephone number</span></a>
+        </dd>
+      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Registration comments
@@ -129,10 +222,11 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </dd>
       </div>
     </dl>
+    {% endif %}
     <form action="10_declaration" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">
-        Accept and send
+        Continue to declaration
       </button>
     </form>
   </div>
