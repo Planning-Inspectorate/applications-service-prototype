@@ -36,41 +36,41 @@ router.post('/upload_amends', function(req, res) {
 // Register to have your say journey
 router.post('/03_over18', function(req, res) {
     if (req.session.data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for') {
-        res.redirect('/FrontOffice/RTHYS/04_orgName');
+        res.redirect('/FrontOffice/rthys/04_orgName');
     } else {
-        res.redirect('/FrontOffice/RTHYS/03_over18');
+        res.redirect('/FrontOffice/rthys/03_over18');
     }
 });
 
 router.post('/04_orgName', function(req, res) {
     if (req.session.data['whoFor'] == 'Myself') {
-        res.redirect('/FrontOffice/RTHYS/05_email');
+        res.redirect('/FrontOffice/rthys/05_email');
     } else {
-        res.redirect('/FrontOffice/RTHYS/04_orgName');
+        res.redirect('/FrontOffice/rthys/04_orgName');
     }
 });
 
 router.post('/04-1_jobRole', function(req, res) {
     if (req.session.data['whoFor'] == 'An organisation I work or volunteer for') {
-        res.redirect('/FrontOffice/RTHYS/04-1_jobRole');
+        res.redirect('/FrontOffice/rthys/04-1_jobRole');
     } else {
-        res.redirect('/FrontOffice/RTHYS/05_email');
+        res.redirect('/FrontOffice/rthys/05_email');
     }
 });
 
 router.post('/13_agent-over18', function(req, res) {
     if (req.session.data['agent-whoFor'] == 'An organisation or charity I do not work for') {
-        res.redirect('/FrontOffice/RTHYS/15_agent-email');
+        res.redirect('/FrontOffice/rthys/15_agent-email');
     } else {
-        res.redirect('/FrontOffice/RTHYS/13_agent-over18');
+        res.redirect('/FrontOffice/rthys/13_agent-over18');
     }
 });
 
 router.post('/08_comments', function(req, res) {
     if (req.session.data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for') {
-        res.redirect('/FrontOffice/RTHYS/11_agent-whoFor');
+        res.redirect('/FrontOffice/rthys/11_agent-whoFor');
     } else {
-        res.redirect('/FrontOffice/RTHYS/08_comments');
+        res.redirect('/FrontOffice/rthys/08_comments');
     }
 });
 
