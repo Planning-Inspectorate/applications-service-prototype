@@ -339,6 +339,12 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                         Declared AI usage (6)
                       </label>
                     </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                        Suspected AI usage (16)
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -386,6 +392,16 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       </thead>
       <tbody class="govuk-table__body">
         {% for i in range(3) %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">B1000000{{i}}4</td>
+          <td class="govuk-table__cell">John Doe</td>
+          <td class="govuk-table__cell">12 Aug 2025</td>
+          <td class="govuk-table__cell">Redacted</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">
+              New
+            </strong></td>
+          <td class="govuk-table__cell"><a href="RelRep_details_v2">Review</a></td>
+        </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">B1000000{{i}}4</td>
           <td class="govuk-table__cell">John Doe</td>

@@ -45,14 +45,19 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           Search
         </button>
     </div>
-
-    <div class="govuk-button-group">
-      <a type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" href="searchMapView">
-        Show filters
-      </a>
-      <a class="govuk-link" href="search">Switch to list view</a>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-button-group">
+          <a type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" href="searchMapView">
+            Show filters
+          </a>
+          <a class="govuk-link" href="search">Switch to list view</a>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-text-align-right">Project view: <strong>Markers</strong> | <a href="#">Boundaries</a></p>
+      </div>
     </div>
-    
     <div id="tooltip">
       <div id="tooltiptext">
         <h3 class="govuk-heading-m">2 projects selected</h3>
