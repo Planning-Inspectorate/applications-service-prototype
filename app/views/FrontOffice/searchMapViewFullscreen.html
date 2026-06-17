@@ -35,30 +35,51 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 </section>
 
 <div class="govuk-grid-row" style="padding-top: 24px;">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-xl" style="margin-bottom: 24px;">Projects map</h2>
-    <p class="govuk-body-m">This is a map of all project boundaries. To find a specific project select a project boundary.</p>
-    <p class="govuk-link" style="color: #1d70b8;">Download a geospatial file containing a complete map of all 241 projects (JSON)</p>
+    <p class="govuk-body">Explore our map to find a national infrastructure project in England and Wales. You can filter by application stage, location or sector.</p>
+    <p class="govuk-body"><a class="govuk-list" href="#">Download a geospatial file containing a map of all available project boundaries (JSON)</a></p>
     <div class="govuk-form-group" style="margin-bottom: 0px;">
       <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
         <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
           Search
         </button>
     </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
-        <div class="govuk-button-group">
-          <a type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" href="searchMapView">
-            Show filters
-          </a>
-          <a class="govuk-link" href="search">Switch to list view</a>
-        </div>
-      </div>
-      <div class="govuk-grid-column-one-half">
-        <p class="govuk-body govuk-!-text-align-right govuk-!-margin-top-2"><span class="govuk-!-margin-right-2"><strong>Project view</strong></span> Markers | <a href="#">Boundaries</a></p>
-      </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-button-group">
+      <a type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" href="searchMapView">
+        Show filters
+      </a>
+      <a type="submit" class="govuk-link" href="search">
+        Switch to list view
+      </a>
     </div>
-    <div id="tooltip">
+  </div>
+  <!--<div class="govuk-grid-column-one-half">
+    <p class="govuk-body govuk-body-s govuk-!-text-align-right govuk-!-margin-top-2">
+      <span class="govuk-!-margin-right-2"><strong>Project view</strong></span>
+      <span class="govuk-!-margin-left-1"><span class="govuk-visually-hidden">Projects shown as </span>Markers</span>
+      <span class="govuk-!-margin-left-1">|</span>
+      <span class="govuk-!-margin-left-1"><a class="govuk-link" href="#"><span class="govuk-visually-hidden">View as </span>Boundaries</a></span>
+    </p>
+  </div>-->
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body govuk-!-margin-top-2">
+      <span class="govuk-!-margin-right-2"><strong>Project view</strong></span>
+      <span class="govuk-!-margin-left-1"><span class="govuk-visually-hidden">Projects shown as </span>Markers</span>
+      <span class="govuk-!-margin-left-1">|</span>
+      <span class="govuk-!-margin-left-1"><a class="govuk-link" href="searchMapViewBoundaries"><span class="govuk-visually-hidden">View as </span>Boundaries</a></span>
+    </p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div id="tooltip" class="tooltipMarkers">
       <div id="tooltiptext">
         <h3 class="govuk-heading-m">2 projects selected</h3>
         <table class="govuk-table" style="margin-bottom: 0px;">
@@ -76,12 +97,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </div>
 
-    <div class="govuk-warning-text" style="padding-top: 32px;">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-visually-hidden">Warning</span>
-        Project boundaries shown are for illustrative purposes only. To view the exact boundaries refer to latest relevant plans and drawings.
-      </strong>
+    <div class="govuk-inset-text">
+      The project boundaries or markers displayed on this map are for illustrative purposes only. Refer to the latest plans and drawings to view exact locations and boundaries.
     </div>
   </div>
 </div>
