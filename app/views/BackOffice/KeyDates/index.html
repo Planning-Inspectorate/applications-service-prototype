@@ -424,14 +424,6 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Planning Inspectorate acknowledgement
-                    </dt>
-                    <dd class="govuk-summary-list__actions">
-                      Yes
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
                       Change request application received
                     </dt>
                     <dd class="govuk-summary-list__actions">
@@ -444,14 +436,6 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       22 Mar 2025
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Change request application outcome
-                    </dt>
-                    <dd class="govuk-summary-list__actions">
-                      Accepted
                     </dd>
                   </div>
                 </dl>
@@ -554,14 +538,6 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Planning Inspectorate acknowledgement
-                    </dt>
-                    <dd class="govuk-summary-list__actions">
-                      {{data['change-request-acknowledged']}}
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
                       Change request application received
                     </dt>
                     <dd class="govuk-summary-list__actions">
@@ -580,19 +556,11 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                       {% endif %}
                     </dd>
                   </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Change request application outcome
-                    </dt>
-                    <dd class="govuk-summary-list__actions">
-                      {{data['change-request-decision-outcome']}}
-                    </dd>
-                  </div>
                 </dl>
               </div>
             </div>
             {% endif %}
-            <form action="edit_change_request" method="post" novalidate>
+            <form action="edit_change_request_new" method="post" novalidate>
               <input type="hidden" name="change-request" value="2">
               <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                 Add change request
