@@ -22,17 +22,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
       John Doe
     </h1>
-    {% if data['RelRep-status'] == 'awaiting-review' %}
     <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
-    {% elseif data['RelRep-status'] == 'withdrawn' %}
-    <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
-    {% elseif data['RelRep-status'] == 'invalid' %}
-    <div class="govuk-tag govuk-tag--red">Invalid</div>
-    {% elseif data['RelRep-status'] == 'referred' %}
-    <div class="govuk-tag govuk-tag--blue">Referred</div>
-    {% else %}
-    <div class="govuk-tag govuk-tag--green">Valid</div>
-    {% endif %}
     <p class="govuk-body-s" style="margin-top: 20px;"><strong>Project name:</strong> Longfield solar farm</p>
     <h2 class="govuk-heading-m">Actions</h2>
     <div class="govuk-button-group">
@@ -321,32 +311,34 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         </a>
       </div>
     </div>
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-            Review decision
-          </h1>
-        </legend>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-              Accept
-            </label>
+    <form class="form" action="RelRep_rejection_reason" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Review decision
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Accept
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                Reject
+              </label>
+            </div>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-              Reject
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-      Continue
-    </button>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
   </div>
 </div>
 

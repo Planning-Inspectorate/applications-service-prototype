@@ -8,7 +8,7 @@
   {{ super() }}
   {{ govukBackLink({
     text: "Back",
-    href: "javascript:window.history.back()"
+    href: "index"
   }) }}
 {% endblock %}
 
@@ -66,14 +66,20 @@
       </h1>
 
       <p class="govuk-body">Once an examination library category has been published, the examination library references are final and cannot be changed.</p>
-      <p class="govuk-body"><a class="govuk-link" href="deadline2_published">View documents in the examination library (67)</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="deadline2_published">View items in the examination library (67)</a></p>
       <div class="govuk-button-group">
         <form action="#">
           <button type="submit" class="govuk-button" data-module="govuk-button">
             Preview and publish category to library
           </button>
         </form>
+        <form action="unpublish_examLibrary">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Unpublish from library
+          </button>
+        </form>
       </div>
+      
     </div>
   </div>    
       <div class="govuk-grid-row">
