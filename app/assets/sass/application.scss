@@ -144,3 +144,8 @@ dl .filters {
 .filterchip:visited {
   color: black;
 }
+
+/* accordion without the extra show all controls */
+.accordion-no-controls .govuk-accordion__controls {
+  display: none;
+}
