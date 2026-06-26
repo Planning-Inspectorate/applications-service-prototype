@@ -14,203 +14,197 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Add a change request
-      </h1>
+    <h1 class="govuk-heading-l">
+      New change request
+    </h1>
 
-      <form class="form" action="./index" method="post">
+    <form class="form" action="./index" method="post">
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="Change-request-notification-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h1 class="govuk-fieldset__heading">
-                Change request notification
-              </h1>
-            </legend>
-            <div id="passport-issued-hint" class="govuk-hint">
-              Applicant notifies the Planning Inspectorate of a change request.
-            </div>
-            <div class="govuk-date-input" id="change-request-notification">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-notification-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-notification-day" name="change-request-notification-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-notification-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-notification-month" name="change-request-notification-month" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-notification-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-notification-year" name="change-request-notification-year" type="text" inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <!--
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h1 class="govuk-fieldset__heading">
-                Change request acknowledged
-              </h1>
-            </legend>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Yes, the Planning Inspectorate acknowledged the change request
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="Change-request-notification-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Notification received from applicant date
+            </h1>
+          </legend>
+          <div class="govuk-date-input" id="change-request-notification">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-notification-day">
+                  Day
                 </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-notification-day" name="change-request-notification-day" type="text" inputmode="numeric">
               </div>
             </div>
-          </fieldset>
-        </div>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h1 class="govuk-fieldset__heading">
-                Planning Inspectorate acknowledgement
-              </h1>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="change-request-acknowledged" name="change-request-acknowledged" type="radio" value="Yes">
-                <label class="govuk-label govuk-radios__label" for="change-request-acknowledged">
-                  Yes, the change request has been acknowledged
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-notification-month">
+                  Month
                 </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-notification-month" name="change-request-notification-month" type="text" inputmode="numeric">
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="change-request-acknowledged" name="change-request-acknowledged" type="radio" value="No">
-                <label class="govuk-label govuk-radios__label" for="change-request-acknowledged">
-                  No, the change request has not been acknowledged
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-notification-year">
+                  Year
                 </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-notification-year" name="change-request-notification-year" type="text" inputmode="numeric">
               </div>
             </div>
-          </fieldset>
-        </div>-->
+          </div>
+        </fieldset>
+      </div>
+      <!--
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Change request acknowledged
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Yes, the Planning Inspectorate acknowledged the change request
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Planning Inspectorate acknowledgement
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="change-request-acknowledged" name="change-request-acknowledged" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="change-request-acknowledged">
+                Yes, the change request has been acknowledged
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="change-request-acknowledged" name="change-request-acknowledged" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="change-request-acknowledged">
+                No, the change request has not been acknowledged
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>-->
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-application-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h1 class="govuk-fieldset__heading">
-                Change request application received
-              </h1>
-            </legend>
-            <div id="change-request-application-hint" class="govuk-hint">
-              Date the Planning Inspectorate receives the change request application.
-            </div>
-            <div class="govuk-date-input" id="change-request-application">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-application-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-application-day" name="change-request-application-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-application-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-application-month" name="change-request-application-month" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-application-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-application-year" name="change-request-application-year" type="text" inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-decision-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h1 class="govuk-fieldset__heading">
-                Change request application decision date
-              </h1>
-            </legend>
-            <div class="govuk-date-input" id="change-request-decision">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-decision-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-decision-day" name="change-request-decision-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-decision-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-decision-month" name="change-request-decision-month" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="change-request-decision-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-decision-year" name="change-request-decision-year" type="text" inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <!--
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h1 class="govuk-fieldset__heading">
-                Change request application outcome
-              </h1>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="change-request-decision-outcome" name="change-request-decision-outcome" type="radio" value="Accepted">
-                <label class="govuk-label govuk-radios__label" for="change-request-decision-outcome">
-                  Accepted
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-application-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Application received date
+            </h1>
+          </legend>
+          <div class="govuk-date-input" id="change-request-application">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-application-day">
+                  Day
                 </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="change-request-decision-outcome" name="change-request-decision-outcome" type="radio" value="Rejected">
-                <label class="govuk-label govuk-radios__label" for="change-request-decision-outcome">
-                  Rejected
-                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-application-day" name="change-request-application-day" type="text" inputmode="numeric">
               </div>
             </div>
-          </fieldset>
-        </div>-->
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-application-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-application-month" name="change-request-application-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-application-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-application-year" name="change-request-application-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <div class="govuk-button-group">
-          <button type="submit" class="govuk-button" data-module="govuk-button">
-            Save and return
-          </button>
-        </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-decision-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Decision date
+            </h1>
+          </legend>
+          <div class="govuk-date-input" id="change-request-decision">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-decision-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-decision-day" name="change-request-decision-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-decision-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-request-decision-month" name="change-request-decision-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="change-request-decision-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-request-decision-year" name="change-request-decision-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!--
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Change request application outcome
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="change-request-decision-outcome" name="change-request-decision-outcome" type="radio" value="Accepted">
+              <label class="govuk-label govuk-radios__label" for="change-request-decision-outcome">
+                Accepted
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="change-request-decision-outcome" name="change-request-decision-outcome" type="radio" value="Rejected">
+              <label class="govuk-label govuk-radios__label" for="change-request-decision-outcome">
+                Rejected
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>-->
 
-      </form>
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
 
-    </div>
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

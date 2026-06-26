@@ -416,7 +416,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                 <dl class="govuk-summary-list">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request notification
+                      Notification received from applicant date
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       12 Jan 2025
@@ -424,7 +424,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request application received
+                      Application received date
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       21 Feb 2025
@@ -432,7 +432,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request application decision date
+                      Decision date
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       22 Mar 2025
@@ -442,7 +442,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Add change request
+              Add <span class="govuk-visually-hidden">pre-examination</span> change request
             </button>
             </form>
           </div>
@@ -528,7 +528,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                 <dl class="govuk-summary-list">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request notification
+                      Notification received from applicant date
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       {% if data['change-request-notification-day']%}
@@ -538,7 +538,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request application received
+                      Application received date
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       {% if data['change-request-application-day']%}
@@ -548,7 +548,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Change request application decision date
+                      Decision date
                     </dt>
                     <dd class="govuk-summary-list__actions">
                       {% if data['change-request-decision-day']%}
@@ -563,7 +563,7 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
             <form action="edit_change_request_new" method="post" novalidate>
               <input type="hidden" name="change-request" value="2">
               <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Add change request
+                Add <span class="govuk-visually-hidden">examination</span> change request
               </button>
             </form>      
           </div>
