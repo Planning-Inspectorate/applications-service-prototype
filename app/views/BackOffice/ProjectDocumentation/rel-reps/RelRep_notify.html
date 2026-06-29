@@ -42,7 +42,21 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           Reason
         </dt>
         <dd class="govuk-summary-list__value">
-          Missing information
+          <ul class="govuk-list govuk-list--bullet">
+            <li>is missing your full name</li>
+            <li>is missing your full address</li>
+            <li>is missing your phone number</li>
+            <li>is missing your email</li>
+            <li>is missing the full name of your organisation or charity you work or volunteer for</li>
+            <li>is missing the full name of the person you are representing</li>
+            <li>is missing the full name of the organisation or charity you are representing</li>
+            <li>is missing the full name of the household you are representing</li>
+            <li>does not contain enough detail about the application and its possible impacts</li>
+            <li>contains content we cannot accept</li>
+            <li>contains inflammatory content</li>
+            <li>contains opinions on policy from National Policy Statements</li>
+            <li>contains information about compensation for compulsory acquisition of land or of an interest in or over land</li>
+          </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> reason</span></a>
@@ -60,16 +74,30 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-details__text">
         <p><strong>Subject:</strong> There is a problem with your registration</p>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p>Dear John Doe,</p>
-        <p>We’ve reviewed your registration to have your say about Longfield solar farm with registration reference number: B100000045</p>
-        <p>Unfortunately, we have not been able to register you. This is because your registration is missing information.</p>
-        <p>Read our <a href="https://www.gov.uk/guidance/nationally-significant-infrastructure-projects-advice-for-submitting-representations-or-comments">advice for submitting representations</a> or comments to find out what you should and should not include in your registration.</p>
+        <p>Dear {User},</p>
+        <p>We’ve reviewed your registration to have your say about {project name} with registration reference number: {registration identification number}</p>
+        <p>We are not able to register you, because this registration: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>is missing your full name</li>
+          <li>is missing your full address</li>
+          <li>is missing your phone number</li>
+          <li>is missing your email</li>
+          <li>is missing the full name of your organisation or charity you work or volunteer for</li>
+          <li>is missing the full name of the person you are representing</li>
+          <li>is missing the full name of the organisation or charity you are representing</li>
+          <li>is missing the full name of the household you are representing</li>
+          <li>does not contain enough detail about the application and its possible impacts</li>
+          <li>contains content we cannot accept</li>
+          <li>contains inflammatory content</li>
+          <li>contains opinions on policy from National Policy Statements</li>
+          <li>contains information about compensation for compulsory acquisition of land or of an interest in or over land</li>
+        </ul>
         <p><strong>Next steps</strong></p>
-
-        <p>You will need to start the registration process again and submit your registration comments by {Date}. </p>
+        <p>Read our <a href="https://www.gov.uk/guidance/nationally-significant-infrastructure-projects-advice-for-submitting-representations-or-comments">advice for submitting representations</a> or comments to find out what you should and should not include in your registration.</p>
+        <p>You will need to start the registration process again and submit your registration comments by 11:59pm <Date>.</p>
         <p><a href="#">Register to have your say</a></p>
-        <p>The Planning Inspectorate​
-        </br>Example.project@email.com</p>
+        <p>The Planning Inspectorate​</p>
+        <p>{project email}</p>
       </div>
       {% else %}
       <div class="govuk-details__text">
@@ -86,13 +114,13 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       {% endif %}
     </details>
     <div class="govuk-button-group">
-      <form action="/form-handler" method="post" novalidate>
+      <form action="RelRep_details" method="post" novalidate>
         <input type="hidden" name="notification" value="sent">
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Confirm and send
         </button>
       </form>
-      <form action="/form-handler" method="post" novalidate>
+      <form action="RelRep_details" method="post" novalidate>
         <input type="hidden" name="notification" value="sent">
         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Skip notification

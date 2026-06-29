@@ -22,23 +22,18 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
       John Doe
     </h1>
+    {% if data['RelRep-status'] == 'awaiting-review' %}
     <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
+    {% elseif data['RelRep-status'] == 'withdrawn' %}
+    <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
+    {% elseif data['RelRep-status'] == 'invalid' %}
+    <div class="govuk-tag govuk-tag--red">Invalid</div>
+    {% elseif data['RelRep-status'] == 'referred' %}
+    <div class="govuk-tag govuk-tag--blue">Referred</div>
+    {% else %}
+    <div class="govuk-tag govuk-tag--green">Valid</div>
+    {% endif %}
     <p class="govuk-body-s" style="margin-top: 20px;"><strong>Project name:</strong> Longfield solar farm</p>
-    <h2 class="govuk-heading-m">Actions</h2>
-    <div class="govuk-button-group">
-      <a href="redact_relRep" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Reassign
-      </a>
-      <a href="edit_relRep" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Edit
-      </a>
-      <a href="redact_relRep" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Redact
-      </a>
-      <a href="#" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Withdraw
-      </a>
-    </div>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -53,16 +48,11 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
             Representation
           </a>
         </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#attachments">
-            Attachments
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
+        <!--<li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#issues">
             Issues
           </a>
-        </li>
+        </li>-->
         <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#contact-details">
             Contact details
@@ -75,39 +65,14 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         </li>
       </ul>
       <div class="govuk-tabs__panel" id="representation">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Representation</h2>
-            <p class="govuk-body govuk-body-s"><strong>Date received:</strong> 11 Jan 2026</p>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <p class="govuk-body govuk-body-s govuk-!-text-align-right"><span><strong class="govuk-!-margin-right-2">Redactions</strong> Hide | <a class="govuk-link govuk-link" href="RelRep_details_v2-toggle">Show</a></span></p>
-          </div>
-        </div>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Representation</h2>
+        <p class="govuk-body govuk-body-s"><strong>Date received:</strong> 11 Jan 2026</p>          
         <div class="representation-content">
           <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development.</p>
           <p class="govuk-body">I accept that there is a requirement and fundamental need to decarbonise the UK economy, there are other ways to achieve this which are less environmentally damaging. By investing in initiatives such as rooftop solar both for homes and industrial buildings, we can achieve the same without removing loads of land across the UK from the agricultural system. The idea for this solarfarm is a prime example of this.</p>
           <p class="govuk-body">The building of a huge solarfarm around these small towns is inappropriate for the area, my uncle John would not be happy about it. The removal of significant amounts of productive farmland will only result in increased challenges to providing food for England.</p>
           <p class="govuk-body">The original proposal was for a normal solarfarm. The scheme now proposes a big solar farm with big batteries. The original proposal was for the battery storage to be located at a disused powerplant. This proposal was much more appropriate as it was further away from my house at 8 Timsbury lane and instead provided a direct link into the National Grid.</p>
         </div>
-        {% if data['rep_edited'] == "edited" %}
-        <details class="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              View original representation
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <div class="representation-content">
-              <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development.</p>
-              <p class="govuk-body">I accept that there is a requirement and fundamental need to decarbonise the UK economy, there are other ways to achieve this which are less environmentally damaging. By investing in initiatives such as rooftop solar both for homes and industrial buildings, we can achieve the same without removing loads of land across the UK from the agricultural system. The idea for this solarfarm is a prime example of this.</p>
-              <p class="govuk-body">The building of a huge solarfarm around these small towns is inappropriate for the area, my uncle John would not be happy about it. The removal of significant amounts of productive farmland will only result in increased challenges to providing food for England.</p>
-            </div>
-          </div>
-        </details>
-        {% endif %}
-      </div>
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="attachments">
         <h2 class="govuk-heading-m">Attachments</h2>
         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Upload files
@@ -231,6 +196,17 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Assigned to
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Alex Hopkins
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               Reference
             </dt>
             <dd class="govuk-summary-list__value">
@@ -253,64 +229,81 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Redaction
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Redacted
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change</a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Redacted notes
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Uncle John, 8 Timsbury lane
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#"></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Redacted by
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Alex Hopkins
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#"></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Status
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if data['RelRep-status'] == 'awaiting-review' %}
-              <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
-              {% elseif data['RelRep-status'] == 'withdrawn' %}
-              <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
-              {% elseif data['RelRep-status'] == 'invalid' %}
-              <div class="govuk-tag govuk-tag--red">Invalid</div>
-              {% elseif data['RelRep-status'] == 'referred' %}
-              <div class="govuk-tag govuk-tag--blue">Referred</div>
-              {% else %}
-              <div class="govuk-tag govuk-tag--green">Valid</div>
-              {% endif %}
+              {% include "../../_includes/representation-status.html" %}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="RelRep_status">Change</a>
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Redaction
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['rep_redacted']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_redaction_status">Change</a>
+            </dd>
+          </div>      
         </dl>
-        <a href="RelRep_task_log" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          View task log
-        </a>
+        <h2 class="govuk-heading-m">Registration comments</h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Original representation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              As a local resident who is currently impacted by this development, I feel compelled to express my...
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Edit</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Edited representation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              As a local resident who is be directly impacted by this development, I feel compelled to express my...
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          {% if data['rep_redacted'] == 'Redacted'%}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Redacted representation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              As a &#9608;&#9608;&#9608;&#9608;&#9608;&#9608; who is be directly impacted by this development, I feel compelled to express my...
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          {% endif %}  
+        </dl>
+        <h2 class="govuk-heading-m">Actions</h2>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Edit
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Redact
+          </button>
+          <a type="submit" class="govuk-link" href="RelRep_task_log_v1">
+            View task log
+          </a>
+        </div>
       </div>
     </div>
+    {% if data['RelRep-status'] == 'awaiting-review' %}
+    <!--Review validity-->
     <form class="form" action="RelRep_rejection_reason" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -321,14 +314,14 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+              <input class="govuk-radios__input" id="validity" name="RelRep-status" type="radio" value="valid">
+              <label class="govuk-label govuk-radios__label" for="validity">
                 Accept
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+              <input class="govuk-radios__input" id="validity-2" name="RelRep-status" type="radio" value="invalid">
+              <label class="govuk-label govuk-radios__label" for="validity-2">
                 Reject
               </label>
             </div>
@@ -339,6 +332,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         Continue
       </button>
     </form>
+    {% endif %}
   </div>
 </div>
 

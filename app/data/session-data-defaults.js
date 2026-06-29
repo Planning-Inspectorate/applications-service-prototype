@@ -2,6 +2,7 @@ module.exports = {
 
   // Insert values here
   'redactionscorrect': 'ready',
+  'RelRep-status': 'awaiting-review',
   'rep_edited': 'unedited',
   'rep_redacted': 'Unredacted',
   'library-category': 'No examination library category',

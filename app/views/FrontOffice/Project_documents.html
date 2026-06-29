@@ -604,13 +604,13 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </button>
     </div>
     <p class="govuk-body">Showing <strong>1</strong> to <strong>25</strong> of <strong>676</strong> documents, newest first.</p>    
-    <p class="govuk-body"><strong style="padding-right: 16px;">Results per page</strong> 25&#10240;&VerticalLine;&#10240;<a>50</a>&#10240;&VerticalLine;&#10240;<a>100</a></p>
+    <p class="govuk-body"><strong style="padding-right: 16px;">Results per page</strong> 25&#10240;&VerticalLine;&#10240;<a href="#">50</a>&#10240;&VerticalLine;&#10240;<a href="#">100</a></p>
 
     
 
 
 
-    {% for i in range(25) %}
+    {% for i in range(1,25) %}
     <div class="document-item">
       <hr class="govuk-section-break govuk-section-break--visible">
       <div class="govuk-grid-row" style="padding-top: 10px;">
@@ -622,10 +622,10 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           <p class="govuk-body govuk-body-s" style="color: #505a5f;">20 May 2025</p>
         </div>
         <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Post decision</p>
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Pre-examination</p> <!--<br>AS-0{%if 10 > i%}0{%endif%}{{i}}-->
         </div>
         <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Development Consent Order as made</p>
+          <p class="govuk-body govuk-body-s" style="color: #505a5f;">Additional Submissions</p>
         </div>
       </div>
       

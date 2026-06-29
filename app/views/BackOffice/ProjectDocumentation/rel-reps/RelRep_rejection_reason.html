@@ -34,24 +34,102 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                Duplicate
+              <input class="govuk-checkboxes__input" id="missing-full-name" name="missing-full-name" type="checkbox" value="missing-full-name">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-full-name">
+                Is missing your full name
               </label>
             </div>
-            <div class="govuk-checkboxes__divider">or</div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-full-address" name="missing-full-address" type="checkbox" value="missing-full-address">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-full-address">
+                Is missing your full address
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-phone-number" name="missing-phone-number" type="checkbox" value="missing-phone-number">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-phone-number">
+                Is missing your phone number
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-email" name="missing-email" type="checkbox" value="missing-email">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-email">
+                Is missing your email
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-org-name" name="missing-org-name" type="checkbox" value="missing-org-name">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-org-name">
+                Is missing the full name of your organisation or charity you work or volunteer for
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-representing-org-name" name="missing-representing-org-name" type="checkbox" value="missing-representing-individual-name">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-representing-org-name">
+                Is missing the full name of the person you are representing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-representing-individual-name" name="missing-representing-individual-name" type="checkbox" value="missing-representing-org-name">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-representing-individual-name">
+                Is missing the full name of the organisation or charity you are representing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-representing-household-name" name="missing-representing-household-name" type="checkbox" value="missing-representing-household-name">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-representing-household-name">
+                Is missing the full name of the household you are representing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-application-detail" name="missing-application-detail" type="checkbox" value="missing-application-detail">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-application-detail">
+                Does not contain enough detail about the application and its possible impacts
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="missing-ai-declaration" name="missing-ai-declaration" type="checkbox" value="missing-ai-declaration">
+              <label class="govuk-label govuk-checkboxes__label" for="missing-ai-declaration">
+                Is missing an AI declaration
+              </label>
+            </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Content we can't accept
+                Contains content we can't accept
               </label>
             </div>
-            <div class="govuk-checkboxes__divider">or</div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Missing information
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Contains inflammatory content
               </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Contains opinions on policy from National Policy Statements
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Contains information about compensation for compulsory acquisition of land or of an interest in or over land
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="other" name="other" type="checkbox" value="other" data-aria-controls="conditional-other">
+              <label class="govuk-label govuk-checkboxes__label" for="other">
+                Other
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="other-reason">
+                  Specify reason
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="other-reason" name="otherReason">
+              </div>
             </div>
           </div>
         </fieldset>

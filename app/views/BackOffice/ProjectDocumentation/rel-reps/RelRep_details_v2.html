@@ -22,17 +22,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
       John Doe
     </h1>
-    {% if data['RelRep-status'] == 'awaiting-review' %}
-    <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
-    {% elseif data['RelRep-status'] == 'withdrawn' %}
-    <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
-    {% elseif data['RelRep-status'] == 'invalid' %}
-    <div class="govuk-tag govuk-tag--red">Invalid</div>
-    {% elseif data['RelRep-status'] == 'referred' %}
-    <div class="govuk-tag govuk-tag--blue">Referred</div>
-    {% else %}
-    <div class="govuk-tag govuk-tag--green">Valid</div>
-    {% endif %}
+    {% include "../../_includes/representation-status.html" %}
     <p class="govuk-body-s" style="margin-top: 20px;"><strong>Project name:</strong> Longfield solar farm</p>
     <h2 class="govuk-heading-m">Actions</h2>
     <div class="govuk-button-group">

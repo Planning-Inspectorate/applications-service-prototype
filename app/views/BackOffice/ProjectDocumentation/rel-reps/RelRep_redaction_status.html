@@ -1,0 +1,66 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+      Change redaction
+    </h1>
+    <div class="govuk-!-margin-bottom-6">
+      {% include "../../_includes/representation-status.html" %}
+    </div>
+    <form class="form" action="RelRep_details" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redaction-status" name="rep_redacted" type="radio" value="Unredacted">
+              <label class="govuk-label govuk-radios__label" for="redaction-status">
+                Unredacted
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redaction-status-2" name="rep_redacted" type="radio" value="Redacted">
+              <label class="govuk-label govuk-radios__label" for="redaction-status-2">
+                Redacted
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redaction-status-3" name="rep_redacted" type="radio" value="Redaction not needed">
+              <label class="govuk-label govuk-radios__label" for="redaction-status-3">
+                Redaction not needed
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Save changes"
+      }) }}
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
