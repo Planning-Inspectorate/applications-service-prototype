@@ -23,9 +23,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       Notes (optional)
     </h1>
 
-    <p class="govuk-body govuk-!-margin-bottom-6">
-      <strong class="govuk-tag govuk-tag--green">Valid</strong>
-    </p>
+    {% include "../../_includes/representation-status.html" %}
 
     <form class="form" action="./RelRep_notify" method="post">
       <div class="govuk-form-group">

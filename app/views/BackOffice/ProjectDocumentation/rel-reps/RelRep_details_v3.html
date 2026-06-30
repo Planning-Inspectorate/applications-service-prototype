@@ -22,18 +22,8 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
       John Doe
     </h1>
-    {% if data['RelRep-status'] == 'awaiting-review' %}
-    <div class="govuk-tag govuk-tag--grey">Awaiting review</div>
-    {% elseif data['RelRep-status'] == 'withdrawn' %}
-    <div class="govuk-tag govuk-tag--orange">Withdrawn</div>
-    {% elseif data['RelRep-status'] == 'invalid' %}
-    <div class="govuk-tag govuk-tag--red">Invalid</div>
-    {% elseif data['RelRep-status'] == 'referred' %}
-    <div class="govuk-tag govuk-tag--blue">Referred</div>
-    {% else %}
-    <div class="govuk-tag govuk-tag--green">Valid</div>
-    {% endif %}
-    <p class="govuk-body-s" style="margin-top: 20px;"><strong>Project name:</strong> Longfield solar farm</p>
+    {% include "../../_includes/representation-status.html" %}
+    <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -48,11 +38,13 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
             Representation
           </a>
         </li>
-        <!--<li class="govuk-tabs__list-item">
+        {% if data['RelRep-status'] == 'valid' %}
+        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#issues">
             Issues
           </a>
-        </li>-->
+        </li>
+        {%endif%}
         <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#contact-details">
             Contact details
@@ -323,6 +315,36 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               <input class="govuk-radios__input" id="validity-2" name="RelRep-status" type="radio" value="invalid">
               <label class="govuk-label govuk-radios__label" for="validity-2">
                 Reject
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+    {% elseif data['rep_redacted'] == 'Unredacted' %}
+    <!--Review redaction-->
+    <form class="form" action="redact_relRep" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Does this representation need redaction?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redaction" name="rep_redacted" type="radio" value="Redacted">
+              <label class="govuk-label govuk-radios__label" for="redaction">
+                Redaction needed
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redaction-2" name="rep_redacted" type="radio" value="Redaction not needed">
+              <label class="govuk-label govuk-radios__label" for="redaction-2">
+                Redaction not needed
               </label>
             </div>
           </div>
