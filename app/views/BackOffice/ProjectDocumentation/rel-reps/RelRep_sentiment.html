@@ -1,0 +1,67 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">John Doe</span>
+    <h1 class="govuk-heading-l">
+      Overall sentiment
+    </h1>
+
+    <form class="form" action="RelRep_details_v3#issues" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-sentiment-1" name="RelRep-sentiment" type="radio" value="Positive">
+              <label class="govuk-label govuk-radios__label" for="representation-sentiment-1">
+                Positive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-status-2" name="RelRep-sentiment" type="radio" value="Neutral">
+              <label class="govuk-label govuk-radios__label" for="representation-status-2">
+                Neutral
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="representation-sentiment-3" name="RelRep-sentiment" type="radio" value="Negative">
+              <label class="govuk-label govuk-radios__label" for="representation-sentiment-3">
+                Negative
+              </label>
+              <div id="AI-assessment-hint" class="govuk-hint govuk-radios__hint">
+                Predicted with 35% confidence
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Save changes"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

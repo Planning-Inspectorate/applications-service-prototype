@@ -14,6 +14,16 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
+<style>
+  .hide {
+    display: none;
+  }
+
+  #change-request-deleted-banner.hide:target,
+  #change-request-created-banner.hide:target {
+    display: block;
+  }
+</style>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -34,6 +44,34 @@ Key dates – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
 
     <div class="govuk-grid-column-three-quarters">
+
+      <!--deleted change request banner-->
+      <div id="change-request-deleted-banner" class="hide govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            Change request 1 deleted
+          </h3>
+        </div>
+      </div>
+
+            <!--deleted change request banner-->
+            <div id="change-request-created-banner" class="hide govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+              <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                  Success
+                </h2>
+              </div>
+              <div class="govuk-notification-banner__content">
+                <h3 class="govuk-notification-banner__heading">
+                  Change request 2 created
+                </h3>
+              </div>
+            </div>
 
       <h2 class="govuk-heading-m">Key dates</h2>
       <p class="govuk-body">Provide details on dates and deadlines in this project.</p>

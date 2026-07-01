@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage project meetings – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="index#change-request-deleted-banner" method="post">
+
+        <h1 class="govuk-heading-l">
+          Delete change request 1
+        </h1>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">
+              Change request 1
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Notification received from applicant date
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  12 Jan 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Application received date
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  21 Feb 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Decision date
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  22 Mar 2025
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        {{ govukButton({
+          text: "Delete change request",
+          classes: "govuk-button--warning"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

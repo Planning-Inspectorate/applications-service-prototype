@@ -10,7 +10,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
   {{ super() }}
   {{ govukBackLink({
     text: "Back",
-    href: "index"
+    href: "index_v1"
   }) }}
 {% endblock %}
 
@@ -94,23 +94,52 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="issues">
         <h2 class="govuk-heading-m">Issues</h2>
-        <div class="govuk-inset-text">
-          <strong>2 issues</strong> were automatically assigned by the system that need reviewing and confirming.
-        </div>
-        <!--issues table-->
-        <p class="govuk-body">
-          <strong class="govuk-tag govuk-tag--green">
-            Agriculture & soils
-          </strong>
-          <strong class="govuk-tag govuk-tag--blue">
-            Alternatives
-          </strong>
-        </p>
-        <a href="RelRep_issues" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Review issues
-        </a>
-        <h2 class="govuk-heading-m">Notes</h2>
-        <p class="govuk-body">The party highlights environmental benefits, but raises issues around negative agricultural impacts around farmland.</p>
+        <!--Summary list version-->
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Overall sentiment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['RelRep-sentiment']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_sentiment">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Issues
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--green">
+                Agriculture & soils
+              </strong>
+              <strong class="govuk-tag govuk-tag--blue">
+                Alternatives
+              </strong>
+              <!--<ul class="govuk-list govuk-list--bullet">
+                <li>Agriculture & soils</li>
+                <li>Alternatives</li>
+              </ul>
+              Agriculture & soils, Alternatives-->
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_issues">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Examining authority questions
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['RelRep-exq']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_ExQ">Change</a>
+            </dd>
+          </div>
+        </dl>
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="contact-details">
         <h2 class="govuk-heading-m">Contact details</h2>
@@ -185,7 +214,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="workflow">
         <h2 class="govuk-heading-m">Workflow</h2>
-        <dl class="govuk-summary-list">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Assigned to
@@ -221,6 +250,17 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Rating
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['RelRep-rating']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_rating">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               Status
             </dt>
             <dd class="govuk-summary-list__value">
@@ -243,7 +283,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </div>      
         </dl>
         <h2 class="govuk-heading-m">Registration comments</h2>
-        <dl class="govuk-summary-list">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Original representation
@@ -285,9 +325,6 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Edit
           </button>
-          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Redact
-          </button>
           <a type="submit" class="govuk-link" href="RelRep_task_log_v1">
             View task log
           </a>
@@ -324,7 +361,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         Continue
       </button>
     </form>
-    {% elseif data['rep_redacted'] == 'Unredacted' %}
+    {% elseif data['rep_redacted'] == 'Unredacted' and data['RelRep-status'] == 'valid' %}
     <!--Review redaction-->
     <form class="form" action="redact_relRep" method="post">
       <div class="govuk-form-group">
