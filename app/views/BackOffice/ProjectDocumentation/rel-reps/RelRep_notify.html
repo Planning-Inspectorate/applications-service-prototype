@@ -33,7 +33,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           {% endif %}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> status</span></a>
+          <a class="govuk-link" href="RelRep_redaction_status">Change<span class="govuk-visually-hidden"> status</span></a>
         </dd>
       </div>
       {% if data['RelRep-status'] == 'invalid' %}
@@ -59,7 +59,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> reason</span></a>
+          <a class="govuk-link" href="RelRep_rejection_reason">Change<span class="govuk-visually-hidden"> reason</span></a>
         </dd>
       </div>
       {% endif %}
@@ -119,12 +119,9 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Confirm and send
         </button>
-      </form>
-      <form action="RelRep_details" method="post" novalidate>
-        <input type="hidden" name="notification" value="sent">
-        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        <a href="RelRep_details" type="submit" class="govuk-link">
           Skip notification
-        </button>
+        </a>
       </form>
     </div>
   </div>

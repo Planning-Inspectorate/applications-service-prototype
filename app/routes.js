@@ -77,7 +77,8 @@ router.post('/08_comments', function(req, res) {
 // relevant representation status
 router.post('/RelRep_status', function(req, res) {
     if (req.session.data['RelRep-status'] == 'invalid') {
-        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_rejection_reason');
     }
     else if (req.session.data['RelRep-status'] == 'referred') {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_referred');
@@ -89,6 +90,7 @@ router.post('/RelRep_status', function(req, res) {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_withdrawn');
     }
     else {
-        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_notify');
     }
 });
