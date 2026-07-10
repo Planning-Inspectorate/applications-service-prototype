@@ -94,3 +94,15 @@ router.post('/RelRep_status', function(req, res) {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_notify');
     }
 });
+
+// relevant representation accept/reject
+router.post('/RelRep_rejection_reason', function(req, res) {
+    if (req.session.data['RelRep-status'] == 'invalid') {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_rejection_reason');
+    }
+    else {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_notify');
+    }
+});

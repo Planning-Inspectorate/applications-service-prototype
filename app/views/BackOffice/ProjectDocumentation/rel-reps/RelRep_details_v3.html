@@ -35,7 +35,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
           <a class="govuk-tabs__tab" href="#representation">
-            Representation
+            Comments
           </a>
         </li>
         {% if data['RelRep-status'] == 'valid' %}
@@ -57,7 +57,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         </li>
       </ul>
       <div class="govuk-tabs__panel" id="representation">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Representation</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Comments</h2>
         <p class="govuk-body govuk-body-s"><strong>Date received:</strong> 11 Jan 2026</p>          
         <div class="representation-content">
           <p class="govuk-body">As a local resident who will be directly impacted by this development, I feel compelled to express my concerns regarding this proposed development.</p>
@@ -325,6 +325,9 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Edit
           </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Redact
+          </button>
           <a type="submit" class="govuk-link" href="RelRep_task_log_v1">
             View task log
           </a>
@@ -333,12 +336,12 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
     {% if data['RelRep-status'] == 'awaiting-review' %}
     <!--Review validity-->
-    <form class="form" action="RelRep_rejection_reason" method="post">
+    <form class="form" action="/RelRep_rejection_reason" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              Review decision
+              Review representation decision
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">

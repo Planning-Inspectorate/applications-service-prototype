@@ -39,8 +39,8 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-one-half">
     <span class=" govuk-heading-xl govuk-!-margin-bottom-0">162</span>
     <p class="govuk-body">Representations received</p>
-    <span class=" govuk-heading-m govuk-!-margin-bottom-0">29 April 2026</span>
-    <p class="govuk-body">Closed date</p>
+    <span class=" govuk-heading-m govuk-!-margin-bottom-0">11 September 2026 to 29 September 2026</span>
+    <p class="govuk-body">Registration open</p>
   </div>
   <div class="govuk-grid-column-one-half">
     <span class=" govuk-heading-xl govuk-!-margin-bottom-0">80</span>
@@ -311,6 +311,12 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                         Parish councils (28)
                       </label>
                     </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        Under 18 (12)
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -327,12 +333,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                        Under 18 (12)
-                      </label>
-                    </div>
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                       <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
@@ -384,7 +384,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header sortButton">Reference&#9660;</th>
           <th scope="col" class="govuk-table__header sortButton">From&#9660;</th>
-          <th scope="col" class="govuk-table__header sortButton">Date received&#9660;</th>
+          <th scope="col" class="govuk-table__header sortButton">Received&#9660;</th>
           <th scope="col" class="govuk-table__header sortButton">Redacted&#9660;</th>
           <th scope="col" class="govuk-table__header sortButton">Status&#9660;</th>
           <th scope="col" class="govuk-table__header">Action</th>

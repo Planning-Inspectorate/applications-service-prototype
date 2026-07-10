@@ -14,9 +14,32 @@
 
 {% block content %}
 
+<style>
+  .hide {
+    display: none;
+  }
+
+  #banner.hide:target {
+    display: block;
+  }
+</style>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+      <div id="banner" class="govuk-error-summary hide" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#">There are submissions in the folder related to this change request, so it cannot be deleted</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <h1 class="govuk-heading-l">
         Change request 1
       </h1>
@@ -102,7 +125,7 @@
           <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-application-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
-                Application received date
+                Application received date (optional)
               </h1>
             </legend>
             <div class="govuk-date-input" id="change-request-application">
@@ -138,7 +161,7 @@
           <fieldset class="govuk-fieldset" role="group" aria-describedby="change-request-decision-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <h1 class="govuk-fieldset__heading">
-                Decision date
+                Decision date (optional)
               </h1>
             </legend>
             <div class="govuk-date-input" id="change-request-decision">
