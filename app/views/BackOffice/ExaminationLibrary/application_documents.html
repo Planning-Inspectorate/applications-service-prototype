@@ -70,47 +70,6 @@
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            View items not published to the examination library (10)
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <table class="govuk-table govuk-table--small-text-until-tablet">
-            <caption class="govuk-table__caption govuk-table__caption--m">
-              Items not published to the examination library
-            </caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header sortButton">Draft reference &#9660;</th>
-                <th scope="col" class="govuk-table__header sortButton">Document description&#9660;</th>
-                <th scope="col" class="govuk-table__header sortButton">Status &#9660;</th>
-                <th scope="col" class="govuk-table__header">Actions</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              {% for i in ['01','02','03','04','05','06','07','08','09','10'] %}
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">
-                  APP-0{{ i }}
-                </th>
-                <td class="govuk-table__cell">
-                  <a href="">Example document</a>
-                </td>
-                <td class="govuk-table__cell">
-                  Not checked
-                </td>
-                
-                <td class="govuk-table__cell">
-                  <a class="govuk-link" href="../ProjectDocumentation/document-properties">Review</a>
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </details>
       <div class="govuk-button-group">
         <form action="#">
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">

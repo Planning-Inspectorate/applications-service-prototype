@@ -198,6 +198,17 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </dd>
         </div>
       {% endif %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          AI declaration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['rep_AIusage']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="RelRep_AIusage">Change</a>
+        </dd>
+      </div>
     </dl>
     <div class="govuk-button-group">
       <a href="edit_relRep" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">

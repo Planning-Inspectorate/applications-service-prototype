@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="09_checkAnswers" method="post" novalidate>
+      <h1 class="govuk-heading-l">AI usage declaration</h1>
+      <p class="govuk-body">Let us know if you've used AI to draft or substantially change your registration comments. This is so our Inspectors can understand the context of the information they are reviewing.</p>
+      <p class="govuk-body">You do not need to tell us if you've used AI for checking spelling or grammar.</p>
+      <p class="govuk-body">If you select yes, then you confirm you've checked your comments for accuracy and that they are a fair representation of your views and experiences.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Did you use AI to help produce your registration comments?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rep_AIusage" name="rep_AIusage" type="radio" value="AI used">
+              <label class="govuk-label govuk-radios__label" for="rep_AIusage">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rep_AIusage-2" name="rep_AIusage" type="radio" value="AI not used">
+              <label class="govuk-label govuk-radios__label" for="rep_AIusage-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

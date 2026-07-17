@@ -9,5 +9,6 @@ module.exports = {
   'library-published': 'notpublished',
   'document-status': 'Not checked',
   'document-redaction': 'Unredacted',
-  'shapefile-status': 'Not uploaded'
+  'shapefile-status': 'Not uploaded',
+  'rep_AIusage': 'AI not used'
 }

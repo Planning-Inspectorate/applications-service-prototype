@@ -9,7 +9,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 {% block beforeContent %}
   {{ super() }}
   {{ govukBackLink({
-    text: "Back",
+    text: "Back to relevant representations",
     href: "index_v1"
   }) }}
 {% endblock %}
@@ -130,7 +130,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Examining authority questions
+              Examining Authority questions
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['RelRep-exq']}}
@@ -194,6 +194,28 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">Unknown</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Affected person
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">Yes</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Compulsory acquisition
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">Objects to acquisition of land</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change</a>
@@ -318,7 +340,18 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               <a class="govuk-link" href="#">Change</a>
             </dd>
           </div>
-          {% endif %}  
+          {% endif %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              AI declaration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['rep_AIusage']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_AIusage">Change</a>
+            </dd>
+          </div>
         </dl>
         <h2 class="govuk-heading-m">Actions</h2>
         <div class="govuk-button-group">
@@ -341,20 +374,20 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              Review representation decision
+              Review decision
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="validity" name="RelRep-status" type="radio" value="valid">
               <label class="govuk-label govuk-radios__label" for="validity">
-                Accept
+                Accept representation
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="validity-2" name="RelRep-status" type="radio" value="invalid">
               <label class="govuk-label govuk-radios__label" for="validity-2">
-                Reject
+                Reject representation
               </label>
             </div>
           </div>

@@ -129,6 +129,17 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
           <a class="govuk-link" href="08_comments">Change<span class="govuk-visually-hidden"> registration comments</span></a>
         </dd>
       </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          AI declaration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['rep_AIusage']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="RelRep_AIusage">Change</a>
+        </dd>
+      </div>
       {% endif %}
     </dl>
     {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
@@ -219,6 +230,17 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="08_comments">Change<span class="govuk-visually-hidden"> registration comments</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          AI declaration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['rep_AIusage']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="08-1_AIdeclaration">Change</a>
         </dd>
       </div>
     </dl>
