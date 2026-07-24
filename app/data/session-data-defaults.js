@@ -10,5 +10,6 @@ module.exports = {
   'document-status': 'Not checked',
   'document-redaction': 'Unredacted',
   'shapefile-status': 'Not uploaded',
-  'rep_AIusage': 'AI not used'
+  'rep_AIusage': 'AI not used',
+  'RelRep_type': 'Local authorities',
 }

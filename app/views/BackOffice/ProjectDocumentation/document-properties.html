@@ -39,8 +39,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     <p class="govuk-body"><strong>Case reference: </strong>EN0110007</p>
     <p class="govuk-body"><strong>Document reference number: </strong>EN0110007-000011</p>
     <p class="govuk-body"><strong>File type and size: </strong>PDF, 17 KB</p>
-    <p class="govuk-body"><strong>Version: </strong>2</p>
-    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <p class="govuk-body"><strong>Version: </strong>1</p>
 
     {{ govukButton({
     text: "Upload new version"
@@ -291,15 +290,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-
-            {% for i in [2,1] %}
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <p class="govuk-body">{{ i }}</p>
               </div>
               </td>
               <td class="govuk-table__cell">
-                <strong><a href="#" class="govuk-link">Document_v{{ i }}.pdf</a></strong><br>
+                <strong><a href="#" class="govuk-link">Document_v1.pdf</a></strong><br>
                 PDF, 1.2MB
               </td>
               <td class="govuk-table__cell">
@@ -312,7 +309,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                   </li>
                 </ul>
               </td>
-              <td class="govuk-table__cell">Redacted</td>
+              <td class="govuk-table__cell">Unredacted</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-list govuk-list--spaced">
                   <li><a href="#" class="govuk-link">Download</a></li>
@@ -320,8 +317,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                 </ul>
               </td>
             </tr>
-            {% endfor %}
-
       </tbody>
       </table>
     </div>
