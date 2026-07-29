@@ -1,0 +1,60 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+      Change land affected
+    </h1>
+    <form class="form" action="RelRep_details" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div id="hint" class="govuk-hint">
+            For example, they own, rent, occupy or hold rights over land affected by the project
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="AI-usage" name="rep_AIusage" type="radio" value="AI not used">
+              <label class="govuk-label govuk-radios__label" for="AI-usage">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="AI-usage-2" name="rep_AIusage" type="radio" value="AI used">
+              <label class="govuk-label govuk-radios__label" for="AI-usage-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Save changes"
+      }) }}
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
