@@ -97,34 +97,38 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           Land affected
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body">Yes</p>
+          <p class="govuk-body">{{data['rep_affectedPerson']}}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="RelRep_affectedPerson">Change</a>
         </dd>
       </div>
+      {% if data['rep_affectedPerson'] == 'Yes' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Change of land rights
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body">Yes</p>
+          <p class="govuk-body">{{data['rep_CA']}}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="RelRep_compAcquisition">Change</a>
         </dd>
       </div>
+      {% if data['rep_CA'] == 'Yes' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Objects to change of land rights
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body">Do not know</p>
+          <p class="govuk-body">{{data['rep_CAobjection']}}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="RelRep_acquisitionObjection">Change</a>
         </dd>
       </div>
+      {% endif %}
+      {% endif %}
     </dl>
     <h2 class="govuk-heading-m" style="padding-top: 24px;">Representation</h2>
     <dl class="govuk-summary-list">

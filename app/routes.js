@@ -28,6 +28,8 @@ router.use((req, res, next) => {
 router.post('/upload_amends', function(req, res) {
     if (req.session.data['redactionscorrect'] == 'ready') {
         res.redirect('/BackOffice/ProjectDocumentation/airedaction/4a');
+    } else if (req.session.data['redactionscorrect'] == 'notneeded') {
+        res.redirect('/BackOffice/ProjectDocumentation/airedaction/4c');
     } else {
         res.redirect('/BackOffice/ProjectDocumentation/airedaction/upload_amends');
     }

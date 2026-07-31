@@ -12,4 +12,5 @@ module.exports = {
   'shapefile-status': 'Not uploaded',
   'rep_AIusage': 'AI not used',
   'RelRep_type': 'Local authorities',
+  'rep_affectedPerson': 'No'
 }

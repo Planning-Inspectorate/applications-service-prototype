@@ -204,23 +204,38 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               Land affected
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">Yes</p>
+              <p class="govuk-body">{{data['rep_affectedPerson']}}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="RelRep_affectedPerson">Change</a>
             </dd>
           </div>
+          {% if data['rep_affectedPerson'] == 'Yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Compulsory acquisition
+              Change of land rights
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">Objects to acquisition of land</p>
+              <p class="govuk-body">{{data['rep_CA']}}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="RelRep_compAcquisition">Change</a>
             </dd>
           </div>
+          {% if data['rep_CA'] == 'Yes' %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Objects to change of land rights
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{data['rep_CAobjection']}}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="RelRep_acquisitionObjection">Change</a>
+            </dd>
+          </div>
+          {% endif %}
+          {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Representation on behalf of
