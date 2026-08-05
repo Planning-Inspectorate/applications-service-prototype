@@ -18,14 +18,14 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="RelRep_notify" method="post">
+    <form class="form" action="RelRep_notify3" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
               Why is the representation being rejected?
             </h1>
-            {% include "../../_includes/representation-status.html" %}
+            <strong class="govuk-tag govuk-tag--red">Invalid</strong>
           </legend>
           <div id="waste-hint" class="govuk-hint">
             Select all that apply

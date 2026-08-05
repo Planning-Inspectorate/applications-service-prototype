@@ -108,3 +108,56 @@ router.post('/RelRep_rejection_reason', function(req, res) {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_notify');
     }
 });
+
+
+
+
+//usability test routes
+
+// relevant representation accept/reject
+router.post('/RelRep_rejection_reason1', function(req, res) {
+    if (req.session.data['RelRep-status1'] == 'invalid') {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_rejection_reason1');
+    }
+    else {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_notify1');
+    }
+});
+
+// relevant representation accept/reject
+router.post('/RelRep_rejection_reason2', function(req, res) {
+    if (req.session.data['RelRep-status2'] == 'invalid') {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_rejection_reason2');
+    }
+    else {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_notify2');
+    }
+});
+
+// relevant representation accept/reject
+router.post('/RelRep_rejection_reason3', function(req, res) {
+    if (req.session.data['RelRep-status3'] == 'invalid') {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_rejection_reason3');
+    }
+    else {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_notify3');
+    }
+});
+
+// relevant representation accept/reject
+router.post('/RelRep_rejection_reason4', function(req, res) {
+    if (req.session.data['RelRep-status4'] == 'invalid') {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_invalid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_rejection_reason4');
+    }
+    else {
+        //res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_status_valid');
+        res.redirect('/BackOffice/ProjectDocumentation/rel-reps/usabilityTest/RelRep_notify4');
+    }
+});

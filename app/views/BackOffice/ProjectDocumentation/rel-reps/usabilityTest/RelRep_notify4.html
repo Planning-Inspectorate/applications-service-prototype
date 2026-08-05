@@ -26,7 +26,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           Status
         </dt>
         <dd class="govuk-summary-list__value">
-          {% if data['RelRep-status'] == 'invalid' %}
+          {% if data['RelRep-status4'] == 'invalid' %}
           <div class="govuk-tag govuk-tag--red">Invalid</div>
           {% else %}
           <div class="govuk-tag govuk-tag--green">Valid</div>
@@ -36,7 +36,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           <a class="govuk-link" href="RelRep_redaction_status">Change<span class="govuk-visually-hidden"> status</span></a>
         </dd>
       </div>
-      {% if data['RelRep-status'] == 'invalid' %}
+      {% if data['RelRep-status4'] == 'invalid' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Reason
@@ -60,12 +60,11 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           Preview email notification
         </span>
       </summary>
-      {% if data['RelRep-status'] == 'invalid' %} 
+      {% if data['RelRep-status4'] == 'invalid' %} 
       <div class="govuk-details__text">
         <p><strong>Subject:</strong> There is a problem with your registration</p>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p>Dear {full name},</p>
-        <p>We’ve reviewed your registration to have your say about {project name} with registration reference number: {registration identification number}</p>
+        <p>We’ve reviewed your registration to have your say about Gainsthorpe Solar Farm with registration reference number: F4941E70F</p>
         <p>We are not able to register you, because this registration: </p>
         <ul class="govuk-list govuk-list--bullet">
           {% for reason in data['rejection-reason'] %}
@@ -95,29 +94,27 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         <p>You will need to start the registration process again and submit your registration comments by 11:59pm <Date>.</p>
         <p><a href="#">Register to have your say</a></p>
         <p>Planning Inspectorate​
-        <br>{project email}</p>
+        <br>gainsthorpe-solar-farm@planninginspectorate.gov.uk</p>
       </div>
       {% else %}
       <div class="govuk-details__text">
         <p><strong>Subject:</strong> Registration complete</p>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p>Dear {full name},</p>
-        <p>You are now registered to have your say about {project name}.</p>
-        <p>Your interested party reference number is: {registration identification number}</p>
+        <p>You are now registered to have your say about Gainsthorpe Solar Farm.</p>
+        <p>Your interested party reference number is: F4941E70F</p>
         <p>As an interested party, you will be able to make further comments, attend certain meetings and receive notifications.</p>
-
         <p>Planning Inspectorate​
-      </br>{project email}</p>
+      </br>gainsthorpe-solar-farm@planninginspectorate.gov.uk</p>
       </div>
       {% endif %}
     </details>
     <div class="govuk-button-group">
-      <form action="RelRep_details" method="post" novalidate>
+      <form action="RelRep_details4" method="post" novalidate>
         <input type="hidden" name="notification" value="sent">
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Confirm and send
         </button>
-        <a href="RelRep_details" type="submit" class="govuk-link">
+        <a href="RelRep_details4" type="submit" class="govuk-link">
           Skip notification
         </a>
       </form>
