@@ -27,7 +27,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
     {% else %}
     <strong class="govuk-tag govuk-tag--grey">Awaiting review</strong>
     {% endif %}
-    <p class="govuk-body-s govuk-!-margin-top-4"><strong>Project name:</strong> Longfield solar farm</p>
+    <p class="govuk-body-s govuk-!-margin-top-4"><strong>Project name:</strong> Gainsthorpe Solar Farm</p>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -252,18 +252,9 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
             </dd>
           </div>
         </dl>
-        <h2 class="govuk-heading-m">Actions</h2>
-        <div class="govuk-button-group">
-          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Edit
-          </button>
-          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Redact
-          </button>
-          <a type="submit" class="govuk-link" href="RelRep_task_log_v1">
-            View task log
-          </a>
-        </div>
+        <a type="submit" class="govuk-button govuk-button--secondary" href="RelRep_task_log_v1">
+          View task log
+        </a>
       </div>
     </div>
     {% if data['RelRep-status4'] == 'valid' %}
