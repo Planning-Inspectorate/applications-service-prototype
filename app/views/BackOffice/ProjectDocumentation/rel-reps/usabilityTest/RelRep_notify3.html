@@ -18,7 +18,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <span class="govuk-caption-l">John Doe</span>
+    <span class="govuk-caption-l">Mxd</span>
     <h1 class="govuk-heading-l">Confirm notification to interested party</h1>
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -69,15 +69,15 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         <ul class="govuk-list govuk-list--bullet">
           {% for reason in data['rejection-reason'] %}
           <li>
-            {% if reason == 'Registering person name missing' %}
+            {% if reason == 'Agent name missing' %}
               is missing your full name
-            {% elseif reason == 'Registering person address missing' %}
+            {% elseif reason == 'Agent address missing' %}
               is missing your full address
-            {% elseif reason == 'Registering person phone number missing' %}
+            {% elseif reason == 'Agent phone number missing' %}
               is missing your phone number
-            {% elseif reason == 'Registering person email missing' %}
+            {% elseif reason == 'Agent email missing' %}
               is missing your email
-            {% elseif reason == 'Registering person organisation missing' %}
+            {% elseif reason == 'Agent organisation missing' %}
               is missing the full name of the organisation or charity you work or volunteer for
             {% elseif reason == 'Represented individual, group or organisation name missing' %}
               is missing the full name of the person, group or organisation you are representing
