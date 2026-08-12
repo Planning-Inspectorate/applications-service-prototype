@@ -332,51 +332,51 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           </details>
         <!--Assigned to-->
-        <details class="govuk-details filters">
-          <summary class="govuk-details__summary govuk-!-margin-left-0">
-            <span class="govuk-details__summary-text filtersText">
-              <strong style="color: black;">Assigned to</strong>
-            </span>
-          </summary>
-          <div class="govuk-details__text govuk-!-margin-left-0" style="background-color:#F3F2F1;">
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                      Myself (3)
-                    </label>
+          <details class="govuk-details filters">
+            <summary class="govuk-details__summary govuk-!-margin-left-0">
+              <span class="govuk-details__summary-text filtersText">
+                <strong style="color: black;">Assigned to</strong>
+              </span>
+            </summary>
+            <div class="govuk-details__text govuk-!-margin-left-0" style="background-color:#F3F2F1;">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        Myself (3)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        Central Admin Team (172)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                        Case Team (86)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                        Inspector (2)
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                        Unassigned (7)
+                      </label>
+                    </div>
                   </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                      CAT (172)
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                      CASE team (86)
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-                      Inspectors (2)
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                      Unassigned (7)
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
+                </fieldset>
+              </div>
             </div>
-          </div>
-        </details>  
+          </details>  
         <!--AI usage filters-->
           <details class="govuk-details filters">
             <summary class="govuk-details__summary govuk-!-margin-left-0">
@@ -411,15 +411,47 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
           </details>
+        <!--Comment length filters-->
+          <details class="govuk-details filters">
+            <summary class="govuk-details__summary govuk-!-margin-left-0">
+              <span class="govuk-details__summary-text filtersText">
+                <strong style="color: black;">Comment word count</strong>
+              </span>
+            </summary>
+            <div class="govuk-details__text govuk-!-margin-left-0" style="background-color:#F3F2F1;">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Min
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Max
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </details>
         </dl>
         <button class="govuk-button">Apply filters</button>
       </div>
     </details>
   </div>
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-s">Download</h2>
-    <p class="govuk-body"><a class="govuk-link" href="#">Download mailing list (CSV)</a></p>
-    <p class="govuk-body"><a class="govuk-link" href="#">Download valid and published representations (CSV)</a></p>
+    <div class="grey-box">
+      <h2 class="govuk-heading-s">Download</h2>
+      <p class="govuk-body"><a class="govuk-link" href="#">Download mailing list (CSV)</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="#">Download valid and published representations (CSV)</a></p>
+    </div>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -443,7 +475,6 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
           <th scope="col" class="govuk-table__header govuk-body-s sortButton">Reference&#9660;</th>
           <th scope="col" class="govuk-table__header govuk-body-s sortButton">From&#9660;</th>
           <th scope="col" class="govuk-table__header govuk-body-s sortButton">Received&#9660;</th>
@@ -455,16 +486,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
       <tbody class="govuk-table__body">
         {% for i in range(3) %}
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
-          <td class="govuk-table__cell">B1000000{{i}}4</td>
+          <td class="govuk-table__cell">B1000000{{i}}3</td>
           <td class="govuk-table__cell">John Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Redacted</td>
@@ -474,15 +496,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           <td class="govuk-table__cell"><a href="RelRep_details_v3">Review</a></td>
         </tr>
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
+
           <td class="govuk-table__cell">B1000000{{i}}4</td>
           <td class="govuk-table__cell">John Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
@@ -494,15 +508,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
+
           <td class="govuk-table__cell">B1000000{{i}}5</td>
           <td class="govuk-table__cell">Jim Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
@@ -514,15 +520,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
+
           <td class="govuk-table__cell">B1000000{{i}}6</td>
           <td class="govuk-table__cell">Jack Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
@@ -534,15 +532,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
+
           <td class="govuk-table__cell">B1000000{{i}}7</td>
           <td class="govuk-table__cell">Jane Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
@@ -554,15 +544,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
+
           <td class="govuk-table__cell">B1000000{{i}}8</td>
           <td class="govuk-table__cell">Johan Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
@@ -574,41 +556,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
+
           <td class="govuk-table__cell">B1000000{{i}}8</td>
           <td class="govuk-table__cell">James Doe</td>
           <td class="govuk-table__cell">12 Aug 2025</td>
           <td class="govuk-table__cell">Unredacted</td>
           <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
               Awaiting review
-            </strong></td>
-          <td class="govuk-table__cell"><a href="RelRep_details_v3">Review</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            <div class="govuk-checkboxes govuk-checkboxes--small">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="rep-{{ i }}" name="representation-select-{{ i }}" type="checkbox"
-                  value="rep-{{ i }}">
-                <label class="govuk-label govuk-checkboxes__label" for="rep-{{ i }}"></label>
-              </div>
-            </div>
-          </td>
-          <td class="govuk-table__cell">B1000000{{i}}9</td>
-          <td class="govuk-table__cell">Joe Doe</td>
-          <td class="govuk-table__cell">12 Aug 2025</td>
-          <td class="govuk-table__cell">Unredacted</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">
-              Referred
             </strong></td>
           <td class="govuk-table__cell"><a href="RelRep_details_v3">Review</a></td>
         </tr>

@@ -19,11 +19,11 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Longfield solar farm</span>
     <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
-      John Doe
+      Representation by John Doe on behalf of Greg Doe
     </h1>
     {% include "../../_includes/representation-status.html" %}
-    <p class="govuk-body-s"><strong>Project name:</strong> Longfield solar farm</p>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -149,7 +149,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               Organisation<br><br>Full name<br><br>Job title<br><br>Email address<br><br>Telephone number
             </dt>
             <dd class="govuk-summary-list__value">
-              <br><br>John Doe<br><br>Doctor<br><br><br><br>0777771723
+              <br><br>Greg Doe<br><br>Baker<br><br><br><br>0777771723
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change</a>
@@ -160,7 +160,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
               Address
             </dt>
             <dd class="govuk-summary-list__value">
-              72 Guild Street<br>London<br>SE23 6FH
+              8 Timsbury lane<br>London<br>SE23 6FH
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change</a>
@@ -213,7 +213,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           {% if data['rep_affectedPerson'] == 'Yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Change of land rights
+              Compulsory Acquisition
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">{{data['rep_CA']}}</p>
@@ -225,7 +225,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           {% if data['rep_CA'] == 'Yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Objects to change of land rights
+              Objects to Compulsory Acquisition
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">{{data['rep_CAobjection']}}</p>
@@ -242,6 +242,42 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">An individual</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+        </dl>
+        <h2 class="govuk-heading-m">Agent details</h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Organisation<br><br>Full name<br><br>Job title<br><br>Email address<br><br>Telephone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <br><br>John Doe<br><br>Planning Specialist<br><br>Sue-deledda@pbpk-planning-consultants.org<br><br>0777771724
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9a Consultancy Way<br>Derby<br>DE22 1GB
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Preferred contact method
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Phone
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change</a>
@@ -370,6 +406,9 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
         </dl>
         <h2 class="govuk-heading-m">Actions</h2>
         <div class="govuk-button-group">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Flag representation
+          </button>
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Edit
           </button>
