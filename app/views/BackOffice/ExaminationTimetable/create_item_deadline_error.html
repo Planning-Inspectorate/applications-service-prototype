@@ -47,7 +47,10 @@
         <p id="passport-issued-error" class="govuk-error-message">
           <span class="govuk-visually-hidden">Error: </span>Deadline item name must follow format of Deadline X, where X is a number optionally followed by a letter
         </p>
-        <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">Deadline</div>
+          <input class="govuk-input govuk-input--width-5" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+        </div>
       </div>
 
       <!--date-->
