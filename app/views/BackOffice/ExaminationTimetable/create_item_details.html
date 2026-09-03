@@ -22,16 +22,29 @@
 			</h1>   
       <p class="govuk-body"><strong>Timetable item type</strong></p>
       <p class="govuk-body">{{ data['timetable-type'] }}</p>
+      {% if (data['timetable-type'] == 'Deadline') %}
       <!--Name-->
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--s" for="event-name">
           Item name
         </label>
         <div id="event-name-hint" class="govuk-hint">
-          There is a limit of 200 characters
+          For example, Deadline 1
         </div>
-        <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
       </div>
+      {% else %}
+            <!--Name-->
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="event-name">
+                Item name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">
+                There is a limit of 200 characters
+              </div>
+              <input class="govuk-input govuk-!-width-one-half" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+            </div>
+      {% endif %}
 
       {% if (data['timetable-type'] == 'Procedural Deadline (Pre-Examination)')
       or (data['timetable-type'] == 'Deadline For Close Of Examination')
