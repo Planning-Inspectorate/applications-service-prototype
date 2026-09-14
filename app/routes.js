@@ -76,6 +76,22 @@ router.post('/08_comments', function(req, res) {
     }
 });
 
+router.post('/07-2_affected', function(req, res) {
+    if (req.session.data['rep_affectedPerson'] == 'No') {
+        res.redirect('/FrontOffice/rthys/08_comments');
+    } else {
+        res.redirect('/FrontOffice/rthys/07-2_affected');
+    }
+});
+
+router.post('/07-3_affected', function(req, res) {
+    if (req.session.data['rep_CA'] == 'No') {
+        res.redirect('/FrontOffice/rthys/08_comments');
+    } else {
+        res.redirect('/FrontOffice/rthys/07-3_affected');
+    }
+});
+
 // relevant representation status
 router.post('/RelRep_status', function(req, res) {
     if (req.session.data['RelRep-status'] == 'invalid') {

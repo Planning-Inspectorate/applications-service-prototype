@@ -94,7 +94,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Land affected
+          Land within project boundary
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">{{data['rep_affectedPerson']}}</p>
@@ -106,7 +106,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       {% if data['rep_affectedPerson'] == 'Yes' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Change of land rights
+          Compulsory acquisition or temporary possession
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">{{data['rep_CA']}}</p>
@@ -118,7 +118,7 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
       {% if data['rep_CA'] == 'Yes' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Objects to change of land rights
+          Objection to land changes
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">{{data['rep_CAobjection']}}</p>

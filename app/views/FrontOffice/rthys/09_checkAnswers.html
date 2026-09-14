@@ -120,6 +120,43 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
       {% if data['whoFor'] != 'On behalf of another person, a household or an organisation I do not work for' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
+          Land within project boundary
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['rep_affectedPerson']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="07-1_affected">Change<span class="govuk-visually-hidden"> registration comments</span></a>
+        </dd>
+      </div>
+      {% if data['rep_CA'] %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Applicant seeking land changes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['rep_CA']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="07-2_affected.html">Change<span class="govuk-visually-hidden"> registration comments</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data['rep_CAobjection'] %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Objection to land changes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['rep_CAobjection']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="07-3_affected">Change<span class="govuk-visually-hidden"> registration comments</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
           Registration comments
         </dt>
         <dd class="govuk-summary-list__value">
