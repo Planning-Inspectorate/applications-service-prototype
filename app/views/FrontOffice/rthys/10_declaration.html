@@ -19,18 +19,45 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Declaration</h1>
-    <p class="govuk-body">By submitting this form, you are registering to have your say and telling us your registration comments.</p>
-    <p class="govuk-body">The Examining Authority must consider your views when they recommend if the project should go ahead. We will contact you if we need more information about the comments you provided in the registration form.</p>
-    <p class="govuk-body">You are agreeing that we will use your details to:</p>
+    <p class="govuk-body">By submitting this form, you are agreeing that:</p>
+
+    {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+    <!--Agent-->
     <ul class="govuk-list govuk-list--bullet">
-      <li>contact you about the project or if we need more information</li>
-      <li>let you know when you can submit more information</li>
+      <li>your name, your organisation name, your client’s name and their comments will be published on our website</li>
+      <li>we may contact you about the project or if we need more information from you</li>
+      <li>you have read and understood our <a class="govuk-link" href="https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice">customer privacy notice (opens in a new tab)</a></li>
     </ul>
-    <p class="govuk-body">You are also agreeing that all comments you submit, along with your name, will be published on this website. No contact details will be made public.</p>
-    <p class="govuk-body">Once we publish your comments, they cannot be removed from the website. You can withdraw your registration comments from the examination of the project and they will no longer be taken into account.</p>
+    <p class="govuk-body">You are also confirming that:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>you are authorised to act on behalf of the person or group you are representing</li>
+      <li>the person or group you are representing is aware of our customer privacy notice and that their names will be published with their comments</li>
+    </ul>
+
+    {% elseif data['whoFor'] == 'An organisation I work or volunteer for' %}
+    <!--Organisation-->
+    <ul class="govuk-list govuk-list--bullet">
+      <li>your organisation name and comments will be published on our website</li>
+      <li>we may contact you about the project or if we need more information from you</li>
+      <li>you have read and understood our <a class="govuk-link" href="https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice">customer privacy notice (opens in a new tab)</a></li>
+    </ul>
+
+    {% else %}
+    <!--Individual-->
+    <ul class="govuk-list govuk-list--bullet">
+      <li>your name and comments will be published on our website</li>
+      <li>we may contact you about the project or if we need more information from you</li>
+      <li>you have read and understood our <a class="govuk-link" href="https://www.gov.uk/government/publications/planning-inspectorate-privacy-notices/customer-privacy-notice">customer privacy notice (opens in a new tab)</a></li>
+    </ul>
+    {% endif %}
+
+    <div class="govuk-inset-text">
+      We'll send you a confirmation email containing a registration reference number. Contact us if you do not receive this email within 30 minutes of submitting your comments. You may need to check your spam or junk folder.
+    </div>
+
     <form action="Completion" autocomplete="off" method="post" novalidate="">
       <input type="hidden" name="declaration-confirmed" value="true">
-    <button type="Submit" class="govuk-button" data-module="govuk-button">Accept and continue</button>
+    <button type="Submit" class="govuk-button" data-module="govuk-button">Accept and submit</button>
     </form>
   </div>
 </div>
