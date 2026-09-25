@@ -18,65 +18,63 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds">
-    <form action="08-1_AIdeclaration" method="post" novalidate>
-      <h1 class="govuk-heading-l">What do you want to tell us about this proposed project?</h1>
-      <p class="govuk-body">You must include comments with your registration. Your comments must be about what you consider to be the main issues and impacts. You should include as much detail as possible and cover anything that may affect your day-to-day life.</p>
+      <h1 class="govuk-heading-l">Registration comments</h1>
+      <p class="govuk-body">Your comments must be about what you consider to be the project’s main issues and impacts. You should include as much detail as possible and cover anything that may affect your day-to-day life.</p>
       <p class="govuk-body">This information will be:</p>
       <ul class="govuk-list govuk-list--bullet">
-                <li>
-                  seen by the examining authority
-                </li>
-
-                <li>
-                  published on our website
-                </li>
-              </ul>
-      <p class="govuk-body">You will be able to submit further comments during the examination of the application once you have registered</p>
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--s" for="comment">
-            Registration comments
-          </label>
-        </h1>
-
-
-
-        <textarea class="govuk-textarea" id="comment" name="comment" rows="5" data-cy="comment" maxlength="130468"></textarea>
-
-      </div>
+        <li>
+          seen by the Examining Authority
+        </li>
+        <li>
+          published on our website
+        </li>
+      </ul>
+      <p class="govuk-body">Your comments should not:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          use racist, inflammatory or abusive language
+        </li>
+        <li>
+          link to third party websites (you can include links to GOV.UK or websites for chartered professional institutes)
+        </li>
+        <li>
+          contain information relating to children or crime
+        </li>
+        <li>
+          include personal information about yourself or any details that could identify a third party, especially sensitive information
+        </li>
+      </ul>
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            Do not include these details.
+            Examples of sensitive information
           </span>
         </summary>
         <div class="govuk-details__text">
-          
-                  <h2 class="govuk-heading-m">Use of language, hyperlinks and sensitive information</h2>
-                  <p class="govuk-body">You should not use racist, inflammatory or abusive language, or include sensitive information (also called special category information) about yourself or others in your comments.</p>
-                  <p class="govuk-body">Do not include links to third party websites. You can include links to either GOV.UK or websites for chartered professional institutes like IEMA.</p>
-                  <h2 class="govuk-heading-m">Examples of sensitive information</h2>
-                  <p class="govuk-body">Sensitive information refers to:</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>comments from children</li>
-                    <li>information relating to children</li>
-                    <li>information relating to health</li>
-                    <li>information relating to crime</li>
-                  </ul>
-                  <p class="govuk-body">It also means any information relating to an individual's:</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>race</li>
-                    <li>ethnic origin</li>
-                    <li>politics</li>
-                    <li>religion</li>
-                    <li>trade union membership</li>
-                    <li>genetics</li>
-                    <li>physical characteristics</li>
-                    <li>sex life</li>
-                    <li>sexual orientation</li>
-                  </ul>
+          <p class="govuk-body">Sensitive information means any information relating to an individual's:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>race</li>
+            <li>ethnic background</li>
+            <li>political opinions</li>
+            <li>religious beliefs</li>
+            <li>trade union membership</li>
+            <li>genetics</li>
+            <li>biometrics (where used for identification)</li>
+            <li>health</li>
+            <li>sex life or orientation</li>
+          </ul>
         </div>
       </details>
+      <p class="govuk-body">Any comments submitted that do not meet our criteria may be returned to you.</p>
+      <form action="08-1_AIdeclaration" method="post" novalidate>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="comment">
+            What do you want to tell us about this proposed project?
+          </label>
+        </h1>
+        <textarea class="govuk-textarea" id="comment" name="comment" rows="5" data-cy="comment" maxlength="130468"></textarea>
+      </div>
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Continue
       </button>

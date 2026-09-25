@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<hr class="govuk-section-break govuk-section-break--m">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <span class="govuk-caption-l">Longfield solar farm (EN0110007)</span>
+    <h1 class="govuk-heading-l">Fire and rescue</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div style="background-color: rgb(95, 140, 99); height: 600px; margin-bottom: 20px;">Insert map here</div>
+  </div>
+</div>
+
+
+
+
+
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Consultees intersecting project</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Consultee</th>
+          <!--<th scope="col" class="govuk-table__header">Type</th>-->
+          <th scope="col" class="govuk-table__header">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Norfolk</th>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Suffolk</th>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Consultees in 1km buffer of project</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Consultee</th>
+          <!--<th scope="col" class="govuk-table__header">Type</th>-->
+          <th scope="col" class="govuk-table__header">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Cambridgeshire</th>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <form action="/form-handler" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and return
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

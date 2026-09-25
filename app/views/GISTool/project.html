@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back to projects",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<hr class="govuk-section-break govuk-section-break--m">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="grey-box">
+      <span class="govuk-caption-xl">EN0110007</span>
+      <h1 class="govuk-heading-xl">
+        Longfield solar farm
+      </h1>
+      <p class="govuk-!-margin-top-0">Energy, Generating Stations, Solar</p>
+      <strong class="govuk-tag govuk-tag--turquoise govuk-!-margin-right-3">Acceptance</strong>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div style="background-color: rgb(95, 140, 99); height: 600px; margin-bottom: 20px;">Insert map here</div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Consultees</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Amount</th>
+          <th scope="col" class="govuk-table__header">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">District councils</th>
+          <td class="govuk-table__cell">5</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Show</a> | <a class="govuk-link" href="manage-consultee">Manage</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">National parks and broads</th>
+          <td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Show</a> | <a class="govuk-link" href="manage-consultee">Manage</a></td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Host parishes or community councils</th>
+          <td class="govuk-table__cell">12</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Show</a> | <a class="govuk-link" href="manage-consultee">Manage</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="preview-report" method="post">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Preview report
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

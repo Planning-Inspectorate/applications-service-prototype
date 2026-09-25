@@ -1,0 +1,334 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<hr class="govuk-section-break govuk-section-break--m">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-l">Check consultees before creating the report</h1>
+    <h2 class="govuk-heading-m">Report details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Case
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Longfield solar farm
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> Case</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Case ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          EN0110007
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Case stage
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Acceptance
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Ruleset
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Post Apr 2024 (England and Wales)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> ruleset</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Consultee details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Fire and rescue
+        </dt>
+        <dd class="govuk-summary-list__value">
+          7
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and rescue 1km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Police and crime commission
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Police and crime commission 1km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Parish community
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Parish community</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          National landscapes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          15
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> National landscapes</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Passenger Trans Exec
+        </dt>
+        <dd class="govuk-summary-list__value">
+          8
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Passenger Trans Exec 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Coal mining
+        </dt>
+        <dd class="govuk-summary-list__value">
+          4
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Coal mining</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Railways
+        </dt>
+        <dd class="govuk-summary-list__value">
+          19
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Railways 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Internal drainage
+        </dt>
+        <dd class="govuk-summary-list__value">
+          6
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Internal drainage 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Greater London Authority
+        </dt>
+        <dd class="govuk-summary-list__value">
+          20
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> GLA 35km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Canals
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Canals 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Local health board
+        </dt>
+        <dd class="govuk-summary-list__value">
+          2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local health board 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Ministry of Defence safeguarding
+        </dt>
+        <dd class="govuk-summary-list__value">
+          14
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Ministry of Defence safeguarding 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Ambulance trusts
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5, 18
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Ambulance trusts 1km/10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Hospitals 10km
+        </dt>
+        <dd class="govuk-summary-list__value">
+          9
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Hospitals 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Local authorities A, B, C, D
+        </dt>
+        <dd class="govuk-summary-list__value">
+          13, 10, 2, 4
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local authorities A/B/C/D</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cheshire brine
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Cheshire brine</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Docks and harbours
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Docks and harbours 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Electricity generators
+        </dt>
+        <dd class="govuk-summary-list__value">
+          2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Elec generators 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Electricity distributors
+        </dt>
+        <dd class="govuk-summary-list__value">
+          8
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Elec distributors 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Electricity interconnectors
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Elec interconnectors 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Ministry of Defence low flying areas
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Ministry of Defence low flying areas 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Joint transport authority (Wales)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          8
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Joint transport authority (Wales) 10km</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Integrated Care boards
+        </dt>
+        <dd class="govuk-summary-list__value">
+          2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Integrated Care boards 10km</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Now generate the report</h2>
+    <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+    <form action="/form-handler" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Generate report
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
