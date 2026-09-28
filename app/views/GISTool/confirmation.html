@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<hr class="govuk-section-break govuk-section-break--m">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Report created
+      </h1>
+      <div class="govuk-panel__body">
+        Case: Longshore Solar Farm<br>
+        Reference: EN0110007
+      </div>
+    </div>
+    <p class="govuk-body"><a href="#" class="govuk-link">Download Longshore Solar Farm scoping report (ZIP, 25MB)</a></p>
+  </div>
+</div>
+
+{% endblock %}

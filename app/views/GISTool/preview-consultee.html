@@ -13,13 +13,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<hr class="govuk-section-break govuk-section-break--m">
-
-
-<div class="govuk-grid-row">
+<div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <span class="govuk-caption-l">Longfield solar farm (EN0110007)</span>
-    <h1 class="govuk-heading-l">Fire and rescue</h1>
+    <span class="govuk-caption-xl">Longfield Solar Farm</span>
+    <h1 class="govuk-heading-xl">Fire and rescue</h1>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -39,18 +36,18 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Consultee</th>
           <!--<th scope="col" class="govuk-table__header">Type</th>-->
-          <th scope="col" class="govuk-table__header">Actions</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Norfolk</th>
-          <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
 
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Suffolk</th>
-          <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
 
         </tr>
       </tbody>
@@ -61,16 +58,19 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Consultee</th>
           <!--<th scope="col" class="govuk-table__header">Type</th>-->
-          <th scope="col" class="govuk-table__header">Actions</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Cambridgeshire</th>
-          <td class="govuk-table__cell"><a class="govuk-link" href="#">Remove</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
         </tr>
       </tbody>
     </table>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Add consultee
+    </button>
     <form action="/form-handler" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">

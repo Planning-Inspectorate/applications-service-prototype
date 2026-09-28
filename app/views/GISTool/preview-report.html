@@ -13,10 +13,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<hr class="govuk-section-break govuk-section-break--m">
-
-
-<div class="govuk-grid-row">
+<div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <h1 class="govuk-heading-l">Check consultees before creating the report</h1>
     <h2 class="govuk-heading-m">Report details</h2>
@@ -26,10 +23,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Case
         </dt>
         <dd class="govuk-summary-list__value">
-          Longfield solar farm
+          Longfield Solar Farm
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> Case</span></a>
+          <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> case</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -60,7 +57,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Post Apr 2024 (England and Wales)
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="index">Change<span class="govuk-visually-hidden"> ruleset</span></a>
+          <a class="govuk-link" href="project">Change<span class="govuk-visually-hidden"> ruleset</span></a>
         </dd>
       </div>
     </dl>
@@ -71,7 +68,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Fire and rescue
         </dt>
         <dd class="govuk-summary-list__value">
-          7
+          3 within 1km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and rescue 1km</span></a>
@@ -82,7 +79,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Police and crime commission
         </dt>
         <dd class="govuk-summary-list__value">
-          12
+          12 within 1km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Police and crime commission 1km</span></a>
@@ -93,7 +90,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Parish community
         </dt>
         <dd class="govuk-summary-list__value">
-          3
+          3 intersect
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Parish community</span></a>
@@ -104,7 +101,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           National landscapes
         </dt>
         <dd class="govuk-summary-list__value">
-          15
+          15 intersect
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> National landscapes</span></a>
@@ -115,7 +112,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Passenger Trans Exec
         </dt>
         <dd class="govuk-summary-list__value">
-          8
+          8 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Passenger Trans Exec 10km</span></a>
@@ -126,7 +123,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Coal mining
         </dt>
         <dd class="govuk-summary-list__value">
-          4
+          4 intersect
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Coal mining</span></a>
@@ -137,7 +134,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Railways
         </dt>
         <dd class="govuk-summary-list__value">
-          19
+          19 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Railways 10km</span></a>
@@ -148,7 +145,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Internal drainage
         </dt>
         <dd class="govuk-summary-list__value">
-          6
+          6 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Internal drainage 10km</span></a>
@@ -159,7 +156,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Greater London Authority
         </dt>
         <dd class="govuk-summary-list__value">
-          20
+          20 within 35km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> GLA 35km</span></a>
@@ -170,7 +167,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Canals
         </dt>
         <dd class="govuk-summary-list__value">
-          11
+          11 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Canals 10km</span></a>
@@ -181,7 +178,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Local health board
         </dt>
         <dd class="govuk-summary-list__value">
-          2
+          2 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local health board 10km</span></a>
@@ -192,7 +189,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Ministry of Defence safeguarding
         </dt>
         <dd class="govuk-summary-list__value">
-          14
+          14 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Ministry of Defence safeguarding 10km</span></a>
@@ -203,7 +200,8 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Ambulance trusts
         </dt>
         <dd class="govuk-summary-list__value">
-          5, 18
+          5 within 1km <br>
+          18 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Ambulance trusts 1km/10km</span></a>
@@ -211,10 +209,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Hospitals 10km
+          Hospitals
         </dt>
         <dd class="govuk-summary-list__value">
-          9
+          9 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Hospitals 10km</span></a>
@@ -222,13 +220,14 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Local authorities A, B, C, D
+          Local authorities
         </dt>
         <dd class="govuk-summary-list__value">
-          13, 10, 2, 4
+          10 intersect<br>
+          27 bordering
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local authorities A/B/C/D</span></a>
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Local authorities</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -236,7 +235,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Cheshire brine
         </dt>
         <dd class="govuk-summary-list__value">
-          1
+          1 intersect
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Cheshire brine</span></a>
@@ -247,7 +246,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Docks and harbours
         </dt>
         <dd class="govuk-summary-list__value">
-          3
+          3 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Docks and harbours 10km</span></a>
@@ -258,7 +257,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Electricity generators
         </dt>
         <dd class="govuk-summary-list__value">
-          2
+          2 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Elec generators 10km</span></a>
@@ -269,7 +268,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Electricity distributors
         </dt>
         <dd class="govuk-summary-list__value">
-          8
+          8 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Elec distributors 10km</span></a>
@@ -280,7 +279,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Electricity interconnectors
         </dt>
         <dd class="govuk-summary-list__value">
-          11
+          11 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Elec interconnectors 10km</span></a>
@@ -291,7 +290,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Ministry of Defence low flying areas
         </dt>
         <dd class="govuk-summary-list__value">
-          5
+          5 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Ministry of Defence low flying areas 10km</span></a>
@@ -302,7 +301,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Joint transport authority (Wales)
         </dt>
         <dd class="govuk-summary-list__value">
-          8
+          0 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Joint transport authority (Wales) 10km</span></a>
@@ -313,16 +312,14 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Integrated Care boards
         </dt>
         <dd class="govuk-summary-list__value">
-          2
+          2 within 10km
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Integrated Care boards 10km</span></a>
         </dd>
       </div>
     </dl>
-    <h2 class="govuk-heading-m">Now generate the report</h2>
-    <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-    <form action="/form-handler" method="post" novalidate>
+    <form action="confirmation" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Generate report

@@ -5,12 +5,12 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<hr class="govuk-section-break govuk-section-break--m">
-<h1 class="govuk-heading-xl">
-  Identify consultees for a NSIP project
-</h1>
-<div class="govuk-grid-row">
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Identify consultees for a NSIP project
+    </h1>
     <h2 class="govuk-heading-m">
       Find a project
     </h2>
@@ -34,23 +34,20 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       <caption class="govuk-table__caption govuk-table__caption--m">Projects</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Project name</th>
-          <th scope="col" class="govuk-table__header">Case ID</th>
-          <th scope="col" class="govuk-table__header">Case stage</th>
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Stage</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a class="govuk-link" href="project">Longfield solar farm</a></th>
-          <td class="govuk-table__cell">EN0110011</td>
-          <td class="govuk-table__cell">
+          <th scope="row" class="govuk-table__header"><a class="govuk-link" href="project">EN0110011 - Longfield Solar Farm</a></th>
+          <td class="govuk-table__cell govuk-table__header--numeric">
             <strong class="govuk-tag govuk-tag--green">Pre-application</strong>
           </td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a class="govuk-link" href="project">Shortfield wind farm</a></th>
-          <td class="govuk-table__cell">EN0110012</td>
-          <td class="govuk-table__cell">
+          <th scope="row" class="govuk-table__header"><a class="govuk-link" href="project">EN0110012 - Shortfield Wind Farm</a></th>
+          <td class="govuk-table__cell govuk-table__header--numeric">
             <strong class="govuk-tag govuk-tag--turquoise">Acceptance</strong>
           </td>
         </tr>
