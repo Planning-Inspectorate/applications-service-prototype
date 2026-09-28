@@ -18,24 +18,28 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">John Doe</span>
-    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
-      Compulsory acquisition or temporary possession
-    </h1>
     <form class="form" action="RelRep_details" method="post">
-
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">John Doe</span>
+            <h1 class="govuk-fieldset__heading">
+              Land within project boundary
+            </h1>
+          </legend>
+          <div id="more-detail-hint" class="govuk-hint">
+            This can include land they own, rent, occupy or hold rights over
+          </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="CA" name="rep_CA" type="radio" value="Yes">
-              <label class="govuk-label govuk-radios__label" for="CA">
+              <input class="govuk-radios__input" id="affectedPerson" name="rep_affectedPerson" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="affectedPerson">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="CA-2" name="rep_CA" type="radio" value="No">
-              <label class="govuk-label govuk-radios__label" for="CA-2">
+              <input class="govuk-radios__input" id="affectedPerson-2" name="rep_affectedPerson" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="affectedPerson-2">
                 No
               </label>
             </div>

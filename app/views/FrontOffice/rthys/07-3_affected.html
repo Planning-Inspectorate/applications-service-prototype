@@ -18,32 +18,48 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/08_comments" method="post" novalidate>
+    <form action="08_comments" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
+              {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+              Do they object to the applicant wanting to acquire, use or change rights over this land?
+              {% else %}
               Do you object to the applicant wanting to acquire, use or change rights over this land?
+              {% endif %}
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="compulsoryAcquisitionObjection" name="rep_CAobjection" type="radio" value="Yes">
               <label class="govuk-label govuk-radios__label" for="compulsoryAcquisitionObjection">
+                {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+                Yes, they object
+                {% else %}
                 Yes, I object
+                {% endif %}
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="compulsoryAcquisitionObjection-2" name="rep_CAobjection" type="radio" value="No">
               <label class="govuk-label govuk-radios__label" for="compulsoryAcquisitionObjection-2">
+                {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+                No, they do not object
+                {% else %}
                 No, I do not object
+                {% endif %}
               </label>
             </div>
             <div class="govuk-radios__divider">or</div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="compulsoryAcquisitionObjection-2" name="rep_CAobjection" type="radio" value="I do not know">
-              <label class="govuk-label govuk-radios__label" for="compulsoryAcquisitionObjection-2">
+              <label class="govuk-label govuk-radios__label" for="compulsoryAcquisitionObjection-3">
+                {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+                They do not know
+                {% else %}
                 I do not know
+                {% endif %}
               </label>
             </div>
           </div>

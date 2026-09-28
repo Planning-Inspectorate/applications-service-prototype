@@ -100,25 +100,25 @@ Representation details – {{ serviceName }} – GOV.UK Prototype Kit
           <p class="govuk-body">{{data['rep_affectedPerson']}}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="RelRep_affectedPerson">Change</a>
+          <a class="govuk-link" href="RelRep_land-within">Change</a>
         </dd>
       </div>
       {% if data['rep_affectedPerson'] == 'Yes' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Compulsory acquisition or temporary possession
+          Affected person
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">{{data['rep_CA']}}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="RelRep_compAcquisition">Change</a>
+          <a class="govuk-link" href="RelRep_affected-person">Change</a>
         </dd>
       </div>
       {% if data['rep_CA'] == 'Yes' %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Objection to land changes
+          Objection to land rights changes
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">{{data['rep_CAobjection']}}</p>

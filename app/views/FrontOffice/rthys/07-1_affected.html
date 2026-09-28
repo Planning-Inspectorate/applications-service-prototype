@@ -23,7 +23,11 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
+              {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
+              Do they own, rent, occupy or hold rights over land within the project's boundaries?
+              {% else %}
               Do you own, rent, occupy or hold rights over land within the project's boundaries?
+              {% endif %}
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">

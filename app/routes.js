@@ -36,6 +36,8 @@ router.post('/upload_amends', function(req, res) {
 });
 
 // Register to have your say journey
+
+// if agent then skip over 18
 router.post('/03_over18', function(req, res) {
     if (req.session.data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for') {
         res.redirect('/FrontOffice/rthys/04_orgName');
@@ -44,6 +46,7 @@ router.post('/03_over18', function(req, res) {
     }
 });
 
+// if registering for themself then skip organisation name
 router.post('/04_orgName', function(req, res) {
     if (req.session.data['whoFor'] == 'Myself') {
         res.redirect('/FrontOffice/rthys/05_email');
@@ -52,6 +55,7 @@ router.post('/04_orgName', function(req, res) {
     }
 });
 
+// if registering for organisation then ask for job role
 router.post('/04-1_jobRole', function(req, res) {
     if (req.session.data['whoFor'] == 'An organisation I work or volunteer for') {
         res.redirect('/FrontOffice/rthys/04-1_jobRole');
@@ -60,6 +64,7 @@ router.post('/04-1_jobRole', function(req, res) {
     }
 });
 
+// if agent is representing an organisation, then skip over 18 question
 router.post('/13_agent-over18', function(req, res) {
     if (req.session.data['agent-whoFor'] == 'An organisation or charity I do not work for') {
         res.redirect('/FrontOffice/rthys/15_agent-email');
@@ -68,14 +73,15 @@ router.post('/13_agent-over18', function(req, res) {
     }
 });
 
-router.post('/08_comments', function(req, res) {
+router.post('/11_agent-whoFor', function(req, res) {
     if (req.session.data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for') {
         res.redirect('/FrontOffice/rthys/11_agent-whoFor');
     } else {
-        res.redirect('/FrontOffice/rthys/08_comments');
+        res.redirect('/FrontOffice/rthys/07-1_affected');
     }
 });
 
+// if land not within boundary skip affected person questions
 router.post('/07-2_affected', function(req, res) {
     if (req.session.data['rep_affectedPerson'] == 'No') {
         res.redirect('/FrontOffice/rthys/08_comments');
@@ -84,6 +90,7 @@ router.post('/07-2_affected', function(req, res) {
     }
 });
 
+// if applicant not acquiring land then skip asking about objections
 router.post('/07-3_affected', function(req, res) {
     if (req.session.data['rep_CA'] == 'No') {
         res.redirect('/FrontOffice/rthys/08_comments');
@@ -124,7 +131,6 @@ router.post('/RelRep_rejection_reason', function(req, res) {
         res.redirect('/BackOffice/ProjectDocumentation/rel-reps/RelRep_notify');
     }
 });
-
 
 
 
