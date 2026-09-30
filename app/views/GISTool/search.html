@@ -20,9 +20,9 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Enter keyword, case reference or case title
         </label>
         <input class="govuk-input" style="width: 522px;" id="searchApplications" name="query" type="text" value="" inputmode="search">   
-        <a type="submit" href="search" class="govuk-button pins-dashboard-form--btn" data-module="govuk-button" data-govuk-button-init="">
+        <button type="submit" class="govuk-button pins-dashboard-form--btn" data-module="govuk-button" data-govuk-button-init="">
           Search
-        </a>
+        </button>
      </div>
     </form>
   </div>
@@ -31,7 +31,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">All cases</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">Search results</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Name</th>
@@ -43,12 +43,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="project">EN0110011 - Longfield Solar Farm</a></th>
           <td class="govuk-table__cell govuk-table__header--numeric">
             <strong class="govuk-tag govuk-tag--green">Pre-application</strong>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a class="govuk-link" href="project">EN0110012 - Shortfield Wind Farm</a></th>
-          <td class="govuk-table__cell govuk-table__header--numeric">
-            <strong class="govuk-tag govuk-tag--turquoise">Acceptance</strong>
           </td>
         </tr>
       </tbody>
