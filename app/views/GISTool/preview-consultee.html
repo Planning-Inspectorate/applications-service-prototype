@@ -17,6 +17,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <span class="govuk-caption-xl">Longfield Solar Farm</span>
     <h1 class="govuk-heading-xl">Fire and rescue</h1>
+    <p class="govuk-body">There is a <strong>1km buffer</strong></p>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -24,54 +25,49 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     <div style="background-color: rgb(95, 140, 99); height: 600px; margin-bottom: 20px;">Insert map here</div>
   </div>
 </div>
-
-
-
-
-
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Consultees intersecting project</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">Consultees</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Consultee</th>
-          <!--<th scope="col" class="govuk-table__header">Type</th>-->
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Identified</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Norfolk</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
-
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Suffolk</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
-
         </tr>
-      </tbody>
-    </table>
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Consultees in 1km buffer of project</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Consultee</th>
-          <!--<th scope="col" class="govuk-table__header">Type</th>-->
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Cambridgeshire</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
         </tr>
+        {% if data['consultee'] %}
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">{{data['consultee']}}</th>
+          <td class="govuk-table__cell">Manually added</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
+        </tr>  
+        {% endif %}
       </tbody>
     </table>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Add consultee
-    </button>
-    <form action="/form-handler" method="post" novalidate>
+    <form action="add-consultee" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add consultee
+      </button>
+    </form>
+    <form action="preview-report" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Save and return

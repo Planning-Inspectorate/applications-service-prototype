@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="preview-consultee" method="post" novalidate>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <span class="govuk-caption-xl">Fire and rescue</span>
+        <label class="govuk-label govuk-label--l" for="consultee-name">
+          Select a consultee
+        </label>
+      </h1>
+      <input class="govuk-input" id="consultee-name" name="consultee" type="text">
+    </div>
+      <input type="hidden" name="answers-checked" value="true">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Add consultee
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

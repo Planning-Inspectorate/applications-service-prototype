@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="project" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Project shapefile
+            </h1>
+          </legend>
+          <div id="changedName-hint" class="govuk-hint">
+            Select a geojson file from the GIS Shapefiles project documentation folder
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="project-shapefile-1" name="party-type" type="radio" value="EN0110007.geojson">
+              <label class="govuk-label govuk-radios__label" for="project-shapefile-1">
+                EN0110007.geojson
+              </label>
+              <div id="council-item-hint" class="govuk-hint govuk-radios__hint">
+                Uploaded: 12:16, 29 Jul 2026
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="project-shapefile-2" name="party-type" type="radio" value="Longfield solar farm shapefiles.geojson">
+              <label class="govuk-label govuk-radios__label" for="project-shapefile-2">
+                Longfield solar farm shapefiles.geojson
+              </label>
+              <div id="council-item-hint" class="govuk-hint govuk-radios__hint">
+                Uploaded: 12:16, 29 Jul 2026
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Save and return"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
