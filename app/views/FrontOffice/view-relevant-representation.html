@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "../FrontOffice/_includes/FO-components.html" %}
+
+<section aria-label="Service information" class="govuk-service-navigation grey-background"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container govuk-width-container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="index" aria-current="true">
+              <strong>Home</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="search">
+              <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <Strong>Detailed information</Strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div class="govuk-grid-row" style="padding-top: 48px;">
+  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
+
+    <nav class="side-nav">
+      <ul class="govuk-list">
+        <li><a href="Project_info">Project information</a></li>
+        <li><a href="Project_documents">Documents</a></li>
+        <li><a href="Project_relReps" class="selected">Relevant representations (registration comments)</a></li>
+        <li><a href="Project_registerToHaveYourSay">Register to have your say</a></li>
+        <li><a href="Project_examTimetable">Examination timetable</a></li>
+        <li><a href="Project_haveYourSay">Have your say</a></li>
+        <li><a href="Project_updates">Get updates</a></li>
+        <li><a href="Project_updates_all">All project updates</a></li>
+        <li><a href="Project_s51">Section 51 advice</a></li>
+      </ul>
+    </nav>    
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <span>&nbsp;</span>
+    <p><strong>Related guides</strong></p>
+    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">The process for Nationally Significant Infrastructure Projects (NSIPs)</a></p>
+    <p><a class="govuk-body-s govuk-link" style="color: #1d70b8;">Have your say about a national infrastructure project</a></p>
+    
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Longfield Solar Farm</span>
+    <h2 class="govuk-heading-l">Gainsthorpe Wildlife Protection Group</h2>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date submitted
+        </dt>
+        <dd class="govuk-summary-list__value">
+          15 May 2026
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submitted by
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Members of the public/businesses
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          RR-001
+        </dd>
+      </div>
+    </dl>
+    <div class="representation-content">
+      <p class="govuk-body">The fields and hedgerows surrounding Gainsthorpe provide important habitats for a variety of species. Birds such as skylarks, yellowhammers, linnets, and owls may use the area for nesting, feeding, or hunting. The construction and operation of a large solar farm could disturb these species, particularly if existing hedgerows, grassland, or field margins are altered.</p>
+      <p class="govuk-body">There could also be effects on mammals including hedgehogs, hares, bats, and foxes. Bats may be affected by changes to foraging routes, while hedgehogs and other ground-dwelling animals could experience habitat fragmentation caused by fencing and associated infrastructure.</p>
+      <p class="govuk-body">The area may also support reptiles, amphibians, and a range of insects, including butterflies, moths, bees, and other pollinators that rely on wildflowers and undisturbed grassland habitats. Construction activity, increased traffic, noise, and changes in land management could reduce the suitability of these habitats.</p>
+      <p class="govuk-body">Gainsthorpe Wildlife Protection Group is concerned that the long-term effects on local wildlife have not been fully understood. Given the importance of protecting biodiversity, a detailed ecological assessment should be undertaken to ensure that any development does not result in a net loss of habitats or negatively affect species that contribute to the natural environment around Gainsthorpe.</p>
+    </div>    
+  </div>
+</div>
+
+
+
+{% endblock %}
