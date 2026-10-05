@@ -25,6 +25,8 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
             <h1 class="govuk-fieldset__heading">
               {% if data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for' %}
               Do they own, rent, occupy or hold rights over land within the project's boundaries?
+              {% elseif data['whoFor'] == 'An organisation I work or volunteer for' %}
+              Does your organisation own, rent, occupy or hold rights over land within the project's boundaries?
               {% else %}
               Do you own, rent, occupy or hold rights over land within the project's boundaries?
               {% endif %}

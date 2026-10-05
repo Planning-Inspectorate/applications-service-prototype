@@ -1,0 +1,312 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "../FrontOffice/_includes/FO-components.html" %}
+
+<section aria-label="Service information" class="govuk-service-navigation grey-background"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container govuk-width-container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="index">
+              <strong>Home</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+            <a class="govuk-service-navigation__link" href="search" aria-current="true">
+              <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <Strong>Detailed information</Strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div class="govuk-grid-row" style="padding-top: 48px;">
+  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-one-third" style="padding-left: 0px;">
+    <h2 class="govuk-heading-m">Filter</h2>
+    <p class="govuk-body-s"><a class="govuk-link" href="#">Show all sections</a></p>
+
+
+    <dl class="govuk-summary-list">
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Location
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    North West (22)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    North East (19)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Yorkshire and the Humber (50)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    West Midlands (10)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    East Midlands (40)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Eastern (51)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    South West (14)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    London (7)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Wales (22)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Sector
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Transport (72)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Energy (186)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Business and Commercial (2)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Water (7)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Waste (3)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Waste Water (2)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+      <details class="govuk-details filters">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text filtersText">
+            Stage
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <a class="govuk-body-s govuk-link" style="color: #1d70b8;">Select all filters</a>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Pre-application (65)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Acceptance (5)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Pre-examination (8)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Examination (6)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Recommendation (4)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Decision (167)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Post-decision (167)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Withdrawn (6)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </details>
+    </dl>
+
+    {{ govukButton({
+      text: "Apply filters",
+      href: "searchFiltered"
+    }) }}
+    <!--
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <p class="govuk-body"><strong>Downloads</strong></p>
+    <p class="govuk-body govuk-body-s"><a class="govuk-link" href="#">Complete list of all 241 projects (CSV)</a></p>
+    <p class="govuk-body govuk-body-s"><a class="govuk-link" href="#">Geospatial file containing a map of all available project boundaries (JSON)</a></p>
+    -->
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <p><strong>Related content</strong></p>
+    <!--<p><a class="govuk-body-s govuk-link" href="search">View projects listing</a></p>-->
+    <p><a class="govuk-body-s govuk-link" href="#">Register of applications</a></p>
+
+    
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl" style="margin-bottom: 24px;">Projects map</h1>
+    <p class="govuk-body">Explore our map to find a national infrastructure project in England and Wales. You can filter by application stage, location or sector.</p>
+    <p class="govuk-body"><a class="govuk-list" href="#">Download a geospatial file containing a map of all available project boundaries (JSON)</a></p>
+    <div class="govuk-form-group" style="margin-bottom: 0px;">
+      <input class="govuk-input" style="width: 522px;" id="one-half" name="oneHalf" type="text">
+        <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+          Search
+        </button>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-button-group">
+          <a type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" href="searchMapViewFullscreen">
+            Hide filters
+          </a>
+          <a type="submit" class="govuk-link" href="search">
+            Switch to list view
+          </a>
+        </div>
+      </div>
+      <!--<div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-body-s govuk-!-text-align-right govuk-!-margin-top-2">
+          <span class="govuk-!-margin-right-2"><strong>Project view</strong></span>
+          <span class="govuk-!-margin-left-1"><span class="govuk-visually-hidden">Projects shown as </span>Markers</span>
+          <span class="govuk-!-margin-left-1">|</span>
+          <span class="govuk-!-margin-left-1"><a class="govuk-link" href="searchMapViewBoundaries"><span class="govuk-visually-hidden">View as </span>Boundaries</a></span>
+        </p>
+      </div>-->
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-top-2">
+          <span class="govuk-!-margin-right-2"><strong>Show projects as</strong></span>
+          <span class="govuk-!-margin-left-1"><span class="govuk-visually-hidden">Projects shown as </span>Markers</span>
+          <span class="govuk-!-margin-left-1">|</span>
+          <span class="govuk-!-margin-left-1"><a class="govuk-link" href="searchMapViewBoundaries"><span class="govuk-visually-hidden">View as </span>Boundaries</a></span>
+        </p>
+      </div>
+    </div>
+    <div id="tooltip" class="tooltipNoMarkers" style="display: flex; flex-direction: column; justify-content: center; align-content: center;">
+      <!--error/loading message-->
+      <div class="govuk-notification-banner__content">
+        <h2 class="govuk-heading-m" role="status">Loading map</h2>
+      </div>
+    </div>
+    <div class="govuk-inset-text">
+      Project boundaries and markers are approximate. Some projects may not have boundaries available. For exact locations, check a project's latest plans and drawings.    
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById("tooltip").onclick = function() {myFunction()};
+
+  function myFunction() {
+    document.getElementById("tooltiptext").style.visibility = "visible";
+  }
+</script>
+
+{% endblock %}
