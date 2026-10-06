@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--l">Remove consultee</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Identified</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Norfolk</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
+        </tr>
+      </tbody>
+    </table>
+    <form action="preview-consultee" method="post" novalidate>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="consultee-removal-reason">
+        Reason for removal
+      </label>
+      <textarea class="govuk-textarea" id="consultee-removal-reason" name="consulteeRemovalReason" rows="3"></textarea>
+    </div>
+      <input type="hidden" name="answers-checked" value="true">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Remove consultee
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

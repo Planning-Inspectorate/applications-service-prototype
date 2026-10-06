@@ -25,6 +25,12 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </h1>
       <input class="govuk-input" id="consultee-name" name="consultee" type="text">
     </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="consultee-reason">
+        Reason for identification
+      </label>
+      <textarea class="govuk-textarea" id="consultee-reason" name="consulteeReason" rows="3"></textarea>
+    </div>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Add consultee
