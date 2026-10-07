@@ -69,21 +69,30 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </button>
     </form>
     {% if data['consulteeRemovalReason'] %}
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Removed consultees</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Name</th>
-          <th scope="col" class="govuk-table__header">Reason</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Norfolk</th>
-          <td class="govuk-table__cell">{{data['consulteeRemovalReason']}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Removed consultees
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Removed consultees</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header">Reason</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Norfolk</th>
+              <td class="govuk-table__cell">{{data['consulteeRemovalReason']}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
     {% endif %}
     <form action="preview-report" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
