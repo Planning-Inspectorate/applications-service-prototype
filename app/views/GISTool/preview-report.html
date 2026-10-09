@@ -20,7 +20,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
         <dt class="govuk-summary-list__key">
-          Case
+          Project
         </dt>
         <dd class="govuk-summary-list__value">
           Longfield Solar Farm
@@ -31,7 +31,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Case reference
+          Project reference
         </dt>
         <dd class="govuk-summary-list__value">
           EN0110007
@@ -44,7 +44,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Shapefile
         </dt>
         <dd class="govuk-summary-list__value">
-          Acceptance_EN0110007.geojson
+          Acceptance-EN0110007.geojson
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="change-shapefile">Change<span class="govuk-visually-hidden"> shapefile</span></a>
@@ -69,7 +69,11 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Fire and rescue
         </dt>
         <dd class="govuk-summary-list__value">
-          3
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Norfolk</li>
+            <li>Suffolk</li>
+            <li>Cambridgeshire</li>
+          </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and rescue</span></a>
@@ -80,7 +84,19 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Police and crime commission
         </dt>
         <dd class="govuk-summary-list__value">
-          12
+          Showing 10 of 32 consultees
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Norfolk</li>
+            <li>Suffolk</li>
+            <li>Cambridgeshire</li>
+            <li>Essex</li>
+            <li>Bedfordshire</li>
+            <li>Hertfordshire</li>
+            <li>Lincolnshire</li>
+            <li>Leicestershire</li>
+            <li>Northamptonshire</li>
+            <li>Nottinghamshire</li>
+          </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Police and crime commission</span></a>
@@ -91,7 +107,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Parish community
         </dt>
         <dd class="govuk-summary-list__value">
-          3
+          Norfolk
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Parish community</span></a>
@@ -319,7 +335,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Nationally Significant Infrastructure Projects
+          National infrastructure projects
         </dt>
         <dd class="govuk-summary-list__value">
           2
@@ -332,7 +348,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     <form action="confirmation" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">
-        Generate report
+        Create report
       </button>
     </form>
   </div>

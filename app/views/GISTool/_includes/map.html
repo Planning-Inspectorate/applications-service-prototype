@@ -8,4 +8,17 @@
   }
 </style>
 
+<script>
+  // Preload the alternate image
+  const preloadImage = new Image();
+  preloadImage.src = "../public/images/back-office/gis-tool/boundary-map-layers.png";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const mapBoundary = document.querySelector(".map-boundary");
+    mapBoundary.addEventListener("click", function () {
+      this.style.backgroundImage = "url('../public/images/back-office/gis-tool/boundary-map-layers.png')";
+    });
+  });
+</script>
+
 <div class="map-boundary" style="background-color: rgb(95, 140, 99);"></div>
