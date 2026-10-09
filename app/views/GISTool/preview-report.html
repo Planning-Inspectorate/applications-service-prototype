@@ -18,7 +18,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-l">Check consultees before creating the report</h1>
     <h2 class="govuk-heading-m">Report details</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
         <dt class="govuk-summary-list__key">
           Case
         </dt>
@@ -31,7 +31,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Case ID
+          Case reference
         </dt>
         <dd class="govuk-summary-list__value">
           EN0110007
@@ -41,12 +41,13 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Case stage
+          Shapefile
         </dt>
         <dd class="govuk-summary-list__value">
-          Acceptance
+          Acceptance_EN0110007.geojson
         </dd>
         <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="change-shapefile">Change<span class="govuk-visually-hidden"> shapefile</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -57,7 +58,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           Post Apr 2024 (England and Wales)
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="project">Change<span class="govuk-visually-hidden"> ruleset</span></a>
+          <a class="govuk-link" href="change-ruleset">Change<span class="govuk-visually-hidden"> ruleset</span></a>
         </dd>
       </div>
     </dl>

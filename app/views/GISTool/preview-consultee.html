@@ -21,7 +21,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <div style="background-color: rgb(95, 140, 99); height: 600px; margin-bottom: 20px;">Insert map here</div>
+    {% include "../GISTool/_includes/consultee-map.html" %}
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -46,18 +46,18 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Suffolk</th>
           <td class="govuk-table__cell">Within 1km buffer</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Cambridgeshire</th>
           <td class="govuk-table__cell">Within 1km buffer</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>
         {% if data['consultee'] %}
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">{{data['consultee']}}</th>
           <td class="govuk-table__cell">{{data['consulteeReason']}}</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="#">Remove</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>  
         {% endif %}
       </tbody>

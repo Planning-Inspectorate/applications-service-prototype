@@ -13,6 +13,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+{% include "../GISTool/_includes/maps.html" %}
 <div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-full">
     <div class="grey-box">
@@ -72,7 +73,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <div style="background-color: rgb(95, 140, 99); height: 600px; margin-bottom: 20px;">Insert map here</div>
+    <div class="map-boundary" style="background-color: rgb(95, 140, 99);"></div>
   </div>
 </div>
 <!--

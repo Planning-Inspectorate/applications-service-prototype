@@ -1,0 +1,18 @@
+<style>
+  .map-boundary {
+    background-image: url("../public/images/back-office/gis-tool/consultee-map.png");
+    height: 515px;
+    margin-bottom: 20px;
+    background-size: cover;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mapBoundary = document.querySelector(".map-boundary");
+    mapBoundary.addEventListener("click", function () {
+      this.style.backgroundImage = "url('../public/images/back-office/gis-tool/consultee-map-selected.png')";
+    });
+  });
+</script>
+
+<div class="map-boundary" style="background-color: rgb(95, 140, 99);"></div>
