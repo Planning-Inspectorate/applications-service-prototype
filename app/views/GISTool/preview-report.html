@@ -13,6 +13,12 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+<style>
+  .hidden{
+    display: none;
+  }  
+</style>
+
 <div class="govuk-grid-row govuk-!-margin-top-7">
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <h1 class="govuk-heading-l">Check consultees before creating the report</h1>
@@ -63,7 +69,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </dl>
     <h2 class="govuk-heading-l">Identified consultees</h2>
-    <h3 class="govuk-heading-m">Administative boundary</h3>
+    <h3 class="govuk-heading-m">Administative boundaries</h3>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -76,39 +82,80 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             <li>Cambridgeshire</li>
             <li>Essex</li>
             <li>Bedfordshire</li>
-            <li>Hertfordshire</li>
-            <li>Lincolnshire</li>
-            <li>Leicestershire</li>
-            <li>Nottinghamshire</li>
-            <li>Derbyshire</li>
-            <li>Staffordshire</li>
-            <li>Warwickshire</li>
-            <li>West Midlands</li>
-            <li>Shropshire</li>
-            <li>Cheshire</li>
-            <li>Greater Manchester</li>
-            <li>Merseyside</li>
-            <li>Lancashire</li>
-            <li>Cumbria</li>
-            <li>Northumberland</li>
-            <li>Tyne and Wear</li>
-            <li>Durham</li>
-            <li>Rutland</li>
-            <li>Northamptonshire</li>
-            <li>Buckinghamshire</li>
-            <li>Oxfordshire</li>
-            <li>Berkshire</li>
-            <li>Hampshire</li>
-            <li>Wiltshire</li>
-            <li>Dorset</li>
-            <li>Somerset</li>
-            <li>Devon</li>
-            <li>Cornwall</li>
-            <li>Gloucestershire</li>
-            <li>Bristol</li>
-            <li>Isle of Wight</li>
-            <li>Channel Islands</li>
+            <li class="hidden">Hertfordshire</li>
+            <li class="hidden">Lincolnshire</li>
+            <li class="hidden">Leicestershire</li>
+            <li class="hidden">Nottinghamshire</li>
+            <li class="hidden">Derbyshire</li>
+            <li class="hidden">Staffordshire</li>
+            <li class="hidden">Warwickshire</li>
+            <li class="hidden">West Midlands</li>
+            <li class="hidden">Shropshire</li>
+            <li class="hidden">Cheshire</li>
+            <li class="hidden">Greater Manchester</li>
+            <li class="hidden">Merseyside</li>
+            <li class="hidden">Lancashire</li>
+            <li class="hidden">Cumbria</li>
+            <li class="hidden">Northumberland</li>
+            <li class="hidden">Tyne and Wear</li>
+            <li class="hidden">Durham</li>
+            <li class="hidden">Rutland</li>
+            <li class="hidden">Northamptonshire</li>
+            <li class="hidden">Buckinghamshire</li>
+            <li class="hidden">Oxfordshire</li>
+            <li class="hidden">Berkshire</li>
+            <li class="hidden">Hampshire</li>
+            <li class="hidden">Wiltshire</li>
+            <li class="hidden">Dorset</li>
+            <li class="hidden">Somerset</li>
+            <li class="hidden">Devon</li>
+            <li class="hidden">Cornwall</li>
+            <li class="hidden">Gloucestershire</li>
+            <li class="hidden">Bristol</li>
+            <li class="hidden">Isle of Wight</li>
+            <li class="hidden">Channel Islands</li>
+            <li class="hidden">East Sussex</li>
+            <li class="hidden">West Sussex</li>
+            <li class="hidden">Surrey</li>
+            <li class="hidden">Kent</li>
+            <li class="hidden">Medway</li>
+            <li class="hidden">Herefordshire</li>
+            <li class="hidden">Worcestershire</li>
+            <li class="hidden">North Yorkshire</li>
+            <li class="hidden">South Yorkshire</li>
+            <li class="hidden">West Yorkshire</li>
+            <li class="hidden">East Riding of Yorkshire</li>
+            <li class="hidden">City of York</li>
+            <li class="hidden">Isles of Scilly</li>
+            <li class="hidden">Torbay</li>
+            <li class="hidden">Plymouth</li>
+            <li class="hidden">Bath and North East Somerset</li>
+            <li class="hidden">South Gloucestershire</li>
+            <li class="hidden">Milton Keynes</li>
+            <li class="hidden">Slough</li>
+            <li class="hidden">Reading</li>
+            <li class="hidden">Windsor and Maidenhead</li>
+            <li class="hidden">Wokingham</li>
           </ul>
+            <p class="govuk-body">
+              <a class="govuk-link govuk-link--no-visited-state" href="#" onclick="toggleHiddenElements(event)">Show more</a>
+            </p>
+            <script>
+            function toggleHiddenElements(event) {
+              event.preventDefault();
+              const hiddenElements = document.querySelectorAll('.hidden');
+              const link = event.target;
+              hiddenElements.forEach(element => {
+              if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'list-item';
+                link.textContent = 'Show less';
+              } else {
+                element.style.display = 'none';
+                link.textContent = 'Show more';
+              }
+              });
+            }
+            </script>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and rescue</span></a>
@@ -131,8 +178,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         </dt>
         <dd class="govuk-summary-list__value">
           <ul class="govuk-list govuk-list--bullet">
-            <li>Cambridgeshire</li>
-            <li>Essex</li>
+            <li>Bristol City Council</li>
+            <li>Cornwall Council</li>
+            <li>Nottingham City Council</li>
+            <li>Reading Borough Council</li>
           </ul>
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -144,7 +193,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           National Parks & Broads
         </dt>
         <dd class="govuk-summary-list__value">
-          Dyrham
+          Lake District
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> National landscapes</span></a>
@@ -232,7 +281,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-        Internal Drainage Boards (England & Wales)
+        Internal Drainage Boards
       </dt>
       <dd class="govuk-summary-list__value">
         No consultees
