@@ -62,12 +62,9 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         {% endif %}
       </tbody>
     </table>
-    <form action="add-consultee" method="post" novalidate>
-      <input type="hidden" name="answers-checked" value="true">
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add consultee
-      </button>
-    </form>
+    <a href="add-consultee" class="govuk-button govuk-button--secondary">
+      Add consultee
+    </a>
     {% if data['consulteeRemovalReason'] %}
     <details class="govuk-details">
       <summary class="govuk-details__summary">
