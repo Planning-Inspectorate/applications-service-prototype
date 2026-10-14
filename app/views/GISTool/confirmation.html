@@ -6,6 +6,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block beforeContent %}
   {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}
