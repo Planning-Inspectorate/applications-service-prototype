@@ -4,6 +4,14 @@
 GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "index"
+  }) }}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row govuk-!-margin-top-7">
@@ -17,7 +25,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     <form method="post" action="#" novalidate="" role="search" aria-label="Applications">
       <div class="govuk-form-group">
         <label class="govuk-label pins-dashboard-form--label" for="searchApplications">
-          Enter keyword, case reference or case title
+          Enter keyword, project reference or project title
         </label>
         <input class="govuk-input" style="width: 522px;" id="searchApplications" name="query" type="text" value="" inputmode="search">   
         <button type="submit" class="govuk-button pins-dashboard-form--btn" data-module="govuk-button" data-govuk-button-init="">
@@ -30,9 +38,9 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <p class="govuk-body">Showing 1 results</p>
+    <p class="govuk-body">Showing <strong>1</strong> to 1 of 1 results</p>
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Projects</caption>
+      <!--<caption class="govuk-table__caption govuk-table__caption--m">Projects</caption>-->
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Name</th>
