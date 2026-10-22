@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<section aria-label="Service information" class="govuk-service-navigation grey-background"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container govuk-width-container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="index" aria-current="true">
+              <strong>Home</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="search">
+              <strong class="govuk-service-navigation__active-fallback"><strong>All projects</strong></strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="#">
+              <Strong>Detailed information</Strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div class="govuk-grid-row" style="padding-top: 48px;">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="2_often" method="post" novalidate>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            What is your email address?
+          </label>
+        </h1>
+        <input class="govuk-input" id="email-address" name="emailAddress" type="text">
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How we use your information
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">Planning Inspectorate email updates only store information you have provided.</p>
+          <p class="govuk-body">You can access, update or permanently delete your email updates and the information associated with them at any time.</p>
+          <p class="govuk-body">We will never:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>sell of rent your information to third parties</li>
+            <li>share your information with third parties for marketing purposes</li>
+          </ul>
+          <p class="govuk-body">You can read the <a class="govuk-link" href="#">full privacy notice</a> for more detail on how your information is stored, shared and used.</p>
+        </div>
+      </details>
+      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}
