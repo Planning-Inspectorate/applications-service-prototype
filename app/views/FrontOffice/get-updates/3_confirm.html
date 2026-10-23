@@ -36,45 +36,22 @@ Project Search – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row" style="padding-top: 48px;">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/3_confirm" method="post" novalidate>
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="update-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              How often do you want to get emails about the project?
-            </h1>
-          </legend>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="update" name="update" type="checkbox" value="Each time we update the project">
-              <label class="govuk-label govuk-checkboxes__label" for="update">
-                Each time we update the project (you may get more than one email a day)
-              </label>
-            </div>
-            <div class="govuk-checkboxes__divider">or</div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="update-2" name="update" type="checkbox" value="When the application is submitted">
-              <label class="govuk-label govuk-checkboxes__label" for="update-2">
-                When the application is submitted
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="update-3" name="update" type="checkbox" value="When you can register to have your say">
-              <label class="govuk-label govuk-checkboxes__label" for="update-3">
-                When you can register to have your say
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="update-4" name="update" type="checkbox" value="When the final decision has been made">
-              <label class="govuk-label govuk-checkboxes__label" for="update-4">
-                When the final decision has been made
-              </label>
-            </div>
-          </div>
-        </fieldset>
+    <h1 class="govuk-heading-l">Confirm you want to get emails</h1>
+    <p class="govuk-body-l">We have sent an email to <strong>xxxxxx.xxxxxx@planninginspectorate.gov.uk</strong></p>
+    <p class="govuk-body">Check your email and confirm you want to get updates about</p>
+    <p class="govuk-body">Longfield Solar Farm</p>
+    <p class="govuk-body">The link will stop working after 48 hours.</p>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Not recieved an email?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">If you have not received an email to your inbox, check your spam or junk folder.</p>
+        <p class="govuk-body">If this does not work, <a class="govuk-link" href="#">request a new email notification</a></p>
       </div>
-      <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
-    </form>
+    </details>
   </div>
 </div>
 
