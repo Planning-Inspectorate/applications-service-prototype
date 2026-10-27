@@ -37,6 +37,24 @@ router.post('/upload_amends', function(req, res) {
 
 // Register to have your say journey
 
+// if organisation
+router.post('/02_fullName', function(req, res) {
+    if (req.session.data['whoFor'] == 'An organisation I work or volunteer for') {
+        res.redirect('/FrontOffice/rthys/01-1_typeOfParty');
+    } else {
+        res.redirect('/FrontOffice/rthys/02_fullName');
+    }
+});
+
+// if agent organisation
+router.post('/12_agent-fullName', function(req, res) {
+    if (req.session.data['agent-whoFor'] == 'An organisation or charity I do not work for') {
+        res.redirect('/FrontOffice/rthys/11-1_agent-typeOfParty');
+    } else {
+        res.redirect('/FrontOffice/rthys/12_agent-fullName');
+    }
+});
+
 // if agent then skip over 18
 router.post('/03_over18', function(req, res) {
     if (req.session.data['whoFor'] == 'On behalf of another person, a household or an organisation I do not work for') {

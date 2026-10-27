@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Project Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {% include "../../FrontOffice/_includes/FO-nav.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../FrontOffice/_includes/FO-components.html" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="12_agent-fullName" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What type of organisation is being represented?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-1" name="whoFor" type="radio" value="Local authority">
+              <label class="govuk-label govuk-radios__label" for="whoFor-1">
+                Local authority
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-2" name="whoFor" type="radio" value="Council">
+              <label class="govuk-label govuk-radios__label" for="whoFor-2">
+                Council
+              </label>
+              <div id="council-item-hint" class="govuk-hint govuk-radios__hint">
+                For example, parish council, community council or town council
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-3" name="whoFor" type="radio" value="Statutory body">
+              <label class="govuk-label govuk-radios__label" for="whoFor-3">
+                Statutory body
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whoFor-3" name="whoFor" type="radio" value="Business or other organisation">
+              <label class="govuk-label govuk-radios__label" for="whoFor-4">
+                Business or other organisation
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

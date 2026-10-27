@@ -7,7 +7,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% block beforeContent %}
   {{ super() }}
   {{ govukBackLink({
-    text: "Back",
+    text: "Back to draft report",
     href: "preview-report"
   }) }}
 {% endblock %}
@@ -91,12 +91,12 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </details>
     {% endif %}
-    <form action="preview-report" method="post" novalidate>
+    <!--<form action="preview-report" method="post" novalidate>
       <input type="hidden" name="answers-checked" value="true">
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Save and return
       </button>
-    </form>
+    </form>-->
   </div>
 </div>
 
