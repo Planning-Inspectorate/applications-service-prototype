@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<style>
+  .hidden{
+    display: none;
+  }  
+</style>
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
+      <p class="govuk-body">Try again later.</p>
+      <p class="govuk-body">We have not saved your answers.</p>
+      <p class="govuk-body">When the service is available, you'll have to start again.</p>
+  </div>
+</div>
+
+{% endblock %}
