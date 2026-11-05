@@ -20,13 +20,29 @@
   }
 
   #banner.hide:target,
-  #banner2.hide:target {
+  #banner2.hide:target,
+  #bannerError.hide:target {
     display: block;
   }
 </style>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+
+      <div class="hide govuk-error-summary" id="bannerError" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#">Examination library category does not contain any new published documents</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="hide" id="banner">
         {% set html %}
@@ -66,7 +82,13 @@
       </h1>
 
       <p class="govuk-body">Once an examination library category has been published, the examination library references are final and cannot be changed.</p>
+      <p class="govuk-body"><a class="govuk-link" href="#">View items waiting to be added to the examination library (2)</a></p>
       <div class="govuk-button-group">
+        <form action="#bannerError">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Preview and publish updates to category
+          </button>
+        </form>
         <form action="#">
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Unpublish from library
