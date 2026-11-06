@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back to draft report",
+    href: "preview-report"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<style>
+  .selected{
+    background-color: #f3f3f3
+  }
+</style>
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <span class="govuk-caption-xl">Longfield Solar Farm</span>
+    <h1 class="govuk-heading-xl">Fire and rescue consultees</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "../GISTool/_includes/consultee-map.html" %}
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Included consultees</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Identified</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        {% if not data['consulteeRemovalReason'] %}
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Norfolk</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
+        </tr>
+        {% endif %}
+        <tr class="govuk-table__row selected">
+          <th scope="row" class="govuk-table__header">St. Erme</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Cambridgeshire</th>
+          <td class="govuk-table__cell">Within 1km buffer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
+        </tr>
+        {% if data['consultee'] %}
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">{{data['consultee']}}</th>
+          <td class="govuk-table__cell">{{data['consulteeReason']}}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
+        </tr>  
+        {% endif %}
+      </tbody>
+    </table>
+    <a href="add-consultee" class="govuk-button govuk-button--secondary">
+      Add a consultee
+    </a>
+    {% if data['consulteeRemovalReason'] %}
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Removed consultees
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Removed consultees</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Name</th>
+              <th scope="col" class="govuk-table__header">Reason</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Norfolk</th>
+              <td class="govuk-table__cell">{{data['consulteeRemovalReason']}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    {% endif %}
+    <!--<form action="preview-report" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and return
+      </button>
+    </form>-->
+  </div>
+</div>
+
+{% endblock %}
