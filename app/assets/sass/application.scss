@@ -169,9 +169,9 @@ dl .filters {
 
 /* MOJ loading spinner https://github.com/alphagov/govuk-design-system-backlog/issues/28#issuecomment-489061680 */
 .ccms-loader {
-  border: 12px solid #DEE0E2;
   border-radius: 50%;
-  border-top-color: #005EA5;
+  border: 12px solid hsl(175.041322314, 60.1990049751%, 79.4117647059%);
+  border-top-color: #28a197;
   width: 80px;
   height: 80px;
   -webkit-animation: spin 2s linear infinite;

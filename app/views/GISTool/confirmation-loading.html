@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<hr class="govuk-section-break govuk-section-break--m">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div>
+      <h1 style="text-align: center;" class="govuk-heading-l" role="status">Generating report</h1>
+      <div class="ccms-loader" aria-hidden="true" style="margin-left: 41%; margin-bottom: 20px;"></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
