@@ -302,6 +302,13 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
                         Traffic & transport (14)
                       </label>
                     </div>
+                    <div class="govuk-checkboxes__divider">or</div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="not yet reviewed" data-behaviour="exclusive">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        Not yet reviewed (81)
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -449,7 +456,7 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
           <details class="govuk-details filters">
             <summary class="govuk-details__summary govuk-!-margin-left-0">
               <span class="govuk-details__summary-text filtersText">
-                <strong style="color: black;">Comment word count</strong>
+                <strong style="color: black;">Comment length</strong>
               </span>
             </summary>
             <div class="govuk-details__text govuk-!-margin-left-0" style="background-color:#F3F2F1;">
