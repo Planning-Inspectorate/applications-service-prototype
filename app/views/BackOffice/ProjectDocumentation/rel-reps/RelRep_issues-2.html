@@ -1,0 +1,88 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Representation details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "RelRep_details_v3"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l" style="margin-bottom: 12px;">
+      Issues
+    </h1>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Issues
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Agriculture & soils
+        </strong>
+        <strong class="govuk-tag govuk-tag--blue">
+          Alternatives
+        </strong>
+        <!--<ul class="govuk-list govuk-list--bullet">
+          <li>Agriculture & soils</li>
+          <li>Alternatives</li>
+        </ul>
+        Agriculture & soils, Alternatives-->
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="RelRep_issues">Change</a>
+      </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="RelRep_details_v3#issues" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Is the analysis complete?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No, further review by the Examining Authority is required
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+    {% endblock %}

@@ -1,0 +1,153 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="document-properties-shapefile" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="document-status-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Shapefile case stage
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-1" name="case-stage-shapefile" type="radio" value="Pre-application (Scoping)" data-aria-controls="case-stage-shapefile-scoping-round">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-1">
+                  Pre-application
+                </label>
+              </div>
+              <div class="govuk-radios__conditional" id="case-stage-shapefile-scoping-round">
+                
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">
+                        Scoping round
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                        <label class="govuk-label govuk-radios__label" for="changedName">
+                          Scoping
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          Re-scoping
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!--
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="case-stage-shapefile-1">
+                    Scoping round
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-quarter" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" aria-describedby="contact-by-email-error" autocomplete="email">
+                </div>
+                -->
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-2" name="case-stage-shapefile" type="radio" value="Acceptance" data-aria-controls="case-stage-shapefile-acceptance-round">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-2">
+                  Acceptance
+                </label>
+              </div>
+              <div class="govuk-radios__conditional" id="case-stage-shapefile-acceptance-round">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">
+                        Acceptance round
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                        <label class="govuk-label govuk-radios__label" for="changedName">
+                          Acceptance
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          Re-acceptance
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-3" name="case-stage-shapefile" type="radio" value="Pre-examination">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-3">
+                  Pre-examination
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-4" name="case-stage-shapefile" type="radio" value="Examination">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-4">
+                  Examination
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-5" name="case-stage-shapefile" type="radio" value="Recommendation">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-5">
+                  Recommendation
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-6" name="case-stage-shapefile" type="radio" value="Decision">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-6">
+                  Decision
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-7" name="case-stage-shapefile" type="radio" value="Post-decision">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-7">
+                  Post-decision
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="case-stage-shapefile-8" name="case-stage-shapefile" type="radio" value="Withdrawn">
+                <label class="govuk-label govuk-radios__label" for="case-stage-shapefile-8">
+                  Withdrawn
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and return"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
