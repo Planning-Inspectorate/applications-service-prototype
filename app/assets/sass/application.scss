@@ -5,6 +5,19 @@
 
 // Add extra styles here
 
+/* hiding banner behavior */
+.hide {
+  display: none;
+}
+
+#banner.hide:target,
+#banner1.hide:target,
+#banner2.hide:target,
+#banner3.hide:target {
+  display: block;
+}
+
+/* header */
 .govuk-header, .govuk-header__container {
   background-color: rgb(0, 0, 0);
   border-bottom: none;
