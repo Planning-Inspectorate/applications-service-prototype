@@ -104,7 +104,29 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Parish, Town and Community Councils
+              National Parks UK (England)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-none">Change<span class="govuk-visually-hidden"> District Councils (Lower Tier Authorities)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Parks UK (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-none">Change<span class="govuk-visually-hidden"> District Councils (Lower Tier Authorities)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Parish, town and community councils
             </dt>
             <dd class="govuk-summary-list__value">
               <ul class="govuk-list govuk-list--bullet">
@@ -194,7 +216,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              District Councils (Lower Tier Authorities)
+              District councils (lower-tier authorities)
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -205,7 +227,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Unitary Authorities
+              Unitary authorities
             </dt>
             <dd class="govuk-summary-list__value">
               <ul class="govuk-list govuk-list--bullet">
@@ -221,35 +243,13 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              National Parks and Broads
+              County councils (upper-tier authorities)
             </dt>
             <dd class="govuk-summary-list__value">
-              Lake District
+              Bristol
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> National landscapes</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              County Councils (Upper Tier Authorities)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-none">Change<span class="govuk-visually-hidden"> County Councils (Upper Tier Authorities)</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Greater London Authority
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-none">Change<span class="govuk-visually-hidden"> Greater London Authority</span></a>
             </dd>
           </div>
         </dl>
@@ -264,111 +264,124 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Ambulance Trusts
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Ambulance Trusts</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Fire and Rescue Authorities
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <ul class="govuk-list govuk-list--bullet">
-              {% if not data['consulteeRemovalReason'] %}
-              <li>Norfolk</li>
-              {% endif %}
-              <li>Suffolk</li>
-              <li>Cambridgeshire</li>
-              {% if data['consultee'] %}
-              <li>{{data['consultee']}}</li>
-              {% endif %}
-            </ul>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Police and Crime Commissioners
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Hospitals operated by NHS Trusts and NHS Foundation Trusts (England)
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> NHS Trusts and Foundation Trusts</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Integrated Care Boards (England)
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Integrated Care Boards</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Internal Drainage Boards
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Internal Drainage Boards</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Local Resilience Forums
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Local Resilience Forums</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Local Health Boards (Wales)
+              Local resilience forums (Wales)
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Local Health Boards</span></a>
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Ambulance Trusts</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              National Landscapes
+              Internal drainage boards (England)
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> National Landscapes</span></a>
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Internal drainage boards (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Landscapes (England)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Landscapes (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Ambulance trusts
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hospitals operated by NHS trusts and NHS foundation trusts (England)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Integrated care boards (England)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Local health boards (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Fire and rescue authorities
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Police and crime commissioners
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
             </dd>
           </div>
         </dl>
@@ -383,48 +396,59 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Electricity Generators
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Electricity generators with compulsory purchase order powers
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Offshore Wind Sites
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Offshore Wind Sites</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Electricity interconnectors with compulsory purchase order powers
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Wind Export Cables
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Wind Export Cables</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Offshore wind export cables and sites
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Office for Nuclear Regulation Sites
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Office for Nuclear Regulation Sites</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Office for Nuclear Regulation sites
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Electricity distributors with compulsory purchase order powers
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
+            </dd>
           </div>
         </dl>
       </div>
@@ -439,59 +463,70 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Canals
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Canals</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Canal or inland navigation authorities
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Canals</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Railways
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Railways</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Dock and harbour authorities
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Railways</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Passenger Transport Executives
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Passenger Transport Executives</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Corporate joint committees (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Railways</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Integrated Transport Authorities
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Integrated Transport Authorities</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Passenger transport executives
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Railways</span></a>
+            </dd>
           </div>
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Docks and Harbours operated by Statutory Harbour Authorities
-          </dt>
-          <dd class="govuk-summary-list__value">
-          No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Docks / Harbours operated by Statutory Harbour Authorities</span></a>
-          </dd>
+            <dt class="govuk-summary-list__key">
+              Integrated transport authorities
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Railways</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Railways
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Railways</span></a>
+            </dd>
           </div>
         </dl>
       </div>
@@ -506,47 +541,47 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Ministry of Defence Safeguarding Areas
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> MoD Safeguarding Areas</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Ministry of Defence Low Flying Areas
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> MoD Low Flying Areas</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Coal Mining Reporting Areas
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No consultees
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Coal Mining Reporting Areas</span></a>
-          </dd>
-          </div>
-          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Cheshire Brine Area
+              Cheshire brine subsidence district
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> Cheshire Brine Area</span></a>
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> MoD Safeguarding Areas</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Mining Remediation Authority
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> MoD Low Flying Areas</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Ministry of Defence safeguarding areas
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> MoD Low Flying Areas</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Ministry of Defence low flying areas
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee">Change<span class="govuk-visually-hidden"> MoD Low Flying Areas</span></a>
             </dd>
           </div>
         </dl>
