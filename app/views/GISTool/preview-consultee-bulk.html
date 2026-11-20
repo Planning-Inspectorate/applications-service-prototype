@@ -42,8 +42,9 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
           </th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Name</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Identified</th>
+          <th scope="col" class="govuk-table__header sortButton govuk-!-width-one-third">Name &#9662;</th>
+          <th scope="col" class="govuk-table__header sortButton govuk-!-width-one-third">Identified &#9662;</th>
+          <th scope="col" class="govuk-table__header sortButton govuk-table__header--numeric">Distance &#9662;</th>
           <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
         </tr>
       </thead>
@@ -64,12 +65,13 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <th scope="row" class="govuk-table__header">Norfolk</th>
           <td class="govuk-table__cell">Within 1km buffer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">0km</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>
         {% endif %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
-            <div class="govuk-form-group govuk-!-margin-bottom-0"">
+            <div class="govuk-form-group govuk-!-margin-bottom-0">
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" name="selectedConsultee[]" type="checkbox">
@@ -82,6 +84,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <th scope="row" class="govuk-table__header">St. Erme</th>
           <td class="govuk-table__cell">Within 1km buffer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2.4km</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>
         {% if not data['consulteeRemovalReason'] %}
@@ -100,6 +103,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <th scope="row" class="govuk-table__header">Cambridgeshire</th>
           <td class="govuk-table__cell">Within 1km buffer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">4.5km</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>
         {% endif %}
@@ -119,6 +123,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <th scope="row" class="govuk-table__header">{{data['consultee']}}</th>
           <td class="govuk-table__cell">{{data['consulteeReason']}}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">4.7km</td>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="remove-consultee">Remove</a></td>
         </tr>  
         {% endif %}
@@ -126,11 +131,13 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     </table>
     <!--<p class="govuk-body">0 consultees selected</p>-->
     <div class="govuk-button-group">
-      <a href="add-consultee" class="govuk-button govuk-button--secondary">
-        Add a consultee
-      </a>
       <a href="remove-consultee-bulk" class="govuk-button govuk-button--secondary">
         Remove selected consultees
+      </a>
+    </div>
+    <div class="govuk-button-group">
+      <a href="add-consultee" class="govuk-button govuk-button--secondary">
+        Add a consultee
       </a>
     </div>
     {% if data['consulteeRemovalReason'] %}
