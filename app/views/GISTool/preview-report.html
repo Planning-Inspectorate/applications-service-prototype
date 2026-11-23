@@ -104,13 +104,35 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              County councils (upper-tier authorities)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Bristol
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> County councils (upper-tier authorities)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              District councils (lower-tier authorities)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> District councils (lower-tier authorities)</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               National Parks UK (England)
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> District Councils (Lower Tier Authorities)</span></a>
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> National Parks UK (England)</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -121,7 +143,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
               No consultees
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> District Councils (Lower Tier Authorities)</span></a>
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> National Parks UK (Wales)</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -190,10 +212,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
                 <li class="hidden">Windsor and Maidenhead</li>
                 <li class="hidden">Wokingham</li>
               </ul>
-                <p class="govuk-body">
-                  <a class="govuk-link govuk-link--no-visited-state" href="#" onclick="toggleHiddenElements(event)">Show more</a>
-                </p>
-                <script>
+              <p class="govuk-body">
+                <a class="govuk-link govuk-link--no-visited-state" href="#" onclick="toggleHiddenElements(event)">Show more</a>
+              </p>
+              <script>
                 function toggleHiddenElements(event) {
                   event.preventDefault();
                   const hiddenElements = document.querySelectorAll('.hidden');
@@ -208,21 +230,10 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
                   }
                   });
                 }
-                </script>
+              </script>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Parish, Town and Community Councils</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              District councils (lower-tier authorities)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> District Councils (Lower Tier Authorities)</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -238,18 +249,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
               </ul>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Parish community</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              County councils (upper-tier authorities)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Bristol
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> National landscapes</span></a>
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Unitary authorities</span></a>
             </dd>
           </div>
         </dl>
@@ -265,62 +265,18 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Local resilience forums (Wales)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Ambulance Trusts</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Internal drainage boards (England)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Internal drainage boards (Wales)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              National Landscapes (England)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              National Landscapes (Wales)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Ambulance trusts
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Fire and rescue authorities
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -353,6 +309,28 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Internal drainage boards (England)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Internal drainage boards (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Fire and Rescue Authorities</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               Local health boards (Wales)
             </dt>
             <dd class="govuk-summary-list__value">
@@ -364,7 +342,29 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Fire and rescue authorities
+              Local resilience forums (Wales)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Ambulance Trusts</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Landscapes (England)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Police and Crime Commissioners</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Landscapes (Wales)
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -397,6 +397,17 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Electricity distributors with compulsory purchase order powers
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               Electricity generators with compulsory purchase order powers
             </dt>
             <dd class="govuk-summary-list__value">
@@ -419,17 +430,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Offshore wind export cables and sites
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Electricity Generators</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Office for Nuclear Regulation sites
             </dt>
             <dd class="govuk-summary-list__value">
@@ -441,7 +441,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Electricity distributors with compulsory purchase order powers
+              Offshore wind export cables and sites
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -475,17 +475,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Dock and harbour authorities
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No consultees
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Railways</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Corporate joint committees (Wales)
             </dt>
             <dd class="govuk-summary-list__value">
@@ -497,7 +486,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Passenger transport executives
+              Dock and harbour authorities
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -509,6 +498,17 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Integrated transport authorities
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No consultees
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="preview-consultee-bulk">Change<span class="govuk-visually-hidden"> Railways</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Passenger transport executives
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -564,7 +564,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Ministry of Defence safeguarding areas
+              Ministry of Defence low flying areas
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
@@ -575,7 +575,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Ministry of Defence low flying areas
+              Ministry of Defence safeguarding areas
             </dt>
             <dd class="govuk-summary-list__value">
               No consultees
