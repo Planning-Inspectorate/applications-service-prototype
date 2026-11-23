@@ -95,7 +95,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         {% if not data['consulteeRemovalReason'] %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
-            <div class="govuk-form-group govuk-!-margin-bottom-0"">
+            <div class="govuk-form-group govuk-!-margin-bottom-0">
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" name="selectedConsultee[]" type="checkbox">
@@ -136,10 +136,23 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
     </table>
     <!--<p class="govuk-body">0 consultees selected</p>-->
     <div class="govuk-button-group">
-      <a href="remove-consultee-bulk" class="govuk-button govuk-button--secondary">
-        Remove selected consultees
+      <a href="remove-consultee-bulk" class="govuk-button govuk-button--secondary" id="remove-consultees-button" style="display: none;">
+      Remove selected consultees
       </a>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      const checkboxes = document.querySelectorAll('input[name="selectedConsultee[]"]');
+      const removeButton = document.getElementById('remove-consultees-button');
+
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+        const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+        removeButton.style.display = anyChecked ? 'inline-block' : 'none';
+        });
+      });
+      });
+    </script>
     <div class="govuk-button-group">
       <a href="add-consultee" class="govuk-button govuk-button--secondary">
         Add a consultee
